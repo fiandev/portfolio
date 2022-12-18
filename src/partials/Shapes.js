@@ -1,11 +1,23 @@
+import { useEffect, useState } from "react";
+import { getBlobRadius } from "../utils/functions";
+
 const Shapes = ({ className, children }) => {
-  let borders = ["rounded-full", "rounded", "rounded-md", "rounded-lg"];
-  let border = borders[Math.floor(Math.random() * borders.length)];
+  const [time, setTime] = useState(Date.now());
+
+  useEffect(() => {
+    const interval = setInterval(() => setTime(Date.now()), 1000);
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+  
+  let border = getBlobRadius();
+  let style = {
+    borderRadius: border
+  }
   
   return (
-      <div className={ `transition-all delay-200 flex justify-center items-center rotate-45 hover:rotate-45 ${ className } ${ border }` }>
-        .
-      </div>
+      <div style={ style } className={ `transition-all duration-1000 delay-200 flex justify-center items-center ${ className }` }>{ children }</div>
    )
 }
 
