@@ -3,8 +3,6 @@ import theme from '../utils/theme';
 import Nav from "../partials/Nav";
 
 const Layout = ({ childrens }) => {
-  
-  
   return (
       <div className="min-h-screen" onLoad={ theme }>
         <Nav />
@@ -12,6 +10,5 @@ const Layout = ({ childrens }) => {
       </div>
     )
 }
-
 
 export default Layout;

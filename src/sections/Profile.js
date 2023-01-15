@@ -24,7 +24,7 @@ const Profile = () => {
   }, [IsDark])
   
   return (
-      <section onLoad={ (e) => handler(e) } id="profile" style={ Style } className={ `bg-fixed relative w-screen pt-20 h-screen lg:min-h-screen flex flex-col gap-2 items-center lg:flex-row-reverse lg:justify-center lg:px-24` }>
+      <section id="profile" style={ Style } className={ `bg-fixed relative w-screen pt-20 h-screen md:min-h-screen flex flex-col gap-2 items-center lg:flex-row-reverse md:justify-center lg:px-24` }>
         
         <div className="group flex items-center justify-center lg:justify-between lg:px-8">
           <Shapes className="h-48 w-48 max-w-48 max-h-48 p-4 relative bg-gradient-to-b from-sky-500 to-violet-400 border shadow-md p-8 overflow-hidden flex justify-center items-center">
@@ -36,7 +36,7 @@ const Profile = () => {
           <span className="text-shadow-md text-2xl lg:text-3xl font-bold font-mono bg-clip-text text-transparent bg-gradient-to-r from-blue-200 to-sky-600 text-center lg:text-start">
             Aditia Akbar Putra Alfiansa 
           </span>
-          <p className="mx-4 text-sm lg:text-md font-light font-serif text-justify lg:text-start">
+          <p className="mx-4 md:mx-0 text-sm lg:text-md font-light font-serif text-justify lg:text-start">
             Hi, I'm Fian my hobby is learn programming and technology, I'm interested learn that's because is so cool 😊
           </p>
           
