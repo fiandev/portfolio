@@ -22,9 +22,9 @@ const About = ({ about }) => {
   
   
   return (
-      <section id="about" className={ `bg-slate-50 px-4 py-8 inset-x-0 transition-all duration-1000t flex flex-col gap-4 justify-start items-center lg:px-8` }>
+      <section id="about" className={ `dark:bg-slate-900 px-4 py-8 inset-x-0 transition-all duration-1000t flex flex-col gap-4 justify-start items-center lg:px-8` }>
         <h1 className="text-3xl capitalize font-bold font-mono">About Me</h1>
-        <div className=" lg:text-md font-light font-serif capitalize">
+        <div className=" lg:text-xl font-light font-serif capitalize">
         {
           about.split("\n").map((text) => {
             return <p>{ text }</p>
@@ -33,7 +33,7 @@ const About = ({ about }) => {
         </div>
         
         
-        <div className="w-full grid px-auto md:grid-cols-2 gap-4 text-md">
+        <div className="w-full h-fit grid px-auto md:grid-cols-2 gap-4 text-md">
         
           <div className="p-4 bg-blue-600 rounded-md">
             <h1 className="text-bold text-slate-50 capitalize text-md md:text-lg lg:text-xl">education</h1>

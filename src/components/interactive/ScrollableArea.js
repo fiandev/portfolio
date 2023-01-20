@@ -46,7 +46,6 @@ export const ScrollableArea = ({
       ref={ref}
       className={className}
       style={{
-        minHeight: `${viewportHeight}vh`,
         backgroundColor: debug ? 'rgba(255, 0, 0, 0.5)' : 'transparent',
         ...style,
       }}
