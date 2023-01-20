@@ -1,11 +1,15 @@
 import { useEffect } from 'react';
+import { library } from '@fortawesome/fontawesome-svg-core'
 import { GlobalScrollProvider } from './hooks/useGlobalScroll';
 import { GlobalMouseMoveProvider } from './hooks/useGlobalMouseMove';
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 
+import { fab } from '@fortawesome/free-brands-svg-icons';
+
 import Layout from './pages/Layout';
 import Home from './pages/Home';
 
+library.add(fab);
 function ScrollToTop() {
   const { pathname } = useLocation();
 

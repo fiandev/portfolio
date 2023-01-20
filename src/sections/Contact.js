@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { faMail, faSpinner, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faFacebook, faInstagram, faDiscord } from "@fortawesome/free-brands-svg-icons";
+
 import ItemContact from "../partials/ItemContact";
 import FormFloating from "../partials/FormFloating";
 
-export default function Contact () {
+export default function Contact ({ links }) {
   let [active, setActive] = useState(false);
   const contactHandler = (e) => {
     let form = e.target;
@@ -19,10 +19,9 @@ export default function Contact () {
         <h1 className="text-3xl capitalize font-bold font-mono">Connect With Me</h1>
         
         <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
-          <ItemContact link="https://github.com/fiandev" description="github" icon={ faGithub } username="github.com/fiandev" />
-          <ItemContact link="https://facebook.com/fianskuy" description="facebook" icon={ faFacebook } username="facebook.com/fianskuy" />
-          <ItemContact link="#" description="discord" icon={ faDiscord } username="facebook.com/fianskuy" />
-          <ItemContact link="https://instagram.com/fiankuyyy" description="instagram" icon={ faInstagram } username="instagram.com/fiankuyyy" />
+        {
+          links.map(link => <ItemContact link={ link.url } description={ link.type } icon={ link.type } username={ link.url } />)
+        }
         </div>
         
         <div className="w-full px-2 md:px-4 grid place-center md:grid-cols-2">
