@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import Theme from "../contexts/Theme";
 import Shapes from "../partials/Shapes";
-import bgDark from "../../assets/static/bg-dark.jpg";
-import bgLight from "../../assets/static/bg-light.jpg";
+import bgDark from "../assets/static/bg-dark.jpg";
+import bgLight from "../assets/static/bg-light.jpg";
 
 const Profile = ({ Data }) => {
   const [IsDark, SetIsDark] = useState( Theme() );

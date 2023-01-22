@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
-import WaveAnimate from "../../assets/svg/WaveAnimate.svg";
+import WaveAnimate from "../assets/svg/WaveAnimate.svg";
 
 export default function Footer () {
   const year = new Date().getFullYear();
