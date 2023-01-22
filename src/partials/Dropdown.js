@@ -18,7 +18,7 @@ export default function Dropdown ({ className, children, text }) {
         { text }
         <FontAwesomeIcon icon={ faCaretDown } />
       </div>
-      <ul className={ `${ !IsActive ? "h-0" : "h-min-48 md:top-[2rem] md:absolute z-20 md:shadow-md md:bg-slate-50 md:w-fit p-2" } border-left border-sky-100 transition-all duration-1000 flex flex-col gap-2 overflow-hidden w-full group-hover:text-main`}>
+      <ul className={ `${ !IsActive ? "h-0" : "h-min-48 lg:top-[2rem] lg:absolute z-20 lg:shadow-md lg:bg-slate-50 lg:w-fit p-2" } border-left border-sky-100 transition-all duration-1000 flex flex-col gap-2 overflow-hidden w-full group-hover:text-main`}>
         { children }
       </ul>
     </div>

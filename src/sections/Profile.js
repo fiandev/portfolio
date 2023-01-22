@@ -19,7 +19,7 @@ const Profile = ({ Data }) => {
         
         <div className="group flex items-center justify-center lg:justify-between lg:px-8">
           <Shapes className="h-48 w-48 max-w-48 max-h-48 p-4 relative bg-gradient-to-b from-sky-500 to-violet-400 border shadow-md p-8 overflow-hidden flex justify-center items-center">
-            <img className="w-full h-full shadow-md" alt="my photo" src={ Data ? Data.photo : "" } />
+            <img className="w-full h-full shadow-md rounded-full border-2 border-sky-400" alt="my photo" src={ Data ? Data.photo : "" } />
           </Shapes>
         </div>
         
@@ -29,7 +29,7 @@ const Profile = ({ Data }) => {
               Data ? Data.name : "loading ..."
             }
           </span>
-          <p className="mx-4 md:mx-0 text-sm lg:text-md font-light font-serif text-justify lg:text-start">
+          <p className="mx-4 lg:mx-0 text-sm lg:text-md font-light font-serif text-center lg:text-start">
             {
               Data ? Data.about : "loading ..."
             }
