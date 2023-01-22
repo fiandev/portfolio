@@ -15,7 +15,7 @@ const Profile = ({ Data }) => {
   }, [IsDark]);
   
   return (
-      <section id="profile" style={ Style } className={ `bg-fixed relative w-screen pt-20 h-screen md:min-h-screen flex flex-col gap-2 items-center lg:flex-row-reverse md:justify-center lg:px-24` }>
+      <section id="profile" style={ Style } className={ `bg-slate-50 dark:bg-slate-900 bg-fixed relative w-screen pt-20 h-screen md:min-h-screen flex flex-col gap-2 items-center lg:flex-row-reverse md:justify-center lg:px-24` }>
         
         <div className="group flex items-center justify-center lg:justify-between lg:px-8">
           <Shapes className="h-48 w-48 max-w-48 max-h-48 p-4 relative bg-gradient-to-b from-sky-500 to-violet-400 border shadow-md p-8 overflow-hidden flex justify-center items-center">
@@ -29,7 +29,7 @@ const Profile = ({ Data }) => {
               Data ? Data.name : "loading ..."
             }
           </span>
-          <p className="mx-4 lg:mx-0 text-sm lg:text-md font-light font-serif text-center lg:text-start">
+          <p className="dark:text-slate-100 mx-4 lg:mx-0 text-sm lg:text-md font-light font-serif text-center lg:text-start">
             {
               Data ? Data.about : "loading ..."
             }

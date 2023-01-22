@@ -15,8 +15,8 @@ export default function Contact ({ links }) {
   }
   
   return (
-      <section id="contact" className="bg-slate-50 min-h-[40vh] py-8 transition-all duration-500 flex flex-col gap-4 justify-center items-center">
-        <h1 className="text-3xl capitalize font-bold font-mono">Connect With Me</h1>
+      <section id="contact" className="bg-slate-50 dark:bg-slate-900 min-h-[40vh] py-8 transition-all duration-500 flex flex-col gap-4 justify-center items-center">
+        <h1 className="text-3xl capitalize font-bold font-mono dark:text-slate-50">Connect With Me</h1>
         
         <div className="grid grid-cols-2 gap-4 auto-cols-auto place-items-center">
         {
