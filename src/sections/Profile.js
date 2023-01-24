@@ -35,7 +35,7 @@ const Profile = ({ Data }) => {
             }
           </p>
           
-          <a href="https://cakeresume.com/aditia-akbar" className="transition-all duration-800 text-sm lg:text-md w-fit h-fit px-4 py-2 rounded-sm text-slate-50 bg-main shadow-lg outline outline-inherit hover:outline-blue-600 hover:outline-offset-2 hover:rounded-full hover:bg-gradient-to-r hover:from-blue-600 hover:to-sky-400">Download CV</a>
+          <a href="https:///t.me/fiandev" className="transition-all duration-800 text-sm lg:text-md w-fit h-fit px-4 py-2 rounded-sm text-slate-50 bg-main shadow-lg outline outline-inherit hover:outline-blue-600 hover:outline-offset-2 hover:rounded-full hover:bg-gradient-to-r hover:from-blue-600 hover:to-sky-400 capitalize">contact me</a>
         </div>
         
       </section>

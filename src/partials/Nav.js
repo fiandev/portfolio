@@ -11,7 +11,7 @@ export default function Nav () {
   }
   
   return (
-      <nav className={ `fixed z-10 w-full shadow-sm px-3 py-1 flex gap-2 lg:px:8 flex-col backdrop-blur-sm lg:backdrop-blur-0 lg:flex-row lg:justify-start light:bg-gradient-to-r from-sky-200 to-blue-100 dark:bg-slate-800` }>
+      <nav className={ `fixed z-10 w-full shadow-sm px-3 py-1 flex gap-2 lg:px:8 flex-col backdrop-blur-sm lg:flex-row lg:justify-start bg-gradient-to-r from-sky-200 to-blue-100 dark:bg-slate-800` }>
         <div className="w-full lg:w-fit flex justify-between items-center py-1">
           <h1 className="text-main hover:text-sky-400 max-w-fit font-bold text-lg hover:text-xl"> fiandev </h1>
           <Hamburger className="w-12 h-12 transition duration-500 lg:hidden" toggleActive={ toggleActive } IsActive={ IsActive }/>
