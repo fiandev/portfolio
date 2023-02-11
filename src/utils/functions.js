@@ -8,4 +8,9 @@ export const getOffset = (el) => {
     x: rect.left + window.scrollX,
     y: rect.top + window.scrollY
   };
-}
+};
+
+
+export const env = (key, reference = null) => {
+  return process.env[key] ? process.env[key] : reference;
+};

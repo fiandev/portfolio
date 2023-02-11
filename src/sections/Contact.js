@@ -20,7 +20,9 @@ export default function Contact ({ links }) {
         
         <div className="grid grid-cols-2 gap-4 auto-cols-auto place-items-center">
         {
-          links.map(link => <ItemContact link={ link.url } description={ link.type } icon={ link.type } username={ link.url } />)
+          links ? 
+            links.map(link => <ItemContact link={ link.url } description={ link.type } icon={ link.type } username={ link.url } />)
+          : <ItemContact className="animate-pulse blur-4" />
         }
         </div>
         

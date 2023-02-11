@@ -10,9 +10,7 @@ const About = ({ about }) => {
 
   useEffect(() => {
     const interval = setInterval(() => setTime(Date.now()), 1000);
-    
     let { years } = countdown(time, birtdate);
-    
     
     setAge(years);
     return () => {
@@ -24,11 +22,13 @@ const About = ({ about }) => {
   return (
       <section id="about" className={ `bg-slate-50 dark:bg-slate-900 px-4 py-8 inset-x-0 transition-all duration-1000t flex flex-col gap-4 justify-start items-center lg:px-8` }>
         <h1 className="text-3xl capitalize font-bold font-mono dark:text-slate-50">About Me</h1>
-        <div className="dark:text-slate-50 lg:text-xl font-light font-serif capitalize">
+        <div className={ `${ !about ? "animate-pulse" : "animate-none" } dark:text-slate-50 lg:text-xl font-light font-serif capitalize` }>
         {
-          about.split("\n").map((text) => {
-            return <p>{ text }</p>
-          })
+          about ?
+            about.split("\n").map((text) => {
+              return <p>{ text }</p>
+            })
+          : "loading ..."
         }
         </div>
         

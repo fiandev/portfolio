@@ -1,11 +1,12 @@
+import { env } from "../utils/functions";
 import axios from "axios";
 
 export const CONFIG = {
-  username: "fiandev",
-  apikey: "1ZubUHXM8knOjwJy"
+  username: env("REACT_APP_API_USERNAME"),
+  apikey: env("REACT_APP_API_KEY")
 }
 
-export const BASEURL = "https://portofolio-api.000webhostapp.com/api";
+export const BASEURL = env("REACT_APP_API_BASEURL");
 export const SCRAPER = axios.create({ BASEURL });
 
 export class Api {

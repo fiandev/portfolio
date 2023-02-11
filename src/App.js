@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 
 import { fab } from '@fortawesome/free-brands-svg-icons';
 
-import Layout from './pages/Layout';
+import Layout from './layouts/index';
 import Home from './pages/Home';
 
 library.add(fab);
