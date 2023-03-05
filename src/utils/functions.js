@@ -14,3 +14,12 @@ export const getOffset = (el) => {
 export const env = (key, reference = null) => {
   return process.env[key] ? process.env[key] : reference;
 };
+
+export const serialize = (obj) => {
+  var str = [];
+  for (var p in obj)
+    if (obj.hasOwnProperty(p)) {
+      str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+    }
+  return str.join("&");
+}
