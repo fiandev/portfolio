@@ -1,9 +1,16 @@
-import { useContext } from 'react';
+import { useContext } from "react";
 
-import { ScrollableAreaContext } from './ScrollableArea';
-import Easing from '../../utils/Easing';
+import { ScrollableAreaContext } from "./ScrollableArea";
+import Easing from "../../utils/Easing";
 
-export const ControlRotate = ({ children, className, from = 0, to = 0, ease = Easing.linear, style = {} }) => {
+export const ControlRotate = ({
+  children,
+  className,
+  from = 0,
+  to = 0,
+  ease = Easing.linear,
+  style = {},
+}) => {
   const pctProgress = useContext(ScrollableAreaContext) || 0;
 
   const easedProgress = ease(pctProgress, 0, 1, 1);
@@ -12,7 +19,10 @@ export const ControlRotate = ({ children, className, from = 0, to = 0, ease = Ea
   const r = from * inverse + to * easedProgress;
 
   return (
-    <span className={className} style={{ transform: `rotate(${r}deg`, display: 'inline-block', ...style }}>
+    <span
+      className={className}
+      style={{ transform: `rotate(${r}deg`, display: "inline-block", ...style }}
+    >
       {children}
     </span>
   );

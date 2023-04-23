@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 
 export const useOnScroll = (onScroll = (scrollY = 0, winHeight = 0) => {}) => {
   // use a ref to avoid an infinite loop when passing `onScroll` to useEffect dependency array
@@ -30,11 +30,11 @@ export const useOnScroll = (onScroll = (scrollY = 0, winHeight = 0) => {}) => {
       currentWinHeight = window.innerHeight || 0;
     };
 
-    window.addEventListener('resize', onResize);
-    document.addEventListener('scroll', onScroll);
+    window.addEventListener("resize", onResize);
+    document.addEventListener("scroll", onScroll);
     return () => {
-      window.removeEventListener('resize', onResize);
-      document.removeEventListener('scroll', onScroll);
+      window.removeEventListener("resize", onResize);
+      document.removeEventListener("scroll", onScroll);
       cancelAnimationFrame(animationId);
     };
   }, [_onScroll]);

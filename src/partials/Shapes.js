@@ -10,15 +10,20 @@ const Shapes = ({ className, children }) => {
       clearInterval(interval);
     };
   }, []);
-  
+
   let border = getBlobRadius();
   let style = {
-    borderRadius: border
-  }
-  
+    borderRadius: border,
+  };
+
   return (
-      <div style={ style } className={ `transition-all duration-1000 delay-200 flex justify-center items-center ${ className }` }>{ children }</div>
-   )
-}
+    <div
+      style={style}
+      className={`transition-all duration-1000 delay-200 flex justify-center items-center ${className}`}
+    >
+      {children}
+    </div>
+  );
+};
 
 export default Shapes;

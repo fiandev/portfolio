@@ -1,7 +1,7 @@
-import { useContext } from 'react';
-import { useGlobalMouseMove } from '../../hooks/useGlobalMouseMove';
-import Easing from '../../utils/Easing';
-import { ScrollableAreaContext } from './ScrollableArea';
+import { useContext } from "react";
+import { useGlobalMouseMove } from "../../hooks/useGlobalMouseMove";
+import Easing from "../../utils/Easing";
+import { ScrollableAreaContext } from "./ScrollableArea";
 
 export const ControlTranslate = ({
   children,
@@ -21,13 +21,19 @@ export const ControlTranslate = ({
   const easedProgress = ease(pctProgress, 0, 1, 1);
   const inverse = 1 - easedProgress;
 
-  const x = scrollFromX * inverse + scrollToX * easedProgress + mouseOffsetX * mouseX;
-  const y = scrollFromY * inverse + scrollToY * easedProgress + mouseOffsetY * mouseY;
+  const x =
+    scrollFromX * inverse + scrollToX * easedProgress + mouseOffsetX * mouseX;
+  const y =
+    scrollFromY * inverse + scrollToY * easedProgress + mouseOffsetY * mouseY;
 
   return (
     <div
       className={className}
-      style={{ transform: `translate3d(${x}px, ${y}px, 0px)`, transformStyle: 'preserve-3d', ...style }}
+      style={{
+        transform: `translate3d(${x}px, ${y}px, 0px)`,
+        transformStyle: "preserve-3d",
+        ...style,
+      }}
     >
       {children}
     </div>

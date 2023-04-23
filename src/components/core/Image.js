@@ -1,13 +1,13 @@
-import { useRef, useState } from 'react';
+import { useRef, useState } from "react";
 
 // import { useRect } from '../hooks/useRect';
-import { useOnScroll } from '../../hooks/useOnScroll';
+import { useOnScroll } from "../../hooks/useOnScroll";
 
-import './Image.scss';
+import "./Image.scss";
 
 export const Image = ({
-  src = '',
-  alt = '',
+  src = "",
+  alt = "",
   height,
   children,
   fixed = false,
@@ -35,7 +35,9 @@ export const Image = ({
     const boxTop = boxRect.top + scrollY;
     const boxBottom = boxRect.bottom + scrollY;
     const boxHeight = boxRect.height;
-    const pct = (clampVal(winBottom, boxTop, boxBottom + winHeight) - boxTop) / (boxHeight + winHeight);
+    const pct =
+      (clampVal(winBottom, boxTop, boxBottom + winHeight) - boxTop) /
+      (boxHeight + winHeight);
 
     const imgHeight = img.current.offsetHeight;
     // const imgTop = img.current.getBoundingClientRect().y;
@@ -44,7 +46,7 @@ export const Image = ({
 
     if (imgHeight < boxHeight) {
       console.warn(
-        `parallax effect doesn't work if image is smaller than the bounding box. imgHeight=${imgHeight} boxHeight=${boxHeight}`,
+        `parallax effect doesn't work if image is smaller than the bounding box. imgHeight=${imgHeight} boxHeight=${boxHeight}`
       );
       return;
     }
@@ -101,11 +103,18 @@ export const Image = ({
   });
 
   return (
-    <div ref={box} className="image-box" style={{ height: height || undefined }}>
+    <div
+      ref={box}
+      className="image-box"
+      style={{ height: height || undefined }}
+    >
       {fixed ? (
         <div
           className="image-bg dark-overlay"
-          style={{ backgroundImage: `url(${src})`, height: height || undefined }}
+          style={{
+            backgroundImage: `url(${src})`,
+            height: height || undefined,
+          }}
         />
       ) : (
         <img

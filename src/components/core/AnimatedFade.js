@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import Easing from '../../utils/Easing';
+import { useEffect, useState } from "react";
+import Easing from "../../utils/Easing";
 
 export const AnimatedFade = ({
   children,
@@ -18,7 +18,12 @@ export const AnimatedFade = ({
     let timeout = 0;
     const tick = () => {
       clearTimeout(timeout);
-      const val = ease(t * endOpacity + (1 - t) * startOpacity, startOpacity, endOpacity, 1);
+      const val = ease(
+        t * endOpacity + (1 - t) * startOpacity,
+        startOpacity,
+        endOpacity,
+        1
+      );
       setOpacity(val);
       t += tΔ;
       t = clamp(t);

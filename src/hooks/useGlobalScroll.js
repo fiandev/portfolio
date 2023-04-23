@@ -5,7 +5,7 @@
 // AND ONE DOC HEIGHT TO BIND TO
 //
 
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from "react";
 
 const GlobalScrollContext = React.createContext(undefined);
 const GlobalWinHeightContext = React.createContext(undefined);
@@ -57,11 +57,11 @@ export const GlobalScrollProvider = ({ children }) => {
 
     onResize();
 
-    window.addEventListener('resize', onResize);
-    document.addEventListener('scroll', onScroll);
+    window.addEventListener("resize", onResize);
+    document.addEventListener("scroll", onScroll);
     return () => {
-      window.removeEventListener('resize', onResize);
-      document.removeEventListener('scroll', onScroll);
+      window.removeEventListener("resize", onResize);
+      document.removeEventListener("scroll", onScroll);
       cancelAnimationFrame(animationId);
     };
   }, [_scrollY, _winHeight, _docHeight]);
@@ -70,7 +70,9 @@ export const GlobalScrollProvider = ({ children }) => {
     <div>
       <GlobalScrollContext.Provider value={scrollY}>
         <GlobalWinHeightContext.Provider value={winHeight}>
-          <GlobalDocHeightContext.Provider value={docHeight}>{children}</GlobalDocHeightContext.Provider>
+          <GlobalDocHeightContext.Provider value={docHeight}>
+            {children}
+          </GlobalDocHeightContext.Provider>
         </GlobalWinHeightContext.Provider>
       </GlobalScrollContext.Provider>
     </div>
@@ -82,8 +84,14 @@ export const useGlobalScroll = () => {
   const winHeight = useContext(GlobalWinHeightContext);
   const docHeight = useContext(GlobalDocHeightContext);
 
-  if (scrollY === undefined || winHeight === undefined || docHeight === undefined) {
-    throw new Error('useGlobalScroll must be used inside a GlobalScrollProvider');
+  if (
+    scrollY === undefined ||
+    winHeight === undefined ||
+    docHeight === undefined
+  ) {
+    throw new Error(
+      "useGlobalScroll must be used inside a GlobalScrollProvider"
+    );
   }
 
   return [scrollY || 0, winHeight || 0, docHeight || 0];

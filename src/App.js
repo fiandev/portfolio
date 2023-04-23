@@ -1,13 +1,13 @@
-import { useEffect } from 'react';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { GlobalScrollProvider } from './hooks/useGlobalScroll';
-import { GlobalMouseMoveProvider } from './hooks/useGlobalMouseMove';
+import { useEffect } from "react";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { GlobalScrollProvider } from "./hooks/useGlobalScroll";
+import { GlobalMouseMoveProvider } from "./hooks/useGlobalMouseMove";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 
-import { fab } from '@fortawesome/free-brands-svg-icons';
+import { fab } from "@fortawesome/free-brands-svg-icons";
 
-import Layout from './layouts/index';
-import Home from './pages/Home';
+import Layout from "./layouts/index";
+import Home from "./pages/Home";
 
 library.add(fab);
 function ScrollToTop() {
@@ -17,7 +17,7 @@ function ScrollToTop() {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: 'instant',
+      behavior: "instant",
     });
   }, [pathname]);
 
@@ -39,7 +39,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            { /* <Route path="*" element={<NoPage />} /> */}
+            {/* <Route path="*" element={<NoPage />} /> */}
           </Route>
         </Routes>
       </BrowserRouter>

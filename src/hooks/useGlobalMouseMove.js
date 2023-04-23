@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from "react";
 
 const GlobalMouseCoordsContext = React.createContext(undefined);
 
@@ -54,21 +54,28 @@ export const GlobalMouseMoveProvider = ({ children }) => {
       currentWinWidth = window.innerWidth || 0;
     };
 
-    window.addEventListener('mousemove', onMouseMove);
-    window.addEventListener('resize', onResize);
+    window.addEventListener("mousemove", onMouseMove);
+    window.addEventListener("resize", onResize);
     return () => {
-      window.removeEventListener('mousemove', onMouseMove);
-      window.removeEventListener('resize', onResize);
+      window.removeEventListener("mousemove", onMouseMove);
+      window.removeEventListener("resize", onResize);
     };
   }, [setMouseCoords]);
 
-  return <GlobalMouseCoordsContext.Provider value={mouseCoords}>{children}</GlobalMouseCoordsContext.Provider>;
+  return (
+    <GlobalMouseCoordsContext.Provider value={mouseCoords}>
+      {children}
+    </GlobalMouseCoordsContext.Provider>
+  );
 };
 
 export const useGlobalMouseMove = () => {
   const mouseCoords = useContext(GlobalMouseCoordsContext);
 
-  if (mouseCoords === undefined) throw new Error('useGlobalMouseMove must be used inside a GlobalMouseMoveProvider');
+  if (mouseCoords === undefined)
+    throw new Error(
+      "useGlobalMouseMove must be used inside a GlobalMouseMoveProvider"
+    );
 
   return mouseCoords;
 };

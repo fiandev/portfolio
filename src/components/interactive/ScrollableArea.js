@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from 'react';
-import { useGlobalScroll } from '../../hooks/useGlobalScroll';
-import { useRect } from '../../hooks/useRect';
-import { Maths } from '../../utils/Maths';
+import React, { useEffect, useRef } from "react";
+import { useGlobalScroll } from "../../hooks/useGlobalScroll";
+import { useRect } from "../../hooks/useRect";
+import { Maths } from "../../utils/Maths";
 
 export const ScrollableAreaContext = React.createContext(false);
 
@@ -11,7 +11,7 @@ export const ScrollableArea = ({
   viewportHeight = 100,
   clamp = true,
   debug = false,
-  debugLabel = '',
+  debugLabel = "",
   children,
   style = {},
   startAtScreenTop = false,
@@ -21,19 +21,26 @@ export const ScrollableArea = ({
   const [initialized, rect] = useRect(ref);
 
   const scrollProgress = initialized
-    ? getScrollProgress(scrollY, rect.top, rect.bottom, winHeight, clamp, startAtScreenTop)
+    ? getScrollProgress(
+        scrollY,
+        rect.top,
+        rect.bottom,
+        winHeight,
+        clamp,
+        startAtScreenTop
+      )
     : 0;
 
   useEffect(() => {
     if (debug)
       console.log(
-        debugLabel || (ref.current && ref.current.id) || 'RECT_CALC',
+        debugLabel || (ref.current && ref.current.id) || "RECT_CALC",
         `INIT=`,
         initialized,
         `TOP=`,
         rect.top,
         `BOTTOM=`,
-        rect.bottom,
+        rect.bottom
       );
   }, [debug, debugLabel, initialized, rect]);
 
@@ -46,7 +53,7 @@ export const ScrollableArea = ({
       ref={ref}
       className={className}
       style={{
-        backgroundColor: debug ? 'rgba(255, 0, 0, 0.5)' : 'transparent',
+        backgroundColor: debug ? "rgba(255, 0, 0, 0.5)" : "transparent",
         ...style,
       }}
     >
@@ -90,12 +97,17 @@ function getScrollProgress(
   containerBottomY = 0,
   winHeight = 0,
   clamp = false,
-  startAtScreenTop = false,
+  startAtScreenTop = false
 ) {
   if (!containerBottomY || containerBottomY - containerTopY <= 0) return -1;
 
-  const min = startAtScreenTop ? containerTopY : Math.max(containerTopY - winHeight, 0);
-  const max = Math.min(document.body.scrollHeight - winHeight, containerBottomY);
+  const min = startAtScreenTop
+    ? containerTopY
+    : Math.max(containerTopY - winHeight, 0);
+  const max = Math.min(
+    document.body.scrollHeight - winHeight,
+    containerBottomY
+  );
 
   const pctProgress = (scrollY - min) / (max - min);
 

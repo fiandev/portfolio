@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 
 export const useMouseMove = (onMouseMove = (mouseX = 0, mouseY = 0) => {}) => {
   // use a ref to avoid an infinite loop when passing `onMouseMove` to useEffect dependency array
@@ -47,11 +47,11 @@ export const useMouseMove = (onMouseMove = (mouseX = 0, mouseY = 0) => {}) => {
       currentWinWidth = window.innerWidth || 0;
     };
 
-    window.addEventListener('mousemove', onMouseMove);
-    window.addEventListener('resize', onResize);
+    window.addEventListener("mousemove", onMouseMove);
+    window.addEventListener("resize", onResize);
     return () => {
-      window.removeEventListener('mousemove', onMouseMove);
-      window.removeEventListener('resize', onResize);
+      window.removeEventListener("mousemove", onMouseMove);
+      window.removeEventListener("resize", onResize);
     };
   }, [_onMouseMove]);
 };
