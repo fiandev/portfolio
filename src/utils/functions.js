@@ -24,3 +24,25 @@ export const serialize = (obj) => {
     }
   return str.join("&");
 };
+
+export const imageErrorHandler = (e, src = "") => {
+  e.target.src = src;
+};
+
+export const delay = (duration = 1000, cb) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      cb();
+      resolve();
+    }, duration);
+  })
+}
+
+export const randomID = (len = 4) => {
+  let chars = "abcdefghijklmnopqrstuvwxyz1234566890";
+  let arr = chars.split("");
+  let result = "";
+  
+  for (let i = 0; i < len; i++) result += arr[Math.floor(Math.random() * arr.length)];
+  return result;
+};

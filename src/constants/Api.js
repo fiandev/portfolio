@@ -35,16 +35,20 @@ export class Api {
     return await SCRAPER(`/inbox/${this.username}?apikey=${this.apikey}`);
   }
 
-  async sentInbox({ data }) {
-    let { response } = await fetch(
-      `${BASEURL}/inbox/${this.apikey}?apikey=${this.apikey}`,
+  async sentInbox(data, cb) {
+    if (!cb && typeof cb !== "function") cb = () => {};
+
+    const response = await fetch(
+      `${BASEURL}/inbox/${this.username}?apikey=${this.apikey}`,
       {
         method: "POST",
-        data: data,
+        body: data,
       }
     );
 
-    return response.json();
+    const result = await response.json();
+
+    return cb(result);
   }
 }
 

@@ -21,7 +21,9 @@
   },
   "scripts": {
     "start": "react-app-rewired start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "prettier": "prettier ./src/**/*.js -w",
+    "prettier:build": "prettier ./build/**/*.js -w"
   },
   "eslintConfig": {
     "extends": [

@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <section
       id="footer"
-      className="relative pt-8 capitalize flex flex-col gap-4 bg-gradient-to-t from-sky-500 to-slate-50 dark:from-sky-900 dark:to-slate-900 items-center justify-end text-gray-800"
+      className="relative w-screen pt-8 capitalize flex flex-col gap-4 bg-gradient-to-t from-sky-500 to-slate-50 dark:from-sky-900 dark:to-slate-900 items-center justify-end text-gray-800"
     >
       <div className="absolute inset-0 flex flex-col justify-center items-center text-center">
         <p className="text-md font-serif text-slate-50">

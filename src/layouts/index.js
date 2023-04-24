@@ -4,9 +4,11 @@ import Nav from "../partials/Nav";
 
 const Layout = ({ childrens }) => {
   return (
-    <div className="min-h-screen" onLoad={theme}>
+    <div className="relative flex flex-col min-h-screen w-screen" onLoad={theme}>
       <Nav />
-      <Outlet />
+      <div className="w-full">
+        <Outlet />
+      </div>
     </div>
   );
 };
