@@ -11,7 +11,7 @@ import FormFloating from "../partials/FormFloating";
 import Alert from "../partials/contact/Alert";
 
 import API from "../constants/Api";
-import { serialize, randomID } from "../utils/functions";
+import { serialize, randomID, env } from "../utils/functions";
 
 export default function Contact({ links, className }) {
   let [active, setActive] = useState(false);
@@ -124,10 +124,10 @@ export default function Contact({ links, className }) {
 
         <iframe
           className="shadow-lg outline outline w-[20rem] h-[20rem] hidden md:block rounded-lg outline-gray-400"
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d247.46967054372496!2d112.3358415452334!3d-7.066158695136858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1674358534566!5m2!1sid!2sid"
-          allowfullscreen=""
+          src={ env("REACT_IFRAME_GMAPS", "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d247.46967054372496!2d112.3358415452334!3d-7.066158695136858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1674358534566!5m2!1sid!2sid") }
+          allowFullScreen="no"
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
+          referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
     </section>

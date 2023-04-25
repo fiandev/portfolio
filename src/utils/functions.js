@@ -12,8 +12,8 @@ export const getOffset = (el) => {
   };
 };
 
-export const env = (key, reference = null) => {
-  return process.env[key] ? process.env[key] : reference;
+export const env = (key, alternative = null) => {
+  return process.env[key] ? process.env[key] : alternative;
 };
 
 export const serialize = (obj) => {

@@ -1,4 +1,6 @@
+import eruda from "eruda";
 import { createRoot } from "react-dom/client";
+import { env } from "./utils/functions";
 
 import App from "./App";
 import "./assets/css/index.css";
@@ -7,8 +9,8 @@ import reportWebVitals from "./reportWebVitals";
 const container = document.getElementById("root");
 const root = createRoot(container); // createRoot(container!) if you use TypeScript
 
+if (env("REACT_NODE_EV", "production") !== "production") eruda.init();
+
 root.render(<App />);
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+
 reportWebVitals();

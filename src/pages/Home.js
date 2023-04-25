@@ -28,7 +28,8 @@ export default function Home() {
       });
   }, []);
 
-  return !IsError ? (
+  return !IsError ? 
+  (
     <div className={`pt-2 scroll-smooth relative`}>
       <Profile Data={Data} />
       <ScrollableArea className="h-fit">
