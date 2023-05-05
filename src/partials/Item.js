@@ -25,7 +25,7 @@ export default function Item({
       className={`group relative w-full h-64 overflow-hidden rounded-sm hover:rounded-md hover:shadow-md ${className}`}
     >
       <img
-        onError={ (e) => imageErrorHandler(e, setThumbnail(e))}
+        onError={ (e) => setThumbnail(e) }
         src={thumbnail ? thumbnail : ""}
         alt={title || "untitled"}
         className="w-full transition-all group-hover:scale-150"
