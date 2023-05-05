@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy } from "react";
 
 import Profile from "../sections/Profile";
 import About from "../sections/About";

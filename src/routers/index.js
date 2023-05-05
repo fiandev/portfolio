@@ -1,17 +1,20 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { lazy, Suspense } from "react";
 
-import Layout from "../layouts/index";
-import Home from "../pages/Home";
+const Layout = lazy(() => import("../layouts/index"));
+const Home = lazy(() => import("../pages/Home"));
 
 export default function Router () {
   return (
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            {/* <Route path="*" element={<NoPage />} /> */}
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      <Suspense>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Home />} />
+              {/* <Route path="*" element={<NoPage />} /> */}
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </Suspense>
     )
 }
