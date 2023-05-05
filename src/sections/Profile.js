@@ -39,7 +39,7 @@ const Profile = ({ Data }) => {
           {Data ? Data.name : "loading ..."}
         </span>
         <p className="dark:text-slate-100 mx-4 lg:mx-0 text-sm lg:text-md font-light font-serif text-center lg:text-start">
-          {Data ? Data.about : "loading ..."}
+          { Data ? (Data.slogan ? Data.slogan : "hi I'm Fian junior fullstack web developer from Indonesia 🇮🇩") : "loading ..." }
         </p>
 
         <a

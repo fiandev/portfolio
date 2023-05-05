@@ -34,7 +34,7 @@ const About = ({ about, className }) => {
       <div
         className={`${
           !about ? "animate-pulse" : "animate-none"
-        } dark:text-slate-50 lg:text-xl font-light font-serif capitalize`}
+        } dark:text-slate-50 lg:text-xl font-light font-serif`}
       >
         {about
           ? about.split("\n").map((text) => {

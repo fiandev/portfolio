@@ -3,7 +3,14 @@ import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { imageErrorHandler } from "../utils/functions";
 import ButtonLink from "./portfolio/ButtonLink";
 
-const defaultImage = "https://cdn.waifu.im/7048.jpg";
+
+const setThumbnail = (e) => {
+  const element = e.target;
+  fetch("https://api.waifu.pics/sfw/waifu")
+    .then(response => response.json())
+    .then(res => element.setAttribute("src", res.url))
+    .catch(e => console.log(e));
+};
 
 export default function Item({
   className,
@@ -18,8 +25,8 @@ export default function Item({
       className={`group relative w-full h-64 overflow-hidden rounded-sm hover:rounded-md hover:shadow-md ${className}`}
     >
       <img
-        onError={(e) => imageErrorHandler(e, defaultImage)}
-        src={thumbnail ? thumbnail : defaultImage}
+        onError={ (e) => imageErrorHandler(e, setThumbnail(e))}
+        src={thumbnail ? thumbnail : ""}
         alt={title || "untitled"}
         className="w-full transition-all group-hover:scale-150"
       />
@@ -29,9 +36,9 @@ export default function Item({
             {title || "untitled project"}
           </p>
           {stacks ? (
-            <div className="flex items-center gap-0.5">
+            <div className="flex w-full shrink-0 items-center justify-center gap-0.5">
               {stacks.map((stack) => (
-                <img src={stack.icon} />
+                <img className="w-5 h-5" src={stack.icon} alt={ stack.name } />
               ))}
             </div>
           ) : null}
