@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function Alert ({ children, className, duration = 2000 }) {
   let [Hidden, SetHidden] = useState(false);

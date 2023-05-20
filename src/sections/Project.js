@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useMemo } from "react";
 
 import Item from "../partials/portfolio/Item";
 import Pagination from "../partials/Pagination";
@@ -12,12 +12,12 @@ const Project = ({ projects, className }) => {
     const firstPageIndex = (currentPage - 1) * PageSize;
     const lastPageIndex = firstPageIndex + PageSize;
     return projects?.slice(firstPageIndex, lastPageIndex);
-  }, [currentPage]);
-  
+  }, [currentPage, projects]);
+
   return (
     <section
       id="project"
-      className={ `bg-main p-4 lg:py-8 transition-all duration-500 flex flex-col gap-4 justify-start items-center ${className}` }
+      className={`bg-main p-4 lg:py-8 transition-all duration-500 flex flex-col gap-4 justify-start items-center ${className}`}
     >
       <h1 className="text-slate-50 text-3xl capitalize font-bold font-mono">
         My Projects
@@ -32,6 +32,7 @@ const Project = ({ projects, className }) => {
                 repo={project.repository}
                 thumbnail={project.thumbnail}
                 title={project.title}
+                description={project.description}
               />
             );
           })
@@ -39,13 +40,13 @@ const Project = ({ projects, className }) => {
           <Item className="animate-pulse " />
         )}
       </div>
-      
+
       <Pagination
         className="pagination"
         currentPage={currentPage}
         totalCount={projects?.length}
         pageSize={PageSize}
-        onPageChange={page => setCurrentPage(page)}
+        onPageChange={(page) => setCurrentPage(page)}
       />
     </section>
   );

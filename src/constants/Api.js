@@ -34,7 +34,7 @@ export class Api {
   async getInbox() {
     return await SCRAPER(`/inbox/${this.username}?apikey=${this.apikey}`);
   }
-  
+
   async sentInbox(data, cb) {
     if (!cb && typeof cb !== "function") cb = () => {};
 

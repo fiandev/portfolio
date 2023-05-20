@@ -13,8 +13,8 @@
     "axios": "^1.3.2",
     "classnames": "^2.3.2",
     "dotenv": "^16.0.3",
+    "prettier": "^2.8.8",
     "react": "^18.2.0",
-    "react-app-rewired": "^2.2.1",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.0",
     "react-scripts": "5.0.1",
@@ -24,7 +24,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "prettier": "prettier ./src/**/*.js -w",
-    "prettier:build": "prettier ./build/**/*.js -w"
+    "prettier:build": "prettier ./build/**/*.{js,html,css,json} -w"
   },
   "eslintConfig": {
     "extends": [

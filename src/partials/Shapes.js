@@ -9,7 +9,7 @@ const Shapes = ({ className, children }) => {
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  }, [time]);
 
   let border = getBlobRadius();
   let style = {

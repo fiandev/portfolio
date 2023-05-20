@@ -23,7 +23,7 @@ export default function Footer() {
           <span className="font-semibold">@ {year}.</span> all right reserved.
         </p>
       </div>
-      <img src={WaveAnimate} className="m-0 p-0" />
+      <img alt="wave animation" src={WaveAnimate} className="m-0 p-0" />
     </section>
   );
 }

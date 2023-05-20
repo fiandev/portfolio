@@ -9,11 +9,11 @@ import countdown from "../utils/time";
 import { useEffect, useState } from "react";
 
 const About = ({ about, className }) => {
-  const birtdate = new Date("13 June 2005, 11:00:00").getTime();
   const [time, setTime] = useState(Date.now());
   const [age, setAge] = useState(0);
 
   useEffect(() => {
+    const birtdate = new Date("13 June 2005, 11:00:00").getTime();
     const interval = setInterval(() => setTime(Date.now()), 1000);
     let { years } = countdown(time, birtdate);
 
@@ -21,12 +21,12 @@ const About = ({ about, className }) => {
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  }, [time, age]);
 
   return (
     <section
       id="about"
-      className={ `bg-slate-50 dark:bg-slate-900 px-4 py-8 inset-x-0 transition-all duration-1000t flex flex-col gap-4 justify-start items-center lg:px-8 ${className}` }
+      className={`bg-slate-50 dark:bg-slate-900 px-4 py-8 inset-x-0 transition-all duration-1000t flex flex-col gap-4 justify-start items-center lg:px-8 ${className}`}
     >
       <h1 className="text-3xl capitalize font-bold font-mono dark:text-slate-50">
         About Me

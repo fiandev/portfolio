@@ -4,9 +4,7 @@ import { GlobalMouseMoveProvider } from "../hooks/useGlobalMouseMove";
 export default function Wrapper({ children }) {
   return (
     <GlobalScrollProvider>
-      <GlobalMouseMoveProvider>
-        { children }
-      </GlobalMouseMoveProvider>
+      <GlobalMouseMoveProvider>{children}</GlobalMouseMoveProvider>
     </GlobalScrollProvider>
   );
 }

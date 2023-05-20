@@ -35,14 +35,15 @@ export const delay = (duration = 1000, cb) => {
       cb();
       resolve();
     }, duration);
-  })
-}
+  });
+};
 
 export const randomID = (len = 4) => {
   let chars = "abcdefghijklmnopqrstuvwxyz1234566890";
   let arr = chars.split("");
   let result = "";
-  
-  for (let i = 0; i < len; i++) result += arr[Math.floor(Math.random() * arr.length)];
+
+  for (let i = 0; i < len; i++)
+    result += arr[Math.floor(Math.random() * arr.length)];
   return result;
 };

@@ -1,4 +1,4 @@
-import { useState, useEffect, lazy } from "react";
+import { useState, useEffect } from "react";
 
 import Profile from "../sections/Profile";
 import About from "../sections/About";
@@ -13,7 +13,7 @@ export default function Home() {
   let [IsError, SetIsError] = useState(false);
   let [Exception, SetException] = useState(null);
   useEffect(() => {
-    let res = fetch("/data/fiandev.json");
+    let res = fetch("/data/data.json");
 
     res
       .then((response) => response.json())
@@ -25,11 +25,10 @@ export default function Home() {
         SetException(err);
       });
   }, []);
-  
+
   if (!Data) return null;
-  
-  return !IsError ? 
-  (
+
+  return !IsError ? (
     <div className={`pt-2 scroll-smooth relative`}>
       <Profile Data={Data} />
       <ScrollableArea className="h-fit">
