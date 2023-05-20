@@ -3,17 +3,17 @@
   "name": "fiandev portfolio",
   "icons": [
     {
-      "src": "https://rypx.000webhostapp.com/avatar/fiandev",
+      "src": "icon.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "https://rypx.000webhostapp.com/avatar/fiandev?width=192&height=192",
+      "src": "icon.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "https://rypx.000webhostapp.com/avatar/fiandev?width=512&height=512",
+      "src": "icon.png",
       "type": "image/png",
       "sizes": "512x512"
     }
