@@ -8,13 +8,25 @@ import Footer from "../sections/Footer";
 import ErrorPage from "./ErrorPage";
 
 import { ScrollableArea } from "../components/interactive/ScrollableArea";
-import * as Data from "../assets/data/fiandev.json";
 
 export default function Home() {
   let [Data, SetData] = useState(null);
   let [IsError, SetIsError] = useState(false);
   let [Exception, SetException] = useState(null);
+  useEffect(() => {
+    let res = fetch("/data/fiandev.json");
 
+    res
+      .then((response) => response.json())
+      .then((result) => {
+        SetData(result.data);
+      })
+      .catch((err) => {
+        SetIsError(true);
+        SetException(err);
+      });
+  }, []);
+  
   return !IsError ? 
   (
     <div className={`pt-2 scroll-smooth relative`}>
