@@ -8,25 +8,12 @@ import Footer from "../sections/Footer";
 import ErrorPage from "./ErrorPage";
 
 import { ScrollableArea } from "../components/interactive/ScrollableArea";
-import API from "../constants/Api";
+import * as Data from "../assets/data/fiandev.json";
 
 export default function Home() {
   let [Data, SetData] = useState(null);
   let [IsError, SetIsError] = useState(false);
   let [Exception, SetException] = useState(null);
-
-  useEffect(() => {
-    let res = API.getProfile();
-
-    res
-      .then((result) => {
-        SetData(result.data);
-      })
-      .catch((err) => {
-        SetIsError(true);
-        SetException(err);
-      });
-  }, []);
 
   return !IsError ? 
   (
