@@ -6,7 +6,6 @@ import Project from "../sections/Project";
 import Contact from "../sections/Contact";
 import Footer from "../sections/Footer";
 import ErrorPage from "./ErrorPage";
-
 import { ScrollableArea } from "../components/interactive/ScrollableArea";
 
 export default function Home() {
@@ -26,6 +25,8 @@ export default function Home() {
         SetException(err);
       });
   }, []);
+  
+  if (!Data) return null;
   
   return !IsError ? 
   (
