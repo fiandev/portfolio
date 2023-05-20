@@ -29,7 +29,7 @@ const Profile = ({ Data }) => {
               Data ? "animation-none" : "animation-pulse"
             } w-full h-full shadow-md rounded-full border-2 border-sky-400`}
             alt="my photo"
-            src={Data ? Data.photo : ""}
+            src={Data ? Data.avatar.url : ""}
           />
         </Shapes>
       </div>

@@ -26,7 +26,7 @@ export default function Item({
     >
       <img
         onError={ (e) => setThumbnail(e) }
-        src={thumbnail ? thumbnail : ""}
+        src={thumbnail ? thumbnail.url : ""}
         alt={title || "untitled"}
         className="w-full transition-all group-hover:scale-150"
       />
