@@ -9,7 +9,7 @@ import reportWebVitals from "./reportWebVitals";
 const container = document.getElementById("root");
 const root = createRoot(container); // createRoot(container!) if you use TypeScript
 
-if (env("REACT_NODE_EV", "production") !== "production") eruda.init();
+if (env("REACT_NODE_ENV", "production") !== "production") eruda.init();
 
 root.render(<App />);
 

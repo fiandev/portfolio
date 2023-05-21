@@ -3,7 +3,7 @@ import Theme from "../contexts/Theme";
 import Shapes from "../partials/Shapes";
 
 const Profile = ({ Data }) => {
-  const [IsDark, /* SetIsDark */] = useState(Theme());
+  const [IsDark /* SetIsDark */] = useState(Theme());
   const [Style, setStyle] = useState(null);
 
   useEffect(() => {

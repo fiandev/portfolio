@@ -1,4 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useEffect, useState } from "react";
 import {
   faGraduationCap,
   faGamepad,
@@ -6,7 +6,8 @@ import {
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
 import countdown from "../utils/time";
-import { useEffect, useState } from "react";
+import { randomID } from "../utils/functions";
+import Item from "../partials/about/Item";
 
 const About = ({ about, className }) => {
   const [time, setTime] = useState(Date.now());
@@ -14,14 +15,14 @@ const About = ({ about, className }) => {
 
   useEffect(() => {
     const birtdate = new Date("13 June 2005, 11:00:00").getTime();
-    const interval = setInterval(() => setTime(Date.now()), 1000);
+    // const interval = setInterval(() => setTime(Date.now()), 1000);
     let { years } = countdown(time, birtdate);
 
     setAge(years);
     return () => {
-      clearInterval(interval);
+      // clearInterval(interval);
     };
-  }, [time, age]);
+  }, []);
 
   return (
     <section
@@ -38,75 +39,52 @@ const About = ({ about, className }) => {
       >
         {about
           ? about.split("\n").map((text) => {
-              return <p>{text}</p>;
+              return <p key={randomID()}>{text}</p>;
             })
           : "loading ..."}
       </div>
 
       <div className="w-full h-fit grid px-auto md:grid-cols-2 gap-4 text-md">
-        <div className="p-4 bg-blue-600 rounded-md">
-          <h1 className="text-bold text-slate-50 capitalize text-md md:text-lg lg:text-xl">
-            education
-          </h1>
-          <ul className="flex flex-col items-start text-slate-100">
-            <li className="flex gap-2 text-semibold items-center">
-              <FontAwesomeIcon className="w-4 h-4" icon={faGraduationCap} />
-              <p>
-                SD Putra Indonesia{" "}
-                <span className="text-bold text-slate-100">(2012 - 2018)</span>
-              </p>
-            </li>
-            <li className="flex gap-2 text-semibold items-center">
-              <FontAwesomeIcon className="w-4 h-4" icon={faGraduationCap} />
-              <p>
-                SMP Al-Amin Surabaya{" "}
-                <span className="text-bold text-slate-100">(2018 - 2021)</span>
-              </p>
-            </li>
-            <li className="flex gap-2 text-semibold items-center">
-              <FontAwesomeIcon className="w-4 h-4" icon={faGraduationCap} />
-              <p>
-                SMK Abdurahman Wahid [computer and network engineer]{" "}
-                <span className="text-bold text-slate-100">(2021 - 2024)</span>
-              </p>
-            </li>
-          </ul>
-        </div>
-
-        <div className="p-4 bg-rose-600 rounded-md">
-          <h1 className="text-bold text-slate-50 capitalize text-md md:text-lg lg:text-xl">
-            biodata
-          </h1>
-          <ul className="flex flex-col items-start text-slate-100">
-            <li className="flex gap-2 text-semibold items-center ">
-              <FontAwesomeIcon className="w-4 h-4" icon={faCakeCandles} />
-              <p>
-                Age:{" "}
-                <span className="text-bold text-slate-100">
-                  {age} Years Old
-                </span>
-              </p>
-            </li>
-            <li className="flex gap-2 text-semibold items-center ">
-              <FontAwesomeIcon className="w-4 h-4" icon={faLocationDot} />
-              <p>
-                State:{" "}
-                <span className="text-bold text-slate-100">
-                  Lamongan, East Java
-                </span>
-              </p>
-            </li>
-            <li className="flex gap-2  items-center ">
-              <FontAwesomeIcon className="w-4 h-4" icon={faGamepad} />
-              <p className="truncate overflow-hidden w-64">
-                Hobbies:{" "}
-                <span className="text-bold text-slate-100">
-                  code, movies, anime, music, and cat
-                </span>
-              </p>
-            </li>
-          </ul>
-        </div>
+        <Item
+          className="bg-blue-600"
+          data={{
+            label: "education",
+            items: [
+              {
+                icon: faGraduationCap,
+                text: "sd putra Indonesia|(2012 - 2018)",
+              },
+              {
+                icon: faGraduationCap,
+                text: "smp al-amin surabaya|(2018 - 2021)",
+              },
+              {
+                icon: faGraduationCap,
+                text: "smk abdurahman wahid|(2021 - 2024)",
+              },
+            ],
+          }}
+        />
+        <Item
+          className="bg-rose-600"
+          data={{
+            label: "biodata",
+            items: [
+              {
+                icon: faCakeCandles,
+                text: `Age: |${age} Years Old`,
+              },
+              {
+                icon: faLocationDot,
+                text: `State: |Lamongan, East Java`,
+              },
+              {
+                icon: faGamepad,
+                text: `Hobbies: |code, movies, anime, music, and cat`,
+              },
+            ],
+          }}
+        />
       </div>
     </section>
   );

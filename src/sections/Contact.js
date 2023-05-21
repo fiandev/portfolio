@@ -1,8 +1,5 @@
 import { useState, useEffect } from "react";
-import {
-  faSpinner,
-  faPaperPlane,
-} from "@fortawesome/free-solid-svg-icons";
+import { faSpinner, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import ItemContact from "../partials/ItemContact";

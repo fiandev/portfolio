@@ -8,21 +8,19 @@ const Layout = ({ childrens }) => {
   const [Loading, SetLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => {
-      SetLoading(Loading => !Loading);
-    }, 2000);
-  }, []);
+    // todo
+  }, [Loading]);
 
-  return Loading ? (
-    <Preload />
-  ) : (
+  return (
     <div
       className="relative flex flex-col min-h-screen w-screen"
       onLoad={theme}
     >
+      {Loading ? <Preload /> : null}
+
       <Nav />
       <div className="w-full">
-        <Outlet />
+        <Outlet context={[SetLoading]} />
       </div>
     </div>
   );

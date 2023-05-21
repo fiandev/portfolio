@@ -15,7 +15,44 @@ module.exports = {
         main: "#5da2ff",
         transparent: 'transparent',
         current: 'currentColor'
-      }
+      },
+      keyframes: {
+        lazy: {
+          '0%': { 
+            display: 'hidden',
+            opacity: '0',
+          },
+          '100%': {
+            display: 'auto',
+            opacity: '1',
+          },
+        },
+        fadeInLeft: {
+          '0%': { 
+            translate: 'translateX(-60%)',
+            opacity: '0',
+          },
+          '100%': {
+            translate: 'translate(0)',
+            opacity: '1',
+          },
+        },
+        fadeInRight: {
+          '0%': { 
+            translate: 'translateX(60%)',
+            opacity: '0',
+          },
+          '100%': {
+            translate: 'translate(0)',
+            opacity: '1',
+          },
+        },
+      },
+      animation: {
+        "lazy": `lazy 1000ms ease-in-out`,
+        "fadeInLeft": `fadeInLeft 1000ms ease-in-out`,
+        "fadeInRight": `fadeInRight 1000ms ease-in-out`,
+      },
     },
   },
   plugins: [],
