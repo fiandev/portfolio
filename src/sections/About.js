@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGraduationCap,
-  faCalendarDays,
+  faGamepad,
   faCakeCandles,
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
@@ -50,21 +50,21 @@ const About = ({ about, className }) => {
           </h1>
           <ul className="flex flex-col items-start text-slate-100">
             <li className="flex gap-2 text-semibold items-center">
-              <FontAwesomeIcon icon={faGraduationCap} />
+              <FontAwesomeIcon className="w-4 h-4" icon={faGraduationCap} />
               <p>
                 SD Putra Indonesia{" "}
                 <span className="text-bold text-slate-100">(2012 - 2018)</span>
               </p>
             </li>
             <li className="flex gap-2 text-semibold items-center">
-              <FontAwesomeIcon icon={faGraduationCap} />
+              <FontAwesomeIcon className="w-4 h-4" icon={faGraduationCap} />
               <p>
                 SMP Al-Amin Surabaya{" "}
                 <span className="text-bold text-slate-100">(2018 - 2021)</span>
               </p>
             </li>
             <li className="flex gap-2 text-semibold items-center">
-              <FontAwesomeIcon icon={faGraduationCap} />
+              <FontAwesomeIcon className="w-4 h-4" icon={faGraduationCap} />
               <p>
                 SMK Abdurahman Wahid [computer and network engineer]{" "}
                 <span className="text-bold text-slate-100">(2021 - 2024)</span>
@@ -79,14 +79,7 @@ const About = ({ about, className }) => {
           </h1>
           <ul className="flex flex-col items-start text-slate-100">
             <li className="flex gap-2 text-semibold items-center ">
-              <FontAwesomeIcon icon={faCalendarDays} />
-              <p>
-                Birthdate:{" "}
-                <span className="text-bold text-slate-100">13 June 2005</span>
-              </p>
-            </li>
-            <li className="flex gap-2 text-semibold items-center ">
-              <FontAwesomeIcon icon={faCakeCandles} />
+              <FontAwesomeIcon className="w-4 h-4" icon={faCakeCandles} />
               <p>
                 Age:{" "}
                 <span className="text-bold text-slate-100">
@@ -95,11 +88,20 @@ const About = ({ about, className }) => {
               </p>
             </li>
             <li className="flex gap-2 text-semibold items-center ">
-              <FontAwesomeIcon icon={faLocationDot} />
+              <FontAwesomeIcon className="w-4 h-4" icon={faLocationDot} />
               <p>
                 State:{" "}
                 <span className="text-bold text-slate-100">
                   Lamongan, East Java
+                </span>
+              </p>
+            </li>
+            <li className="flex gap-2  items-center ">
+              <FontAwesomeIcon className="w-4 h-4" icon={faGamepad} />
+              <p className="truncate overflow-hidden w-64">
+                Hobbies:{" "}
+                <span className="text-bold text-slate-100">
+                  code, movies, anime, music, and cat
                 </span>
               </p>
             </li>

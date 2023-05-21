@@ -15,14 +15,18 @@
     "dotenv": "^16.0.3",
     "prettier": "^2.8.8",
     "react": "^18.2.0",
+    "react-app-rewired": "^2.2.1",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.0",
     "react-scripts": "5.0.1",
+    "rewire": "^6.0.0",
     "web-vitals": "^3.1.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "build:bundle": "node bundle.js",
+    "test": "react-app-rewired test",
     "prettier": "prettier ./src/**/*.js -w",
     "prettier:build": "prettier ./build/**/*.{js,html,css,json} -w"
   },
