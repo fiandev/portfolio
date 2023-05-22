@@ -19,7 +19,9 @@ export default function Item ({ children, data, className }) {
                       <FontAwesomeIcon className="w-4 h-4" icon={item.icon} />
                       <p>
                         { item.text.split("|")[0] }
-                        <span className="text-bold text-slate-100">{ item.text.split("|").pop() }}</span>
+                        <span className="text-bold text-slate-100">
+                          { item.text.split("|").pop() }
+                        </span>
                       </p>
                     </li>
                   )

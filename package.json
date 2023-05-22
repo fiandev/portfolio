@@ -15,19 +15,16 @@
     "dotenv": "^16.0.3",
     "prettier": "^2.8.8",
     "react": "^18.2.0",
-    "react-app-rewired": "^2.2.1",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.0",
-    "react-scripts": "5.0.1",
     "rewire": "^6.0.0",
     "terser-webpack-plugin": "^5.3.9",
     "web-vitals": "^3.1.1"
   },
   "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
-    "build:bundle": "node bundle.js",
-    "test": "react-app-rewired test",
+    "start": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
     "prettier": "prettier ./src/**/*.js -w",
     "prettier:build": "prettier ./build/**/*.{js,html,css,json} -w"
   },
@@ -50,11 +47,12 @@
     ]
   },
   "devDependencies": {
-    "@webpack-cli/generators": "^3.0.4",
-    "autoprefixer": "^10.4.13",
+    "@vitejs/plugin-react": "^4.0.0",
+    "autoprefixer": "^10.4.14",
     "eruda": "^3.0.0",
-    "postcss": "^8.4.21",
+    "postcss": "^8.4.23",
     "tailwindcss": "^3.2.7",
-    "webpack-cli": "^5.1.1"
+    "vite": "^4.3.8",
+    "vite-plugin-svgr": "^3.2.0"
   }
 }

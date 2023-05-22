@@ -23,9 +23,7 @@ const Profile = ({ Data }) => {
       <div className="group flex items-center justify-center lg:justify-between lg:px-8">
         <Shapes className="h-48 w-48 max-w-48 max-h-48 p-4 relative bg-gradient-to-b from-sky-500 to-violet-400 border shadow-md p-8 overflow-hidden flex justify-center items-center">
           <img
-            className={`${
-              Data ? "animation-none" : "animation-pulse"
-            } w-full h-full shadow-md rounded-full border-2 border-sky-400`}
+            className={ `${ Data ? "animation-none" : "animation-pulse" } w-full h-full shadow-md rounded-full border-2 border-sky-400` }
             alt="my avatar"
             src={Data ? Data.avatar.base64 : ""}
           />

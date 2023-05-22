@@ -1,26 +1,87 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Webpack App</title>
-    </head>
-    <body>
-        <h1>Hello world!</h1>
-        <h2>Tip: Check your console</h2>
-    </body>
+<html lang="en">
+  <head>
+    <!-- Google SEO  -->
+    <meta name="google-site-verification" content="6JyPQefQInzqKGO1cXqAmDMa7gPZoqFRdjIDSyFkRo8" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PNHKC77');</script>
     
-    <script>
-        if ("serviceWorker" in navigator) {
-            window.addEventListener("load", () => {
-                navigator.serviceWorker
-                    .register("service-worker.js")
-                    .then((registration) => {
-                        console.log("Service Worker registered: ", registration);
-                    })
-                    .catch((registrationError) => {
-                        console.error("Service Worker registration failed: ", registrationError);
-                    });
-            });
-        }
-    </script>
+    <!-- Primary Meta Tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#067aff" />
+    <meta name="msapplication-navbutton-color" content="#067aff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#067aff">
+    <meta name="google" content="nositelinkssearchbox" />
+    <meta name="description" content="Hi, I'm Fian junior fullstack web developer">
+    
+    <meta name="keywords" content="fiandev, portfolio, frontend, backend, web developer, developer, coder, programmer, freelancer, Fian">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="english">
+    <meta name="revisit-after" content=" days">
+    <meta name="author" content="fiandev">
+    <meta name="hostname" content="vercel.app">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:site_name" content="fiandev portfolio">
+    <meta property="og:title" content="fiandev portfolio">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fiandev.vercel.app/">
+    <meta property="og:title" content="fiandev portfolio">
+    <meta property="og:description" content="Hi, I'm Fian junior fullstack web developer">
+    <meta property="og:image" content="/icon.png">
+    <meta property="og:image:secure_url" content="/icon.png">
+    <meta property="og:image:alt" content="fiandev photo's">
+    <meta property="article:section" content="fiandev">
+    <meta property="article:author" content="fiandev">
+    <meta property="article:tag" content="fiandev">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://fiandev.vercel.app">
+    <meta property="twitter:title" content="fiandev portfolio">
+    <meta property="twitter:description" content="Hi, I'm Fian junior fullstack web developer">
+    <meta property="twitter:image" content="/icon.png">
+    
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://www.google.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.google.com" crossorigin>
+  
+    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+    <link rel="preconnect" href="https://stats-g-doubleclick.net" crossorigin>
+    
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://www.vercel.app">
+    <link rel="dns-prefetch" href="https://www.google.com">
+    <link rel="dns-prefetch" href="https://i.ibb.co/">
+    
+    <link rel="canonical" href="https://fiandev.vercel.app/">
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="fiandev portfolio">
+  
+    <!-- Icons -->
+    <link rel="icon" href="/icon.png" />
+    <link rel="apple-touch-icon" href="/icon.png" />
+    
+    <!-- itemprop -->
+    <meta itemprop="image" content="/icon.png">
+    <meta itemprop="name" content="fiandev portfolio">
+    
+    <!-- Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Title -->
+    <title>fiandev portfolio</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="module" src="./src/index.jsx"></script>
+  </body>
 </html>
