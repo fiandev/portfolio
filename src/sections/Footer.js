@@ -27,7 +27,7 @@ export default function Footer() {
           </p>
         </div>
       </ViewportArea>
-      <img alt="wave animation" src={WaveAnimate} className="m-0 p-0" />
+      <img className="w-max h-max" alt="wave animation" src={WaveAnimate} className="m-0 p-0" />
     </section>
   );
 }
