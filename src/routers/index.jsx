@@ -1,12 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
+import Preload from "../layouts/Preload";
 
 const Layout = lazy(() => import("../layouts/index"));
 const Home = lazy(() => import("../pages/Home"));
 
 export default function Router() {
   return (
-    <Suspense>
+    <Suspense fallback={<Preload />}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>

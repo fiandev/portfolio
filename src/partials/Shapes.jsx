@@ -17,12 +17,12 @@ const Shapes = ({ className, children }) => {
   };
 
   return (
-    <div
+    <template
       style={style}
       className={`transition-all duration-1000 delay-200 flex justify-center items-center ${className}`}
     >
       {children}
-    </div>
+    </template>
   );
 };
 

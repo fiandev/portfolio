@@ -22,13 +22,11 @@ const Profile = ({ Data }) => {
     >
       <div className="group flex items-center justify-center lg:justify-between lg:px-8">
         <Shapes className="h-48 w-48 max-w-48 max-h-48 p-4 relative bg-gradient-to-b from-sky-500 to-violet-400 border shadow-md p-8 overflow-hidden flex justify-center items-center">
-          <template className="w-full h-full">
-            <img
-              className={ `${ Data ? "animation-none" : "animation-pulse" } w-full h-full shadow-md rounded-full border-2 border-sky-400` }
-              alt="my avatar"
-              src={Data ? Data.avatar.base64 : ""}
-            />
-          </template>
+          <img
+            className={ `${ Data ? "animation-none" : "animation-pulse" } w-full h-full shadow-md rounded-full border-2 border-sky-400` }
+            alt="my avatar"
+            src={Data ? Data.avatar.base64 : ""}
+          />
         </Shapes>
       </div>
 
@@ -47,7 +45,7 @@ const Profile = ({ Data }) => {
         <a
           name="contact me"
           href="https:///t.me/fiandev"
-          className="transition-all duration-800 text-sm lg:text-md w-fit h-fit px-4 py-2 rounded-sm text-slate-100 bg-blue-400 shadow-lg outline outline-inherit hover:outline-blue-600 hover:outline-offset-2 hover:rounded-full hover:bg-gradient-to-r hover:from-blue-600 hover:to-sky-400 capitalize"
+          className="transition-all duration-800 text-sm lg:text-md w-fit h-fit px-4 py-2 rounded-sm text-slate-100 bg-blue-500 shadow-lg outline outline-inherit hover:outline-blue-600 hover:outline-offset-2 hover:rounded-full hover:bg-gradient-to-r hover:from-blue-600 hover:to-sky-400 capitalize"
         >
           contact me
         </a>

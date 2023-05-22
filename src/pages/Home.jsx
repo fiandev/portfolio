@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { useOutletContext } from "react-router";
 
 import Profile from "../sections/Profile";
 import About from "../sections/About";
@@ -15,7 +14,6 @@ export default function Home() {
   let [Data, SetData] = useState(null);
   let [IsError, SetIsError] = useState(false);
   let [Exception, SetException] = useState(null);
-  const [SetLoading] = useOutletContext();
 
   useEffect(() => {
     let res = fetch("/data/data.json");
@@ -24,7 +22,6 @@ export default function Home() {
       .then((response) => response.json())
       .then((result) => {
         SetData(result.data);
-        setTimeout(() => SetLoading(false), 2000);
       })
       .catch((err) => {
         SetIsError(true);
