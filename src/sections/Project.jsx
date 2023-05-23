@@ -16,7 +16,6 @@ const Project = ({ projects, className }) => {
   }, [currentPage, projects]);
 
   return (
-    <ViewportArea>
       <section
         id="project"
         className={`bg-main p-4 lg:py-8 transition-all duration-500 flex flex-col gap-4 justify-start items-center ${className}`}
@@ -28,14 +27,16 @@ const Project = ({ projects, className }) => {
           {currentData ? (
             currentData.map((project) => {
               return (
-                <Item
-                  link={project.preview}
-                  stacks={project.stacks}
-                  repo={project.repository}
-                  thumbnail={project.thumbnail}
-                  title={project.title}
-                  description={project.description}
-                />
+                <ViewportArea>
+                  <Item
+                    link={project.preview}
+                    stacks={project.stacks}
+                    repo={project.repository}
+                    thumbnail={project.thumbnail}
+                    title={project.title}
+                    description={project.description}
+                  />
+                </ViewportArea>
               );
             })
           ) : (
@@ -51,7 +52,6 @@ const Project = ({ projects, className }) => {
           onPageChange={(page) => setCurrentPage(page)}
         />
       </section>
-    </ViewportArea>
   );
 };
 

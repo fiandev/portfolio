@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
+import { Markup } from 'interweave';
+
 import Theme from "../contexts/Theme";
 import Shapes from "../partials/Shapes";
+import Image from "../partials/Image";
 
 const Profile = ({ Data }) => {
   const [IsDark /* SetIsDark */] = useState(Theme());
@@ -22,32 +25,31 @@ const Profile = ({ Data }) => {
     >
       <div className="group flex items-center justify-center lg:justify-between lg:px-8">
         <Shapes className="h-48 w-48 max-w-48 max-h-48 lg:max-w-72 lg:max-h-72 lg:w-72 lg:h-72 p-4 relative bg-gradient-to-b from-sky-500 to-violet-400 border shadow-md p-8 overflow-hidden flex justify-center items-center">
-          <img
+          <Image
             className={`${
               Data ? "animation-none" : "animation-pulse"
             } w-full h-full shadow-md rounded-full border-2 border-sky-400`}
             alt="my avatar"
-            src={Data ? Data.avatar.base64 : ""}
+            srcset={Data ? Data.avatar.base64 : ""}
           />
         </Shapes>
       </div>
 
       <div className="relative w-full lg:w-90 flex flex-col items-center lg:items-start gap-2">
-        <div className="text-shadow-md text-2xl lg:text-3xl font-bold font-mono bg-clip-text text-transparent bg-gradient-to-r from-blue-200 to-sky-600 text-center lg:text-start">
+        <h1 className="text-shadow-md text-2xl lg:text-3xl capitalize font-bold font-mono bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-sky-600 text-center lg:text-start">
           {Data ? Data.name : "loading ..."}
-        </div>
-        <p className="dark:text-slate-100 mx-4 lg:mx-0 text-sm md:w-1/2 md:text-lg lg:text-3xl lg:text-md font-light font-serif text-center lg:text-start">
-          {Data
-            ? Data.slogan
-              ? Data.slogan
-              : "hi I'm Fian junior fullstack web developer from Indonesia 🇮🇩"
-            : "loading ..."}
+        </h1>
+        <p className="dark:text-slate-100 mx-4 lg:mx-0 text-sm md:w-1/2 md:text-lg lg:text-2xl font-light font-serif text-center lg:text-start">
+          {
+            Data ? <Markup content={ Data.formatted_slogan } />
+            : "loading ..."
+          }
         </p>
 
         <a
           name="contact me"
           href="https:///t.me/fiandev"
-          className="transition-all duration-800 text-sm lg:text-md w-fit h-fit px-4 py-2 rounded-sm text-slate-100 bg-blue-500 shadow-lg outline outline-inherit hover:outline-blue-600 hover:outline-offset-2 hover:rounded-full hover:bg-gradient-to-r hover:from-blue-600 hover:to-sky-400 capitalize"
+          className="transition-all duration-800 text-sm lg:text-md w-fit h-fit px-4 py-2 rounded-sm text-slate-100 bg-blue-800 dark:bg-blue-600 shadow-lg outline outline-inherit hover:outline-blue-600 hover:outline-offset-2 hover:rounded-full hover:bg-gradient-to-r hover:from-blue-600 hover:to-sky-400 capitalize"
         >
           contact me
         </a>

@@ -7,3 +7,19 @@ section {
   flex-direction: column;
   align-items: center;
 }
+
+b, strong {
+  font-weight: bold;
+}
+
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
