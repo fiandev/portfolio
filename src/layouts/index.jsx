@@ -11,7 +11,7 @@ const Layout = ({ childrens }) => {
     >
       <Nav />
       <div className="w-full">
-        <Outlet  />
+        <Outlet />
       </div>
     </div>
   );

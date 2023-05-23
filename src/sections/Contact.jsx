@@ -50,7 +50,7 @@ export default function Contact({ links, className }) {
         connect with me
       </h1>
 
-      <div className="grid grid-cols-2 gap-4 auto-cols-auto place-items-center">
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5 place-items-center">
         {links ? (
           links.map((link) => (
             <ItemContact
@@ -66,7 +66,7 @@ export default function Contact({ links, className }) {
         )}
       </div>
 
-      <div className="w-full px-2 md:px-4 lg:px-8 grid gap-4 place-items-center md:grid-cols-2">
+      <div className="px-2 flex flex-col w-full px-2 md:w-1/2">
         <form
           onSubmit={(e) => contactHandler(e)}
           className="flex flex-col gap-2 w-full py-4"
@@ -126,18 +126,6 @@ export default function Contact({ links, className }) {
             Send
           </button>
         </form>
-
-        <iframe
-          className="shadow-lg outline outline w-[20rem] h-[20rem] hidden md:block rounded-lg outline-gray-400"
-          src={env(
-            "REACT_IFRAME_GMAPS",
-            "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d247.46967054372496!2d112.3358415452334!3d-7.066158695136858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1674358534566!5m2!1sid!2sid"
-          )}
-          title="gmaps iframe"
-          allowFullScreen="no"
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
       </div>
     </section>
   );

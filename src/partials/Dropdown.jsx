@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import { faCaretUp, faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 export default function Dropdown({ className, children, text }) {
   let [IsActive, SetIsActive] = useState(false);
@@ -18,7 +18,7 @@ export default function Dropdown({ className, children, text }) {
         className={`${className} px-2 flex justify-between items-center w-full lg:w-auto lg:gap-4 text-sky-800 font-semibold hover:text-main bg-transparent hover:bg-sky-100 hover:rounded-md ${className}`}
       >
         {text}
-        <FontAwesomeIcon icon={faCaretDown} />
+        <FontAwesomeIcon icon={IsActive ? faCaretUp : faCaretDown} />
       </div>
       <ul
         className={`${

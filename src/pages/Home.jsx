@@ -16,7 +16,7 @@ export default function Home() {
   let [Exception, SetException] = useState(null);
 
   useEffect(() => {
-    let res = fetch("/data/data.json");
+    let res = fetch("/data/fiandev.json");
 
     res
       .then((response) => response.json())
@@ -31,11 +31,11 @@ export default function Home() {
 
   if (!Data) return null;
 
-  return !IsError ? (
+  return !IsError && Data ? (
     <div className={`pt-2 scroll-smooth relative`}>
       <Profile Data={Data} />
       <ScrollableArea className="h-fit">
-        <About className="lg:px-[10vw]" about={Data?.about} />
+        <About className="lg:px-[10vw]" data={Data} />
       </ScrollableArea>
 
       <ViewportArea specialKey={randomID()}>

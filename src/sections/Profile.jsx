@@ -21,9 +21,11 @@ const Profile = ({ Data }) => {
       } bg-slate-200 dark:bg-slate-900 bg-fixed relative w-screen pt-20 h-screen md:min-h-screen flex flex-col gap-2 items-center lg:flex-row-reverse md:justify-center lg:px-24`}
     >
       <div className="group flex items-center justify-center lg:justify-between lg:px-8">
-        <Shapes className="h-48 w-48 max-w-48 max-h-48 p-4 relative bg-gradient-to-b from-sky-500 to-violet-400 border shadow-md p-8 overflow-hidden flex justify-center items-center">
+        <Shapes className="h-48 w-48 max-w-48 max-h-48 lg:max-w-72 lg:max-h-72 lg:w-72 lg:h-72 p-4 relative bg-gradient-to-b from-sky-500 to-violet-400 border shadow-md p-8 overflow-hidden flex justify-center items-center">
           <img
-            className={ `${ Data ? "animation-none" : "animation-pulse" } w-full h-full shadow-md rounded-full border-2 border-sky-400` }
+            className={`${
+              Data ? "animation-none" : "animation-pulse"
+            } w-full h-full shadow-md rounded-full border-2 border-sky-400`}
             alt="my avatar"
             src={Data ? Data.avatar.base64 : ""}
           />
@@ -34,7 +36,7 @@ const Profile = ({ Data }) => {
         <div className="text-shadow-md text-2xl lg:text-3xl font-bold font-mono bg-clip-text text-transparent bg-gradient-to-r from-blue-200 to-sky-600 text-center lg:text-start">
           {Data ? Data.name : "loading ..."}
         </div>
-        <p className="dark:text-slate-100 mx-4 lg:mx-0 text-sm lg:text-md font-light font-serif text-center lg:text-start">
+        <p className="dark:text-slate-100 mx-4 lg:mx-0 text-sm md:w-1/2 md:text-lg lg:text-3xl lg:text-md font-light font-serif text-center lg:text-start">
           {Data
             ? Data.slogan
               ? Data.slogan

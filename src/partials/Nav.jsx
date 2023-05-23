@@ -2,6 +2,7 @@ import { useState } from "react";
 import Hamburger from "./Hamburger";
 import NavLink from "./NavLink";
 import Dropdown from "./Dropdown";
+import { request } from "../utils/functions";
 
 export default function Nav() {
   const [IsActive, SetIsActive] = useState(false);
@@ -32,17 +33,15 @@ export default function Nav() {
         } overflow-y-hidden lg:overflow-y-visible lg:max-h-fit flex-col lg:flex-row`}
       >
         <ul className="flex py-2.5 lg:py-0 w-full flex-col lg:flex-row lg:items-center lg:justify-end lg:gap-2 uppercase">
-          <Dropdown className="p-2 lg:py-0" text="home">
-            <NavLink to="#profile" className="p-2">
-              Profile
-            </NavLink>
-            <NavLink to="#home" className="p-2">
-              About
-            </NavLink>
-          </Dropdown>
-          <NavLink className="p-2 lg:py-0" to="/">
-            Articles
-          </NavLink>
+          {request("/") ? (
+            <Dropdown className="p-2 lg:py-0" text="home">
+              <NavLink to="#profile" text="profile" className="p-2" />
+              <NavLink to="#about" text="about" className="p-2" />
+            </Dropdown>
+          ) : (
+            <NavLink text="Home" to="/" className="p-2" />
+          )}
+          <NavLink text="services" to="/services" className="p-2" />
         </ul>
       </div>
     </nav>

@@ -3,5 +3,4 @@ import App from "./App";
 
 test("check data", () => {
   render(<App />);
-  
 });

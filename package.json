@@ -25,7 +25,7 @@
     "start": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "prettier": "prettier ./src/**/*.js -w",
+    "prettier": "prettier ./src/**/*.{js,jsx,tsx,ts} -w",
     "prettier:build": "prettier ./build/**/*.{js,html,css,json} -w"
   },
   "eslintConfig": {

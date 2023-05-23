@@ -47,3 +47,9 @@ export const randomID = (len = 4) => {
     result += arr[Math.floor(Math.random() * arr.length)];
   return result;
 };
+
+export const request = (path) => {
+  let url = new URL(window.location.href);
+
+  return !path ? url.pathname : path === url.pathname;
+};
