@@ -16,7 +16,7 @@ export default function Home() {
   let [Exception, SetException] = useState(null);
 
   useEffect(() => {
-    let res = fetch("/data/fiandev.json");
+    let res = fetch("/data/data.json");
 
     res
       .then((response) => response.json())
