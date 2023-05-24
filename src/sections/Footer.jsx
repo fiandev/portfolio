@@ -3,6 +3,7 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 import ViewportArea from "../components/interactive/ViewportArea";
 import WaveAnimate from "../assets/svg/WaveAnimate.svg";
+import Image from "../partials/Image";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -14,7 +15,7 @@ export default function Footer() {
     >
       <ViewportArea>
         <div className="absolute inset-0 flex flex-col justify-center items-center text-center">
-          <p className="text-md font-serif text-slate-50">
+          <p className="text-lg font-serif text-slate-50">
             built with{" "}
             <FontAwesomeIcon icon={faHeart} className="text-rose-400" /> by{" "}
             <span className="font-semibold text-sky-800 dark:text-sky-400 hover:underline">
@@ -27,10 +28,10 @@ export default function Footer() {
           </p>
         </div>
       </ViewportArea>
-      <img
+      <Image
         className="w-max h-max m-0 p-0"
         alt="wave animation"
-        src={WaveAnimate}
+        srcset={WaveAnimate}
       />
     </section>
   );

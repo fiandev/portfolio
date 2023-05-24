@@ -4,7 +4,7 @@ import Item from "../partials/portfolio/Item";
 import Pagination from "../partials/Pagination";
 import ViewportArea from "../components/interactive/ViewportArea";
 
-let PageSize = 3;
+let PageSize = 6;
 
 const Project = ({ projects, className }) => {
   const [currentPage, setCurrentPage] = useState(1);

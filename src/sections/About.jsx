@@ -39,14 +39,14 @@ const About = ({ data, className }) => {
         <div
           className={`${
             !formatted_about ? "animate-pulse" : "animate-none"
-          } md:text-center dark:text-slate-50 lg:text-2xl font-light font-serif`}
+          } md:text-center dark:text-slate-50 text-lg lg:text-xl xl:text-2xl font-light font-serif`}
         >
           <Markup content={ formatted_about } />
         </div>
 
-        <div className="w-full h-fit py-4 items-center grid px-auto md:grid-cols-2 gap-4 text-md">
+        <div className="w-full h-fit py-4 items-center grid px-auto md:grid-cols-2 gap-4">
           <Item
-            className="bg-rose-600 no-scrollbar"
+            className="bg-rose-600"
             data={{
               label: "my skills",
               items: skills.map((skill) => {
@@ -76,7 +76,7 @@ const About = ({ data, className }) => {
                 },
                 {
                   icon: faGraduationCap,
-                  text: `Education: | High school (computer and network engineering)`,
+                  text: `Education: | High school`,
                 },
                 {
                   icon: faGamepad,
