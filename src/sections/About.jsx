@@ -6,7 +6,7 @@ import {
   faLocationDot,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
-import { Markup } from 'interweave';
+import { Markup } from "interweave";
 
 import countdown from "../utils/time";
 import Item from "../partials/about/Item";
@@ -41,7 +41,7 @@ const About = ({ data, className }) => {
             !formatted_about ? "animate-pulse" : "animate-none"
           } md:text-center dark:text-slate-50 text-lg lg:text-xl xl:text-2xl font-light font-serif`}
         >
-          <Markup content={ formatted_about } />
+          <Markup content={formatted_about} />
         </div>
 
         <div className="w-full h-fit py-4 items-center grid px-auto md:grid-cols-2 gap-4">

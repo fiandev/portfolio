@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Markup } from 'interweave';
+import { Markup } from "interweave";
 
 import Theme from "../contexts/Theme";
 import Shapes from "../partials/Shapes";
@@ -40,10 +40,7 @@ const Profile = ({ Data }) => {
           {Data ? Data.name : "loading ..."}
         </h1>
         <p className="dark:text-slate-100 mx-4 lg:mx-0 text-sm md:w-1/2 lg:w-full md:text-lg lg:text-2xl font-light font-serif text-center lg:text-start">
-          {
-            Data ? <Markup content={ Data.formatted_slogan } />
-            : "loading ..."
-          }
+          {Data ? <Markup content={Data.formatted_slogan} /> : "loading ..."}
         </p>
 
         <a

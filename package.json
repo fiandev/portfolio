@@ -26,6 +26,7 @@
     "start": "vite",
     "build": "vite build",
     "serve": "vite preview",
+    "push": "vite build && cd $HOME/fiandev.github.io && rm assets/* -r && cp $HOME/portfolio/build/* . -r",
     "prettier": "prettier ./src/**/*.{js,jsx,tsx,ts} -w",
     "prettier:build": "prettier ./build/**/*.{js,html,css,json} -w"
   },

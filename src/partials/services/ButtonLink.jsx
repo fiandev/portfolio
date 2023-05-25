@@ -1,11 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function ButtonLink({ link, icon, label, name }) {
+export default function ButtonLink({ link, icon, label = "no label", name, className }) {
   return (
     <a
       href={link || "#"}
-      name={name || "no name"}
-      className="group/button flex gap-2 items-center transition-all duration-800 text-sm lg:text-md w-fit h-fit p-2 rounded-sm text-slate-50 bg-blue-400 outline outline-slate-900 hover:rounded-full"
+      name={name || label}
+      className={ `group/button flex gap-2 items-center transition-all duration-800 text-sm lg:text-md p-2 rounded-sm hover:rounded-full ${ className }` }
     >
       <FontAwesomeIcon
         className="transition-all group-hover/button:animate-bounce"

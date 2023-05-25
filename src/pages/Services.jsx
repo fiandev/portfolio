@@ -9,8 +9,8 @@ export default function Services() {
           <Item
             title="slicing design from figma"
             description="5$ / hours"
-            className="w-48 h-48 outline bg-blue-600"
-            thumbnail="https://images.unsplash.com/photo-1506097425191-7ad538b29cef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2xpY2luZyUyMGRlc2lnbnxlbnwwfDB8MHx8fDA%3D&auto=format&fit=crop&w=1920&q=1280"
+            className="w-48 h-48"
+            thumbnail="https://source.unsplash.com/random/1280x1280/?design"
           />
         </div>
       </section>

@@ -7,7 +7,11 @@ export default function Item({ children, data, className }) {
   return (
     data && (
       <ViewportArea>
-        <div className={`p-4 rounded-md flex flex-col gap-2 ${className || "bg-main"}`}>
+        <div
+          className={`p-4 rounded-md flex flex-col gap-2 ${
+            className || "bg-main"
+          }`}
+        >
           <h1 className="text-bold text-slate-50 capitalize text-lg lg:text-xl xl:text-2xl">
             {data.label}
           </h1>
@@ -15,9 +19,7 @@ export default function Item({ children, data, className }) {
             {data.items.map((item) => {
               return (
                 <li className="flex gap-2 text-semibold items-center">
-                  {item.icon ? (
-                    null
-                  ) : (
+                  {item.icon ? null : (
                     <Image
                       className="w-6 h-6"
                       alt={`${data.label}'s icon`}
@@ -25,9 +27,7 @@ export default function Item({ children, data, className }) {
                     />
                   )}
                   <div className="flex gap-1 justify-betweem">
-                    <p className="w-fit max-w-32">
-                      {item.text.split("|")[0]}
-                    </p>
+                    <p className="w-fit max-w-32">{item.text.split("|")[0]}</p>
                     <span className="text-bold text-slate-100">
                       {item.text.split("|").pop()}
                     </span>
