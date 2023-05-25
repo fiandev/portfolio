@@ -35,7 +35,7 @@ export default function ViewportArea({ specialKey, children, className }) {
     <div
       key={specialKey || randomID()}
       ref={element}
-      className={`w-full ${Show ? `${animate}` : ""}`}
+      className={`w-full ${ className } ${Show ? `${animate}` : ""}`}
     >
       {Show && children}
     </div>

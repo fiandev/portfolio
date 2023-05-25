@@ -23,12 +23,13 @@ const Project = ({ projects, className }) => {
       <h1 className="text-slate-50 text-3xl capitalize font-bold font-mono">
         My Projects
       </h1>
-      <div className="grid md:grid-cols-3 gap-4 place-items-center">
+      <div className="overflow-scroll w-screen px-2 flex flex-shrink-0 gap-2 md:grid md:grid-cols-3 md:gap-4 place-items-center">
         {currentData ? (
           currentData.map((project) => {
             return (
-              <ViewportArea>
+              <ViewportArea className="w-52 md:w-full h-72">
                 <Item
+                  className="w-52 md:w-full h-72"
                   link={project.preview}
                   stacks={project.stacks}
                   repo={project.repository}
