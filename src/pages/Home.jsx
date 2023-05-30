@@ -16,6 +16,18 @@ export default function Home() {
   let [Exception, SetException] = useState(null);
 
   useEffect(() => {
+    import("../assets/json/data.json")
+      .then((module) => {
+        let json = module.default;
+        SetData(json.data);
+      })
+      .catch((err) => {
+        SetException(err);
+      });
+  }, []);
+
+  /*
+  useEffect(() => {
     let res = fetch("/data/data.json");
 
     res
@@ -27,13 +39,12 @@ export default function Home() {
         SetIsError(true);
         SetException(err);
       });
-  }, []);
+  }, []);*/
 
   if (!Data) return null;
-
   return !IsError && Data ? (
     <div className={`pt-2 scroll-smooth relative`}>
-      <Profile Data={Data} />
+      <Profile data={Data} />
       <ScrollableArea className="h-fit">
         <About className="lg:px-[10vw]" data={Data} />
       </ScrollableArea>
@@ -74,8 +85,8 @@ export default function Home() {
     </div>
   ) : (
     <ErrorPage
-      code={Exception.code}
-      message={Exception.message}
+      code={Exception?.code || 500}
+      message={Exception?.message || "internal server error"}
       suggest="maybe backend server for this website is down please contact me at 't.me/fiandev'"
     />
   );

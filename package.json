@@ -27,7 +27,7 @@
     "build": "vite build",
     "serve": "vite preview",
     "push": "vite build && cd $HOME/fiandev.github.io && rm assets/* -r && cp $HOME/portfolio/build/* . -r",
-    "prettier": "prettier ./src/**/*.{js,jsx,tsx,ts} -w",
+    "prettier": "prettier ./src/**/*.{js,jsx,ts,tsx} -w",
     "prettier:build": "prettier ./build/**/*.{js,html,css,json} -w"
   },
   "eslintConfig": {
@@ -52,6 +52,7 @@
     "@vitejs/plugin-react": "^4.0.0",
     "autoprefixer": "^10.4.14",
     "eruda": "^3.0.0",
+    "json-loader": "^0.5.7",
     "postcss": "^8.4.23",
     "tailwindcss": "^3.2.7",
     "vite": "^4.3.8",

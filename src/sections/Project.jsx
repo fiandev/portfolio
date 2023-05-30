@@ -1,8 +1,12 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, lazy, Suspense } from "react";
 
-import Item from "../partials/portfolio/Item";
-import Pagination from "../partials/Pagination";
-import ViewportArea from "../components/interactive/ViewportArea";
+import Loading from "../partials/Loading";
+
+const Item = lazy(() => import("../partials/portfolio/Item"));
+const Pagination = lazy(() => import("../partials/Pagination"));
+const ViewportArea = lazy(() =>
+  import("../components/interactive/ViewportArea")
+);
 
 let PageSize = 6;
 
@@ -27,17 +31,19 @@ const Project = ({ projects, className }) => {
         {currentData ? (
           currentData.map((project) => {
             return (
-              <ViewportArea className="w-52 md:w-full h-72">
-                <Item
-                  className="w-52 md:w-full h-72"
-                  link={project.preview}
-                  stacks={project.stacks}
-                  repo={project.repository}
-                  thumbnail={project.thumbnail}
-                  title={project.title}
-                  description={project.description}
-                />
-              </ViewportArea>
+              <Suspense fallback={<Loading />}>
+                <ViewportArea className="w-52 md:w-full h-72">
+                  <Item
+                    className="w-52 md:w-full h-72"
+                    link={project.preview}
+                    stacks={project.stacks}
+                    repo={project.repository}
+                    thumbnail={project.thumbnail}
+                    title={project.title}
+                    description={project.description}
+                  />
+                </ViewportArea>
+              </Suspense>
             );
           })
         ) : (
