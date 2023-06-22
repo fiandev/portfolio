@@ -39,7 +39,7 @@ const About = ({ data, className }) => {
         <div
           className={`${
             !formatted_about ? "animate-pulse" : "animate-none"
-          } md:text-center dark:text-slate-50 text-lg lg:text-xl xl:text-2xl font-light font-serif`}
+          } md:text-center dark:text-slate-50 text-lg lg:text-xl xl:text-2xl font-light font-serif py-4`}
         >
           <Markup content={formatted_about} />
         </div>

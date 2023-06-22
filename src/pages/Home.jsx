@@ -6,6 +6,7 @@ import Project from "../sections/Project";
 import Contact from "../sections/Contact";
 import Footer from "../sections/Footer";
 import ErrorPage from "./ErrorPage";
+import HomePreview from "./HomePreview";
 import { ScrollableArea } from "../components/interactive/ScrollableArea";
 import { randomID } from "../utils/functions";
 import ViewportArea from "../components/interactive/ViewportArea";
@@ -26,22 +27,7 @@ export default function Home() {
       });
   }, []);
 
-  /*
-  useEffect(() => {
-    let res = fetch("/data/data.json");
-
-    res
-      .then((response) => response.json())
-      .then((result) => {
-        SetData(result.data);
-      })
-      .catch((err) => {
-        SetIsError(true);
-        SetException(err);
-      });
-  }, []);*/
-
-  if (!Data) return null;
+  if (!Data) return <HomePreview />;
   return !IsError && Data ? (
     <div className={`pt-2 scroll-smooth relative`}>
       <Profile data={Data} />
@@ -79,7 +65,10 @@ export default function Home() {
         </svg>
       </ViewportArea>
       <ViewportArea>
-        <Contact className="lg:px-[10vw]" links={Data?.links} />
+        <Contact
+          className="bg-slate-50 dark:bg-slate-900"
+          links={Data?.links}
+        />
       </ViewportArea>
       <Footer />
     </div>

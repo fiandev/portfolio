@@ -16,20 +16,20 @@ export default function Item({
     >
       <Image
         srcset={thumbnail}
-        className="hidden group-hover/item:block group-hover/item:scale-125 transition-all duration-1000 delay-500 group-hover/item:blur-sm absolute inset-0 h-max w-max"
+        className="group-hover/item:scale-125 group-hover/item:skew-x-3 transition-all duration-1000 group-hover/item:blur-sm absolute inset-0 w-max"
       />
-      <div className="relative flex flex-col gap-1 items-center">
-        <h1 className="hover:text-underline font-serif text-sm font-semibold text-slate-600 dark:text-slate-100 uppercase group-hover/item:text-slate-100">
-          {description}
-        </h1>
-        <p className="capitalize hover:underline lowercase truncate text-xs font-semibold text-slate-400 dark:text-slate-200 group-hover/item:text-slate-200">
+      <div className="absolute h-36 transition-all hover:h-full inset-x-0 bottom-0 bg-slate-100 flex flex-col gap-1 items-center justify-center">
+        <h1 className="group-hover/item:font-outline-0 hover:text-underline font-serif text-sm font-bold text-main uppercase">
           {title}
+        </h1>
+        <p className="capitalize hover:underline lowercase text-xs w-28 text-center font-semibold text-slate-800">
+          {description}
         </p>
 
         <ButtonLink
-          label="buy now"
+          label="order now"
           icon={faShop}
-          className="w-18 h-6 outline group-hover/item:bg-main group-hover/item:text-slate-200 group-hover/item:flex hidden"
+          className="flex scale-0 group-hover/item:scale-100 transition-transform w-18 h-6 text-xs uppercase outline delay-100 group-hover/item:bg-main group-hover/item:text-slate-200"
         />
       </div>
     </div>

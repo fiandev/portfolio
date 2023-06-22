@@ -22,4 +22,30 @@ b, strong {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
+  
+  .preview-content * {
+    background: transparent !important;
+    color: #c7c7c8 !important;
+    border: solid 0px !important;
+    @apply animate-pulse bg-transparent;
+  }
+  
+  .preview-content h1,
+  .preview-content p,
+  .preview-content a,
+  .preview-content img {
+    background: #c7c7c8 !important;
+  }
+  .preview-content img {
+    @apply animate-pulse;
+  }
+}
+
+@layer base {
+  .font-outline-0 {
+    -webkit-text-stroke: 0px #ffffff;
+  }
+  .font-outline {
+    -webkit-text-stroke: .5px #0036f1;
+  }
 }

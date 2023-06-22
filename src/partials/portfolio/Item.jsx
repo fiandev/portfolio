@@ -28,7 +28,7 @@ export default function Item({
         onError={setThumbnail}
         srcset={thumbnail ? thumbnail.base64 : ""}
         alt={title || "untitled"}
-        className="w-full h-36 md:w-48 lg:w-60 md:h-32 transition-all group-hover:scale-150 bg-sky-400"
+        className="w-full h-36 lg:w-full transition-all group-hover:scale-150 bg-sky-400"
       />
       <div className="transition-all group-hover:rounded-md group-hover:shadow-md absolute flex justify-center items-center bottom-0 w-full h-40 py-4 hover:h-full bg-slate-50 bg-slate-50">
         <div className="group/item flex flex-col items-center gap-2">

@@ -1,19 +1,24 @@
-import Item from "../partials/services/Item";
+import ServiceList from "../sections/ServiceList";
+import Contact from "../sections/Contact";
+import Footer from "../sections/Footer";
 
 export default function Services() {
   return (
-    <div className={`pt-2 scroll-smooth relative pt-20`}>
-      <section className="flex flex-col items-start px-4 gap-2">
-        <h1> frontend service </h1>
-        <div className="flex items-center shrink-0">
-          <Item
-            title="slicing design from figma"
-            description="5$ / hours"
-            className="w-48 h-48"
-            thumbnail="https://source.unsplash.com/random/1280x1280/?design"
-          />
-        </div>
-      </section>
+    <div className={`pt-8 scroll-smooth relative pt-2`}>
+      <ServiceList className="py-4" />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+        className="outline-0 border-0"
+      >
+        <path
+          className="fill-sky-100 dark:fill-slate-900"
+          fillOpacity="1"
+          d="M0,32L0,64L48,64L48,256L96,256L96,96L144,96L144,0L192,0L192,224L240,224L240,192L288,192L288,256L336,256L336,256L384,256L384,288L432,288L432,96L480,96L480,96L528,96L528,320L576,320L576,288L624,288L624,320L672,320L672,224L720,224L720,224L768,224L768,288L816,288L816,128L864,128L864,224L912,224L912,224L960,224L960,96L1008,96L1008,0L1056,0L1056,64L1104,64L1104,128L1152,128L1152,192L1200,192L1200,96L1248,96L1248,64L1296,64L1296,128L1344,128L1344,0L1392,0L1392,128L1440,128L1440,320L1392,320L1392,320L1344,320L1344,320L1296,320L1296,320L1248,320L1248,320L1200,320L1200,320L1152,320L1152,320L1104,320L1104,320L1056,320L1056,320L1008,320L1008,320L960,320L960,320L912,320L912,320L864,320L864,320L816,320L816,320L768,320L768,320L720,320L720,320L672,320L672,320L624,320L624,320L576,320L576,320L528,320L528,320L480,320L480,320L432,320L432,320L384,320L384,320L336,320L336,320L288,320L288,320L240,320L240,320L192,320L192,320L144,320L144,320L96,320L96,320L48,320L48,320L0,320L0,320Z"
+        ></path>
+      </svg>
+      <Contact className="bg-gradient-to-b from-sky-100 to-slate-50 dark:from-sky-900 dark:to-slate-900" />
+      <Footer />
     </div>
   );
 }

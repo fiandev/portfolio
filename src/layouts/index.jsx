@@ -10,7 +10,7 @@ const Layout = ({ childrens }) => {
       onLoad={theme}
     >
       <Nav />
-      <div className="w-full">
+      <div className="w-full pt-10 md:pt-14 lg:pt-10">
         <Outlet />
       </div>
     </div>
