@@ -12,17 +12,17 @@ export default function Item({
   return (
     <div
       href={link || "#"}
-      className={`${className} relative group/item hover:bg-sky-400 dark:hover:bg-slate-900 dark:bg-main hover:font-bold outline outline-main outline-sm hover:outline-md hover:outline-gray-800 dark:hover:outline-slate-50 rounded-md shadow-gray-900 dark:shadow-slate-100 w-28 w-max-28 h-24 p-4 flex flex-col gap-1 text-center justify-center border-main overflow-hidden`}
+      className={`${className} relative group/item hover:font-bold outline outline-main outline-sm hover:outline-md hover:outline-gray-800 dark:hover:outline-slate-50 rounded-md shadow-gray-900 dark:shadow-slate-100 w-28 w-max-28 h-24 p-4 flex flex-col gap-1 text-center justify-center border-main overflow-hidden`}
     >
       <Image
         srcset={thumbnail}
         className="group-hover/item:scale-125 group-hover/item:skew-x-3 transition-all duration-1000 group-hover/item:blur-sm absolute inset-0 w-max"
       />
-      <div className="absolute h-36 transition-all hover:h-full inset-x-0 bottom-0 bg-slate-100 flex flex-col gap-1 items-center justify-center">
+      <div className="absolute h-36 transition-all hover:h-full inset-x-0 bottom-0 bg-slate-100 dark:bg-slate-800 flex flex-col gap-1 items-center justify-center">
         <h1 className="group-hover/item:font-outline-0 hover:text-underline font-serif text-sm font-bold text-main uppercase">
           {title}
         </h1>
-        <p className="capitalize hover:underline lowercase text-xs w-28 text-center font-semibold text-slate-800">
+        <p className="capitalize hover:underline lowercase text-xs w-28 text-center font-semibold text-slate-800 dark:text-slate-100">
           {description}
         </p>
 

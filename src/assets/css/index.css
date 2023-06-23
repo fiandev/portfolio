@@ -48,4 +48,17 @@ b, strong {
   .font-outline {
     -webkit-text-stroke: .5px #0036f1;
   }
+  
+  .nav-link {
+    @apply bg-sky-100 rounded-md text-main bg-transparent
+           dark:bg-transparent text-main dark:text-slate-100;
+  }
+  .nav-link:hover {
+    @apply text-sky-800 dark:text-slate-100;
+  }
+  .nav-link-active {
+    @apply text-sky-800 rounded-md
+          dark:hover:text-slate-100 dark:bg-sky-400 dark:text-slate-100;
+  }
+  
 }

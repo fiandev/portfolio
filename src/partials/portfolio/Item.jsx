@@ -35,7 +35,7 @@ export default function Item({
           <p className="text-slate-800 text-center text-sm md:text-lg lg:text-xl font-serif text-bold px-2 h-6 max-h-6 overflow-hidden">
             {title || "untitled project"}
           </p>
-          <p className="text-slate-800 text-center text-xs md:text-sm lg:text-lg font-serif text-bold px-2 h-12 max-h-12 lg:h-6 lg:max-h-6 overflow-y-scroll">
+          <p className="no-scrollbar text-slate-800 text-center text-xs md:text-sm lg:text-lg font-serif text-bold px-2 h-12 max-h-12 lg:h-12 lg:max-h-6 overflow-y-scroll">
             {description || "no description"}
           </p>
           {stacks ? (
