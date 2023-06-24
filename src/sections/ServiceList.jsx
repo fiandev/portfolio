@@ -12,7 +12,7 @@ const services = {
       title: "build rest full API",
       description: "build your rest api quickly and efficiently",
       thumbnail:
-        "https://heri.blog.uma.ac.id/wp-content/uploads/2020/11/Rest-API-768x580.png",
+        "https://staticassets.dreamfactory.com/blogs/restapi2.png?t=1527092313664",
     },
     {
       title: "seo optimization",

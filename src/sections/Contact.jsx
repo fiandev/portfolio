@@ -99,6 +99,7 @@ export default function Contact({ links, className }) {
           <FormFloating
             error={errors ? errors["sender"] : null}
             name="sender"
+            text="username"
             placeholder="write your username ..."
           />
           <FormFloating

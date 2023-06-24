@@ -1,6 +1,7 @@
 export default function FormFloating({
   type,
   name,
+  text,
   className,
   value,
   placeholder,
@@ -16,7 +17,7 @@ export default function FormFloating({
         htmlFor={name}
         className="transition-all group-hover/floating:text-sm text-md text-gray-400 group-hover/floating:font-light"
       >
-        {name}
+        {text || name}
       </label>
       {type === "textarea" ? (
         <textarea

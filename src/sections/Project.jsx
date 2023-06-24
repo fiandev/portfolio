@@ -24,8 +24,8 @@ const Project = ({ projects, className }) => {
       <h1 className="text-slate-50 text-3xl capitalize font-bold font-mono">
         My Projects
       </h1>
-      <div className="no-scrollbar overflow-scroll w-full flex flex-col items-center">
-        <div className="w-fit no-scrollbar overflow-scroll flex items-center flex-shrink-0 gap-2 md:grid md:grid-cols-3 md:gap-4 md:place-items-center">
+      <div className="no-scrollbar overflow-scroll w-full flex flex-col items-start md:items-center">
+        <div className="transition-all w-fit no-scrollbar overflow-scroll flex items-center flex-shrink-0 gap-2 md:grid md:grid-cols-3 md:gap-4 md:place-items-center">
           {currentData ? (
             currentData.map((project) => {
               return (
