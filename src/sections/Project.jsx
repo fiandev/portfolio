@@ -19,9 +19,9 @@ const Project = ({ projects, className }) => {
   return (
     <section
       id="project"
-      className={`bg-main p-4 lg:py-8 transition-all duration-500 flex flex-col gap-4 justify-start xl:justify-center items-center ${className}`}
+      className={`bg-sky-100 dark:bg-main p-4 lg:py-8 transition-all duration-500 flex flex-col gap-4 justify-start xl:justify-center items-center ${className}`}
     >
-      <h1 className="text-slate-50 text-3xl capitalize font-bold font-mono">
+      <h1 className="text-slate-800 dark:text-slate-50 text-3xl capitalize font-bold font-mono">
         My Projects
       </h1>
       <div className="no-scrollbar overflow-scroll w-full flex flex-col items-start md:items-center">

@@ -24,6 +24,12 @@ const services = {
       thumbnail:
         "https://media.istockphoto.com/id/1358013032/id/foto/konsep-pengembangan-web.jpg?s=612x612&w=0&k=20&c=Bf1e38ySsu3YkmDL74yI7hWziLvgcvfm1mHT14e5QDo=",
     },
+    {
+      title: "crawling website",
+      description: "retrieve all the information needed and store it",
+      thumbnail:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3J-cqAcLthCczovHHQan67KaxxzE5XO27NA&usqp=CAU",
+    },
   ],
 
   others: [

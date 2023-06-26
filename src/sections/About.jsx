@@ -68,11 +68,11 @@ const About = ({ data, className }) => {
                 },
                 {
                   icon: faCakeCandles,
-                  text: `Age: |${age} Years Old`,
+                  text: `Age: | ${age} Years Old`,
                 },
                 {
                   icon: faLocationDot,
-                  text: `State: |Lamongan, East Java`,
+                  text: `State: | Lamongan, East Java`,
                 },
                 {
                   icon: faGraduationCap,
@@ -80,7 +80,7 @@ const About = ({ data, className }) => {
                 },
                 {
                   icon: faGamepad,
-                  text: `Hobbies: |code, movies, anime, music, and cat`,
+                  text: `Hobbies: | code, movies, anime, music, and cat`,
                 },
               ],
             }}

@@ -21,7 +21,7 @@ export default function Dropdown({ className, children, text }) {
         <FontAwesomeIcon icon={IsActive ? faCaretUp : faCaretDown} />
       </div>
       <ul
-        className={`${
+        className={`dropdown ${
           !IsActive
             ? "h-0"
             : "h-min-48 lg:top-[2rem] lg:absolute z-20 lg:shadow-md lg:bg-slate-50 lg:w-48 p-2"

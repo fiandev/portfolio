@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
+import theme from "../utils/theme";
 import Preload from "../layouts/Preload";
 
 const Layout = lazy(() => import("../layouts/index"));
@@ -8,6 +9,7 @@ const Services = lazy(() => import("../pages/Services"));
 const ErrorPage = lazy(() => import("../pages/ErrorPage"));
 
 export default function Router() {
+  theme();
   return (
     <Suspense fallback={<Preload />}>
       <BrowserRouter>

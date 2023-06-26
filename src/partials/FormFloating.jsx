@@ -5,17 +5,18 @@ export default function FormFloating({
   className,
   value,
   placeholder,
+  formClassName,
   error = null,
 }) {
   return (
     <div
-      className={`transition-all flex flex-col justify-center rounded-md group/floating outline outline-gray-400 hover:outline-main hover:outline-md p-2 ${className} ${
+      className={`transition-all flex flex-col justify-center rounded-md group/floating outline outline-gray-400 hover:outline-main hover:outline-md p-2 text-gray-400 ${className} ${formClassName} ${
         error ? "hover:outline-rose-500 outline-rose-400" : ""
       } `}
     >
       <label
         htmlFor={name}
-        className="transition-all group-hover/floating:text-sm text-md text-gray-400 group-hover/floating:font-light"
+        className="transition-all group-hover/floating:text-sm text-md group-hover/floating:font-light"
       >
         {text || name}
       </label>

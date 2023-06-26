@@ -54,11 +54,10 @@ b, strong {
            dark:bg-transparent text-main dark:text-slate-100;
   }
   .nav-link:hover {
-    @apply text-sky-800 dark:text-slate-100;
+    @apply text-sky-800 dark:text-slate-800;
   }
   .nav-link-active {
     @apply text-sky-800 rounded-md
-          dark:hover:text-slate-100 dark:bg-sky-400 dark:text-slate-100;
+          dark:text-slate-800;
   }
-  
 }

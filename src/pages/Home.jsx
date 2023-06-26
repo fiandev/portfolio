@@ -15,12 +15,14 @@ export default function Home() {
   let [Data, SetData] = useState(null);
   let [IsError, SetIsError] = useState(false);
   let [Exception, SetException] = useState(null);
-
+  
   useEffect(() => {
     import("../assets/json/data.json")
       .then((module) => {
         let json = module.default;
-        SetData(json.data);
+        let data = json.data;
+        
+        SetData(data);
       })
       .catch((err) => {
         SetException(err);
@@ -42,7 +44,7 @@ export default function Home() {
           className="bg-slate-50 outline-0 border-0 dark:bg-slate-900"
         >
           <path
-            className="fill-main"
+            className="fill-sky-100 dark:fill-main"
             fillOpacity="1"
             d="M0,192L0,32L48,32L48,64L96,64L96,128L144,128L144,256L192,256L192,160L240,160L240,160L288,160L288,224L336,224L336,288L384,288L384,160L432,160L432,192L480,192L480,64L528,64L528,224L576,224L576,96L624,96L624,224L672,224L672,32L720,32L720,224L768,224L768,192L816,192L816,160L864,160L864,224L912,224L912,224L960,224L960,128L1008,128L1008,128L1056,128L1056,224L1104,224L1104,160L1152,160L1152,64L1200,64L1200,32L1248,32L1248,192L1296,192L1296,96L1344,96L1344,288L1392,288L1392,224L1440,224L1440,320L1392,320L1392,320L1344,320L1344,320L1296,320L1296,320L1248,320L1248,320L1200,320L1200,320L1152,320L1152,320L1104,320L1104,320L1056,320L1056,320L1008,320L1008,320L960,320L960,320L912,320L912,320L864,320L864,320L816,320L816,320L768,320L768,320L720,320L720,320L672,320L672,320L624,320L624,320L576,320L576,320L528,320L528,320L480,320L480,320L432,320L432,320L384,320L384,320L336,320L336,320L288,320L288,320L240,320L240,320L192,320L192,320L144,320L144,320L96,320L96,320L48,320L48,320L0,320L0,320Z"
           ></path>
@@ -55,7 +57,7 @@ export default function Home() {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 320"
-          className="bg-main outline-0 border-0"
+          className="bg-sky-100 dark:bg-main outline-0 border-0"
         >
           <path
             className="fill-slate-50 dark:fill-slate-900"

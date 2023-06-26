@@ -6,6 +6,7 @@ import Dropdown from "./Dropdown";
 
 export default function Nav() {
   const [IsActive, SetIsActive] = useState(false);
+  const author = "fiandev";
   const toggleActive = () => {
     SetIsActive(!IsActive);
   };
@@ -13,21 +14,20 @@ export default function Nav() {
   const request = (path) => {
     let location = useLocation();
     let { pathname } = location;
-
+    
     return pathname === path;
   };
 
   return (
     <nav
-      className={`fixed top-0 lg:px-[10vw] z-10 w-full shadow-sm px-3 py-1 flex gap-2 lg:px:8 flex-col backdrop-blur-sm lg:flex-row lg:justify-start bg-gradient-to-r from-sky-200 to-blue-100 dark:from-sky-800 dark:to-blue-600`}
+      className={`fixed top-0 lg:px-[10vw] z-10 w-full shadow-sm px-3 py-1 flex gap-2 lg:px:8 flex-col lg:flex-row lg:justify-start bg-gradient-to-r from-sky-200 to-blue-100 dark:from-sky-800 dark:to-blue-600`}
     >
       <div className="w-full lg:w-fit flex justify-between items-center py-1">
-        <h1 className="text-main hover:text-sky-400 max-w-fit font-bold text-lg hover:text-xl uppercase">
-          {" "}
-          fiandev{" "}
+        <h1 className="text-main duration-100 transform-gpu transform-cpu transition-transform max-w-fit font-bold text-lg uppercase">
+          { author }
         </h1>
         <Hamburger
-          className="w-12 h-12 transition duration-500 lg:hidden"
+          className="w-12 h-12 transition duration-500 lg:hidden fill-slate-100 font-bold"
           toggleActive={toggleActive}
           IsActive={IsActive}
         />

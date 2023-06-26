@@ -9,7 +9,7 @@ import Alert from "../partials/contact/Alert";
 import API from "../constants/Api";
 import { randomID, env } from "../utils/functions";
 
-export default function Contact({ links, className }) {
+export default function Contact({ links, className, formClassName }) {
   let [active, setActive] = useState(false);
   let [success, setSuccess] = useState(false);
   let [errors, setErrors] = useState(null);
@@ -97,17 +97,20 @@ export default function Contact({ links, className }) {
             : null}
 
           <FormFloating
+            formClassName={ formClassName }
             error={errors ? errors["sender"] : null}
             name="sender"
             text="username"
             placeholder="write your username ..."
           />
           <FormFloating
+            formClassName={ formClassName }
             error={errors ? errors["email"] : null}
             name="email"
             placeholder="write your email ..."
           />
           <FormFloating
+            formClassName={ formClassName }
             error={errors ? errors["message"] : null}
             type="textarea"
             name="message"
