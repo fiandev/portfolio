@@ -97,20 +97,20 @@ export default function Contact({ links, className, formClassName }) {
             : null}
 
           <FormFloating
-            formClassName={ formClassName }
+            formClassName={formClassName}
             error={errors ? errors["sender"] : null}
             name="sender"
             text="username"
             placeholder="write your username ..."
           />
           <FormFloating
-            formClassName={ formClassName }
+            formClassName={formClassName}
             error={errors ? errors["email"] : null}
             name="email"
             placeholder="write your email ..."
           />
           <FormFloating
-            formClassName={ formClassName }
+            formClassName={formClassName}
             error={errors ? errors["message"] : null}
             type="textarea"
             name="message"

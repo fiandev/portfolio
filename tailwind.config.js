@@ -53,6 +53,9 @@ module.exports = {
         "fadeInLeft": `fadeInLeft 1000ms ease-in-out`,
         "fadeInRight": `fadeInRight 1000ms ease-in-out`,
       },
+      fontFamily: {
+        "fasthand": ['Fasthand', 'cursive'],
+      }
     },
   },
   plugins: [],

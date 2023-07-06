@@ -31,7 +31,7 @@
     "serve": "vite preview",
     "push": "vite build && cd $HOME/fiandev.github.io && rm assets/* -r && cp $HOME/portfolio/build/* . -r",
     "prettier": "prettier ./src/**/*.{js,jsx,ts,tsx} -w",
-    "prettier:build": "prettier ./build/**/*.{js,html,css,json} -w"
+    "prettier:build": "prettier ./build/**/*.{js,jsx,ts,tsx} -w"
   },
   "eslintConfig": {
     "extends": [

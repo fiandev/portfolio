@@ -1,0 +1,28 @@
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .preview-content * {
+    background: transparent !important;
+    color: #c7c7c8 !important;
+    border: solid 0px !important;
+    @apply animate-pulse bg-transparent;
+  }
+  
+  .preview-content h1,
+  .preview-content p,
+  .preview-content a,
+  .preview-content img {
+    background: #c7c7c8 !important;
+  }
+  .preview-content img {
+    @apply animate-pulse;
+  }
+}

@@ -16,11 +16,11 @@ i18next
     ns: ["default"],
     defaultNS: "default",
 
-    supportedLngs: ["en","id"],
-    
+    supportedLngs: ["en", "id"],
+
     backend: {
-      loadPath: loadPath
-    }
-  })
-  
+      loadPath: loadPath,
+    },
+  });
+
 export default i18next;

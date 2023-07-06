@@ -1,8 +1,18 @@
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
 import Hamburger from "./Hamburger";
 import NavLink from "./NavLink";
 import Dropdown from "./Dropdown";
+
+const links = [
+  {
+    text: "Home",
+    href: "/",
+  },
+  {
+    text: "Services",
+    href: "/services",
+  },
+];
 
 export default function Nav() {
   const [IsActive, SetIsActive] = useState(false);
@@ -11,20 +21,13 @@ export default function Nav() {
     SetIsActive(!IsActive);
   };
 
-  const request = (path) => {
-    let location = useLocation();
-    let { pathname } = location;
-    
-    return pathname === path;
-  };
-
   return (
     <nav
       className={`fixed top-0 lg:px-[10vw] z-10 w-full shadow-sm px-3 py-1 flex gap-2 lg:px:8 flex-col lg:flex-row lg:justify-start bg-gradient-to-r from-sky-200 to-blue-100 dark:from-sky-800 dark:to-blue-600`}
     >
       <div className="w-full lg:w-fit flex justify-between items-center py-1">
         <h1 className="text-main duration-100 transform-gpu transform-cpu transition-transform max-w-fit font-bold text-lg uppercase">
-          { author }
+          {author}
         </h1>
         <Hamburger
           className="w-12 h-12 transition duration-500 lg:hidden fill-slate-100 font-bold"
@@ -39,42 +42,17 @@ export default function Nav() {
         } overflow-y-hidden lg:overflow-y-visible lg:max-h-fit flex-col lg:flex-row`}
       >
         <ul className="flex py-2.5 lg:py-0 w-full flex-col lg:flex-row lg:items-center lg:justify-end lg:gap-2 uppercase">
-          {request("/") ? (
-            <Dropdown
-              className={`p-2 lg:py-0 ${
-                request("/") ? "nav-link-active" : "nav-link"
-              }`}
-              text="home"
-            >
-              <NavLink
-                to="#profile"
-                text="profile"
-                className={`${
-                  request("#profile") ? "nav-link-active" : "nav-link"
-                } `}
-              />
-              <NavLink
-                to="#about"
-                text="about"
-                className={`${
-                  request("#about") ? "nav-link-active" : "nav-link"
-                } `}
-              />
-            </Dropdown>
-          ) : (
-            <NavLink
-              text="Home"
-              to="/"
-              className={`${request("/") ? "nav-link-active" : "nav-link"} `}
-            />
-          )}
-          <NavLink
-            text="services"
-            to="/services"
-            className={`${
-              request("/services") ? "nav-link-active" : "nav-link"
-            } `}
-          />
+          {links.map((link) => {
+            return link.links ? (
+              <Dropdown>
+                {link.links.map((link) => {
+                  return <NavLink text={link.text} to={link.href} />;
+                })}
+              </Dropdown>
+            ) : (
+              <NavLink text={link.text} to={link.href} />
+            );
+          })}
         </ul>
       </div>
     </nav>

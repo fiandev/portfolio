@@ -1,0 +1,9 @@
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+b, strong {
+  font-weight: bold;
+}

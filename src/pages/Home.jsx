@@ -15,13 +15,13 @@ export default function Home() {
   let [Data, SetData] = useState(null);
   let [IsError, SetIsError] = useState(false);
   let [Exception, SetException] = useState(null);
-  
+
   useEffect(() => {
     import("../assets/json/data.json")
       .then((module) => {
         let json = module.default;
         let data = json.data;
-        
+
         SetData(data);
       })
       .catch((err) => {
