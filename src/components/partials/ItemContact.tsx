@@ -6,7 +6,7 @@ export default function ItemContact({
   username = "username",
   description = "...",
   link = "#",
-}:: {
+}: {
   className?: string
   icon?: string
   username?: string

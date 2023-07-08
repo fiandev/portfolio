@@ -7,6 +7,15 @@ export default function FormFloating({
   placeholder,
   formClassName,
   error = null,
+}: {
+  type: string
+  name?: string
+  text?: string
+  className?: string
+  value?: string
+  placeholder?: string
+  formClassName?: string
+  error?: null | any
 }) {
   return (
     <div
