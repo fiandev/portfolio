@@ -14,9 +14,9 @@ export default function Contact({ links, className, formClassName }: {
   className?: string | null
   formClassName?: string | null
 }) {
-  let [active, setActive] = useState(false);
-  let [success, setSuccess] = useState(false);
-  let [errors, setErrors] = useState(null);
+  let [active, setActive] = useState<boolean>(false);
+  let [success, setSuccess] = useState<boolean>(false);
+  let [errors, setErrors] = useState<null|any>(null);
 
   useEffect(() => {
     //

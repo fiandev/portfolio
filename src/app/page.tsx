@@ -14,7 +14,7 @@ import ViewportArea from "@components/interactive/ViewportArea";
 export default function Home() {
   let [Data, SetData] = useState<null|any>(null);
   let [IsError, SetIsError] = useState<boolean>(false);
-  let [Exception, SetException] = useState<null|object>(null);
+  let [Exception, SetException] = useState<null|any>(null);
 
   useEffect(() => {
     import("@assets/json/data.json")
@@ -75,8 +75,8 @@ export default function Home() {
     </div>
   ) : (
     <ErrorPage
-      code={Exception?.code || 500}
-      message={Exception?.message || "internal server error"}
+      code={Exception.code || 500}
+      message={Exception.message || "internal server error"}
       suggest="maybe backend server for this website is down please contact me at 't.me/fiandev'"
     />
   );
