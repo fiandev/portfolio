@@ -10,7 +10,7 @@ import Alert from "@components/partials/contact/Alert";
 import { randomID, env } from "@utils/functions";
 
 export default function Contact({ links, className, formClassName }: {
-  links: string[]
+  links?: string[]
   className?: string | null
   formClassName?: string | null
 }) {
