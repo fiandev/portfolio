@@ -3,12 +3,13 @@ import React, { useEffect, useRef } from "react";
 import { useGlobalScroll } from "@hooks/useGlobalScroll";
 import { useRect } from "@hooks/useRect";
 import { Maths } from "@utils/Maths";
+import { randomID } from "@utils/functions";
 
 export const ScrollableAreaContext = React.createContext<any>(false);
 
 export const ScrollableArea = ({
-  id = undefined,
-  className = undefined,
+  id = randomID(),
+  className = "",
   viewportHeight = 100,
   clamp = true,
   debug = false,
@@ -18,11 +19,11 @@ export const ScrollableArea = ({
   startAtScreenTop = false,
 }: {
   id: number
-  className: string
+  className: string | null
   viewportHeight: number
   clamp: boolean
   debug: boolean
-  debugLabel: string
+  debugLabel: string | null
   children: React.ReactNode
   style: object
   startAtScreenTop: boolean
