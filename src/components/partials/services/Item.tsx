@@ -27,7 +27,7 @@ export default function Item({
 
         <ButtonLink
           label="order now"
-          icon={}
+          icon={ faShop }
           link={ link || "#" }
           className="flex scale-0 group-hover/item:scale-100 transition-transform w-18 h-6 text-xs uppercase outline delay-100 group-hover/item:bg-main group-hover/item:text-slate-200"
         />
