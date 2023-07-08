@@ -20,7 +20,7 @@ export const ScrollableArea = ({
 }: {
   id?: number
   className?: string | null
-  viewportHeight ok?: number
+  viewportHeight?: number
   clamp?: boolean
   debug?: boolean
   debugLabel?: string | null
