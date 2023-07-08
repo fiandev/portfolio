@@ -36,9 +36,10 @@ export default function Contact({ links, className, formClassName }: {
         setSuccess(true);
         setErrors(null);
         setActive(false);
+        
         form.reset();
       } else {
-        setErrors(response.error || {});
+        setErrors("something went wrong !");
       }
     } catch (e) {
       console.log(e);
