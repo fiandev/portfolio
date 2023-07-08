@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { getBlobRadius } from "@utils/functions";
 
 const Shapes = ({ className, children }: {
-  className: string
+  className?: string | null
   children: React.ReactNode
 }) => {
   const [time, setTime] = useState<any>(Date.now());

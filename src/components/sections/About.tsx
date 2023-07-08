@@ -13,8 +13,8 @@ import countdown from "@utils/time";
 import Item from "@components/partials/about/Item";
 
 const About = ({ data, className }: {
-  data: any | object
-  className: string | number
+  data: object
+  className?: string | number
 }) => {
   const [time, setTime] = useState<any>(Date.now());
   const [age, setAge] = useState<number>(0);

@@ -11,8 +11,8 @@ import { randomID, env } from "@utils/functions";
 
 export default function Contact({ links, className, formClassName }: {
   links: string[]
-  className: string | null
-  formClassName: string | null
+  className?: string | null
+  formClassName?: string | null
 }) {
   let [active, setActive] = useState(false);
   let [success, setSuccess] = useState(false);

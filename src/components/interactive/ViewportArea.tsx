@@ -4,9 +4,9 @@ import { randomID } from "@utils/functions";
 
 const animates = ["animate-fadeInRight", "animate-fadeInLeft"];
 export default function ViewportArea({ specialKey, children, className }: {
-  specialKey: string | number | null
+  specialKey?: string | number | null
   children: React.ReactNode
-  className: string | null
+  className?: string | null
 }) {
   const [Show, SetShow] = useState<boolean>(false);
   const element = useRef<any>();

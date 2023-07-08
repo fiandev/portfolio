@@ -11,11 +11,11 @@ export const AnimatedFade = ({
   ease = Easing.easeInOutQuad,
 }: {
   children: React.ReactNode
-  duration: number
-  frame: number
-  startOpacity: number
-  endOpacity: number
-  ease: any
+  duration?: number
+  frame?: number
+  startOpacity?: number
+  endOpacity?: number
+  ease?: any
 }) => {
   const [opacity, setOpacity] = useState<any>(0);
 
