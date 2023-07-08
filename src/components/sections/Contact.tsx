@@ -9,7 +9,11 @@ import Alert from "@components/partials/contact/Alert";
 
 import { randomID, env } from "@utils/functions";
 
-export default function Contact({ links, className, formClassName }) {
+export default function Contact({ links, className, formClassName }: {
+  links: string[]
+  className: string | null
+  formClassName: string | null
+}) {
   let [active, setActive] = useState(false);
   let [success, setSuccess] = useState(false);
   let [errors, setErrors] = useState(null);

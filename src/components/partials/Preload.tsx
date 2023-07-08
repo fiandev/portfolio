@@ -9,8 +9,11 @@ const styles = [
   "animate-bounce",
 ];
 
-export default function Preload({ className, children }) {
-  const [Index, SetIndex] = useState(0);
+export default function Preload({ className, children }: {
+  className: string | null
+  children: React.ReactNode
+}) {
+  const [Index, SetIndex] = useState<number>(0);
 
   useEffect(() => {
     setTimeout(() => {

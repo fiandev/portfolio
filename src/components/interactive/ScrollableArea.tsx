@@ -4,7 +4,7 @@ import { useGlobalScroll } from "@hooks/useGlobalScroll";
 import { useRect } from "@hooks/useRect";
 import { Maths } from "@utils/Maths";
 
-export const ScrollableAreaContext = React.createContext(false);
+export const ScrollableAreaContext = React.createContext<any>(false);
 
 export const ScrollableArea = ({
   id = undefined,
@@ -16,10 +16,20 @@ export const ScrollableArea = ({
   children,
   style = {},
   startAtScreenTop = false,
+}: {
+  id: number
+  className: string
+  viewportHeight: number
+  clamp: boolean
+  debug: boolean
+  debugLabel: string
+  children: React.ReactNode
+  style: object
+  startAtScreenTop: boolean
 }) => {
-  const ref = useRef(null);
+  const ref = useRef<any>(null);
   const [scrollY, winHeight] = useGlobalScroll();
-  const [initialized, rect] = useRect(ref);
+  const [initialized, rect] = useRect<any>(ref);
 
   const scrollProgress = initialized
     ? getScrollProgress(

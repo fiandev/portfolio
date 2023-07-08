@@ -31,11 +31,12 @@ function scandiir (folder) {
 function checkfile (file) {
   let content = _fs.readFileSync(file, "utf8");
   
-  if (/(useState|useEffect)/gm.test(content) && content.split("\n")[0] !== '"use client"') {
-    content = '"use client"\n' + content;
-    console.log(`overwrite file ${ file }`);
+  if (/(useState|useEffect)/gm.test(content) /*&& content.split("\n")[0] !== '"use client"'*/) {
+    // content = '"use client"\n' + content;
+    // console.log(`overwrite file ${ file }`);
+    console.log(`${file} is client component`);
   }
-  
+  /*
   for (let alias in aliases) {
     let pattern = new RegExp(`((..\\/)+)${ aliases[alias] }`, "gm");
     
@@ -44,8 +45,8 @@ function checkfile (file) {
       content = content.replace(pattern, alias);
     }
   }
-  
- _fs.writeFileSync(file, content); 
+  */
+ // _fs.writeFileSync(file, content); 
 }
 
 let files = scandiir("./src");

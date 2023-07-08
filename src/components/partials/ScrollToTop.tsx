@@ -3,8 +3,10 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
-export default function ScrollToTop({ className }) {
-  const [position, setPosition] = useState(0);
+export default function ScrollToTop({ className }: {
+  className: string
+}) {
+  const [position, setPosition] = useState<number>(0);
   const offsetY = 50;
   const bottom =
     Math.ceil(window.innerHeight + window.scrollY) >=

@@ -2,8 +2,11 @@
 import { useEffect, useState } from "react";
 import { getBlobRadius } from "@utils/functions";
 
-const Shapes = ({ className, children }) => {
-  const [time, setTime] = useState(Date.now());
+const Shapes = ({ className, children }: {
+  className: string
+  children: React.ReactNode
+}) => {
+  const [time, setTime] = useState<any>(Date.now());
 
   useEffect(() => {
     const interval = setInterval(() => setTime(Date.now()), 1000);

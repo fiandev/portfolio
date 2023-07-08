@@ -9,8 +9,15 @@ export const AnimatedFade = ({
   startOpacity = 0,
   endOpacity = 1,
   ease = Easing.easeInOutQuad,
+}: {
+  children: React.ReactNode
+  duration: number
+  frame: number
+  startOpacity: number
+  endOpacity: number
+  ease: any
 }) => {
-  const [opacity, setOpacity] = useState(0);
+  const [opacity, setOpacity] = useState<any>(0);
 
   useEffect(() => {
     const tΔ = (1 * frame) / duration;
