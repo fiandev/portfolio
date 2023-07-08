@@ -8,7 +8,10 @@ const Pagination = lazy(() => import("@components/partials/Pagination"));
 
 let PageSize = 6;
 
-const Project = ({ projects, className }) => {
+const Project = ({ projects, className }: {
+  projects: any
+  className?: string | null
+}) => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const currentData = useMemo(() => {

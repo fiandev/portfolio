@@ -16,7 +16,7 @@ const links = [
 ];
 
 export default function Nav() {
-  const [IsActive, SetIsActive] = useState(false);
+  const [IsActive, SetIsActive] = useState<boolean>(false);
   const author = "fiandev";
   const toggleActive = () => {
     SetIsActive(!IsActive);

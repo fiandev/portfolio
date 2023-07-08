@@ -13,7 +13,7 @@ import countdown from "@utils/time";
 import Item from "@components/partials/about/Item";
 
 const About = ({ data, className }: {
-  data: object
+  data: any
   className?: string | number
 }) => {
   const [time, setTime] = useState<any>(Date.now());

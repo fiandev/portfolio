@@ -55,7 +55,7 @@ const services = {
   ],
 };
 
-export default function ServiceList({ className }) {
+export default function ServiceList({ className = "" }) {
   return (
     <section
       className={`flex-shrink-0 flex flex-col items-start px-4 gap-2 ${className}`}

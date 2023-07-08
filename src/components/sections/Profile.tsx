@@ -6,7 +6,9 @@ import Theme from "@contexts/Theme";
 import Shapes from "@components/partials/Shapes";
 import Image from "@components/partials/Image";
 
-const Profile = ({ data }) => {
+const Profile = ({ data }: {
+  data: any
+}) => {
   const [IsDark /* SetIsDark */] = useState<boolean>(Theme());
   const [Style, setStyle] = useState<null|any>(null);
   
