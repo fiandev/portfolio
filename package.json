@@ -6,7 +6,6 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
     "prettier": "prettier ./src/**/*.{js,jsx,ts,tsx} -w",
     "prettier:build": "prettier ./build/**/*.{js,jsx,ts,tsx} -w"
   },
@@ -20,8 +19,6 @@
     "@types/react-dom": "18.2.6",
     "autoprefixer": "10.4.14",
     "classnames": "^2.3.2",
-    "eslint": "8.44.0",
-    "eslint-config-next": "13.4.8",
     "interweave": "^13.1.0",
     "next": "13.4.8",
     "postcss": "8.4.24",
