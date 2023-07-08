@@ -10,7 +10,7 @@ export default function ButtonLink({
   return (
     <a
       href={link || "#"}
-      name={name || label}
+      key={name || label}
       className={`group/button flex gap-2 items-center transition-all duration-800 p-2 rounded-sm hover:rounded-full ${className}`}
     >
       <FontAwesomeIcon
