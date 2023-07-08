@@ -11,7 +11,7 @@ export default function ItemContact({
   icon?: string
   username?: string
   description?: string
-  link?: string
+  link?: any
 }) {
   return (
     <a
