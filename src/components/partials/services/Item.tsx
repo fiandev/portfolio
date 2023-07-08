@@ -11,7 +11,6 @@ export default function Item({
 }) {
   return (
     <div
-      href={link || "#"}
       className={`${className} relative group/item hover:font-bold outline outline-main outline-sm hover:outline-md hover:outline-gray-800 dark:hover:outline-slate-50 rounded-md shadow-gray-900 dark:shadow-slate-100 w-28 w-max-28 h-24 p-4 flex flex-col gap-1 text-center justify-center border-main overflow-hidden`}
     >
       <Image
@@ -29,6 +28,7 @@ export default function Item({
         <ButtonLink
           label="order now"
           icon={faShop}
+          href={ href || "#" }
           className="flex scale-0 group-hover/item:scale-100 transition-transform w-18 h-6 text-xs uppercase outline delay-100 group-hover/item:bg-main group-hover/item:text-slate-200"
         />
       </div>
