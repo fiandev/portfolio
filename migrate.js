@@ -31,7 +31,7 @@ function scandiir (folder) {
 function checkfile (file) {
   let content = _fs.readFileSync(file, "utf8");
   
-  if (/(useGlobalScroll)/gm.test(content) /*&& content.split("\n")[0] !== '"use client"'*/) {
+  if (/(@contexts\/Theme)/gm.test(content) /*&& content.split("\n")[0] !== '"use client"'*/) {
     // content = '"use client"\n' + content;
     // console.log(`overwrite file ${ file }`);
     console.log(`${file} is client component`);

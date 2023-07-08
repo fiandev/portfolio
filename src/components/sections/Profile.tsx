@@ -1,25 +1,12 @@
-"use client";
-import { useState, useEffect } from "react";
 import { Markup } from "interweave";
 
-import Theme from "@contexts/Theme";
 import Shapes from "@components/partials/Shapes";
 import Image from "@components/partials/Image";
 
 const Profile = ({ data }: { data: any }) => {
-  const [IsDark /* SetIsDark */] = useState<boolean>(Theme());
-  const [Style, setStyle] = useState<null | any>(null);
-
-  useEffect(() => {
-    setStyle({
-      // todo
-    });
-  }, [IsDark]);
-
   return (
     <section
       id="profile"
-      style={Style}
       className={`${
         !data ? "preview-content" : ""
       } bg-slate-200 dark:bg-slate-900 bg-fixed relative w-screen h-screen md:min-h-screen flex flex-col gap-2 items-center justify-center lg:flex-row-reverse md:justify-center lg:px-24`}
