@@ -4,7 +4,11 @@ import ViewportArea from "@components/interactive/ViewportArea";
 import Image from "../Image";
 import { randomID } from "@utils/functions";
 
-export default function Item({ children, data, className }) {
+export default function Item({ children, data, className }: {
+  children?: React.ReactNode
+  data?: any
+  className?: string
+}) {
   return (
     data && (
       <ViewportArea>
@@ -12,7 +16,7 @@ export default function Item({ children, data, className }) {
           className={`p-4 rounded-md flex flex-col gap-2 ${
             className || "bg-main"
           }`}
-          key={randomID}
+          key={randomID()}
         >
           <h1 className="font-bold text-slate-50 capitalize text-lg lg:text-xl xl:text-2xl">
             {data.label}
