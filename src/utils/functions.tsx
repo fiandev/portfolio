@@ -4,6 +4,7 @@ export const randomPercen = () =>
 export const getBlobRadius = () =>
   `${randomPercen()}% ${randomPercen()}% ${randomPercen()}% ${randomPercen()}% / ${randomPercen()}% ${randomPercen()}% ${randomPercen()}% ${randomPercen()}%`;
 
+/*
 export const getOffset = (el) => {
   const rect = el.getBoundingClientRect();
   return {
@@ -11,6 +12,7 @@ export const getOffset = (el) => {
     y: rect.top + window.scrollY,
   };
 };
+*/
 
 export const env = (key, alternative = null) => {
   return process.env[key] ? process.env[key] : alternative;

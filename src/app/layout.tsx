@@ -1,5 +1,8 @@
 import { GlobalScrollProvider } from "@hooks/useGlobalScroll";
 import { GlobalMouseMoveProvider } from "@hooks/useGlobalMouseMove";
+import { GlobalThemeProvider } from "@hooks/useTheme";
+
+import Wrapper from "@components/sections/Wrapper";
 import Nav from "@components/sections/Nav";
 import Footer from "@components/sections/Footer";
 import ScrollToTop from "@components/partials/ScrollToTop";
@@ -22,14 +25,16 @@ export default function RootLayout({
       <body className="relative flex flex-col min-h-screen w-screen">
         <noscript>You need to enable JavaScript to run this app.</noscript>
         <div id="root">
-          <Nav />
-          <div className="w-full pt-10 md:pt-14 lg:pt-10">
-            <GlobalScrollProvider>
-              <GlobalMouseMoveProvider>{children}</GlobalMouseMoveProvider>
-            </GlobalScrollProvider>
-            <ScrollToTop className="bg-main text-slate-800 dark:bg-slate-800 dark:text-main" />
-          </div>
-          <Footer />
+          <GlobalThemeProvider>
+            <Wrapper>
+              <Nav />
+              <GlobalScrollProvider>
+                <GlobalMouseMoveProvider>{children}</GlobalMouseMoveProvider>
+              </GlobalScrollProvider>
+              <ScrollToTop className="bg-main text-slate-800 dark:bg-slate-800 dark:text-main" />
+              <Footer />
+            </Wrapper>
+          </GlobalThemeProvider>
         </div>
       </body>
     </html>
