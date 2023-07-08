@@ -3,8 +3,10 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
-export default function ScrollToTop({ className }: {
-  className?: string | null
+export default function ScrollToTop({
+  className,
+}: {
+  className?: string | null;
 }) {
   const [position, setPosition] = useState<number>(0);
   const offsetY = 50;

@@ -18,15 +18,15 @@ export const ScrollableArea = ({
   style = {},
   startAtScreenTop = false,
 }: {
-  id?: any | null
-  className?: string | null
-  viewportHeight?: number
-  clamp?: boolean
-  debug?: boolean
-  debugLabel?: string | null
-  children: React.ReactNode
-  style?: object
-  startAtScreenTop?: boolean
+  id?: any | null;
+  className?: string | null;
+  viewportHeight?: number;
+  clamp?: boolean;
+  debug?: boolean;
+  debugLabel?: string | null;
+  children: React.ReactNode;
+  style?: object;
+  startAtScreenTop?: boolean;
 }) => {
   const ref: any = useRef();
   const [scrollY, winHeight] = useGlobalScroll();

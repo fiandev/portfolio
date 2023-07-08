@@ -12,9 +12,9 @@ import { randomID } from "@utils/functions";
 import ViewportArea from "@components/interactive/ViewportArea";
 
 export default function Home() {
-  let [Data, SetData] = useState<null|any>(null);
+  let [Data, SetData] = useState<null | any>(null);
   let [IsError, SetIsError] = useState<boolean>(false);
-  let [Exception, SetException] = useState<null|any>(null);
+  let [Exception, SetException] = useState<null | any>(null);
 
   useEffect(() => {
     import("@assets/json/data.json")
@@ -67,10 +67,7 @@ export default function Home() {
         </svg>
       </ViewportArea>
       <ViewportArea>
-        <Contact
-          className="bg-slate-50 dark:bg-slate-900"
-          links={Data.links}
-        />
+        <Contact className="bg-slate-50 dark:bg-slate-900" links={Data.links} />
       </ViewportArea>
     </div>
   ) : (

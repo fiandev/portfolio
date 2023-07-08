@@ -8,14 +8,14 @@ export default function FormFloating({
   formClassName,
   error = null,
 }: {
-  type: string
-  name?: string
-  text?: string
-  className?: string
-  value?: string
-  placeholder?: string
-  formClassName?: string
-  error?: null | any
+  type?: string;
+  name?: string;
+  text?: string;
+  className?: string;
+  value?: string;
+  placeholder?: string;
+  formClassName?: string;
+  error?: null | any;
 }) {
   return (
     <div
@@ -31,7 +31,7 @@ export default function FormFloating({
       </label>
       {type === "textarea" ? (
         <textarea
-          rows={ 3 }
+          rows={3}
           name={name || "input"}
           id={name || "input"}
           className={`peer w-full h-min-4 text-sm bg-transparent border-0 outline-0 ${

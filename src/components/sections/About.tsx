@@ -12,9 +12,12 @@ import { Markup } from "interweave";
 import countdown from "@utils/time";
 import Item from "@components/partials/about/Item";
 
-const About = ({ data, className }: {
-  data: any
-  className?: string | number
+const About = ({
+  data,
+  className,
+}: {
+  data: any;
+  className?: string | number;
 }) => {
   const [time, setTime] = useState<any>(Date.now());
   const [age, setAge] = useState<number>(0);

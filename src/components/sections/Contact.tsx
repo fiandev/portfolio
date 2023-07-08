@@ -9,14 +9,18 @@ import Alert from "@components/partials/contact/Alert";
 
 import { randomID, env } from "@utils/functions";
 
-export default function Contact({ links, className, formClassName }: {
-  links?: string[]
-  className?: string | null
-  formClassName?: string | null
+export default function Contact({
+  links,
+  className,
+  formClassName,
+}: {
+  links?: any[];
+  className?: string | null;
+  formClassName?: string | null;
 }) {
   let [active, setActive] = useState<boolean>(false);
   let [success, setSuccess] = useState<boolean>(false);
-  let [errors, setErrors] = useState<null|any>(null);
+  let [errors, setErrors] = useState<null | any>(null);
 
   useEffect(() => {
     //
@@ -36,7 +40,7 @@ export default function Contact({ links, className, formClassName }: {
         setSuccess(true);
         setErrors(null);
         setActive(false);
-        
+
         form.reset();
       } else {
         setErrors("something went wrong !");

@@ -3,10 +3,14 @@ import { useRef, useState, useEffect } from "react";
 import { randomID } from "@utils/functions";
 
 const animates = ["animate-fadeInRight", "animate-fadeInLeft"];
-export default function ViewportArea({ specialKey, children, className }: {
-  specialKey?: string | number | null
-  children: React.ReactNode
-  className?: string | null
+export default function ViewportArea({
+  specialKey,
+  children,
+  className,
+}: {
+  specialKey?: string | number | null;
+  children: React.ReactNode;
+  className?: string | null;
 }) {
   const [Show, SetShow] = useState<boolean>(false);
   const element = useRef<any>();

@@ -7,11 +7,11 @@ export default function ItemContact({
   description = "...",
   link = "#",
 }: {
-  className?: string
-  icon?: string
-  username?: string
-  description?: string
-  link?: any
+  className?: string;
+  icon?: string;
+  username?: string;
+  description?: string;
+  link?: any;
 }) {
   return (
     <a

@@ -1,10 +1,14 @@
 "use client";
 import { useState } from "react";
 
-export default function Alert({ children, className, duration = 2000 }: {
-  children: React.ReactNode
-  className: string | number
-  duration: number
+export default function Alert({
+  children,
+  className,
+  duration = 2000,
+}: {
+  children?: React.ReactNode;
+  className?: string;
+  duration?: number;
 }) {
   let [Hidden, SetHidden] = useState<boolean>(false);
   let [Missing, SetMissing] = useState<boolean>(false);

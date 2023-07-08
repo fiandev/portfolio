@@ -1,11 +1,16 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export default function NavLink({ className, to, text = "", children }: {
-  className?: string
-  to: string
-  text?: string | null
-  children?: React.ReactNode
+export default function NavLink({
+  className,
+  to,
+  text = "",
+  children,
+}: {
+  className?: string;
+  to: string;
+  text?: string | null;
+  children?: React.ReactNode;
 }) {
   const request = (path) => {
     let pathname = usePathname();

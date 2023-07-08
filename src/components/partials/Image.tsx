@@ -1,12 +1,18 @@
 "use client";
 import { randomID } from "@utils/functions";
 
-export default function Image({ srcset, alt, className, onError, src }: {
-  src?: string
-  srcset?: string
-  alt?: string
-  className?: string
-  onError?: any
+export default function Image({
+  srcset,
+  alt,
+  className,
+  onError,
+  src,
+}: {
+  src?: string;
+  srcset?: string;
+  alt?: string;
+  className?: string;
+  onError?: any;
 }) {
   const handleError = () => {
     // todo

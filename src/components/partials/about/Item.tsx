@@ -4,10 +4,14 @@ import ViewportArea from "@components/interactive/ViewportArea";
 import Image from "../Image";
 import { randomID } from "@utils/functions";
 
-export default function Item({ children, data, className }: {
-  children?: React.ReactNode
-  data?: any
-  className?: string
+export default function Item({
+  children,
+  data,
+  className,
+}: {
+  children?: React.ReactNode;
+  data?: any;
+  className?: string;
 }) {
   return (
     data && (

@@ -9,9 +9,12 @@ const styles = [
   "animate-bounce",
 ];
 
-export default function Preload({ className, children }: {
-  className?: string | null
-  children?: React.ReactNode
+export default function Preload({
+  className,
+  children,
+}: {
+  className?: string | null;
+  children?: React.ReactNode;
 }) {
   const [Index, SetIndex] = useState<number>(0);
 

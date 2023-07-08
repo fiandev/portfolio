@@ -3,10 +3,14 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretUp, faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
-export default function Dropdown({ className, children, text }: {
-  className?: string | null
-  children: React.ReactNode
-  text?: string
+export default function Dropdown({
+  className,
+  children,
+  text,
+}: {
+  className?: string | null;
+  children: React.ReactNode;
+  text?: string;
 }) {
   let [IsActive, SetIsActive] = useState<boolean>(false);
 
