@@ -30,7 +30,7 @@ export default function Contact({ links, className, formClassName }: {
     try {
       let response = await fetch("/api/contact", {
         method: "post",
-        data: data,
+        body: data,
       });
       if (response.status === 200) {
         setSuccess(true);
