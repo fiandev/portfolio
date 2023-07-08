@@ -18,7 +18,7 @@ export const ScrollableArea = ({
   style = {},
   startAtScreenTop = false,
 }: {
-  id?: number
+  id?: number | string
   className?: string | null
   viewportHeight?: number
   clamp?: boolean
