@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState, useEffect } from "react";
 import { faSpinner, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -26,8 +26,8 @@ export default function Contact({ links, className, formClassName }) {
     try {
       let response = await fetch("/api/contact", {
         method: "post",
-        data: data
-      })
+        data: data,
+      });
       if (response.status === 200) {
         setSuccess(true);
         setErrors(null);

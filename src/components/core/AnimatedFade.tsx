@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useEffect, useState } from "react";
 import Easing from "@utils/Easing";
 
@@ -23,7 +23,7 @@ export const AnimatedFade = ({
         t * endOpacity + (1 - t) * startOpacity,
         startOpacity,
         endOpacity,
-        1
+        1,
       );
       setOpacity(val);
       t += tΔ;

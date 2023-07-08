@@ -1,11 +1,10 @@
-"use client"
+"use client";
 import { useState, useEffect } from "react";
 
 import Profile from "@components/sections/Profile";
 import About from "@components/sections/About";
 import Project from "@components/sections/Project";
 import Contact from "@components/sections/Contact";
-import Footer from "@components/sections/Footer";
 import ErrorPage from "@components/sections/ErrorPage";
 import HomePreview from "@components/sections/HomePreview";
 import { ScrollableArea } from "@components/interactive/ScrollableArea";
@@ -73,7 +72,6 @@ export default function Home() {
           links={Data?.links}
         />
       </ViewportArea>
-      <Footer />
     </div>
   ) : (
     <ErrorPage

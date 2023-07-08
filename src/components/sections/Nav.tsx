@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState } from "react";
 import Hamburger from "@components/partials/Hamburger";
 import NavLink from "@components/partials/NavLink";

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 //
 // ONE SCROLL LISTENER TO RULE THEM ALL
 // ONE RESIZE LISTENER TO FIND THEM
@@ -91,7 +91,7 @@ export const useGlobalScroll = () => {
     docHeight === undefined
   ) {
     throw new Error(
-      "useGlobalScroll must be used inside a GlobalScrollProvider"
+      "useGlobalScroll must be used inside a GlobalScrollProvider",
     );
   }
 

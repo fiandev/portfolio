@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useRef, useState } from "react";
 
 // import { useRect } from '@hooks/useRect';
@@ -47,7 +47,7 @@ export const Image = ({
 
     if (imgHeight < boxHeight) {
       console.warn(
-        `parallax effect doesn't work if image is smaller than the bounding box. imgHeight=${imgHeight} boxHeight=${boxHeight}`
+        `parallax effect doesn't work if image is smaller than the bounding box. imgHeight=${imgHeight} boxHeight=${boxHeight}`,
       );
       return;
     }

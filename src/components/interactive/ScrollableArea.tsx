@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useEffect, useRef } from "react";
 import { useGlobalScroll } from "@hooks/useGlobalScroll";
 import { useRect } from "@hooks/useRect";
@@ -28,7 +28,7 @@ export const ScrollableArea = ({
         rect.bottom,
         winHeight,
         clamp,
-        startAtScreenTop
+        startAtScreenTop,
       )
     : 0;
 
@@ -41,7 +41,7 @@ export const ScrollableArea = ({
         `TOP=`,
         rect.top,
         `BOTTOM=`,
-        rect.bottom
+        rect.bottom,
       );
   }, [debug, debugLabel, initialized, rect]);
 
@@ -98,7 +98,7 @@ function getScrollProgress(
   containerBottomY = 0,
   winHeight = 0,
   clamp = false,
-  startAtScreenTop = false
+  startAtScreenTop = false,
 ) {
   if (!containerBottomY || containerBottomY - containerTopY <= 0) return -1;
 
@@ -107,7 +107,7 @@ function getScrollProgress(
     : Math.max(containerTopY - winHeight, 0);
   const max = Math.min(
     document.body.scrollHeight - winHeight,
-    containerBottomY
+    containerBottomY,
   );
 
   const pctProgress = (scrollY - min) / (max - min);

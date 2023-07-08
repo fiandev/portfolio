@@ -45,7 +45,7 @@ const Pagination = (props) => {
           "p-2 rounded-sm w-6 h-6 flex items-center justify-center text-main bg-slate-50 text-xs",
           {
             hidden: currentPage === 1,
-          }
+          },
         )}
         onClick={onPrevious}
       >
@@ -81,7 +81,7 @@ const Pagination = (props) => {
           "p-2 rounded-sm w-6 h-6 flex items-center justify-center text-main bg-slate-50 text-xs",
           {
             hidden: currentPage === lastPage,
-          }
+          },
         )}
         onClick={onNext}
       >

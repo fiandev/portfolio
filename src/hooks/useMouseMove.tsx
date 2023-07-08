@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useEffect, useRef } from "react";
 
 export const useMouseMove = (onMouseMove = (mouseX = 0, mouseY = 0) => {}) => {

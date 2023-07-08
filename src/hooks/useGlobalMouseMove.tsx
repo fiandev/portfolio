@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useContext, useEffect, useState } from "react";
 
 const GlobalMouseCoordsContext = React.createContext(undefined);
@@ -75,7 +75,7 @@ export const useGlobalMouseMove = () => {
 
   if (mouseCoords === undefined)
     throw new Error(
-      "useGlobalMouseMove must be used inside a GlobalMouseMoveProvider"
+      "useGlobalMouseMove must be used inside a GlobalMouseMoveProvider",
     );
 
   return mouseCoords;

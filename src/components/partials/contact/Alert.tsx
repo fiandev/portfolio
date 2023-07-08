@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState } from "react";
 
 export default function Alert({ children, className, duration = 2000 }) {

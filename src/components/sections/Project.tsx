@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState, useMemo, lazy, Suspense } from "react";
 
 import Loading from "@components/partials/Loading";

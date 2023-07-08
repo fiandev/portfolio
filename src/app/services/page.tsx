@@ -1,6 +1,5 @@
 import ServiceList from "@components/sections/ServiceList";
 import Contact from "@components/sections/Contact";
-import Footer from "@components/sections/Footer";
 
 export default function Services() {
   return (
@@ -21,7 +20,6 @@ export default function Services() {
         formClassName="dark:outline-sky-100 dark:hover:outline-main dark:text-slate-100"
         className="bg-gradient-to-b from-sky-100 to-slate-50 dark:text-100 dark:from-main dark:to-slate-900"
       />
-      <Footer />
     </div>
   );
 }
