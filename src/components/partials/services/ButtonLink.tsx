@@ -1,11 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function ButtonLink({
-  link,
+  link = "#",
   icon,
   label = "no label",
-  name,
-  className,
+  name = "",
+  className = "",
 }) {
   return (
     <a
