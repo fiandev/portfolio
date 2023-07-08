@@ -14,7 +14,7 @@ const defaultRect = () => ({
  * Get the rect bounding box for a node excluding any transformations.
  * see: https://stackoverflow.com/questions/27745438/how-to-compute-getboundingclientrect-without-considering-transforms
  */
-export const useRect = (nodeRef = { current: null }: any) => {
+export const useRect = (nodeRef = { current: null }) => {
   const [initialized, setInitialized] = useState<any>(false);
   const [rect, setRect] = useState<any>(defaultRect());
 
