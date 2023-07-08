@@ -28,9 +28,9 @@ export const ScrollableArea = ({
   style?: object
   startAtScreenTop?: boolean
 }) => {
-  const ref = useRef<any>(null);
+  const ref: any = useRef();
   const [scrollY, winHeight] = useGlobalScroll();
-  const [initialized, rect] = useRect<any>(ref);
+  const [initialized, rect] = useRect(ref);
 
   const scrollProgress = initialized
     ? getScrollProgress(

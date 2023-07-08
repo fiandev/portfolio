@@ -14,9 +14,9 @@ const defaultRect = () => ({
  * Get the rect bounding box for a node excluding any transformations.
  * see: https://stackoverflow.com/questions/27745438/how-to-compute-getboundingclientrect-without-considering-transforms
  */
-export const useRect = (nodeRef = { current: null }) => {
-  const [initialized, setInitialized] = useState(false);
-  const [rect, setRect] = useState(defaultRect());
+export const useRect = (nodeRef = { current: null }: any) => {
+  const [initialized, setInitialized] = useState<any>(false);
+  const [rect, setRect] = useState<any>(defaultRect());
 
   useEffect(() => {
     // rect.current = calcPosition(nodeRef.current);
