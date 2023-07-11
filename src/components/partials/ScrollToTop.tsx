@@ -40,7 +40,7 @@ export default function ScrollToTop({
       onClick={() => setClicked(true)}
       className={`${position > offsetY ? "scale-100" : "scale-0"} ${
         isBottom ? "animate-bounce" : ""
-      } hover:outline duration-500 transition-transform fixed bottom-2 right-2 w-12 h-12 rounded-full text-lg flex items-center justify-center lg:hidden ${className}`}
+      } hover:outline duration-500 transition-transform fixed z-[99] bottom-2 right-2 w-12 h-12 rounded-full text-lg flex items-center justify-center lg:hidden ${className}`}
     >
       <FontAwesomeIcon icon={faArrowUp} />
     </div>
