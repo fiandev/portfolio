@@ -4,21 +4,13 @@ export const randomPercen = () =>
 export const getBlobRadius = () =>
   `${randomPercen()}% ${randomPercen()}% ${randomPercen()}% ${randomPercen()}% / ${randomPercen()}% ${randomPercen()}% ${randomPercen()}% ${randomPercen()}%`;
 
-/*
-export const getOffset = (el) => {
-  const rect = el.getBoundingClientRect();
-  return {
-    x: rect.left + window.scrollX,
-    y: rect.top + window.scrollY,
-  };
-};
-*/
-
-export const env = (key, alternative = null) => {
+export const env = (key: string, alternative?: string | number | Function | null): string | number | null => {
+  if (typeof alternative === "function") return process.env[key] ? process.env[key] : alternative()
+  
   return process.env[key] ? process.env[key] : alternative;
 };
 
-export const serialize = (obj) => {
+export const serialize = (obj = {}) => {
   var str = [];
   for (var p in obj)
     if (obj.hasOwnProperty(p)) {
@@ -27,7 +19,7 @@ export const serialize = (obj) => {
   return str.join("&");
 };
 
-export const imageErrorHandler = (e, src = "") => {
+export const imageErrorHandler = (e, src = ""): string | null => {
   e.target.src = src;
 };
 

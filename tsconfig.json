@@ -39,6 +39,15 @@
       ],
       "@styles/*": [
         "./src/styles/*"
+      ],
+      "@database/*": [
+        "./src/database/*"
+      ],
+      "@models/*": [
+        "./src/database/models/*"
+      ],
+      "@schemas/*": [
+        "./src/database/schemas/*"
       ]
     },
     "plugins": [
