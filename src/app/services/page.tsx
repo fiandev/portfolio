@@ -6,8 +6,9 @@ import Contact from "@components/sections/Contact";
 const title = "fiandev's service",
   thumbnail = "https://fiandev.my.id/graph.png",
   description =
-    "see all the list of services that I provide, as an IT Support freelancer"
-    
+    "see all the list of services that I provide, as an IT Support freelancer",
+  keywords = ["service", "services", "pricing", "fiandev", "freelance", "freelancer", "it support"];
+  
 export const metadata: Metadata = {
   title: title,
   description: description,

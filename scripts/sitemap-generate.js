@@ -102,10 +102,15 @@ async function generate_sitemap() {
   return await xw.toString();
 }
 
+function write(path, content) {
+  try {
+    fs.writeFileSync(path, content);
+    console.log(`file generated at ${path}`);
+  } catch (e) {
+    console.log(`failed write file at ${path}`);
+  }
+}
+
 (async () => {
-  fs.writeFileSync(sitemap, await generate_sitemap());
-  fs.writeFileSync(
-    sitemap_index,
-    await generate_sitemap_index(["sitemap.xml"]),
-  );
+  write(sitemap, await generate_sitemap());
 })();

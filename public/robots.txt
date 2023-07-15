@@ -1,3 +1,14 @@
-# https://www.robotstxt.org/robotstxt.html
+# *
 User-agent: *
-Disallow:
+Allow: /
+
+# black-listed-bot
+User-agent: black-listed-bot
+Disallow: /dashboard
+
+# Host
+Host: https://fiandev.my.id
+
+# Sitemaps
+Sitemap: https://fiandev.my.id/sitemap_index.xml
+Sitemap: https://fiandev.my.id/sitemap.xml
