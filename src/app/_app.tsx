@@ -6,7 +6,7 @@ import "@/styles/index.css";
 library.add(fab);
 
 export default async function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return <Component {...pageProps} />;
   /*
   return (
     <div>

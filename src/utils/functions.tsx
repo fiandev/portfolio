@@ -4,9 +4,13 @@ export const randomPercen = () =>
 export const getBlobRadius = () =>
   `${randomPercen()}% ${randomPercen()}% ${randomPercen()}% ${randomPercen()}% / ${randomPercen()}% ${randomPercen()}% ${randomPercen()}% ${randomPercen()}%`;
 
-export const env = (key: string, alternative?: string | number | Function | null): string | number | null => {
-  if (typeof alternative === "function") return process.env[key] ? process.env[key] : alternative()
-  
+export const env = (
+  key: string,
+  alternative?: string | number | Function | null,
+): string | number | null => {
+  if (typeof alternative === "function")
+    return process.env[key] ? process.env[key] : alternative();
+
   return process.env[key] ? process.env[key] : alternative;
 };
 

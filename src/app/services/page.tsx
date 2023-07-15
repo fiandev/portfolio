@@ -1,6 +1,23 @@
-import ServiceList from "@components/sections/ServiceList";
+import { Metadata } from "next";
+
+import ServiceList, { images } from "@components/sections/ServiceList";
 import Contact from "@components/sections/Contact";
 
+const title = "fiandev's service",
+  thumbnail = "https://fiandev.my.id/graph.png",
+  description =
+    "see all the list of services that I provide, as an IT Support freelancer"
+    
+export const metadata: Metadata = {
+  title: title,
+  description: description,
+  keywords: keywords,
+  openGraph: {
+    title: title,
+    images: images,
+    description: description,
+  },
+}
 export default function Services() {
   return (
     <div className={`pt-8 scroll-smooth relative pt-2 dark:bg-slate-800`}>

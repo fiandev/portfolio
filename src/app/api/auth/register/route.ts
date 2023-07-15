@@ -1,14 +1,11 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from "next";
 import { NextResponse } from "next/server";
 
 import User from "@models/User";
 import connect from "@database/connect";
 import { encrypt, decrypt } from "@utils/encryption";
 
-export const POST = async (
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
-) => {
+export const POST = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
   await connect();
   const { name, email, password, username } = req.body;
 
@@ -26,12 +23,12 @@ export const POST = async (
     return res.status(200).json({
       message: "user has been added !",
       username: newUser.username,
-    })
+    });
   } catch (err) {
     console.log(err);
     return res.status(201).json({
       message: "failed when add new user !",
-      error: error.message
-    })
+      error: error.message,
+    });
   }
 };
