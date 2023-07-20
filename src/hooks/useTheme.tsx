@@ -35,7 +35,7 @@ export const GlobalThemeProvider = ({
 
   return (
     <div>
-      <GlobalThemeContext.Provider value={[theme, setTheme]}>
+      <GlobalThemeContext.Provider value={theme}>
         {children}
       </GlobalThemeContext.Provider>
     </div>
@@ -43,9 +43,9 @@ export const GlobalThemeProvider = ({
 };
 
 export const useTheme = () => {
-  const [theme, setTheme] = useContext<any>(GlobalThemeContext);
-
+  const theme = useContext<any>(GlobalThemeContext);
+  console.log({ theme })
   if (!theme) console.log("useTheme must be used inside a GlobalThemeProvider");
-
-  return [theme, setTheme];
+  
+  return theme;
 };

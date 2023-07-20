@@ -40,6 +40,9 @@
       "@styles/*": [
         "./src/styles/*"
       ],
+      "@providers/*": [
+        "./src/providers/*"
+      ],
       "@database/*": [
         "./src/database/*"
       ],

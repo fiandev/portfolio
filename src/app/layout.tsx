@@ -4,6 +4,8 @@ import { GlobalScrollProvider } from "@hooks/useGlobalScroll";
 import { GlobalMouseMoveProvider } from "@hooks/useGlobalMouseMove";
 import { GlobalThemeProvider } from "@hooks/useTheme";
 
+import AuthProvider from "@providers/AuthProvider";
+
 import Wrapper from "@components/sections/Wrapper";
 import Nav from "@components/sections/Nav";
 import Footer from "@components/sections/Footer";
@@ -79,18 +81,18 @@ export default function RootLayout({
     <html>
       <body className="relative flex flex-col min-h-screen w-screen">
         <noscript>You need to enable JavaScript to run this app.</noscript>
-        <div id="root">
-          <GlobalThemeProvider>
-            <Wrapper>
+        <Wrapper>
+          <AuthProvider>
+            <GlobalThemeProvider>
               <Nav />
               <GlobalScrollProvider>
                 <GlobalMouseMoveProvider>{children}</GlobalMouseMoveProvider>
               </GlobalScrollProvider>
               <ScrollToTop className="bg-main text-slate-800 dark:bg-slate-800 dark:text-main" />
               <Footer />
-            </Wrapper>
-          </GlobalThemeProvider>
-        </div>
+            </GlobalThemeProvider>
+          </AuthProvider>
+        </Wrapper>
       </body>
     </html>
   );

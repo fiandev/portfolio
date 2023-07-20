@@ -24,7 +24,7 @@ export default function NavLink({
         request(to) ? "nav-link-active" : "nav-link"
       } ${className}`}
     >
-      <Link className="duration-1000 flex w-full bg-transparent" href={to}>
+      <Link className="hover:cursor-pointer duration-800 flex w-full bg-transparent" href={to}>
         {text || "#"}
       </Link>
     </li>
