@@ -44,8 +44,8 @@ export const GlobalThemeProvider = ({
 
 export const useTheme = () => {
   const theme = useContext<any>(GlobalThemeContext);
-  console.log({ theme })
-  if (!theme) console.log("useTheme must be used inside a GlobalThemeProvider");
   
+  if (!theme) console.log("useTheme must be used inside a GlobalThemeProvider");
+
   return theme;
 };

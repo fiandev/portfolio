@@ -55,7 +55,13 @@ const services = {
   ],
 };
 
-export const images = [].concat(...Object.entries(services).map(val => services[val[0]].map(item => item.thumbnail))).filter(v => !!v);
+export const images = []
+  .concat(
+    ...Object.entries(services).map((val) =>
+      services[val[0]].map((item) => item.thumbnail),
+    ),
+  )
+  .filter((v) => !!v);
 export default function ServiceList({ className = "" }) {
   return (
     <section

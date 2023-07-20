@@ -7,8 +7,16 @@ const title = "fiandev's service",
   thumbnail = "https://fiandev.my.id/graph.png",
   description =
     "see all the list of services that I provide, as an IT Support freelancer",
-  keywords = ["service", "services", "pricing", "fiandev", "freelance", "freelancer", "it support"];
-  
+  keywords = [
+    "service",
+    "services",
+    "pricing",
+    "fiandev",
+    "freelance",
+    "freelancer",
+    "it support",
+  ];
+
 export const metadata: Metadata = {
   title: title,
   description: description,
@@ -18,7 +26,7 @@ export const metadata: Metadata = {
     images: images,
     description: description,
   },
-}
+};
 export default function Services() {
   return (
     <div className={`pt-8 scroll-smooth relative pt-2 dark:bg-slate-800`}>

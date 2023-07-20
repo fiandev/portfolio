@@ -131,7 +131,9 @@ export default function Contact({
             className="hover:cursor-pointer self-end md:self-start font-sans font-light hover:font-semibold transition-all flex gap-2 items-center justify-center w-24 h-8 p-2 group/btn bg-blue-500 hover:bg-blue-600 outline-lg outline-blue-200 outline hover:outline-blue-400 hover:animate-none hover:shadow-lg text-slate-50 rounded-full"
           >
             <FontAwesomeIcon
-              className={`${ active ? "hover:cursor-wait" : "hover:cursor-pointer" } animation group-hover/btn:animate-bounce` }
+              className={`${
+                active ? "hover:cursor-wait" : "hover:cursor-pointer"
+              } animation group-hover/btn:animate-bounce`}
               icon={!active ? faPaperPlane : faSpinner}
             />
             Send
