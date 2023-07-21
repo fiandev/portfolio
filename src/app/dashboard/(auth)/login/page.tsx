@@ -20,7 +20,7 @@ export default function Login() {
 
   return (
     <div className="w-screen h-screen flex justify-center items-center">
-      <form onSubmit={handlerSumbmit} className="flex flex-col gap-3">
+      <form onSubmit={handlerSubmit} className="flex flex-col gap-3">
         <input
           type="email"
           placeholder="email"
