@@ -20,7 +20,7 @@
     "bcryptjs": "^2.4.3",
     "classnames": "^2.3.2",
     "interweave": "^13.1.0",
-    "mongoose": "^7.3.4",
+    "mongoose": "^7.4.0",
     "next": "13.4.8",
     "next-auth": "^4.22.1",
     "react": "18.2.0",
