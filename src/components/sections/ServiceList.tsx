@@ -63,6 +63,10 @@ export const images = []
   )
   .filter((v) => !!v);
 export default function ServiceList({ className = "" }) {
+  const phoneNumber = "+6281336270845"
+  let WhatsApp_URL = `https://wa.me/${ phoneNumber }`
+  let now = new Date().toLocaleString();
+  
   return (
     <section
       className={`flex-shrink-0 flex flex-col items-start px-4 gap-2 ${className}`}
@@ -83,6 +87,7 @@ export default function ServiceList({ className = "" }) {
                       description={service.description}
                       className="w-48 h-64"
                       alt={`${service.title} photo's `}
+                      link={ `${ WhatsApp_URL }?text=service: ${ service.title }\norder date: ${ now }\ncustomer name: <fill your name>\ndescription: <describe your wish>\n` }
                       thumbnail={
                         service.thumbnail ||
                         "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=755&q=80"

@@ -3,13 +3,13 @@ import { signIn } from "next-auth/react";
 import React, { useState } from "react";
 
 export default function Login() {
-  const [isFailed, setIsFailed] = useState<boolean>(false);
+  const [isFailed, setIsFailed] = useState(false);
 
   const handlerSubmit = async (e) => {
     e.preventDefault();
     const email = e.target[0].value;
     const password = e.target[1].value;
-
+    
     try {
       await signIn("credentials", { email, password });
     } catch (error) {
