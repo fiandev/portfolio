@@ -10,7 +10,7 @@ import Alert from "@components/partials/contact/Alert";
 
 import { randomID, env } from "@utils/functions";
 
-const Register = () => {
+const Register = (): any => {
   const [active, setActive] = useState(false);
   const [errors, setErrors] = useState([]);
   const router = useRouter();
@@ -55,9 +55,14 @@ const Register = () => {
     }
   };
   
-  if (env("APP_ENV") === "production") return router.push("/dashboard/login");
-  
-  return (
+  return env("APP_ENV") === "production") ?
+    (
+      <div className="flex flex-col items-center justify-center pt-2 scroll-smooth relative w-full h-screen">
+        <h1 className="text-2xl"> 403 </h1>
+        <p> forbidden </p>
+      </div>
+    )
+  : (
     <div className="flex flex-col pt-2 scroll-smooth relative w-full">
     
       
