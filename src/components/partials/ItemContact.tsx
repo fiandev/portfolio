@@ -1,13 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { FaFacebook, FaGithub, FaTwitter, FaInstagram, FaWhatsapp, FaLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faGithub, faTwitter, faInstagram, faWhatsapp, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const icons = {
-  facebook: FaFacebook,
-  instagram: FaInstagram,
-  whatsapp: FaWhatsapp,
-  twitter: FaTwitter,
-  github: FaGithub,
-  linkedin: FaLinkedin
+  facebook: faFacebook,
+  instagram: faInstagram,
+  whatsapp: faWhatsapp,
+  twitter: faTwitter,
+  github: faGithub,
+  linkedin: faLinkedin
 };
 
 export default function ItemContact({
