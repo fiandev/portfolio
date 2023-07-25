@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import { randomID } from "@utils/functions";
 
 export default function Image({
@@ -14,12 +14,12 @@ export default function Image({
   className?: string;
   onError?: any;
 }) {
-  const handleError = () => {
-    // todo
+  const handleError = (e) => {
+    e.target.src = "https://www.worldwidejournals.com/paripex/images/404-error.gif";
   };
 
   return (
-    <Image
+    <img
       onError={onError || handleError}
       className={className}
       src={srcset || src}
