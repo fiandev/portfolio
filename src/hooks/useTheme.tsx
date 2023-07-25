@@ -24,7 +24,7 @@ export const GlobalThemeProvider = ({
     
     // Whenever the user explicitly chooses to respect the OS preference
     setTheme(theme);
-  }, [theme]);
+  }, [Theme]);
 
   return (
     <GlobalThemeContext.Provider value={Theme}>
@@ -34,9 +34,9 @@ export const GlobalThemeProvider = ({
 };
 
 export const useTheme = () => {
-  const theme = useContext<any>(GlobalThemeContext);
+  const Theme = useContext<any>(GlobalThemeContext);
   
-  if (!theme) console.log("useTheme must be used inside a GlobalThemeProvider");
+  if (!Theme) console.log("useTheme must be used inside a GlobalThemeProvider");
 
-  return theme;
+  return Theme;
 };
