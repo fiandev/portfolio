@@ -79,7 +79,7 @@
       {
         "title": "My Qur'an",
         "description": "Aplikasi web sederhana untuk membaca quran serta mengetahui waktu sholat kapan dan dimana saja.",
-        "preview": "my-quran-seven.vercel.app",
+        "preview": "https://my-quran-gray.vercel.app/",
         "stacks": [
           {
             "name": "javascript",
