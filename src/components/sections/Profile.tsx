@@ -18,7 +18,7 @@ const Profile = ({ data }: { data: any }) => {
               data ? "animation-none" : "animation-pulse"
             } w-full h-full shadow-md rounded-full border-2 border-sky-400`}
             alt="my avatar"
-            srcset={data ? data.avatar.base64 : ""}
+            srcset={data ? data.avatar.url : ""}
           />
         </Shapes>
       </div>

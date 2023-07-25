@@ -13,13 +13,13 @@ const setThumbnail = (e) => {
 };
 
 export default function Item({
-  className,
-  thumbnail,
-  title,
-  description,
-  link,
-  repo,
-  stacks,
+  className = "",
+  thumbnail = "#",
+  title = "",
+  description = "",
+  link = "",
+  repo = "",
+  stacks = "",
 }) {
   return (
     <div
@@ -27,7 +27,7 @@ export default function Item({
     >
       <Image
         onError={setThumbnail}
-        srcset={thumbnail ? thumbnail.base64 : ""}
+        srcset={thumbnail ? thumbnail : ""}
         alt={title || "untitled"}
         className="w-full h-36 lg:w-full transition-all group-hover:scale-150 bg-sky-400"
       />

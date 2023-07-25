@@ -7,9 +7,9 @@
     -webkit-text-stroke: 0px #ffffff;
   }
   .font-outline {
-    -webkit-text-stroke: .5px #0036f1;
+    -webkit-text-stroke: 0.5px #0036f1;
   }
-  
+
   .nav-link {
     @apply bg-sky-100 rounded-md text-main bg-transparent
            dark:bg-transparent text-main dark:text-slate-100;

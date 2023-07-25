@@ -30,7 +30,7 @@ export default function Footer() {
       <Image
         className="w-max h-max m-0 p-0"
         alt="wave animation"
-        srcset="/static/svg/WaveAnimate.svg"
+        srcset="/static/svg/wave.svg"
       />
     </section>
   );

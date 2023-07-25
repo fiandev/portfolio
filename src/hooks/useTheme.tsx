@@ -1,44 +1,35 @@
 "use client";
 import React, { useContext, useEffect, useState } from "react";
 
-const GlobalThemeContext = React.createContext<any>(null);
+const GlobalThemeContext = React.createContext<string>("light");
 
 export const GlobalThemeProvider = ({
   children,
 }: {
   children: React.ReactNode;
 }) => {
-  const [theme, setTheme] = useState<any>(null);
+  const [Theme, setTheme] = useState<any>(null);
 
   useEffect(() => {
     let isDarkTheme =
       localStorage.theme === "dark" ||
       (!("theme" in localStorage) &&
         window.matchMedia("(prefers-color-scheme: dark)").matches);
-
-    if (isDarkTheme) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
+    let theme = isDarkTheme ? "dark" : "light";
+    
+    document.documentElement.classList.add(theme);
 
     // Whenever the user explicitly chooses light mode
-    localStorage.theme = "light";
-
-    // Whenever the user explicitly chooses dark mode
-    localStorage.theme = "dark";
-
+    localStorage.theme = theme;
+    
     // Whenever the user explicitly chooses to respect the OS preference
-    localStorage.removeItem("theme");
-    setTheme(isDarkTheme ? "dark" : "light");
-  }, [setTheme, theme]);
+    setTheme(theme);
+  }, [theme]);
 
   return (
-    <div>
-      <GlobalThemeContext.Provider value={theme}>
-        {children}
-      </GlobalThemeContext.Provider>
-    </div>
+    <GlobalThemeContext.Provider value={Theme}>
+      {children}
+    </GlobalThemeContext.Provider>
   );
 };
 

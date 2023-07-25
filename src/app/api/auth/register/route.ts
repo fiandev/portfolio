@@ -7,8 +7,11 @@ import { encrypt, decrypt } from "@utils/encryption";
 
 export const POST = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
   await connect();
-  const { name, email, password, username } = req.body;
-
+  // const { username, email, password } = req.body;
+  console.log({ body: req.body })
+  
+  return req.body
+  /*
   const hashedPassword = await encrypt(password, 5);
 
   const newUser = await User.create({
@@ -18,7 +21,8 @@ export const POST = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
     is_admin: email === "fiandev1234@gmail.com",
     password: hashedPassword,
   });
-
+  */
+  /*
   try {
     return res.status(200).json({
       message: "user has been added !",
@@ -31,4 +35,5 @@ export const POST = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
       error: error.message,
     });
   }
+  */
 };

@@ -42,7 +42,7 @@ const Project = ({
                     link={project.preview}
                     stacks={project.stacks}
                     repo={project.repository}
-                    thumbnail={project.thumbnail}
+                    thumbnail={project.thumbnail.url}
                     title={project.title}
                     description={project.description}
                   />

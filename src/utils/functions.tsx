@@ -46,8 +46,9 @@ export const randomID = (len = 4) => {
   return result;
 };
 
-export const request = (path) => {
-  let url = new URL(window.location.href);
-
-  return !path ? url.pathname : path === url.pathname;
-};
+export const textWhatsAppEncode = (text = "") => {
+  text = text.replace("\n", "%0A");
+  text = text.replace(" ", "%20");
+  
+  return text;
+}

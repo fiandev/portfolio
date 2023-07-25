@@ -1,0 +1,493 @@
+{
+  "code": 200,
+  "status": "success",
+  "data": {
+    "name": "fian",
+    "username": "fiandev",
+    "email": "fiandev1234@gmail.com",
+    "slogan": "Pertama, izinkan saya memperkenalkan diri. Nama saya Aditia Akbar Putra Alfiansa, Anda bisa memanggil saya Fian.Saya membuat portofolio ini karena, saya ingin Anda mengenal saya dan apa yang bisa saya lakukan untuk Anda.Silakan hubungi saya, jika Anda membutuhkan bantuan saya \ud83d\ude04. Saya akan berusaha melakukan yang terbaik untuk itu.",
+    "about": "Pertama, izinkan saya memperkenalkan diri. Nama saya Aditia Akbar Putra Alfiansa, Anda bisa memanggil saya Fian.Saya membuat portofolio ini karena, saya ingin Anda mengenal saya dan apa yang bisa saya lakukan untuk Anda.Silakan hubungi saya, jika Anda membutuhkan bantuan saya \ud83d\ude04. Saya akan berusaha melakukan yang terbaik untuk itu.",
+    "birthdate": "2005-06-13",
+    "special_token": "!im_admin!",
+    "formatted_about": "<div>Pertama, izinkan saya memperkenalkan diri. Nama saya <strong>Aditia Akbar Putra Alfiansa</strong>, Anda bisa memanggil saya <strong>Fian</strong>.<br><br>Saya membuat portofolio ini karena, saya ingin Anda mengenal saya dan apa yang bisa saya lakukan untuk Anda.<br><br><strong>Silakan hubungi saya</strong>, jika Anda membutuhkan bantuan saya \ud83d\ude04. Saya akan berusaha melakukan yang terbaik untuk itu.</div>",
+    "formatted_slogan": "<div>Halo semuanya, saya <strong>Fian</strong>.<br><br>Saya sangat tertarik dengan dunia programming. Bahasa favorit saya adalah <strong>javascript</strong>, <strong>Python</strong>, dan <strong>PHP</strong>.</div>",
+    "photo": "http://localhost:8000/post-images/no-pp.jpg",
+    "skills": [
+      {
+        "name": "javascript",
+        "percentage": 100,
+        "level": "expert",
+        "description": null
+      },
+      {
+        "name": "PHP",
+        "percentage": 81,
+        "level": "expert",
+        "description": null
+      },
+      {
+        "name": "python",
+        "percentage": 60,
+        "level": "intermediate",
+        "description": null
+      },
+      {
+        "name": "CSS",
+        "percentage": 95,
+        "level": "expert",
+        "description": null
+      },
+      {
+        "name": "tailwind",
+        "percentage": 96,
+        "level": "expert",
+        "description": null
+      },
+      {
+        "name": "bootstrap",
+        "percentage": 85,
+        "level": "expert",
+        "description": null
+      },
+      {
+        "name": "typescript",
+        "percentage": 61,
+        "level": "intermediate",
+        "description": null
+      },
+      {
+        "name": "nextjs",
+        "percentage": 30,
+        "level": "beginner",
+        "description": "on period of learning and deepening the material"
+      },
+      {
+        "name": "laravel",
+        "percentage": 75,
+        "level": "intermediate",
+        "description": null
+      }
+    ],
+    "links": [
+      { "type": "github", "url": "https://github.com/fiandev" },
+      { "type": "facebook", "url": "https://fb.me/real.fiandev" },
+      { "type": "twitter", "url": "https://twitter.com/alfiann_13" },
+      { "type": "telegram", "url": "https://t.me/fiandev" },
+      { "type": "whatsapp", "url": "https://wa.me/+6281336270845" }
+    ],
+    "portfolios": [
+      {
+        "title": "My Qur'an",
+        "description": "Aplikasi web sederhana untuk membaca quran serta mengetahui waktu sholat kapan dan dimana saja.",
+        "preview": "my-quran-seven.vercel.app",
+        "stacks": [
+          {
+            "name": "javascript",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/javascript.svg"
+          },
+          {
+            "name": "bootstrap",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/bootstrap.svg"
+          }
+        ],
+        "repository": "https://github.com/fiandev/my-quran",
+        "uid": "d05d1966-f6ba-11ed-b908-be7c3490365e",
+        "created_at": "2023-05-20T03:12:31.000000Z",
+        "formatted_description": "<div>Aplikasi web sederhana untuk membaca quran serta mengetahui waktu sholat kapan dan dimana saja.</div>",
+        "thumbnail": {
+          "url": "https://i.ibb.co/vPqww51/df317c663083.jpg",
+          "data": {
+            "data": {
+              "id": "T82vvXc",
+              "title": "df317c663083",
+              "url_viewer": "https://ibb.co/T82vvXc",
+              "url": "https://i.ibb.co/vPqww51/df317c663083.jpg",
+              "display_url": "https://i.ibb.co/1qQvvVZ/df317c663083.jpg",
+              "width": 1600,
+              "height": 828,
+              "size": 100430,
+              "time": 1684873276,
+              "expiration": 0,
+              "image": {
+                "filename": "df317c663083.jpg",
+                "name": "df317c663083",
+                "mime": "image/jpeg",
+                "extension": "jpg",
+                "url": "https://i.ibb.co/vPqww51/df317c663083.jpg"
+              },
+              "thumb": {
+                "filename": "df317c663083.jpg",
+                "name": "df317c663083",
+                "mime": "image/jpeg",
+                "extension": "jpg",
+                "url": "https://i.ibb.co/T82vvXc/df317c663083.jpg"
+              },
+              "medium": {
+                "filename": "df317c663083.jpg",
+                "name": "df317c663083",
+                "mime": "image/jpeg",
+                "extension": "jpg",
+                "url": "https://i.ibb.co/1qQvvVZ/df317c663083.jpg"
+              },
+              "delete_url": "https://ibb.co/T82vvXc/7021603fbf8c80c9690092675671a91d"
+            },
+            "success": true,
+            "status": 200
+          },
+          "created_at": "2023-05-23T20:22:06.000000Z",
+          "updated_at": "2023-05-23T20:22:06.000000Z"
+        }
+      },
+      {
+        "title": "Otaku Downloader",
+        "description": "alat untuk mengunduh anime dari otakudesu secara otomatis.",
+        "preview": "https://github.com/fiandev/otaku-downloader",
+        "stacks": [
+          {
+            "name": "javascript",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/javascript.svg"
+          }
+        ],
+        "repository": "https://github.com/fiandev/otaku-downloader",
+        "uid": "691e8813-f705-11ed-8de3-8c397bbe451e",
+        "created_at": "2023-05-20T11:56:52.000000Z",
+        "formatted_description": "<div>alat untuk mengunduh anime dari <strong>otakudesu</strong> secara otomatis.</div>",
+        "thumbnail": {
+          "url": "https://i.ibb.co/VNtZD2W/533b3ce03dd6.png",
+          "data": {
+            "data": {
+              "id": "yRX15Wn",
+              "title": "533b3ce03dd6",
+              "url_viewer": "https://ibb.co/yRX15Wn",
+              "url": "https://i.ibb.co/VNtZD2W/533b3ce03dd6.png",
+              "display_url": "https://i.ibb.co/TTkSRmB/533b3ce03dd6.png",
+              "width": 1200,
+              "height": 600,
+              "size": 140107,
+              "time": 1684583811,
+              "expiration": 0,
+              "image": {
+                "filename": "533b3ce03dd6.png",
+                "name": "533b3ce03dd6",
+                "mime": "image/png",
+                "extension": "png",
+                "url": "https://i.ibb.co/VNtZD2W/533b3ce03dd6.png"
+              },
+              "thumb": {
+                "filename": "533b3ce03dd6.png",
+                "name": "533b3ce03dd6",
+                "mime": "image/png",
+                "extension": "png",
+                "url": "https://i.ibb.co/yRX15Wn/533b3ce03dd6.png"
+              },
+              "medium": {
+                "filename": "533b3ce03dd6.png",
+                "name": "533b3ce03dd6",
+                "mime": "image/png",
+                "extension": "png",
+                "url": "https://i.ibb.co/TTkSRmB/533b3ce03dd6.png"
+              },
+              "delete_url": "https://ibb.co/yRX15Wn/9894d150b09ed350babcec604fc47cbd"
+            },
+            "success": true,
+            "status": 200
+          },
+          "created_at": "2023-05-20T11:56:52.000000Z",
+          "updated_at": "2023-05-20T11:56:52.000000Z"
+        }
+      },
+      {
+        "title": "Tanyo.id",
+        "description": "I worked as a freelance frontend during this project",
+        "preview": "https://tanyo.id/",
+        "stacks": [
+          {
+            "name": "javascript",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/javascript.svg"
+          },
+          {
+            "name": "tailwind",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/tailwind.svg"
+          }
+        ],
+        "repository": "https://tanyo.id/",
+        "uid": "1de82653-f707-11ed-8de3-8c397bbe451e",
+        "created_at": "2023-05-20T12:09:05.000000Z",
+        "formatted_description": "<div>I worked as a freelance frontend during this project</div>",
+        "thumbnail": {
+          "url": "https://i.ibb.co/KG8kkvT/80ea8f9e709d.jpg",
+          "data": {
+            "data": {
+              "id": "0XzSSbH",
+              "title": "80ea8f9e709d",
+              "url_viewer": "https://ibb.co/0XzSSbH",
+              "url": "https://i.ibb.co/KG8kkvT/80ea8f9e709d.jpg",
+              "display_url": "https://i.ibb.co/RSJmmwR/80ea8f9e709d.jpg",
+              "width": 1600,
+              "height": 828,
+              "size": 81995,
+              "time": 1684584544,
+              "expiration": 0,
+              "image": {
+                "filename": "80ea8f9e709d.jpg",
+                "name": "80ea8f9e709d",
+                "mime": "image/jpeg",
+                "extension": "jpg",
+                "url": "https://i.ibb.co/KG8kkvT/80ea8f9e709d.jpg"
+              },
+              "thumb": {
+                "filename": "80ea8f9e709d.jpg",
+                "name": "80ea8f9e709d",
+                "mime": "image/jpeg",
+                "extension": "jpg",
+                "url": "https://i.ibb.co/0XzSSbH/80ea8f9e709d.jpg"
+              },
+              "medium": {
+                "filename": "80ea8f9e709d.jpg",
+                "name": "80ea8f9e709d",
+                "mime": "image/jpeg",
+                "extension": "jpg",
+                "url": "https://i.ibb.co/RSJmmwR/80ea8f9e709d.jpg"
+              },
+              "delete_url": "https://ibb.co/0XzSSbH/399bee2716be12b079a1ac036f9c72a7"
+            },
+            "success": true,
+            "status": 200
+          },
+          "created_at": "2023-05-20T12:09:05.000000Z",
+          "updated_at": "2023-05-20T12:09:05.000000Z"
+        }
+      },
+      {
+        "title": "express.js template",
+        "description": "starter template for express app",
+        "preview": "https://npm.runkit.com/express-structure-folders",
+        "stacks": [
+          {
+            "name": "javascript",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/javascript.svg"
+          }
+        ],
+        "repository": "https://github.com/fiandev/express-structure-folders",
+        "uid": "3299f76d-f708-11ed-8de3-8c397bbe451e",
+        "created_at": "2023-05-20T12:16:49.000000Z",
+        "formatted_description": "<div>starter template for express app</div>",
+        "thumbnail": {
+          "url": "https://i.ibb.co/MRtTnfK/be6411d0e1a0.png",
+          "data": {
+            "data": {
+              "id": "y8ZT0pK",
+              "title": "be6411d0e1a0",
+              "url_viewer": "https://ibb.co/y8ZT0pK",
+              "url": "https://i.ibb.co/MRtTnfK/be6411d0e1a0.png",
+              "display_url": "https://i.ibb.co/D7vX4Ym/be6411d0e1a0.png",
+              "width": 1200,
+              "height": 600,
+              "size": 130189,
+              "time": 1684585009,
+              "expiration": 0,
+              "image": {
+                "filename": "be6411d0e1a0.png",
+                "name": "be6411d0e1a0",
+                "mime": "image/png",
+                "extension": "png",
+                "url": "https://i.ibb.co/MRtTnfK/be6411d0e1a0.png"
+              },
+              "thumb": {
+                "filename": "be6411d0e1a0.png",
+                "name": "be6411d0e1a0",
+                "mime": "image/png",
+                "extension": "png",
+                "url": "https://i.ibb.co/y8ZT0pK/be6411d0e1a0.png"
+              },
+              "medium": {
+                "filename": "be6411d0e1a0.png",
+                "name": "be6411d0e1a0",
+                "mime": "image/png",
+                "extension": "png",
+                "url": "https://i.ibb.co/D7vX4Ym/be6411d0e1a0.png"
+              },
+              "delete_url": "https://ibb.co/y8ZT0pK/ef4e87ea89beca45bae1558569f29e5d"
+            },
+            "success": true,
+            "status": 200
+          },
+          "created_at": "2023-05-20T12:16:49.000000Z",
+          "updated_at": "2023-05-20T12:16:49.000000Z"
+        }
+      },
+      {
+        "title": "Personal Portfolio",
+        "description": "Situs web portofolio pribadi saya",
+        "preview": "fiandev.vercel.app",
+        "stacks": [
+          {
+            "name": "tailwind",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/tailwind.svg"
+          },
+          {
+            "name": "laravel",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/laravel.svg"
+          }
+        ],
+        "repository": "https://github.com/fiandev/portfolio",
+        "uid": "848f95c0-f9ae-11ed-b41b-42f50435fe5b",
+        "created_at": "2023-05-23T21:12:26.000000Z",
+        "formatted_description": "<div>Situs web portofolio pribadi saya</div>",
+        "thumbnail": {
+          "url": "https://i.ibb.co/jDbmg9Q/1350d4086098.jpg",
+          "data": {
+            "data": {
+              "id": "sqbnypN",
+              "title": "1350d4086098",
+              "url_viewer": "https://ibb.co/sqbnypN",
+              "url": "https://i.ibb.co/jDbmg9Q/1350d4086098.jpg",
+              "display_url": "https://i.ibb.co/TtY6mD7/1350d4086098.jpg",
+              "width": 1600,
+              "height": 828,
+              "size": 49746,
+              "time": 1684876346,
+              "expiration": 0,
+              "image": {
+                "filename": "1350d4086098.jpg",
+                "name": "1350d4086098",
+                "mime": "image/jpeg",
+                "extension": "jpg",
+                "url": "https://i.ibb.co/jDbmg9Q/1350d4086098.jpg"
+              },
+              "thumb": {
+                "filename": "1350d4086098.jpg",
+                "name": "1350d4086098",
+                "mime": "image/jpeg",
+                "extension": "jpg",
+                "url": "https://i.ibb.co/sqbnypN/1350d4086098.jpg"
+              },
+              "medium": {
+                "filename": "1350d4086098.jpg",
+                "name": "1350d4086098",
+                "mime": "image/jpeg",
+                "extension": "jpg",
+                "url": "https://i.ibb.co/TtY6mD7/1350d4086098.jpg"
+              },
+              "delete_url": "https://ibb.co/sqbnypN/1bc1ac9a28766ff52a3a234159f57f09"
+            },
+            "success": true,
+            "status": 200
+          },
+          "created_at": "2023-05-23T21:12:26.000000Z",
+          "updated_at": "2023-05-23T21:12:26.000000Z"
+        }
+      },
+      {
+        "title": "memetren community",
+        "description": "sebuah website komunitas untuk melihat, mengupload dan membahas meme\u00b2 terbaru",
+        "preview": "https://memetren.my.id",
+        "stacks": [
+          {
+            "name": "javascript",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/javascript.svg"
+          },
+          {
+            "name": "python",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/python.svg"
+          },
+          {
+            "name": "bootstrap",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/bootstrap.svg"
+          }
+        ],
+        "repository": null,
+        "uid": "1854b884-2acd-11ee-9601-c70dea7173ee",
+        "created_at": "2023-07-25T09:24:45.000000Z",
+        "formatted_description": "<div>sebuah website komunitas untuk melihat, mengupload dan membahas meme\u00b2 terbaru</div>",
+        "thumbnail": {
+          "url": "https://i.ibb.co/Y0cD8ff/80b8b10476df.jpg",
+          "data": {
+            "data": {
+              "id": "8Yrz2PP",
+              "title": "80b8b10476df",
+              "url_viewer": "https://ibb.co/8Yrz2PP",
+              "url": "https://i.ibb.co/Y0cD8ff/80b8b10476df.jpg",
+              "display_url": "https://i.ibb.co/tLqZcYY/80b8b10476df.jpg",
+              "width": 1600,
+              "height": 900,
+              "size": 40023,
+              "time": 1690276938,
+              "expiration": 0,
+              "image": {
+                "filename": "80b8b10476df.jpg",
+                "name": "80b8b10476df",
+                "mime": "image/jpeg",
+                "extension": "jpg",
+                "url": "https://i.ibb.co/Y0cD8ff/80b8b10476df.jpg"
+              },
+              "thumb": {
+                "filename": "80b8b10476df.jpg",
+                "name": "80b8b10476df",
+                "mime": "image/jpeg",
+                "extension": "jpg",
+                "url": "https://i.ibb.co/8Yrz2PP/80b8b10476df.jpg"
+              },
+              "medium": {
+                "filename": "80b8b10476df.jpg",
+                "name": "80b8b10476df",
+                "mime": "image/jpeg",
+                "extension": "jpg",
+                "url": "https://i.ibb.co/tLqZcYY/80b8b10476df.jpg"
+              },
+              "delete_url": "https://ibb.co/8Yrz2PP/2c5906cbaeb82cb45c6f5ee3c43ab967"
+            },
+            "success": true,
+            "status": 200
+          },
+          "created_at": "2023-07-25T09:24:45.000000Z",
+          "updated_at": "2023-07-25T09:24:45.000000Z"
+        }
+      }
+    ],
+    "avatar": {
+      "url": "https://i.ibb.co/PTFf0sm/516457d995eb.jpg",
+      "data": {
+        "data": {
+          "id": "tZQWFwm",
+          "title": "516457d995eb",
+          "url_viewer": "https://ibb.co/tZQWFwm",
+          "url": "https://i.ibb.co/PTFf0sm/516457d995eb.jpg",
+          "display_url": "https://i.ibb.co/gvmBhbj/516457d995eb.jpg",
+          "width": 1600,
+          "height": 1600,
+          "size": 237211,
+          "time": 1687427139,
+          "expiration": 0,
+          "image": {
+            "filename": "516457d995eb.jpg",
+            "name": "516457d995eb",
+            "mime": "image/jpeg",
+            "extension": "jpg",
+            "url": "https://i.ibb.co/PTFf0sm/516457d995eb.jpg"
+          },
+          "thumb": {
+            "filename": "516457d995eb.jpg",
+            "name": "516457d995eb",
+            "mime": "image/jpeg",
+            "extension": "jpg",
+            "url": "https://i.ibb.co/tZQWFwm/516457d995eb.jpg"
+          },
+          "medium": {
+            "filename": "516457d995eb.jpg",
+            "name": "516457d995eb",
+            "mime": "image/jpeg",
+            "extension": "jpg",
+            "url": "https://i.ibb.co/gvmBhbj/516457d995eb.jpg"
+          },
+          "delete_url": "https://ibb.co/tZQWFwm/880ff2db327c75b5b2706bb6d4c3798e"
+        },
+        "success": true,
+        "status": 200
+      },
+      "created_at": "2023-06-22T09:45:39.000000Z",
+      "updated_at": "2023-06-22T09:45:39.000000Z"
+    }
+  },
+  "server_time": "Tue, 25/07/2023 04:29:04"
+}

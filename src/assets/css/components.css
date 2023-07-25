@@ -4,6 +4,7 @@ section {
   align-items: center;
 }
 
-b, strong {
+b,
+strong {
   font-weight: bold;
 }

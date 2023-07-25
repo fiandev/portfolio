@@ -8,7 +8,7 @@ export default function FormFloating({
   formClassName,
   error = null,
 }: {
-  type?: string;
+  type?: "text" | "textarea" | "password" | "number" | "range" | "phone";
   name?: string;
   text?: string;
   className?: string;
@@ -51,7 +51,7 @@ export default function FormFloating({
               ? "placeholder-rose-500 text-rose-500"
               : "text-main placeholder-main"
           }`}
-          type="text"
+          type={ type = "text" }
           name={name || "input"}
           value={value}
           placeholder={placeholder || "type here ..."}
