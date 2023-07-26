@@ -35,4 +35,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-.migrate.js
+/migrate.js
+
+# dashboard
+/src/app/dashboard
