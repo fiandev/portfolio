@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function ButtonLink({
@@ -8,7 +9,7 @@ export default function ButtonLink({
   className = "",
 }) {
   return (
-    <a
+    <Link
       href={link || "#"}
       key={name || label}
       className={`group/button flex gap-2 items-center transition-all duration-800 p-2 rounded-sm hover:rounded-full ${className}`}
@@ -18,6 +19,6 @@ export default function ButtonLink({
         icon={icon}
       />
       <span>{label || "visit"}</span>
-    </a>
+    </Link>
   );
 }

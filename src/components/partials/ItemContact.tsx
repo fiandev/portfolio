@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faGithub, faTwitter, faInstagram, faWhatsapp, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faGithub, faTwitter, faInstagram, faWhatsapp, faLinkedin, faTelegram } from "@fortawesome/free-brands-svg-icons";
 
 const icons = {
   facebook: faFacebook,
@@ -7,7 +7,8 @@ const icons = {
   whatsapp: faWhatsapp,
   twitter: faTwitter,
   github: faGithub,
-  linkedin: faLinkedin
+  linkedin: faLinkedin,
+  telegram: faTelegram,
 };
 
 export default function ItemContact({

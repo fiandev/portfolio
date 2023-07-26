@@ -5,29 +5,29 @@ const services = {
   "web development": [
     {
       title: "slicing design from figma",
-      description: "turn your designs in figma into reality",
+      description: "mengubah desain Anda di figma menjadi kenyataan",
       thumbnail:
         "https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80",
     },
     {
       title: "build rest full API",
-      description: "build your rest api quickly and efficiently",
+      description: "bangun rest api Anda dengan cepat dan efisien",
       thumbnail:
         "https://staticassets.dreamfactory.com/blogs/restapi2.png?t=1527092313664",
     },
     {
       title: "seo optimization",
-      description: "make the website number one in all search engines",
+      description: "jadikan website anda nomor satu di semua mesin pencari",
     },
     {
       title: "add feature on website",
-      description: "add the necessary features to your website safe and stable",
+      description: "tambahkan fitur yang diperlukan agar situs web Anda aman dan stabil",
       thumbnail:
         "https://media.istockphoto.com/id/1358013032/id/foto/konsep-pengembangan-web.jpg?s=612x612&w=0&k=20&c=Bf1e38ySsu3YkmDL74yI7hWziLvgcvfm1mHT14e5QDo=",
     },
     {
       title: "crawling website",
-      description: "retrieve all the information needed and store it",
+      description: "mengambil semua informasi pada sebuah website yang dibutuhkan dan menyimpannya",
       thumbnail:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3J-cqAcLthCczovHHQan67KaxxzE5XO27NA&usqp=CAU",
     },
@@ -37,11 +37,11 @@ const services = {
     {
       title: "jockey assignments",
       description:
-        "You can just relax and leave your school/college assignments to me!",
+        "Anda bisa santai saja dan serahkan tugas sekolah/kuliah Anda kepada saya!",
     },
     {
       title: "fix bug",
-      description: "find and solve problems in your program",
+      description: "menemukan dan memecahkan masalah dalam program Anda",
       thumbnail:
         "https://media.istockphoto.com/id/504819900/id/foto/pengembangan-perangkat-lunak-dan-konsep-debugging-bug-ditemukan-dalam-kode-biner.jpg?s=612x612&w=0&k=20&c=9Jh41JcZ_8UgwY1R3fqUSWBVQFrk-wwxE_b1LJus1C0=",
     },
@@ -49,7 +49,7 @@ const services = {
   products: [
     {
       title: "school website",
-      description: "full-featured school website",
+      description: "situs web sekolah dengan fitur lengkap",
       thumbnail:
         "https://raw.githubusercontent.com/fiandev/school-landing-page/master/.assets/preview.jpg",
     },
@@ -88,7 +88,7 @@ export default function ServiceList({ className = "" }) {
                       description={service.description}
                       className="w-48 h-64"
                       alt={`${service.title} photo's `}
-                      link={ textWhatsAppEncode(`${ WhatsApp_URL }?text=service: ${ service.title }\norder date: ${ now }\ncustomer name: <fill your name>\ndescription: <describe your wish>\n`) }
+                      link={ textWhatsAppEncode(`${ WhatsApp_URL }?text=service: ${ service.title }|order date: ${ now }|customer name: <fill your name>|description: <describe your wish>`) }
                       thumbnail={
                         service.thumbnail ||
                         "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=755&q=80"

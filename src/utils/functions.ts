@@ -47,8 +47,8 @@ export const randomID = (len = 4) => {
 };
 
 export const textWhatsAppEncode = (text = "") => {
-  text = text.replace("\n", "%0A");
-  text = text.replace(" ", "%20");
+  text = text.replace(/(\|)+/g, "%0A")
+             .replace(/(\s+)/g, "%20")
   
   return text;
 }

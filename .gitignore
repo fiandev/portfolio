@@ -39,3 +39,6 @@ next-env.d.ts
 
 # dashboard
 /src/app/dashboard
+
+# test
+/test
