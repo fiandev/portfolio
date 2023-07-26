@@ -1,6 +1,5 @@
 "use client"
 import Image from "next/image";
-import { randomID } from "@utils/functions";
 
 export default function Image({
   srcset,
@@ -18,16 +17,16 @@ export default function Image({
   const handleError = (e) => {
     e.target.src = "https://www.worldwidejournals.com/paripex/images/404-error.gif";
   };
-  let uniqueKey = randomID();
+  let resource = srcset || src;
   
   return (
     <Image
       sizes="100%"
       onError={onError || handleError}
       className={className}
-      src={srcset || src}
-      alt={alt || uniqueKey}
-      key={uniqueKey}
+      src={resource}
+      alt={alt || resource}
+      key={resource}
     />
   );
 }
