@@ -1,5 +1,4 @@
 "use client"
-import NextImage from "next/image";
 
 export default function Image({
   srcset,
@@ -20,7 +19,7 @@ export default function Image({
   let resource = srcset || src;
   
   return (
-    <NextImage
+    <img
       sizes="100%"
       onError={onError || handleError}
       className={className}

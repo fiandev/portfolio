@@ -17,7 +17,7 @@ export default function Home() {
   let [Exception, SetException] = useState<null | any>(null);
 
   useEffect(() => {
-    import("@assets/json/profile.json")
+    import("@assets/json/data.json")
       .then((module) => {
         let json = module.default;
         let data = json.data;
