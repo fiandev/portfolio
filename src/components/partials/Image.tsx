@@ -13,20 +13,21 @@ export default function Image({
   srcset?: string;
   alt?: string;
   className?: string;
-  onError?: any;
+  onError?: Function;
 }) {
   const handleError = (e) => {
     e.target.src = "https://www.worldwidejournals.com/paripex/images/404-error.gif";
   };
-
+  let uniqueKey = randomID();
+  
   return (
     <Image
       sizes="100%"
       onError={onError || handleError}
       className={className}
       src={srcset || src}
-      alt={alt || randomID()}
-      key={randomID()}
+      alt={alt || uniqueKey}
+      key={uniqueKey}
     />
   );
 }
