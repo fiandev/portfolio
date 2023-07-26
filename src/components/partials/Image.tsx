@@ -1,5 +1,5 @@
 "use client"
-// import Image from "next/image";
+import Image from "next/image";
 import { randomID } from "@utils/functions";
 
 export default function Image({
@@ -20,11 +20,11 @@ export default function Image({
   };
 
   return (
-    <img
+    <Image
+      sizes="100%"
       onError={onError || handleError}
       className={className}
       src={srcset || src}
-      loading="lazy"
       alt={alt || randomID()}
       key={randomID()}
     />
