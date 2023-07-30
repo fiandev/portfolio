@@ -27,6 +27,7 @@ export default function Contact({
   }, [active]);
 
   const contactHandler = async (e) => {
+    e.preventDefault();
     let form = e.target;
     let data = {
       username: form.elements.username.value,
@@ -47,7 +48,6 @@ export default function Contact({
       throw new Error(`key API_KEY doesn't exit in file .env`)
     });
     
-    e.preventDefault();
     try {
       let response = await fetch("https://portfolio-backend.fiandev.repl.co/messages", {
         headers: {
@@ -113,18 +113,13 @@ export default function Contact({
           ) : null}
 
           {errors
-            ? Object.keys(errors).map((key) => {
+            ? errors.map((error) => {
                 return (
                   <Alert key={randomID()} className="bg-rose-500 font-bold">
-                    <span className="capitalize"> {key} </span>
-                    {errors[key].map((error) => {
-                      return (
-                        <p className="font-normal text-sm lg:text-lg">
-                          {" "}
-                          {error}{" "}
-                        </p>
-                      );
-                    })}
+                    <span className="capitalize"> error ! </span>
+                      <p className="font-normal text-sm lg:text-lg">
+                        {error}
+                      </p>
                   </Alert>
                 );
               })
@@ -152,7 +147,7 @@ export default function Contact({
           />
           <button
             onClick={() => setActive(true)}
-            htmlType="submit"
+            type="submit"
             className="hover:cursor-pointer self-end md:self-start font-sans font-light hover:font-semibold transition-all flex gap-2 items-center justify-center w-24 h-8 p-2 group/btn bg-blue-500 hover:bg-blue-600 outline-lg outline-blue-200 outline hover:outline-blue-400 hover:animate-none hover:shadow-lg text-slate-50 rounded-full"
           >
             <FontAwesomeIcon
