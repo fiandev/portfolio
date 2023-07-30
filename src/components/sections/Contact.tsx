@@ -50,6 +50,8 @@ export default function Contact({
     let key = process.env.API_KEY;
 
     try {
+      setActive(true);
+      console.log({ key, data })
       let response = await fetch(
         "https://portfolio-backend.fiandev.repl.co/messages",
         {
@@ -62,14 +64,13 @@ export default function Contact({
           body: JSON.stringify(data),
         },
       );
-
+      
       let json = await response.json();
 
       if (json.code === 200) {
         setSuccess(true);
-        setErrors([]);
         setActive(false);
-
+        
         form.reset();
       } else {
         setErrors(["something went wrong !"]);
@@ -104,7 +105,7 @@ export default function Contact({
 
       <div className="px-2 flex flex-col w-full px-2 md:w-[80%] lg:w-[60%]">
         <form
-          onSubmit={(e) => contactHandler(e)}
+          onSubmit={contactHandler}
           className="flex flex-col gap-2 w-full py-4"
         >
           {success ? (
@@ -148,7 +149,6 @@ export default function Contact({
             placeholder="tulis pesan anda ..."
           />
           <button
-            onClick={() => setActive(true)}
             type="submit"
             className="hover:cursor-pointer self-end md:self-start font-sans font-light hover:font-semibold transition-all flex gap-2 items-center justify-center w-24 h-8 p-2 group/btn bg-blue-500 hover:bg-blue-600 outline-lg outline-blue-200 outline hover:outline-blue-400 hover:animate-none hover:shadow-lg text-slate-50 rounded-full"
           >
