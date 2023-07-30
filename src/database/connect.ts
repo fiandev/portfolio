@@ -4,7 +4,7 @@ import { env } from "@utils/functions";
 const connect = async () => {
   try {
     return await mongoose.connect(
-      env("MONGODB_CONNECTION", () => {
+      env("NEXT_SECRET_MONGODB_CONNECTION", () => {
         throw new Error("mongodb string connection, is not exist !");
       }),
     );

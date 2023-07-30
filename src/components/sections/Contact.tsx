@@ -44,8 +44,8 @@ export default function Contact({
     if (!data.username) setErrors((errors) => errors.concat("username tidak boleh kosong"));
     if (!data.message) setErrors((errors) => errors.concat("pesan tidak boleh kosong"));
     
-    let key = env("API_KEY", () => {
-      throw new Error(`key API_KEY doesn't exit in file .env`)
+    let key = env("NEXT_SECRET_API_KEY", () => {
+      throw new Error(`key NEXT_SECRET_API_KEY doesn't exit in file .env`)
     });
     
     try {
