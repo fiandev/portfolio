@@ -38,7 +38,7 @@ next-env.d.ts
 /migrate.js
 
 # dashboard
-/src/app/dashboard
+# /src/app/dashboard
 
 # test
 /test

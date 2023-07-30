@@ -2,6 +2,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import usePagination from "@hooks/usePagination";
 import classnames from "classnames";
+import { randomID } from "@utils/functions";
+
 const Pagination = (props) => {
   const {
     onPageChange,
@@ -35,6 +37,7 @@ const Pagination = (props) => {
   let lastPage = paginationRange[paginationRange.length - 1];
   return (
     <ul
+      key={randomID()}
       className={classnames("flex gap-2 items-center", {
         [className]: className,
       })}
@@ -47,6 +50,7 @@ const Pagination = (props) => {
             hidden: currentPage === 1,
           },
         )}
+        key={randomID()}
         onClick={onPrevious}
       >
         <FontAwesomeIcon icon={faArrowLeft} />
@@ -55,7 +59,9 @@ const Pagination = (props) => {
         // If the pageItem is a DOT, render the DOTS unicode character
         if (pageNumber === "DOTS") {
           return (
-            <li className="p-2 rounded-sm w-6 h-6 flex items-center justify-center text-main bg-slate-50 text-xs dots">
+            <li 
+              key={randomID()}
+              className="p-2 rounded-sm w-6 h-6 flex items-center justify-center text-main bg-slate-50 text-xs dots">
               &#8230;
             </li>
           );
@@ -69,6 +75,7 @@ const Pagination = (props) => {
                 ? "bg-main text-slate-50 border border-slate-50"
                 : "text-main bg-slate-50"
             }`}
+            key={randomID()}
             onClick={() => onPageChange(pageNumber)}
           >
             {pageNumber}
@@ -83,6 +90,7 @@ const Pagination = (props) => {
             hidden: currentPage === lastPage,
           },
         )}
+        key={randomID()}
         onClick={onNext}
       >
         <FontAwesomeIcon icon={faArrowRight} />

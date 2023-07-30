@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { randomID } from "@utils/functions";
 
 export default function NavLink({
   className,
@@ -23,6 +24,7 @@ export default function NavLink({
       className={`p-2 group flex w-full lg:w-auto font-semibold ${
         request(to) ? "nav-link-active" : "nav-link"
       } ${className}`}
+      key={randomID()}
     >
       <Link
         className="hover:cursor-pointer duration-800 flex w-full bg-transparent"

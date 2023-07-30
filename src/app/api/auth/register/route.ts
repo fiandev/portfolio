@@ -3,37 +3,30 @@ import { NextResponse } from "next/server";
 
 import User from "@models/User";
 import connect from "@database/connect";
-import { encrypt, decrypt } from "@utils/encryption";
+import { encrypt } from "@utils/encryption";
 
-export const POST = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
-  await connect();
-  // const { username, email, password } = req.body;
-  console.log({ body: req.body })
+export async function POST (req, res) {
+  const { username, email, password } = req.body;
   
-  return req.body
-  /*
-  const hashedPassword = await encrypt(password, 5);
-
-  const newUser = await User.create({
-    name,
-    email,
-    username,
-    is_admin: email === "fiandev1234@gmail.com",
-    password: hashedPassword,
-  });
-  */
-  /*
   try {
+    const hashed_password = await encrypt(password, 5);
+    await connect();
+    await User.create({
+      username: username,
+      email: email,
+      is_admin: email === "fiandev1234@gmail.com",
+      password: hashed_password,
+    });
+    
     return res.status(200).json({
       message: "user has been added !",
-      username: newUser.username,
     });
   } catch (err) {
-    console.log(err);
+    console.error({ err });
+    
     return res.status(201).json({
       message: "failed when add new user !",
       error: error.message,
     });
   }
-  */
 };

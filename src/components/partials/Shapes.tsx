@@ -24,12 +24,12 @@ const Shapes = ({
   };
 
   return (
-    <template
+    <div
       style={style}
       className={`transition-all duration-1000 delay-200 flex justify-center items-center ${className}`}
     >
       {children}
-    </template>
+    </div>
   );
 };
 
