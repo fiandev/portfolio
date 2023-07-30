@@ -20,7 +20,7 @@ export default function Contact({
 }) {
   let [active, setActive] = useState<boolean>(false);
   let [success, setSuccess] = useState<boolean>(false);
-  let [errors, setErrors] = useState<null | any>(null);
+  let [errors, setErrors] = useState([]);
 
   useEffect(() => {
     //
@@ -28,22 +28,43 @@ export default function Contact({
 
   const contactHandler = async (e) => {
     let form = e.target;
-    let data = new FormData(form);
-
+    let data = {
+      username: form.elements.username.value,
+      message: form.elements.message.value,
+      email: form.elements.email.value,
+    };
+    
+    /* validation */
+    let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    
+    setErrors([]);
+    
+    if (emailRegex.test(data.email)) setErrors((errors) => errors.concat("email tidak valid !"));
+    if (!data.username) setErrors((errors) => errors.concat("username tidak boleh kosong"));
+    if (!data.message) setErrors((errors) => errors.concat("pesan tidak boleh kosong"));
+    
     e.preventDefault();
     try {
-      let response = await fetch("/api/contact", {
-        method: "post",
-        body: data,
-      });
-      if (response.status === 200) {
+      let response = await fetch("https://portfolio-backend.fiandev.repl.co/messages", {
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+          key: env("API_KEY", () => throw new Error(`key API_KEY doesn't exit in file .env`)),
+        },
+        method: "POST",
+        body: JSON.stringify(data)
+      })
+      
+      let json = await response.json()
+      
+      if (json.code === 200) {
         setSuccess(true);
-        setErrors(null);
+        setErrors([]);
         setActive(false);
-
+        
         form.reset();
       } else {
-        setErrors("something went wrong !");
+        setErrors(["something went wrong !"]);
       }
     } catch (e) {
       console.log(e);
@@ -107,23 +128,23 @@ export default function Contact({
 
           <FormFloating
             formClassName={formClassName}
-            error={errors ? errors["sender"] : null}
-            name="sender"
+            error={errors ? errors["username"] : null}
+            name="username"
             text="username"
-            placeholder="write your username ..."
+            placeholder="masukan nama anda..."
           />
           <FormFloating
             formClassName={formClassName}
             error={errors ? errors["email"] : null}
             name="email"
-            placeholder="write your email ..."
+            placeholder="masukan email anda ..."
           />
           <FormFloating
             formClassName={formClassName}
             error={errors ? errors["message"] : null}
             type="textarea"
             name="message"
-            placeholder="write your message ..."
+            placeholder="tulis pesan anda ..."
           />
           <button
             onClick={() => setActive(true)}
@@ -136,7 +157,7 @@ export default function Contact({
               } animation group-hover/btn:animate-bounce`}
               icon={!active ? faPaperPlane : faSpinner}
             />
-            Send
+            kirim
           </button>
         </form>
       </div>
