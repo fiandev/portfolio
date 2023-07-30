@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 export default function Image({
   srcset,
@@ -14,10 +14,11 @@ export default function Image({
   onError?: Function;
 }) {
   const handleError = (e) => {
-    e.target.src = "https://www.worldwidejournals.com/paripex/images/404-error.gif";
+    e.target.src =
+      "https://www.worldwidejournals.com/paripex/images/404-error.gif";
   };
   let resource = srcset || src;
-  
+
   return (
     <img
       sizes="100%"

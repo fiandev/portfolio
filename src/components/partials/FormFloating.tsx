@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 export default function FormFloating({
   type,
@@ -53,7 +53,7 @@ export default function FormFloating({
               ? "placeholder-rose-500 text-rose-500"
               : "text-main placeholder-main"
           }`}
-          type={ type = "text" }
+          type={(type = "text")}
           name={name || "input"}
           value={value}
           placeholder={placeholder || "type here ..."}

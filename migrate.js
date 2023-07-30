@@ -31,15 +31,16 @@ function scandiir (folder) {
 function checkfile (file) {
   let content = _fs.readFileSync(file, "utf8");
   
-  if (/(@contexts\/Theme)/gm.test(content) /*&& content.split("\n")[0] !== '"use client"'*/) {
+  
+  // if (/(@contexts\/Theme)/gm.test(content) /*&& content.split("\n")[0] !== '"use client"'*/) {
+//     content = '"use client"\n' + content;
+//     console.log(`overwrite file ${ file }`);
+//     console.log(`${file} is client component`);
+//   }
+  if (/wave\.svg/gm.test(content) /*&& content.split("\n")[0] !== '"use client"'*/) {
     // content = '"use client"\n' + content;
     // console.log(`overwrite file ${ file }`);
-    console.log(`${file} is client component`);
-  }
-  if (/(useState|useEffect)/gm.test(content) /*&& content.split("\n")[0] !== '"use client"'*/) {
-    // content = '"use client"\n' + content;
-    // console.log(`overwrite file ${ file }`);
-    //console.log(`${file} is client component`);
+    console.log(`detected at ${file}`);
   }
   /*
   for (let alias in aliases) {
@@ -57,5 +58,5 @@ function checkfile (file) {
 let files = scandiir("./src");
 
 for (let file of files) {
-  if (/\.(js|ts(x))/.test(file)) checkfile(file);
+  if (/\.(js|ts(x)?)/.test(file)) checkfile(file);
 }

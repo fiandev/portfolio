@@ -16,12 +16,12 @@ export const GlobalThemeProvider = ({
       (!("theme" in localStorage) &&
         window.matchMedia("(prefers-color-scheme: dark)").matches);
     let theme = isDarkTheme ? "dark" : "light";
-    
+
     document.documentElement.classList.add(theme);
 
     // Whenever the user explicitly chooses light mode
     localStorage.theme = theme;
-    
+
     // Whenever the user explicitly chooses to respect the OS preference
     setTheme(theme);
   }, [Theme]);
@@ -35,7 +35,7 @@ export const GlobalThemeProvider = ({
 
 export const useTheme = () => {
   const Theme = useContext<any>(GlobalThemeContext);
-  
+
   if (!Theme) console.log("useTheme must be used inside a GlobalThemeProvider");
 
   return Theme;

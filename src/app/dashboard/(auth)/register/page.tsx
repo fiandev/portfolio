@@ -7,14 +7,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import FormFloating from "@components/partials/FormFloating";
 import Alert from "@components/partials/contact/Alert";
 
-import { randomID, env } from "@utils/functions";
+import { randomID } from "@utils/functions";
 
 const Register = (): any => {
   const [active, setActive] = useState(false);
   const [errors, setErrors] = useState([]);
   const [message, setMessage] = useState("");
   const router = useRouter();
-  
+
   const handlerSubmit = async (e) => {
     e.preventDefault();
     let data = {
@@ -23,59 +23,55 @@ const Register = (): any => {
       password: e.target[2].value,
       confirm_password: e.target[3].value,
     };
-    
+
     let { password, confirm_password } = data;
-    
-    if (password !== confirm_password) return setErrors(["The password and confirm password is not same !"]);
+
+    if (password !== confirm_password)
+      return setErrors(["The password and confirm password is not same !"]);
     setActive(true);
     try {
-      const response = await fetch('/api/auth/register', {
-        method: 'POST',
+      const response = await fetch("/api/auth/register", {
+        method: "POST",
         headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
+          Accept: "application/json",
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify(data),
       });
-      
+
       const json = await response.json();
       setMessage(json.message);
       setActive(false);
     } catch (error) {
       console.error({ error });
     }
-  }
-  
-  return env("APP_ENV") === "production" ?
-    (
-      <div className="flex flex-col items-center justify-center pt-2 scroll-smooth relative w-full h-screen">
-        <h1 className="text-2xl"> 403 </h1>
-        <p> forbidden </p>
-      </div>
-    ) : (
+  };
+
+  return process.env.APP_ENV === "production" ? (
+    <div className="flex flex-col items-center justify-center pt-2 scroll-smooth relative w-full h-screen">
+      <h1 className="text-2xl"> 403 </h1>
+      <p> forbidden </p>
+    </div>
+  ) : (
     <div className="flex flex-col pt-2 scroll-smooth relative w-full">
-      <form className="flex flex-col justify-center gap-2 w-full h-screen p-4" onSubmit={handlerSubmit}>
-        {
-         errors && errors.map((error) => {
-          return (
+      <form
+        className="flex flex-col justify-center gap-2 w-full h-screen p-4"
+        onSubmit={handlerSubmit}
+      >
+        {errors &&
+          errors.map((error) => {
+            return (
               <Alert key={randomID()} className="bg-rose-500 font-bold">
-                  <p className="font-normal text-sm lg:text-lg">
-                    {error}
-                  </p>
+                <p className="font-normal text-sm lg:text-lg">{error}</p>
               </Alert>
             );
-         }) 
-        }
-        
-        {
-          message && (
-            <Alert key={randomID()} className="bg-main font-bold">
-                <p className="font-normal text-sm lg:text-lg">
-                  {message}
-                </p>
-            </Alert>
-          )
-        }
+          })}
+
+        {message && (
+          <Alert key={randomID()} className="bg-main font-bold">
+            <p className="font-normal text-sm lg:text-lg">{message}</p>
+          </Alert>
+        )}
         <FormFloating
           name="username"
           text="username"

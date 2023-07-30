@@ -1,9 +1,7 @@
 import bcrypt from "bcryptjs";
 import { env } from "@utils/functions";
 
-const key = env("ENCRYPTION_KEY", () => {
-  throw new Error("ENCRYPTION_KEY is not exist !");
-});
+const key = process.env.ENCRYPTION_KEY;
 const algorithm = "AES";
 
 export const encrypt = async (text: string, level = 5) =>

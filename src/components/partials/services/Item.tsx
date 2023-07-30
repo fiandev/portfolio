@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useEffect } from "react";
 import { faShop } from "@fortawesome/free-solid-svg-icons";
 import ButtonLink from "./ButtonLink";
@@ -13,8 +13,8 @@ export default function Item({
 }) {
   useEffect(() => {
     link = window.encodeURIComponent(link);
-  }, [link])
-  
+  }, [link]);
+
   return (
     <div
       className={`${className} relative group/item hover:font-bold outline outline-main outline-sm hover:outline-md hover:outline-gray-800 dark:hover:outline-slate-50 rounded-md shadow-gray-900 dark:shadow-slate-100 w-28 w-max-28 h-24 p-4 flex flex-col gap-1 text-center justify-center border-main overflow-hidden`}

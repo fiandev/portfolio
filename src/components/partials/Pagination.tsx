@@ -59,9 +59,10 @@ const Pagination = (props) => {
         // If the pageItem is a DOT, render the DOTS unicode character
         if (pageNumber === "DOTS") {
           return (
-            <li 
+            <li
               key={randomID()}
-              className="p-2 rounded-sm w-6 h-6 flex items-center justify-center text-main bg-slate-50 text-xs dots">
+              className="p-2 rounded-sm w-6 h-6 flex items-center justify-center text-main bg-slate-50 text-xs dots"
+            >
               &#8230;
             </li>
           );

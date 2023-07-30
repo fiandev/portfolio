@@ -7,7 +7,7 @@ import ItemContact from "@components/partials/ItemContact";
 import FormFloating from "@components/partials/FormFloating";
 import Alert from "@components/partials/contact/Alert";
 
-import { randomID, env } from "@utils/functions";
+import { randomID } from "@utils/functions";
 
 export default function Contact({
   links,
@@ -34,38 +34,42 @@ export default function Contact({
       message: form.elements.message.value,
       email: form.elements.email.value,
     };
-    
+
     /* validation */
     let emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    
+
     setErrors([]);
-    
-    if (!emailRegex.test(data.email)) setErrors((errors) => errors.concat("email tidak valid !"));
-    if (!data.username) setErrors((errors) => errors.concat("username tidak boleh kosong"));
-    if (!data.message) setErrors((errors) => errors.concat("pesan tidak boleh kosong"));
-    
-    let key = env("API_KEY", () => {
-      throw new Error("API_KEY doesn't exit in file .env")
-    });
-    
+
+    if (!emailRegex.test(data.email))
+      setErrors((errors) => errors.concat("email tidak valid !"));
+    if (!data.username)
+      setErrors((errors) => errors.concat("username tidak boleh kosong"));
+    if (!data.message)
+      setErrors((errors) => errors.concat("pesan tidak boleh kosong"));
+
+    let key = process.env.API_KEY;
+
     try {
-      let response = await fetch("https://portfolio-backend.fiandev.repl.co/messages", {
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json',
-          key: key,
+      let response = await fetch(
+        "https://portfolio-backend.fiandev.repl.co/messages",
+        {
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+            key: key,
+          },
+          method: "POST",
+          body: JSON.stringify(data),
         },
-        method: "POST",
-        body: JSON.stringify(data)
-      })
-      
-      let json = await response.json()
-      
+      );
+
+      let json = await response.json();
+
       if (json.code === 200) {
         setSuccess(true);
         setErrors([]);
         setActive(false);
-        
+
         form.reset();
       } else {
         setErrors(["something went wrong !"]);
@@ -117,9 +121,7 @@ export default function Contact({
                 return (
                   <Alert key={randomID()} className="bg-rose-500 font-bold">
                     <span className="capitalize"> error ! </span>
-                      <p className="font-normal text-sm lg:text-lg">
-                        {error}
-                      </p>
+                    <p className="font-normal text-sm lg:text-lg">{error}</p>
                   </Alert>
                 );
               })

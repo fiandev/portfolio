@@ -13,11 +13,11 @@ const Handler = NextAuth({
         await connect();
         try {
           const user = await User.findOne({ email: credentials.email });
-          
+
           if (user) {
             const isPasswordCorrect = await bcrypt.compare(
               credentials.password,
-              user.password
+              user.password,
             );
             if (isPasswordCorrect) return user;
             else return new Error("user not found");
@@ -35,7 +35,4 @@ const Handler = NextAuth({
   },
 });
 
-export { 
-  Handler as GET, 
-  Handler as POST 
-};
+export { Handler as GET, Handler as POST };

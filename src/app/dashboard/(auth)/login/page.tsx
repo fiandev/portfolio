@@ -9,7 +9,7 @@ export default function Login() {
     e.preventDefault();
     let email = e.target[0].value;
     let password = e.target[1].value;
-    
+
     try {
       await signIn("credentials", { email, password });
     } catch (error) {
