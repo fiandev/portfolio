@@ -44,7 +44,9 @@ export default function Contact({
     if (!data.username) setErrors((errors) => errors.concat("username tidak boleh kosong"));
     if (!data.message) setErrors((errors) => errors.concat("pesan tidak boleh kosong"));
     
-    let key = env("API_KEY", "${{ secrets.API_KEY }}");
+    let key = env("API_KEY", () => {
+      throw new Error("API_KEY doesn't exit in file .env")
+    });
     
     try {
       let response = await fetch("https://portfolio-backend.fiandev.repl.co/messages", {

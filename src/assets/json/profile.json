@@ -141,7 +141,7 @@
       {
         "title": "Otaku Downloader",
         "description": "alat untuk mengunduh anime dari otakudesu secara otomatis.",
-        "preview": "https://github.com/fiandev/otaku-downloader",
+        "preview": null,
         "stacks": [
           {
             "name": "javascript",
@@ -198,7 +198,7 @@
       },
       {
         "title": "Tanyo.id",
-        "description": "I worked as a freelance frontend during this project",
+        "description": "Saya bekerja sebagai frontend freelance selama proyek ini berlangsung",
         "preview": "https://tanyo.id/",
         "stacks": [
           {
@@ -210,7 +210,7 @@
             "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/tailwind.svg"
           }
         ],
-        "repository": "https://tanyo.id/",
+        "repository": null,
         "uid": "1de82653-f707-11ed-8de3-8c397bbe451e",
         "created_at": "2023-05-20T12:09:05.000000Z",
         "formatted_description": "<div>I worked as a freelance frontend during this project</div>",
@@ -260,8 +260,8 @@
       },
       {
         "title": "express.js template",
-        "description": "starter template for express app",
-        "preview": "https://npm.runkit.com/express-structure-folders",
+        "description": "template awal untuk aplikasi expressjs",
+        "preview": null,
         "stacks": [
           {
             "name": "javascript",
@@ -322,15 +322,19 @@
         "preview": "fiandev.vercel.app",
         "stacks": [
           {
+            "name": "typescript",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/typescript.svg"
+          },
+          {
             "name": "tailwind",
             "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/tailwind.svg"
           },
           {
-            "name": "laravel",
-            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/laravel.svg"
+            "name": "nextjs",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/nextjs.svg"
           }
         ],
-        "repository": "https://github.com/fiandev/portfolio",
+        "repository": null,
         "uid": "848f95c0-f9ae-11ed-b41b-42f50435fe5b",
         "created_at": "2023-05-23T21:12:26.000000Z",
         "formatted_description": "<div>Situs web portofolio pribadi saya</div>",
