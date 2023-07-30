@@ -47,11 +47,10 @@ export default function Contact({
     if (!data.message)
       setErrors((errors) => errors.concat("pesan tidak boleh kosong"));
       
-    let key = process.env.NEXT_PUBLIC_API_KEY;
+    let key = "fiandev@secret_12345";
 
     try {
       setActive(true);
-      console.log({ key, data })
       let response = await fetch(
         "https://portfolio-backend.fiandev.repl.co/messages",
         {

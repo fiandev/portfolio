@@ -47,12 +47,7 @@ const Register = (): any => {
     }
   };
 
-  return process.env.APP_ENV === "production" ? (
-    <div className="flex flex-col items-center justify-center pt-2 scroll-smooth relative w-full h-screen">
-      <h1 className="text-2xl"> 403 </h1>
-      <p> forbidden </p>
-    </div>
-  ) : (
+  return (
     <div className="flex flex-col pt-2 scroll-smooth relative w-full">
       <form
         className="flex flex-col justify-center gap-2 w-full h-screen p-4"
