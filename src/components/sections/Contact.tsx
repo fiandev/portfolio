@@ -43,13 +43,17 @@ export default function Contact({
     if (!data.username) setErrors((errors) => errors.concat("username tidak boleh kosong"));
     if (!data.message) setErrors((errors) => errors.concat("pesan tidak boleh kosong"));
     
+    let key = env("API_KEY", () => {
+      throw new Error(`key API_KEY doesn't exit in file .env`)
+    });
+    
     e.preventDefault();
     try {
       let response = await fetch("https://portfolio-backend.fiandev.repl.co/messages", {
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
-          key: env("API_KEY", () => throw new Error(`key API_KEY doesn't exit in file .env`)),
+          key: key,
         },
         method: "POST",
         body: JSON.stringify(data)
