@@ -36,17 +36,15 @@ export default function Contact({
     };
     
     /* validation */
-    let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    let emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     
     setErrors([]);
     
-    if (emailRegex.test(data.email)) setErrors((errors) => errors.concat("email tidak valid !"));
+    if (!emailRegex.test(data.email)) setErrors((errors) => errors.concat("email tidak valid !"));
     if (!data.username) setErrors((errors) => errors.concat("username tidak boleh kosong"));
     if (!data.message) setErrors((errors) => errors.concat("pesan tidak boleh kosong"));
     
-    let key = env("NEXT_SECRET_API_KEY", () => {
-      throw new Error(`key NEXT_SECRET_API_KEY doesn't exit in file .env`)
-    });
+    let key = env("API_KEY", "${{ secrets.API_KEY }}");
     
     try {
       let response = await fetch("https://portfolio-backend.fiandev.repl.co/messages", {
