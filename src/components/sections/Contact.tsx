@@ -46,8 +46,8 @@ export default function Contact({
       setErrors((errors) => errors.concat("username tidak boleh kosong"));
     if (!data.message)
       setErrors((errors) => errors.concat("pesan tidak boleh kosong"));
-
-    let key = process.env.API_KEY;
+      
+    let key = process.env.NEXT_PUBLIC_API_KEY;
 
     try {
       setActive(true);
