@@ -18,7 +18,7 @@ const title = "fiandev's portfolio",
   description =
     "Hai semuanya, saya Fian junior software engineer dan fullstack web developer, saya sangat tertarik dengan dunia pemrograman, bahasa favorit saya adalah javaScript, Python, dan PHP.",
   keywords =
-    "fiandev, webdev, web, dev, portfolio, frontend, backend, web developer, developer, coder, programmer, freelancer, fian, alfian, aditia, akbar, putra, alfiansa, IT Support",
+    "fiandev, webdev, web, dev, portfolio, frontend, backend, web developer, developer, coder, programmer, freelancer, fian, aditia, akbar, putra, alfiansa, IT Support",
   baseURL = "https://fiandev.my.id",
   siteName = "fiandev's portfolio";
 
