@@ -9,7 +9,7 @@ import Alert from "@components/partials/contact/Alert";
 
 import { randomID } from "@utils/functions";
 
-export default function Register () {
+export default function Register() {
   const [active, setActive] = useState(false);
   const [errors, setErrors] = useState([]);
   const [message, setMessage] = useState("");
@@ -102,4 +102,4 @@ export default function Register () {
       </form>
     </div>
   );
-};
+}
