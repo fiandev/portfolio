@@ -27,6 +27,10 @@ export const metadata: Metadata = {
   metadataBase: new URL(baseURL),
   description: description,
   keywords: keywords,
+  category: "personal website",
+  type: "website",
+  locale: "id_ID",
+  creator: "fian",
   robots: {
     index: true,
     follow: true,
@@ -39,10 +43,11 @@ export const metadata: Metadata = {
   },
   verification: {
     google: "6JyPQefQInzqKGO1cXqAmDMa7gPZoqFRdjIDSyFkRo8",
-    yandex: "bb340f272a48fb7c",
+    yandex: "45ef227dddb68c4b",
     bing: "2B357FEFFB2A5648990DF22A1C80B02C",
     other: {
-      me: ["fiandev1234@gmail.com"],
+      github: "fiandev",
+      "msvalidate.01": "2B357FEFFB2A5648990DF22A1C80B02C"
     },
   },
   twitter: {
@@ -56,10 +61,12 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: baseURL,
+    /*
     languages: {
       "en-US": "/en",
       "id-ID": "/id",
     },
+    */
   },
   openGraph: {
     title: title,
