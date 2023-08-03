@@ -46,7 +46,7 @@ export default function Contact({
       setErrors((errors) => errors.concat("username tidak boleh kosong"));
     if (!data.message)
       setErrors((errors) => errors.concat("pesan tidak boleh kosong"));
-      
+
     let key = "fiandev@secret_12345";
 
     try {
@@ -63,13 +63,13 @@ export default function Contact({
           body: JSON.stringify(data),
         },
       );
-      
+
       let json = await response.json();
 
       if (json.code === 200) {
         setSuccess(true);
         setActive(false);
-        
+
         form.reset();
       } else {
         setErrors(["something went wrong !"]);

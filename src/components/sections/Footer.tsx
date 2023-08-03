@@ -10,8 +10,9 @@ import Image from "@components/partials/Image";
 export default function Footer() {
   let [Data, SetData] = useState<null | any>(null);
   const year = new Date().getFullYear();
-  const repository = Data?.links?.filter(link => link.type == "github")[0].url || "";
-  
+  const repository =
+    Data?.links?.filter((link) => link.type == "github")[0].url || "";
+
   useEffect(() => {
     import("@assets/json/data.json")
       .then((module) => {
@@ -21,10 +22,10 @@ export default function Footer() {
         SetData(data);
       })
       .catch((err) => {
-        console.log({ err })
+        console.log({ err });
       });
   }, []);
-  
+
   return (
     <section
       id="footer"
@@ -35,9 +36,9 @@ export default function Footer() {
           <p className="text-lg font-serif text-slate-50">
             built with
             <FontAwesomeIcon icon={faHeart} className="text-rose-400" /> by
-            <Link 
+            <Link
               className="font-semibold text-sky-800 dark:text-sky-400 hover:underline"
-              href={ repository }
+              href={repository}
             >
               fiandev
             </Link>

@@ -24,25 +24,29 @@ export default function Nav() {
   const toggleActive = () => {
     SetIsActive(!IsActive);
   };
-  
+
   useEffect(() => {
     let offsetY = 20;
-    
+
     const handler = () => {
       let isScrolled = Math.ceil(window.innerHeight + window.scrollY) > offsetY;
       SetIsColored(isScrolled);
     };
-    
+
     window.addEventListener("scroll", handler);
 
     return () => {
       window.removeEventListener("scroll", handler);
     };
-  }, [Active, isColored]);
-  
+  }, [IsActive, isColored]);
+
   return (
     <nav
-      className={`fixed top-0 lg:px-[10vw] z-10 w-full shadow-md px-3 py-1 flex gap-2 lg:px:8 flex-col lg:flex-row lg:justify-start ${ isColored ? "bg-gradient-to-r from-sky-200 to-blue-100 dark:from-sky-800 dark:to-blue-600" : "bg-transparent"} lg:bg-gradient-to-r lg:from-sky-200 lg:to-blue-100 dark:lg:from-sky-800 dark:lg:to-blue-600`}
+      className={`fixed top-0 lg:px-[10vw] z-10 w-full shadow-md px-3 py-1 flex gap-2 lg:px:8 flex-col lg:flex-row lg:justify-start ${
+        isColored
+          ? "bg-gradient-to-r from-sky-200 to-blue-100 dark:from-sky-800 dark:to-blue-600"
+          : "bg-transparent"
+      } lg:bg-gradient-to-r lg:from-sky-200 lg:to-blue-100 dark:lg:from-sky-800 dark:lg:to-blue-600`}
     >
       <div className="w-full lg:w-fit flex justify-between items-center py-1 transition ease-in duration-800">
         <Link

@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     bing: "2B357FEFFB2A5648990DF22A1C80B02C",
     other: {
       github: "fiandev",
-      "msvalidate.01": "2B357FEFFB2A5648990DF22A1C80B02C"
+      "msvalidate.01": "2B357FEFFB2A5648990DF22A1C80B02C",
     },
   },
   twitter: {
@@ -92,9 +92,7 @@ export default function RootLayout({
             <GlobalThemeProvider>
               <Nav />
               <GlobalScrollProvider>
-                <GlobalMouseMoveProvider>
-                  {children}
-                </GlobalMouseMoveProvider>
+                <GlobalMouseMoveProvider>{children}</GlobalMouseMoveProvider>
               </GlobalScrollProvider>
               <ScrollToTop className="bg-main text-slate-800 dark:bg-slate-800 dark:text-main" />
               <Footer />
