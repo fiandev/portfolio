@@ -1,7 +1,7 @@
 "use client";
 import React, { useContext, useEffect, useState } from "react";
 
-const GlobalThemeContext = React.createContext<string>("light");
+export const GlobalThemeContext = React.createContext<string>("light");
 
 export const GlobalThemeProvider = ({
   children,
