@@ -28,20 +28,19 @@ export const metadata: Metadata = {
   description: description,
   keywords: keywords,
   robots: {
-    index: false,
+    index: true,
     follow: true,
     nocache: true,
     googleBot: {
       index: true,
-      follow: false,
-      noimageindex: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      follow: true,
+      noimageindex: false,
     },
   },
   verification: {
     google: "6JyPQefQInzqKGO1cXqAmDMa7gPZoqFRdjIDSyFkRo8",
+    yandex: "bb340f272a48fb7c",
+    bing: "2B357FEFFB2A5648990DF22A1C80B02C",
     other: {
       me: ["fiandev1234@gmail.com"],
     },
