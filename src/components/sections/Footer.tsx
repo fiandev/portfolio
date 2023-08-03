@@ -1,12 +1,30 @@
+"use client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { useEffect, useState } from "react";
 
+import Link from "next/link";
 import ViewportArea from "@components/interactive/ViewportArea";
 import Image from "@components/partials/Image";
 
 export default function Footer() {
+  let [Data, SetData] = useState<null | any>(null);
   const year = new Date().getFullYear();
+  const repository = Data?.links?.filter(link => link.type == "github")[0].url || "";
+  
+  useEffect(() => {
+    import("@assets/json/data.json")
+      .then((module) => {
+        let json = module.default;
+        let data = json.data;
 
+        SetData(data);
+      })
+      .catch((err) => {
+        console.log({ err })
+      });
+  }, []);
+  
   return (
     <section
       id="footer"
@@ -15,12 +33,14 @@ export default function Footer() {
       <ViewportArea>
         <div className="absolute inset-0 flex flex-col justify-center items-center text-center">
           <p className="text-lg font-serif text-slate-50">
-            built with{" "}
-            <FontAwesomeIcon icon={faHeart} className="text-rose-400" /> by{" "}
-            <span className="font-semibold text-sky-800 dark:text-sky-400 hover:underline">
-              {" "}
-              fiandev{" "}
-            </span>
+            built with
+            <FontAwesomeIcon icon={faHeart} className="text-rose-400" /> by
+            <Link 
+              className="font-semibold text-sky-800 dark:text-sky-400 hover:underline"
+              href={ repository }
+            >
+              fiandev
+            </Link>
           </p>
           <p className="text-sm font-serif text-gray-100">
             <span className="font-semibold">@ {year}.</span> all right reserved.

@@ -92,7 +92,9 @@ export default function RootLayout({
             <GlobalThemeProvider>
               <Nav />
               <GlobalScrollProvider>
-                <GlobalMouseMoveProvider>{children}</GlobalMouseMoveProvider>
+                <GlobalMouseMoveProvider>
+                  {children}
+                </GlobalMouseMoveProvider>
               </GlobalScrollProvider>
               <ScrollToTop className="bg-main text-slate-800 dark:bg-slate-800 dark:text-main" />
               <Footer />
