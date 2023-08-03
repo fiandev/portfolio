@@ -16,9 +16,9 @@ import "@/styles/index.css";
 const title = "fiandev's portfolio",
   thumbnail = "https://fiandev.my.id/graph.png",
   description =
-    "Hi everyone, I'm Fian junior software engineer and fullstack web developer from Indonesia 🇮🇩, I'm very interested in the world of programming, my favorite language is javaScript, Python, And PHP.",
+    "Hai semuanya, saya Fian junior software engineer dan fullstack web developer, saya sangat tertarik dengan dunia pemrograman, bahasa favorit saya adalah javaScript, Python, dan PHP.",
   keywords =
-    "fiandev, webdev, web, dev, portfolio, frontend, backend, web developer, developer, coder, programmer, freelancer, fian, alfian, aditia, akbar, putra, alfiansa",
+    "fiandev, webdev, web, dev, portfolio, frontend, backend, web developer, developer, coder, programmer, freelancer, fian, alfian, aditia, akbar, putra, alfiansa, IT Support",
   baseURL = "https://fiandev.my.id",
   siteName = "fiandev's portfolio";
 
