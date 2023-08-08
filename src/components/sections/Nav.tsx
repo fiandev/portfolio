@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Link } from "next/link";
+import Link from "next/link";
 import Hamburger from "@components/partials/Hamburger";
 import NavLink from "@components/partials/NavLink";
 import Dropdown from "@components/partials/Dropdown";
@@ -26,7 +26,7 @@ export default function Nav() {
   };
 
   useEffect(() => {
-    let offsetY = 20;
+    let offsetY = 50;
 
     const handler = () => {
       let isScrolled = Math.ceil(window.innerHeight + window.scrollY) > offsetY;
