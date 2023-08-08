@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 
 import Preload from "@components/partials/Preload";
 
-export default function Wrapper({ children }: { children?: React.ReactNode }) {
+export default function Wrapper({ children = null }) {
   const theme = useTheme();
   const router = useRouter();
   const [loading, setLoading] = useState(false);
