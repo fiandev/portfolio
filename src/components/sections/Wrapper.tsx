@@ -1,7 +1,7 @@
 "use client";
 import { useTheme } from "@hooks/useTheme";
 import { useEffect, useState } from "next/link";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 import Preload from "@components/partials/Preload";
 

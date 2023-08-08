@@ -37,7 +37,7 @@ function checkfile (file) {
 //     console.log(`overwrite file ${ file }`);
 //     console.log(`${file} is client component`);
 //   }
-  if (/wave\.svg/gm.test(content) /*&& content.split("\n")[0] !== '"use client"'*/) {
+  if (/useRouter/gm.test(content) /*&& content.split("\n")[0] !== '"use client"'*/) {
     // content = '"use client"\n' + content;
     // console.log(`overwrite file ${ file }`);
     console.log(`detected at ${file}`);
