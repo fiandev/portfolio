@@ -14,7 +14,7 @@ import ScrollToTop from "@components/partials/ScrollToTop";
 import "@/styles/index.css";
 
 const title = "fiandev's portfolio",
-  thumbnail = "https://fiandev.my.id/graph.png",
+  thumbnail = "https://fiandev.my.id/poster.jpg",
   description =
     "Hai semuanya, saya Fian junior software engineer dan fullstack web developer, saya sangat tertarik dengan dunia pemrograman, bahasa favorit saya adalah javaScript, Python, dan PHP.",
   keywords =

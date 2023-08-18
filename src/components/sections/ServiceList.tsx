@@ -1,5 +1,5 @@
 import Item from "@components/partials/services/Item";
-import { textWhatsAppEncode } from "@utils/functions";
+import { textWhatsAppEncode, arrayShuffle } from "@utils/functions";
 
 const services = {
   "web development": [
@@ -58,13 +58,13 @@ const services = {
   ],
 };
 
-export const images = []
+export const images = arrayShuffle([]
   .concat(
     ...Object.entries(services).map((val) =>
       services[val[0]].map((item) => item.thumbnail),
     ),
   )
-  .filter((v) => !!v);
+  .filter((v) => !!v));
 export default function ServiceList({ className = "" }) {
   const phoneNumber = "+6281336270845";
   let WhatsApp_URL = `https://wa.me/${phoneNumber}`;

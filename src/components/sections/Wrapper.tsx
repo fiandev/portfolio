@@ -8,7 +8,7 @@ export default function Wrapper({ children }: { children?: React.ReactNode }) {
  
 
   return (
-    <div className="w-full pt-10 md:pt-14 lg:pt-10">
+    <div className="w-full">
       {children}
     </div>
   );
