@@ -1,5 +1,5 @@
 "use client";
-
+import { useEffect } from "react";
 export default function Image({
   srcset,
   alt,
@@ -18,7 +18,13 @@ export default function Image({
       "https://www.worldwidejournals.com/paripex/images/404-error.gif";
   };
   let resource = srcset || src;
-
+  
+  useEffect(() => {
+    window.addEventListener("contextmenu", (e) => {
+      e.preventDefault();
+    });
+    
+  }, []);
   return (
     <img
       sizes="100%"
