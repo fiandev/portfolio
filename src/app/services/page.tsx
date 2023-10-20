@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function Services({ data, services }) {
+export default async function Services() {
   let data = (await import("@assets/json/data.json")).default.data;
   let services = (await import("@assets/json/services.json")).default;
   
