@@ -338,7 +338,7 @@
       {
         "title": "Personal Portfolio",
         "description": "Situs web portofolio pribadi saya",
-        "preview": "fiandev.vercel.app",
+        "preview": "https://fiandev.my.id",
         "stacks": [
           {
             "name": "typescript",

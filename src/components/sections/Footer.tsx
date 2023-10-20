@@ -26,7 +26,10 @@ const icons = {
   telegram: faTelegram,
 };
 
-export default function Footer({ links }: { links?: any[] }) {
+export default function Footer({ links, projects }: { 
+  links?: any[];
+  projects?: any[];
+}) {
   return (
     <footer class="bg-white dark:bg-gray-800">
       <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
@@ -36,8 +39,8 @@ export default function Footer({ links }: { links?: any[] }) {
               <Image
                 src="/logo.png"
                 class="w-8 h-8 mr-3"
-                w={16}
-                h={16}
+                w={20}
+                h={20}
                 alt="fiandev's logo"
               />
               <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white uppercase">
@@ -65,15 +68,15 @@ export default function Footer({ links }: { links?: any[] }) {
             </div>
             <div>
               <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                Follow us
+                Projects
               </h2>
               <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                {links
-                  ? links.map((link) => {
+                {projects 
+                  ? projects.map((project) => {
                       return (
                         <li>
-                          <a href={link.url} class="hover:underline ">
-                            {link.type}
+                          <a href={project.preview || "#"} class={ `hover:underline ${ project.preview ? "hover:font-semibold" : "" }` }>
+                            {project.title}
                           </a>
                         </li>
                       );

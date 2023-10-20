@@ -33,7 +33,7 @@ export default async function Services() {
   let data = json.data;
 
   return (
-    <div className={`pt-4 mt-2 scroll-smooth relative dark:bg-slate-800`}>
+    <div className={`pt-8 scroll-smooth relative dark:bg-slate-800`}>
       <ServiceList className="py-4" />
       <svg
         xmlns="http://www.w3.org/2000/svg"

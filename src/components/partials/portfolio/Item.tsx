@@ -2,7 +2,7 @@ import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import ButtonLink from "./ButtonLink";
 import { randomID } from "@utils/functions";
-import Image from "@components/partials/Image";
+// import Image from "@components/partials/Image";
 
 const setThumbnail = (e) => {
   const element = e.target;
@@ -25,9 +25,9 @@ export default function Item({
     <div
       className={`group relative overflow-hidden rounded-sm hover:rounded-md hover:shadow-md ${className}`}
     >
-      <Image
+      <img
         onError={setThumbnail}
-        srcset={thumbnail ? thumbnail : ""}
+        src={thumbnail ? thumbnail : ""}
         alt={title || "untitled"}
         className="w-full h-36 lg:w-full transition-all group-hover:scale-150 bg-sky-400"
       />
