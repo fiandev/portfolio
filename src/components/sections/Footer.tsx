@@ -68,7 +68,7 @@ export default function Footer({ links }: { links?: any[] }) {
                 {links
                   ? links.map((link) => {
                       return (
-                        <li class="mb-4">
+                        <li>
                           <a href={link.url} class="hover:underline ">
                             {link.type}
                           </a>
@@ -113,7 +113,7 @@ export default function Footer({ links }: { links?: any[] }) {
                     <a
                       key={randomID()}
                       href={link.url}
-                      class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+                      class="w-6 h-6 flex items-center justify-center text-gray-500 hover:text-gray-900 dark:hover:text-white"
                     >
                       <FontAwesomeIcon icon={icons[link.icon]} />
                     </a>
