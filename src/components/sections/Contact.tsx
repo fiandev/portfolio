@@ -1,3 +1,4 @@
+"use client";
 import ItemContact from "@components/partials/ItemContact";
 import { randomID } from "@utils/functions";
 

@@ -1,3 +1,4 @@
+"use client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -33,8 +34,8 @@ export default function Footer({ links }: { links?: any[] }) {
           <div class="mb-6 md:mb-0">
             <a href="https://fiandev.my.id" class="flex items-center">
               <Image
-                src="https://fiandev.my.id/logo.png"
-                class="h-8 mr-3"
+                src="/logo.png"
+                class="w-8 h-8 mr-3"
                 w={512}
                 h={512}
                 alt="fiandev's logo"

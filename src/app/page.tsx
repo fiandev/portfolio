@@ -1,15 +1,21 @@
 // "use client";
 // import { useState, useEffect } from "react";
 
-import Profile from "@components/sections/Profile";
-import About from "@components/sections/About";
-import Project from "@components/sections/Project";
-import Contact from "@components/sections/Contact";
-import ErrorPage from "@components/sections/ErrorPage";
+// import Profile from "@components/sections/Profile";
+// import About from "@components/sections/About";
+// import Project from "@components/sections/Project";
+// import Contact from "@components/sections/Contact";
+// import ErrorPage from "@components/sections/ErrorPage";
 // import Preload from "@components/sections/Preload";
+
 import { ScrollableArea } from "@components/interactive/ScrollableArea";
 import { randomID } from "@utils/functions";
 import ViewportArea from "@components/interactive/ViewportArea";
+
+const Profile = lazy(() => import("@components/sections/Profile"));
+const About = lazy(() => import("@components/sections/About"));
+const Contact = lazy(() => import("@components/sections/Contact"));
+const Project = lazy(() => import("@components/sections/Project"));
 
 export default async function Home() {
   let json = (await import("@assets/json/data.json")).default;
