@@ -7,6 +7,7 @@ import type { AppProps } from "next/app";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Preload from "@components/partials/Preload";
+import { GlobalThemeProvider } from "@hooks/useTheme";
 
 import "@/styles/index.css";
 
@@ -36,7 +37,9 @@ export default async function App({ Component, pageProps }: AppProps) {
 
   return (
     <Fragment>
-      {loading ? <Preload /> : <Component {...pageProps} />}
+      <GlobalThemeProvider>
+        {loading ? <Preload /> : <Component {...pageProps} />}
+      </GlobalThemeProvider>
       <Analytics />
     </Fragment>
   );

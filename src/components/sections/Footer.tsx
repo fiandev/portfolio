@@ -27,7 +27,7 @@ const icons = {
 
 export default function Footer({ links }: { links?: any[] }) {
   return (
-    <footer class="bg-white dark:bg-gray-900">
+    <footer class="bg-white dark:bg-gray-800">
       <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0">
@@ -37,7 +37,7 @@ export default function Footer({ links }: { links?: any[] }) {
                 class="h-8 mr-3"
                 alt="fiandev's logo"
               />
-              <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+              <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white uppercase">
                 fiandev
               </span>
             </a>

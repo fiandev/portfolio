@@ -26,7 +26,7 @@ export default function Preload({
   }, [Index]);
 
   return (
-    <div className="w-screen h-screen absolute inset-0 z-[999] grid place-items-center bg-slate-50 dark:bg-slate-800 hover:cursor-wait">
+    <div className="w-screen h-screen absolute inset-0 z-[999999] grid place-items-center bg-slate-50 dark:bg-slate-800 hover:cursor-wait">
       <div
         className={`transition-all origin-center duration-300 ${styles[Index]} flex justify-center items-center bg-main w-8 h-8 ${className}`}
       >
