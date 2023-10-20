@@ -7,8 +7,8 @@ export default function Image({
   className,
   onError,
   src,
-  w,
-  h,
+  w = 1024,
+  h = 1024,
 }: {
   src?: string;
   srcset?: string;
@@ -35,8 +35,8 @@ export default function Image({
       className={className}
       alt={alt || resource}
       src={resource}
-      width={w || 1024}
-      height={h || 1024}
+      width={w}
+      height={h}
     />
   )
   );
