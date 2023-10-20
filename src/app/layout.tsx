@@ -14,7 +14,7 @@ const Wrapper = lazy(() => import("@components/sections/Wrapper"));
 const Nav = lazy(() => import("@components/sections/Nav"));
 const Footer = lazy(() => import("@components/sections/Footer"));
 // import ScrollToTop from "@components/partials/ScrollToTop";
-const ScrollToTop = lazy(() => import("@components/partials/portfolio/ScrollToTop"));
+const ScrollToTop = lazy(() => import("@components/partials/ScrollToTop"));
 
 import "@/styles/index.css";
 
