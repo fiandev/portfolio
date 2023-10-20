@@ -8,6 +8,7 @@
 // import ErrorPage from "@components/sections/ErrorPage";
 // import Preload from "@components/sections/Preload";
 
+import { lazy } from "react";
 import { ScrollableArea } from "@components/interactive/ScrollableArea";
 import { randomID } from "@utils/functions";
 import ViewportArea from "@components/interactive/ViewportArea";
