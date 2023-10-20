@@ -113,9 +113,11 @@ export default function Footer({ links }: { links?: any[] }) {
                     <a
                       key={randomID()}
                       href={link.url}
-                      class="w-6 h-6 flex items-center justify-center text-gray-500 hover:text-gray-900 dark:hover:text-white"
+                      class="w-6 h-6 flex items-center justify-center text-slate-800 dark:text-slate-200 hover:text-gray-200 hover:font-bold"
                     >
-                      <FontAwesomeIcon icon={icons[link.icon]} />
+                      <FontAwesomeIcon 
+                        icon={icons[link.type]} 
+                      />
                     </a>
                   );
                 })
