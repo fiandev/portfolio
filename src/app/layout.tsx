@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { lazy } from "react";
 
 import { GlobalScrollProvider } from "@hooks/useGlobalScroll";
 import { GlobalMouseMoveProvider } from "@hooks/useGlobalMouseMove";
@@ -6,10 +7,14 @@ import { GlobalThemeProvider } from "@hooks/useTheme";
 
 import AuthProvider from "@providers/AuthProvider";
 
-import Wrapper from "@components/sections/Wrapper";
-import Nav from "@components/sections/Nav";
-import Footer from "@components/sections/Footer";
-import ScrollToTop from "@components/partials/ScrollToTop";
+// import Wrapper from "@components/sections/Wrapper";
+// import Nav from "@components/sections/Nav";
+// import Footer from "@components/sections/Footer";
+const Wrapper = lazy(() => import("@components/sections/Wrapper"));
+const Nav = lazy(() => import("@components/sections/Nav"));
+const Footer = lazy(() => import("@components/sections/Footer"));
+// import ScrollToTop from "@components/partials/ScrollToTop";
+const ScrollToTop = lazy(() => import("@components/partials/portfolio/ScrollToTop"));
 
 import "@/styles/index.css";
 
@@ -87,7 +92,7 @@ export default async function RootLayout({
   let data = json.data;
 
   return (
-    <html>
+    <html lang="en-US">
       <body className="relative flex flex-col min-h-screen w-screen">
         <noscript>You need to enable JavaScript to run this app.</noscript>
         <Wrapper>

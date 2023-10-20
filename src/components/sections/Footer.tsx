@@ -36,8 +36,8 @@ export default function Footer({ links }: { links?: any[] }) {
               <Image
                 src="/logo.png"
                 class="w-8 h-8 mr-3"
-                w={512}
-                h={512}
+                w={16}
+                h={16}
                 alt="fiandev's logo"
               />
               <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white uppercase">
