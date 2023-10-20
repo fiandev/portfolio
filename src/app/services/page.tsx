@@ -31,9 +31,9 @@ export const metadata: Metadata = {
 export default async function Services() {
   let json = (await import("@assets/json/data.json")).default;
   let data = json.data;
-  
+
   return (
-    <div className={`pt-6 scroll-smooth relative dark:bg-slate-800`}>
+    <div className={`pt-4 mt-2 scroll-smooth relative dark:bg-slate-800`}>
       <ServiceList className="py-4" />
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +49,7 @@ export default async function Services() {
       <Contact
         formClassName="dark:outline-sky-100 dark:hover:outline-main dark:text-slate-100"
         className="bg-gradient-to-b from-sky-100 to-slate-50 dark:text-100 dark:from-main dark:to-slate-900"
-        links={ data.links }
+        links={data.links}
       />
     </div>
   );

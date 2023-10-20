@@ -67,11 +67,13 @@ export default function Footer({ links }: { links?: any[] }) {
               <ul class="text-gray-500 dark:text-gray-400 font-medium">
                 {links
                   ? links.map((link) => {
-                      <li class="mb-4">
-                        <a href={link.url} class="hover:underline ">
-                          {link.type}
-                        </a>
-                      </li>;
+                      return (
+                        <li class="mb-4">
+                          <a href={link.url} class="hover:underline ">
+                            {link.type}
+                          </a>
+                        </li>
+                      );
                     })
                   : null}
               </ul>
@@ -107,13 +109,15 @@ export default function Footer({ links }: { links?: any[] }) {
           <div class="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
             {links
               ? links.map((link) => {
-                  <a
-                    key={randomID()}
-                    href={link.url}
-                    class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
-                  >
-                    <FontAwesomeIcon icon={icons[link.icon]} />
-                  </a>;
+                  return (
+                    <a
+                      key={randomID()}
+                      href={link.url}
+                      class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+                    >
+                      <FontAwesomeIcon icon={icons[link.icon]} />
+                    </a>
+                  );
                 })
               : null}
           </div>
