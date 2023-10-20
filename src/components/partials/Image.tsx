@@ -38,6 +38,5 @@ export default function Image({
       width={w}
       height={h}
     />
-  )
   );
 }
