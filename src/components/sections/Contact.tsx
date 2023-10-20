@@ -1,4 +1,5 @@
 import ItemContact from "@components/partials/ItemContact";
+import { randomID } from "@utils/functions";
 
 export default function Contact({
   links,
