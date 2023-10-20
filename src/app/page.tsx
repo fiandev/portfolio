@@ -6,22 +6,21 @@
 // import Project from "@components/sections/Project";
 // import Contact from "@components/sections/Contact";
 // import ErrorPage from "@components/sections/ErrorPage";
-// import Preload from "@components/sections/Preload";
 
 import { lazy } from "react";
 import { ScrollableArea } from "@components/interactive/ScrollableArea";
 import { randomID } from "@utils/functions";
 import ViewportArea from "@components/interactive/ViewportArea";
+import Preload from "@components/partials/Preload";
 
 const Profile = lazy(() => import("@components/sections/Profile"));
 const About = lazy(() => import("@components/sections/About"));
 const Contact = lazy(() => import("@components/sections/Contact"));
 const Project = lazy(() => import("@components/sections/Project"));
 
-export default async function Home() {
-  let json = (await import("@assets/json/data.json")).default;
-  let Data = json.data;
-
+export default function Home({ Data }) {
+  if (!Data) return <Preload/>;
+  
   return (
     <div className={`scroll-smooth relative`}>
       <Profile data={Data} />
@@ -63,4 +62,15 @@ export default async function Home() {
       </ViewportArea>
     </div>
   );
+}
+
+export async function getStaticProps () {
+  let json = (await import("@assets/json/data.json")).default;
+  let Data = json.data;
+  
+  return {
+    props: {
+      Data
+    }
+  }
 }

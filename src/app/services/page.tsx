@@ -1,7 +1,8 @@
 import { Metadata } from "next";
 
-import ServiceList, { images } from "@components/sections/ServiceList";
+import ServiceList from "@components/sections/ServiceList";
 import Contact from "@components/sections/Contact";
+import Preload from "@components/partials/Preload";
 
 const title = "fiandev's service",
   thumbnail = "https://fiandev.my.id/graph.png",
@@ -23,18 +24,16 @@ export const metadata: Metadata = {
   keywords: keywords,
   openGraph: {
     title: title,
-    images: images,
     description: description,
   },
 };
 
-export default async function Services() {
-  let json = (await import("@assets/json/data.json")).default;
-  let data = json.data;
-
+export default function Services({ data, services }) {
+  if (!data || !services) return <Preload />;
+  
   return (
     <div className={`pt-8 scroll-smooth relative dark:bg-slate-800`}>
-      <ServiceList className="py-4" />
+      <ServiceList services={ services } className="py-4" />
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
@@ -53,4 +52,16 @@ export default async function Services() {
       />
     </div>
   );
+}
+
+export async function getStaticProps () {
+  let data = (await import("@assets/json/data.json")).default.data;
+  let services = (await import("@assets/json/services.json")).default;
+  
+  return {
+    props: {
+      data,
+      services
+    }
+  }
 }
