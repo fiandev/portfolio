@@ -27,9 +27,10 @@ export const metadata: Metadata = {
     description: description,
   },
 };
+
 export default function Services() {
   return (
-    <div className={`pt-8 scroll-smooth relative pt-2 dark:bg-slate-800`}>
+    <div className={`scroll-smooth relative dark:bg-slate-800`}>
       <ServiceList className="py-4" />
       <svg
         xmlns="http://www.w3.org/2000/svg"

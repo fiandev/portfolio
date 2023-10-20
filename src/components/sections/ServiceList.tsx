@@ -50,6 +50,12 @@ const services = {
   ],
   products: [
     {
+      title: "website film",
+      description:
+        "situs web film yang bisa digunakan untuk streaming, menjelajahi dan mengunduh film dan dilengkapi dengan dashboard admin yang kaya fitur",
+      thumbnail: "https://i.ibb.co/jVDZbF3/20230912-172737.jpg",
+    },
+    {
       title: "school website",
       description: "situs web sekolah dengan fitur lengkap",
       thumbnail:
@@ -58,15 +64,17 @@ const services = {
   ],
 };
 
-export const images = arrayShuffle([]
-  .concat(
-    ...Object.entries(services).map((val) =>
-      services[val[0]].map((item) => item.thumbnail),
-    ),
-  )
-  .filter((v) => !!v));
+export const images = arrayShuffle(
+  []
+    .concat(
+      ...Object.entries(services).map((val) =>
+        services[val[0]].map((item) => item.thumbnail),
+      ),
+    )
+    .filter((v) => !!v),
+);
 export default function ServiceList({ className = "" }) {
-  const phoneNumber = "+6281336270845";
+  const phoneNumber = "+62895380689955";
   let WhatsApp_URL = `https://wa.me/${phoneNumber}`;
   let now = new Date().toLocaleString();
 

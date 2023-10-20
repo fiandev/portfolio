@@ -1,58 +1,125 @@
-"use client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
-import { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faGithub,
+  faTwitter,
+  faInstagram,
+  faWhatsapp,
+  faLinkedin,
+  faTelegram,
+} from "@fortawesome/free-brands-svg-icons";
 
 import Link from "next/link";
 import ViewportArea from "@components/interactive/ViewportArea";
 import Image from "@components/partials/Image";
+import { randomID } from "@utils/functions";
 
-export default function Footer() {
-  let [Data, SetData] = useState<null | any>(null);
-  const year = new Date().getFullYear();
-  const repository =
-    Data?.links?.filter((link) => link.type == "github")[0].url || "";
+const icons = {
+  facebook: faFacebook,
+  instagram: faInstagram,
+  whatsapp: faWhatsapp,
+  twitter: faTwitter,
+  github: faGithub,
+  linkedin: faLinkedin,
+  telegram: faTelegram,
+};
 
-  useEffect(() => {
-    import("@assets/json/data.json")
-      .then((module) => {
-        let json = module.default;
-        let data = json.data;
-
-        SetData(data);
-      })
-      .catch((err) => {
-        console.log({ err });
-      });
-  }, []);
-
+export default function Footer({ links }: { links?: any[] }) {
   return (
-    <section
-      id="footer"
-      className="relative w-screen pt-8 capitalize flex flex-col gap-4 bg-gradient-to-t from-sky-500 to-slate-50 dark:from-sky-900 dark:to-slate-900 items-center justify-end text-gray-800"
-    >
-      <ViewportArea>
-        <div className="absolute inset-0 flex flex-col justify-center items-center text-center">
-          <p className="text-lg font-serif text-slate-50">
-            built with
-            <FontAwesomeIcon icon={faHeart} className="text-rose-400" /> by
-            <Link
-              className="font-semibold text-sky-800 dark:text-sky-400 hover:underline"
-              href={repository}
-            >
-              fiandev
-            </Link>
-          </p>
-          <p className="text-sm font-serif text-gray-100">
-            <span className="font-semibold">@ {year}.</span> all right reserved.
-          </p>
+    <footer class="bg-white dark:bg-gray-900">
+      <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div class="md:flex md:justify-between">
+          <div class="mb-6 md:mb-0">
+            <a href="https://fiandev.my.id" class="flex items-center">
+              <img
+                src="https://fiandev.my.id/logo.png"
+                class="h-8 mr-3"
+                alt="fiandev's logo"
+              />
+              <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+                fiandev
+              </span>
+            </a>
+          </div>
+          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                Links
+              </h2>
+              <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li>
+                  <Link href="/" class="hover:underline">
+                    home
+                  </Link>
+                </li>
+                <li class="mb-4">
+                  <Link href="/services" class="hover:underline">
+                    services
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                Follow us
+              </h2>
+              <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                {links
+                  ? links.map((link) => {
+                      <li class="mb-4">
+                        <a href={link.url} class="hover:underline ">
+                          {link.type}
+                        </a>
+                      </li>;
+                    })
+                  : null}
+              </ul>
+            </div>
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                Legal
+              </h2>
+              <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:underline">
+                    Terms &amp; Conditions
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </ViewportArea>
-      <Image
-        className="w-max h-max m-0 p-0"
-        alt="wave animation"
-        srcset="/static/svg/wave.svg"
-      />
-    </section>
+        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+            © 2023{" "}
+            <a href="https://github.com/fiandev" class="hover:underline">
+              fiandev
+            </a>
+            . All Rights Reserved.
+          </span>
+          <div class="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
+            {links
+              ? links.map((link) => {
+                  <a
+                    key={randomID()}
+                    href={link.url}
+                    class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+                  >
+                    <FontAwesomeIcon icon={icons[link.icon]} />
+                  </a>;
+                })
+              : null}
+          </div>
+        </div>
+      </div>
+    </footer>
   );
 }

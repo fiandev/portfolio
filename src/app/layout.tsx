@@ -16,7 +16,7 @@ import "@/styles/index.css";
 const title = "fiandev's portfolio",
   thumbnail = "https://fiandev.my.id/poster.jpg",
   description =
-    "Hai semuanya, saya Fian junior software engineer dan fullstack web developer, saya sangat tertarik dengan dunia pemrograman, bahasa favorit saya adalah javaScript, Python, dan PHP.",
+    "Hi everyone, I am Fian junior software engineer and fullstack web developer, I am very interested in the world of programming, my favorite languages are JavaScript, Python and PHP.",
   keywords =
     "fiandev, webdev, web, dev, portfolio, frontend, backend, web developer, developer, coder, programmer, freelancer, fian, aditia, akbar, putra, alfiansa, IT Support",
   baseURL = "https://fiandev.my.id",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   keywords: keywords,
   category: "personal website",
   type: "website",
-  locale: "id_ID",
+  locale: "en_US",
   creator: "fian",
   robots: {
     index: true,
@@ -78,11 +78,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  let json = (await import("@assets/json/data.json")).default;
+  let data = json.data;
+
   return (
     <html>
       <body className="relative flex flex-col min-h-screen w-screen">
@@ -95,7 +98,7 @@ export default function RootLayout({
                 <GlobalMouseMoveProvider>{children}</GlobalMouseMoveProvider>
               </GlobalScrollProvider>
               <ScrollToTop className="bg-main text-slate-800 dark:bg-slate-800 dark:text-main" />
-              <Footer />
+              <Footer links={links} />
             </GlobalThemeProvider>
           </AuthProvider>
         </Wrapper>

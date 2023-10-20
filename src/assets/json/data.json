@@ -5,12 +5,12 @@
     "name": "fian",
     "username": "fiandev",
     "email": "fiandev1234@gmail.com",
-    "slogan": "Halo semuanya, saya Fian. Saya sangat tertarik dengan dunia programming. Bahasa favorit saya adalah javascript, Python, dan PHP.",
-    "about": "Pertama, izinkan saya memperkenalkan diri. Nama saya Aditia Akbar Putra Alfiansa, Anda bisa memanggil saya Fian.Saya membuat portofolio ini karena, saya ingin Anda mengenal saya dan apa yang bisa saya lakukan untuk Anda.Silakan hubungi saya, jika Anda membutuhkan bantuan saya 😄. Saya akan berusaha melakukan yang terbaik untuk itu.",
+    "slogan": "Hi everyone, I am Fian junior software engineer and fullstack web developer, I am very interested in the world of programming, my favorite languages are JavaScript, Python and PHP.",
+    "about": "First, let me introduce myself. My name is Aditia Akbar Putra Alfiansa, you can call me Fian. I made this portfolio because, I want you to know me and what I can do.",
     "birthdate": "2005-06-13",
     "special_token": "!im_admin!",
-    "formatted_about": "<div>Pertama, izinkan saya memperkenalkan diri. Nama saya <strong>Aditia Akbar Putra Alfiansa</strong>, Anda bisa memanggil saya <strong>Fian</strong>.<br><br>Saya membuat portofolio ini karena, saya ingin Anda mengenal saya dan apa yang bisa saya lakukan untuk Anda.<br><br><strong>Silakan hubungi saya</strong>, jika Anda membutuhkan bantuan saya 😄. Saya akan berusaha melakukan yang terbaik untuk itu.</div>",
-    "formatted_slogan": "<div>Halo semuanya, saya <strong>Fian</strong>.<br><br>Saya sangat tertarik dengan dunia programming. Bahasa favorit saya adalah <strong>javascript</strong>, <strong>Python</strong>, dan <strong>PHP</strong>.</div>",
+    "formatted_about": "<div>First, let me introduce myself. My name is <strong>Aditia Akbar Putra Alfiansa</strong>, you can call me Fian. I made this portfolio because, I want you to know me and what I can do</div>",
+    "formatted_slogan": "<div>Hi everyone, I am Fian junior software engineer and fullstack web developer, I am very interested in the world of programming, my favorite languages are JavaScript, Python and PHP.</div>",
     "photo": "http://localhost:8000/post-images/no-pp.jpg",
     "skills": [
       {

@@ -1,37 +1,22 @@
-"use client";
-import { useState, useEffect } from "react";
+// "use client";
+// import { useState, useEffect } from "react";
 
 import Profile from "@components/sections/Profile";
 import About from "@components/sections/About";
 import Project from "@components/sections/Project";
 import Contact from "@components/sections/Contact";
 import ErrorPage from "@components/sections/ErrorPage";
-import HomePreview from "@components/sections/HomePreview";
+// import Preload from "@components/sections/Preload";
 import { ScrollableArea } from "@components/interactive/ScrollableArea";
 import { randomID } from "@utils/functions";
 import ViewportArea from "@components/interactive/ViewportArea";
 
-export default function Home() {
-  let [Data, SetData] = useState<null | any>(null);
-  let [IsError, SetIsError] = useState<boolean>(false);
-  let [Exception, SetException] = useState<null | any>(null);
+export default async function Home() {
+  let jaon = (await import("@assets/json/data.json")).default;
+  let Data = json.data;
 
-  useEffect(() => {
-    import("@assets/json/data.json")
-      .then((module) => {
-        let json = module.default;
-        let data = json.data;
-
-        SetData(data);
-      })
-      .catch((err) => {
-        SetException(err);
-      });
-  }, []);
-
-  if (!Data) return <HomePreview />;
-  return !IsError && Data ? (
-    <div className={`pt-2 scroll-smooth relative`}>
+  return (
+    <div className={`scroll-smooth relative`}>
       <Profile data={Data} />
       <ScrollableArea className="h-fit">
         <About className="lg:px-[10vw]" data={Data} />
@@ -70,11 +55,5 @@ export default function Home() {
         <Contact className="bg-slate-50 dark:bg-slate-900" links={Data.links} />
       </ViewportArea>
     </div>
-  ) : (
-    <ErrorPage
-      code={Exception.code || 500}
-      message={Exception.message || "internal server error"}
-      suggest="maybe backend server for this website is down please contact me at 't.me/fiandev'"
-    />
   );
 }

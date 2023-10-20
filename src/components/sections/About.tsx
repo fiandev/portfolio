@@ -19,8 +19,8 @@ const About = ({
   data: any;
   className?: string | number;
 }) => {
-  const [ time, setTime ] = useState<any>(Date.now());
-  const [ age, setAge ] = useState<number>(0);
+  const [time, setTime] = useState<any>(Date.now());
+  const [age, setAge] = useState<number>(0);
   const { formatted_about, skills } = data;
 
   useEffect(() => {
