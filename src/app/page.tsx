@@ -12,7 +12,7 @@ import { randomID } from "@utils/functions";
 import ViewportArea from "@components/interactive/ViewportArea";
 
 export default async function Home() {
-  let jaon = (await import("@assets/json/data.json")).default;
+  let json = (await import("@assets/json/data.json")).default;
   let Data = json.data;
 
   return (
