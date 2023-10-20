@@ -32,9 +32,11 @@ export default function Footer({ links }: { links?: any[] }) {
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0">
             <a href="https://fiandev.my.id" class="flex items-center">
-              <img
+              <Image
                 src="https://fiandev.my.id/logo.png"
                 class="h-8 mr-3"
+                w={512}
+                h={512}
                 alt="fiandev's logo"
               />
               <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white uppercase">

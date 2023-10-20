@@ -1,4 +1,5 @@
 "use client";
+import NwxtImage from "next/image";
 import { useEffect } from "react";
 export default function Image({
   srcset,
@@ -6,12 +7,16 @@ export default function Image({
   className,
   onError,
   src,
+  w,
+  h,
 }: {
   src?: string;
   srcset?: string;
   alt?: string;
   className?: string;
   onError?: Function;
+  w?: number;
+  h?: number;
 }) {
   const handleError = (e) => {
     e.target.src =
@@ -25,13 +30,14 @@ export default function Image({
     });
   }, []);
   return (
-    <img
-      sizes="100%"
+    <NextImage
       onError={onError || handleError}
       className={className}
-      src={resource}
       alt={alt || resource}
-      key={resource}
+      src={resource}
+      width={w || 1024}
+      height={h || 1024}
     />
+  )
   );
 }
