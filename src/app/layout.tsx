@@ -19,7 +19,7 @@ const ScrollToTop = lazy(() => import("@components/partials/ScrollToTop"));
 import "@/styles/index.css";
 
 const title = "fiandev's portfolio",
-  thumbnail = "https://fiandev.my.id/poster.jpg",
+  thumbnail = "https://fiandev.my.id/graph.jpg",
   description =
     "Hi everyone, I am Fian junior software engineer and fullstack web developer, I am very interested in the world of programming, my favorite languages are JavaScript, Python and PHP.",
   keywords =

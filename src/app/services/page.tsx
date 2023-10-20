@@ -29,11 +29,12 @@ export const metadata: Metadata = {
 };
 
 export default function Services({ data, services }) {
-  if (!data || !services) return <Preload />;
+  let data = (await import("@assets/json/data.json")).default.data;
+  let services = (await import("@assets/json/services.json")).default;
   
   return (
     <div className={`pt-8 scroll-smooth relative dark:bg-slate-800`}>
-      <ServiceList services={ services } className="py-4" />
+      <ServiceList services={ services } className="py-4 mt-4" />
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
@@ -52,16 +53,4 @@ export default function Services({ data, services }) {
       />
     </div>
   );
-}
-
-export async function getStaticProps () {
-  let data = (await import("@assets/json/data.json")).default.data;
-  let services = (await import("@assets/json/services.json")).default;
-  
-  return {
-    props: {
-      data,
-      services
-    }
-  }
 }
