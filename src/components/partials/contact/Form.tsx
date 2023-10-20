@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { faSpinner, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import ItemContact from "@components/partials/ItemContact";
 import FormFloating from "@components/partials/FormFloating";
 import Alert from "@components/partials/contact/Alert";
 

@@ -1,3 +1,5 @@
+import ItemContact from "@components/partials/ItemContact";
+
 export default function Contact({
   links,
   className,
