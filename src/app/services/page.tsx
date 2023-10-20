@@ -28,9 +28,11 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Services({ data, services }) {
+export default async function Services({ data, services }) {
   let data = (await import("@assets/json/data.json")).default.data;
   let services = (await import("@assets/json/services.json")).default;
+  
+  if (!data || !services) return <Preload/>;
   
   return (
     <div className={`pt-8 scroll-smooth relative dark:bg-slate-800`}>

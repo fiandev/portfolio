@@ -18,7 +18,10 @@ const About = lazy(() => import("@components/sections/About"));
 const Contact = lazy(() => import("@components/sections/Contact"));
 const Project = lazy(() => import("@components/sections/Project"));
 
-export default function Home({ Data }) {
+export default async function Home() {
+  let json = (await import("@assets/json/data.json")).default;
+  let Data = json.data;
+  
   if (!Data) return <Preload/>;
   
   return (
@@ -63,7 +66,7 @@ export default function Home({ Data }) {
     </div>
   );
 }
-
+/*
 export async function getStaticProps () {
   let json = (await import("@assets/json/data.json")).default;
   let Data = json.data;
@@ -74,3 +77,4 @@ export async function getStaticProps () {
     }
   }
 }
+*/
