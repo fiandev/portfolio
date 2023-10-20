@@ -52,7 +52,7 @@ const services = {
     {
       title: "website film",
       description:
-        "situs web film yang bisa digunakan untuk streaming, menjelajahi dan mengunduh film dan dilengkapi dengan dashboard admin yang kaya fitur",
+        "situs web film yang dilengkapi dengan dashboard admin yang kaya fitur",
       thumbnail: "https://i.ibb.co/jVDZbF3/20230912-172737.jpg",
     },
     {
