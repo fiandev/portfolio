@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     description: description,
   },
 };
-export default function About () {
+export default async function About () {
   let json = (await import("@assets/json/data.json")).default;
   let data = json.data;
   let { formatted_about = "", avatar = {}, skills = [] } = data;
