@@ -73,7 +73,7 @@ export default async function About () {
   ];
   
   return (
-    <div className={`flex flex-col items-center scroll-smooth relative dark:bg-slate-800 p-4`}>
+    <div className={`bg-slate-200 dark:bg-slate-800 flex flex-col items-center scroll-smooth relative dark:bg-slate-800 p-4`}>
         <Image
             className={`${
               avatar ? "animation-none" : "animation-pulse"
@@ -87,7 +87,7 @@ export default async function About () {
             !about ? "animate-pulse" : "animate-none"
           } md:text-center dark:text-slate-50 text-lg lg:text-xl xl:text-2xl font-serif py-4 font-light`}
         >
-          <textarea disabled={true} className="w-full h-fit bg-slate-100 dark:bg-slate-800 shadow shadow-md shadow-slate-800 dark:shadow-slate-200 outline-0 border-0">
+          <textarea disabled={true} className="w-max h-fit bg-transparent outline-0 border-0">
             {about}
           </textarea> 
         </div>

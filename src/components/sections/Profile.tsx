@@ -9,7 +9,7 @@ const Profile = ({ data }: { data: any }) => {
       id="profile"
       className={`${
         !data ? "preview-content" : ""
-      } bg-fixed relative w-screen h-screen md:min-h-screen flex flex-col gap-2 items-center justify-center lg:flex-row-reverse md:justify-center lg:px-24`}
+      } bg-slate-200 dark:bg-slate-800 bg-fixed relative w-screen h-screen md:min-h-screen flex flex-col gap-2 items-center justify-center lg:flex-row-reverse md:justify-center lg:px-24`}
     >
       <div className="group flex items-center justify-center lg:justify-between lg:px-8">
         <div className="relative">
