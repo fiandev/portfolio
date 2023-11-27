@@ -17,7 +17,7 @@ const Shapes = ({
       clearInterval(interval);
     };
   }, [time]);
-  
+
   let style = {
     borderRadius: getBlobRadius(),
   };

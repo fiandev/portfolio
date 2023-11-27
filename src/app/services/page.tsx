@@ -36,7 +36,10 @@ export default async function Services() {
 
   return (
     <div className={`py-4 scroll-smooth relative dark:bg-slate-800`}>
-      <ServiceList services={services} className="bg-slate-200 dark:bg-slate-800 py-4" />
+      <ServiceList
+        services={services}
+        className="bg-slate-200 dark:bg-slate-800 py-4"
+      />
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
