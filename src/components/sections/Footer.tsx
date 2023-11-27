@@ -26,7 +26,7 @@ const icons = {
   telegram: faTelegram,
 };
 
-export default function Footer() {
+export default async function Footer() {
   let json = (await import("@assets/json/data.json")).default;
   let data = json.data;
   let { links = [], projects = [] } = data;
