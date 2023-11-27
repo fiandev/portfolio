@@ -19,6 +19,6 @@
   }
   .nav-link-active {
     @apply text-sky-800 rounded-md
-          dark:text-slate-800;
+          dark:text-gray-700;
   }
 }

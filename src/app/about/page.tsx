@@ -73,11 +73,11 @@ export default async function About () {
   ];
   
   return (
-    <div className={`flex flex-col items-center scroll-smooth relative dark:bg-slate-800`}>
+    <div className={`flex flex-col items-center scroll-smooth relative dark:bg-slate-800 p-4`}>
         <Image
             className={`${
               avatar ? "animation-none" : "animation-pulse"
-            } w-full h-full shadow-md rounded-full border-2 border-sky-400`}
+            } w-32 h-32 shadow-md rounded-full border-2 border-sky-400`}
             alt="my avatar"
             srcset={avatar ? avatar.url : ""}
           />

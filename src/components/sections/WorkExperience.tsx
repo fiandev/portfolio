@@ -2,7 +2,7 @@ export default function WorkExperience() {
   return (
     <section
       id="work-experience"
-      className="bg-slate-50 dark:bg-slate-900 px-4 py-8 inset-x-0 transition-all duration-1000 flex justify-start items-center lg:px-8"
+      className="bg-slate-50 dark:bg-slate-900 px-4 py-8 inset-x-0 transition-all duration-1000 flex flex-col justify-start items-center gap-4 lg:px-8"
     >
       <h1 className="text-3xl capitalize font-bold font-mono dark:text-slate-50">
         Work Experience
