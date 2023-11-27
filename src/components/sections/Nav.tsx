@@ -68,7 +68,7 @@ export default function Nav() {
 
       <div
         className={`transition ease-in duration-800 w-full flex backdrop-blur-md lg:backdrop-blur-0 ${
-          IsActive ? "max-h-fit" : "max-h-0"
+          navOpen ? "max-h-fit" : "max-h-0"
         } overflow-y-hidden lg:overflow-y-visible lg:max-h-fit flex-col lg:flex-row`}
       >
         <ul className="flex py-2.5 lg:py-0 w-full flex-col lg:flex-row lg:items-center lg:justify-end lg:gap-2 uppercase">
