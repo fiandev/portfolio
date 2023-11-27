@@ -99,7 +99,7 @@ export default async function About() {
       >
         {about.split("\n").map((v) => {
           return (
-            <p className="w-max h-fit bg-transparent outline-0 border-0">{v}</p>
+            <p className="w-full bg-transparent outline-0 border-0">{v}</p>
           );
         })}
       </div>
