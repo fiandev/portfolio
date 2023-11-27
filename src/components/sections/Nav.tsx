@@ -5,7 +5,7 @@ import Hamburger from "@components/partials/Hamburger";
 import NavLink from "@components/partials/NavLink";
 import Dropdown from "@components/partials/Dropdown";
 
-export const links = [
+export const navLinks = [
   {
     text: "Home",
     href: "/",
@@ -73,10 +73,10 @@ export default function Nav() {
         } overflow-y-hidden lg:overflow-y-visible lg:max-h-fit flex-col lg:flex-row`}
       >
         <ul className="flex py-2.5 lg:py-0 w-full flex-col lg:flex-row lg:items-center lg:justify-end lg:gap-2 uppercase">
-          {links.map((link) => {
-            return link.links ? (
+          {navLinks.map((link) => {
+            return link.navLinks ? (
               <Dropdown>
-                {link.links.map((link) => {
+                {link.navLinks.map((link) => {
                   return <NavLink text={link.text} to={link.href} />;
                 })}
               </Dropdown>
