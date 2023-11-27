@@ -31,12 +31,12 @@ export const metadata: Metadata = {
 export default async function Services() {
   let data = (await import("@assets/json/data.json")).default.data;
   let services = (await import("@assets/json/services.json")).default;
-  
-  if (!data || !services) return <Preload/>;
-  
+
+  if (!data || !services) return <Preload />;
+
   return (
     <div className={`pt-8 scroll-smooth relative dark:bg-slate-800`}>
-      <ServiceList services={ services } className="py-4 mt-4" />
+      <ServiceList services={services} className="py-4 mt-4" />
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"

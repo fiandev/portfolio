@@ -1,11 +1,4 @@
-// "use client";
-// import { useState, useEffect } from "react";
-
-// import Profile from "@components/sections/Profile";
-// import About from "@components/sections/About";
-// import Project from "@components/sections/Project";
-// import Contact from "@components/sections/Contact";
-// import ErrorPage from "@components/sections/ErrorPage";
+"use client";
 
 import { lazy } from "react";
 import { ScrollableArea } from "@components/interactive/ScrollableArea";
@@ -21,9 +14,9 @@ const Project = lazy(() => import("@components/sections/Project"));
 export default async function Home() {
   let json = (await import("@assets/json/data.json")).default;
   let Data = json.data;
-  
-  if (!Data) return <Preload/>;
-  
+
+  if (!Data) return <Preload />;
+
   return (
     <div className={`scroll-smooth relative`}>
       <Profile data={Data} />
@@ -66,15 +59,3 @@ export default async function Home() {
     </div>
   );
 }
-/*
-export async function getStaticProps () {
-  let json = (await import("@assets/json/data.json")).default;
-  let Data = json.data;
-  
-  return {
-    props: {
-      Data
-    }
-  }
-}
-*/

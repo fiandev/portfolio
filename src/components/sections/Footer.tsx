@@ -26,10 +26,11 @@ const icons = {
   telegram: faTelegram,
 };
 
-export default function Footer({ links, projects }: { 
-  links?: any[];
-  projects?: any[];
-}) {
+export default function Footer() {
+  let json = (await import("@assets/json/data.json")).default;
+  let data = json.data;
+  let { links = [], projects = [] } = data;
+
   return (
     <footer class="bg-white dark:bg-gray-800">
       <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
@@ -71,11 +72,16 @@ export default function Footer({ links, projects }: {
                 Projects
               </h2>
               <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                {projects 
+                {projects
                   ? projects.map((project) => {
                       return (
                         <li>
-                          <a href={project.preview || "#"} class={ `hover:underline ${ project.preview ? "hover:font-semibold" : "" }` }>
+                          <a
+                            href={project.preview || "#"}
+                            class={`hover:underline ${
+                              project.preview ? "hover:font-semibold" : ""
+                            }`}
+                          >
                             {project.title}
                           </a>
                         </li>
@@ -121,9 +127,7 @@ export default function Footer({ links, projects }: {
                       href={link.url}
                       class="w-6 h-6 flex items-center justify-center text-slate-800 dark:text-slate-200 hover:text-gray-200 hover:font-bold"
                     >
-                      <FontAwesomeIcon 
-                        icon={icons[link.type]} 
-                      />
+                      <FontAwesomeIcon icon={icons[link.type]} />
                     </a>
                   );
                 })

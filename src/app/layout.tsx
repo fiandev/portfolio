@@ -5,15 +5,11 @@ import { GlobalScrollProvider } from "@hooks/useGlobalScroll";
 import { GlobalMouseMoveProvider } from "@hooks/useGlobalMouseMove";
 import { GlobalThemeProvider } from "@hooks/useTheme";
 
-import AuthProvider from "@providers/AuthProvider";
+// import AuthProvider from "@providers/AuthProvider";
 
-// import Wrapper from "@components/sections/Wrapper";
-// import Nav from "@components/sections/Nav";
-// import Footer from "@components/sections/Footer";
 const Wrapper = lazy(() => import("@components/sections/Wrapper"));
 const Nav = lazy(() => import("@components/sections/Nav"));
 const Footer = lazy(() => import("@components/sections/Footer"));
-// import ScrollToTop from "@components/partials/ScrollToTop";
 const ScrollToTop = lazy(() => import("@components/partials/ScrollToTop"));
 
 import "@/styles/index.css";
@@ -83,29 +79,24 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  let json = (await import("@assets/json/data.json")).default;
-  let data = json.data;
-
   return (
     <html lang="en-US">
       <body className="relative flex flex-col min-h-screen w-screen">
         <noscript>You need to enable JavaScript to run this app.</noscript>
         <Wrapper>
-          <AuthProvider>
-            <GlobalThemeProvider>
-              <Nav />
-              <GlobalScrollProvider>
-                <GlobalMouseMoveProvider>{children}</GlobalMouseMoveProvider>
-              </GlobalScrollProvider>
-              <ScrollToTop className="bg-main text-slate-800 dark:bg-slate-800 dark:text-main" />
-              <Footer links={data.links} projects={data.portfolios}/>
-            </GlobalThemeProvider>
-          </AuthProvider>
+          <GlobalThemeProvider>
+            <Nav />
+            <GlobalScrollProvider>
+              <GlobalMouseMoveProvider>{children}</GlobalMouseMoveProvider>
+            </GlobalScrollProvider>
+            <ScrollToTop className="bg-main text-slate-800 dark:bg-slate-800 dark:text-main" />
+            <Footer />
+          </GlobalThemeProvider>
         </Wrapper>
       </body>
     </html>

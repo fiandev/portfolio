@@ -12,7 +12,7 @@ const Shapes = ({
   const [time, setTime] = useState<any>(Date.now());
 
   useEffect(() => {
-    const interval = setInterval(() => setTime(Date.now()), 1000);
+    const interval = setInterval(() => setTime(Date.now()), 3000);
     return () => {
       clearInterval(interval);
     };
