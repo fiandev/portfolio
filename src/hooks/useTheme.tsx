@@ -15,7 +15,8 @@ export const GlobalThemeProvider = ({
       localStorage.theme === "dark" ||
       (!("theme" in localStorage) &&
         window.matchMedia("(prefers-color-scheme: dark)").matches);
-    let theme = isDarkTheme ? "dark" : "light";
+    //let theme = isDarkTheme ? "dark" : "light";
+    let theme = "light";
 
     document.documentElement.classList.add(theme);
 

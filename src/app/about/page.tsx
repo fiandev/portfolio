@@ -77,22 +77,29 @@ export default async function About () {
         <Image
             className={`${
               avatar ? "animation-none" : "animation-pulse"
-            } w-32 h-32 shadow-md rounded-full border-2 border-sky-400`}
+            } w-32 h-32 shadow-md rounded-full border-2 border-slate-100`}
             alt="my avatar"
             srcset={avatar ? avatar.url : ""}
           />
           
         <div
           className={`${
-            !formatted_about ? "animate-pulse" : "animate-none"
+            !about ? "animate-pulse" : "animate-none"
           } md:text-center dark:text-slate-50 text-lg lg:text-xl xl:text-2xl font-serif py-4 font-light`}
         >
-          <p>
+          <textarea disabled={true} className="bg-transparent outline-0 border-0">
             {about}
-          </p>
+          </textarea> 
         </div>
 
         <div className="w-full h-fit py-4 items-center grid px-auto md:grid-cols-2 gap-4">
+          <Item
+            className="bg-blue-600"
+            data={{
+              label: "biodata",
+              items: biodataItems,
+            }}
+          />
           <Item
             className="bg-rose-600"
             data={{
@@ -103,13 +110,6 @@ export default async function About () {
                   text: `${skill.name} | (${skill.level})`,
                 };
               }),
-            }}
-          />
-          <Item
-            className="bg-blue-600"
-            data={{
-              label: "biodata",
-              items: biodataItems,
             }}
           />
         </div>

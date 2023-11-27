@@ -1,8 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-import ViewportArea from "@components/interactive/ViewportArea";
-import Image from "../Image";
 import { randomID } from "@utils/functions";
+
+import Image from "../Image";
 
 export default function Item({
   children,
@@ -15,7 +14,6 @@ export default function Item({
 }) {
   return (
     data && (
-      <ViewportArea>
         <div
           className={`p-4 rounded-md flex flex-col gap-2 ${
             className || "bg-main"
@@ -52,7 +50,6 @@ export default function Item({
             })}
           </ul>
         </div>
-      </ViewportArea>
     )
   );
 }

@@ -2,11 +2,11 @@
   "code": 200,
   "status": "success",
   "data": {
-    "name": "fian",
+    "name": "Aditia Akbar Putra A",
     "username": "fiandev",
     "email": "fiandev1234@gmail.com",
     "slogan": "I am a fullstack web developer, my favorite programming languages are JavaScript, PHP and Python, don't hesitate to contact me.",
-    "about": "My name is Aditia Akbar Putra Alfiansa, you can call me Fian.\n I have been interested in the world of programming since middle school and I am dedicated to continuing to learn new things about the world of programmin.\nI made this portfolio because,\nI want you to know me and what I can do.",
+    "about": "My name is Aditia Akbar Putra Alfiansa, you can call me Fian.\n I have been interested in the world of programming since middle school and I am dedicated to continuing to learn new things about the world of programming.\nI made this portfolio because,\nI want you to know me and what I can do.",
     "birthdate": "13 June 2005, 11:00:00",
     "special_token": "!im_admin!",
     "formatted_about": "<p>My name is <b>Aditia Akbar Putra Alfiansa</b>, you can call me Fian. <br/> I have been interested in the world of programming since middle school and I am dedicated to continuing to learn new things about the world of programmin. <br/> I made this portfolio because, I want you to know me and what I can do.</p>",

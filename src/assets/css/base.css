@@ -15,7 +15,7 @@
            dark:bg-transparent text-main dark:text-slate-100;
   }
   .nav-link:hover {
-    @apply text-sky-800 dark:text-slate-800;
+    @apply text-sky-800 dark:text-gray-300;
   }
   .nav-link-active {
     @apply text-sky-800 rounded-md
