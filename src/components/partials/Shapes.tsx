@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { getBlobRadius, randomInt } from "@utils/functions";
+import { getBlobRadius } from "@utils/functions";
 
 const Shapes = ({
   className,
@@ -17,12 +17,9 @@ const Shapes = ({
       clearInterval(interval);
     };
   }, [time]);
-
-  let pixels = `${ randomInt(24, 32) / 4 }rem`;
+  
   let style = {
     borderRadius: getBlobRadius(),
-    width: pixels,
-    height: pixels,
   };
 
   return (
