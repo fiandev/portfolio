@@ -43,9 +43,34 @@ export const metadata: Metadata = {
 export default async function About () {
   let json = (await import("@assets/json/data.json")).default;
   let data = json.data;
-  let { formatted_about = "", avatar = {}, skills = [] } = data;
+  let { birtdate = new Date().toLocaleString(), formatted_about = "", avatar = {}, skills = [] } = data;
   
   if (!data) return <Preload />;
+  
+  let age = countdown(time, new Date(birtdate).getTime()).years;
+    
+  let biodataItems = [
+    {
+      icon: faUser,
+      text: `Name: | Fian`,
+    },
+    {
+      icon: faCakeCandles,
+      text: `Age: | ${age} Years Old`,
+    },
+    {
+      icon: faLocationDot,
+      text: `State: | Lamongan, East Java`,
+    },
+    {
+      icon: faGraduationCap,
+      text: `Education: | High school`,
+    },
+    {
+      icon: faGamepad,
+      text: `Hobbies: | code, movies, anime, music, and cat`,
+    },
+  ];
   
   return (
     <div className={`flex flex-col items-center scroll-smooth relative dark:bg-slate-800`}>
