@@ -61,8 +61,8 @@ export default function Nav() {
         </Link>
         <Hamburger
           className="w-12 h-12 transition duration-500 lg:hidden fill-slate-100 font-bold"
-          toggleActive={toggleActive}
-          IsActive={IsActive}
+          toggleActive={() => setNavOpen(!navOpen)}
+          IsActive={navOpen}
         />
       </div>
 
