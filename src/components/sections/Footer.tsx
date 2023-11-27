@@ -1,5 +1,6 @@
+import { lazy } from "react";;
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faHeart } from "@fortawesome/free-solid-svg-icons"
 import {
   faFacebook,
   faGithub,
@@ -9,12 +10,13 @@ import {
   faLinkedin,
   faTelegram,
 } from "@fortawesome/free-brands-svg-icons";
-
 import Link from "next/link";
-import ViewportArea from "@components/interactive/ViewportArea";
+
 import { navLinks } from "@components/sections/Nav";
-import Image from "@components/partials/Image";
 import { randomID } from "@utils/functions";
+
+const FooterBackLinks =  lazy(() => import("@components/partials/footer/FooterBackLinks"));
+const Image =  lazy(() => import("@components/partials/Image"));
 
 const icons = {
   facebook: faFacebook,
@@ -50,24 +52,7 @@ export default async function Footer() {
             </a>
           </div>
           <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-            <div>
-              <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                Links
-              </h2>
-              <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                {navLinks
-                  ? navLinks.map((link) => {
-                      return (
-                        <li>
-                          <Link href={link.href || "#"} class="hover:underline">
-                            {link.text}
-                          </Link>
-                        </li>
-                      );
-                    })
-                  : null}
-              </ul>
-            </div>
+            <FooterBackLinks links={navLinks} />
             <div>
               <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                 portfolios

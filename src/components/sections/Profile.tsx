@@ -27,7 +27,7 @@ const Profile = ({ data }: { data: any }) => {
         <h1
           className={`${
             !data.name ? "animate-pulse" : ""
-          } text-shadow-md text-3xl capitalize font-bold font-mono bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-sky-600 text-center lg:text-start`}
+          } text-shadow-md text-2xl capitalize font-bold font-mono bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-sky-600 text-center lg:text-start`}
         >
           {data ? data.name : "loading ..."}
         </h1>
