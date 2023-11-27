@@ -12,28 +12,6 @@ import { Markup } from "interweave";
 import countdown from "@utils/time";
 import Item from "@components/partials/about/Item";
 
-let biodataItems = [
-  {
-    icon: faUser,
-    text: `Name: | Fian`,
-  },
-  {
-    icon: faCakeCandles,
-    text: `Age: | ${age} Years Old`,
-  },
-  {
-    icon: faLocationDot,
-    text: `State: | Lamongan, East Java`,
-  },
-  {
-    icon: faGraduationCap,
-    text: `Education: | High school`,
-  },
-  {
-    icon: faGamepad,
-    text: `Hobbies: | code, movies, anime, music, and cat`,
-  },
-];
 
 export default function About({
   data,
@@ -45,6 +23,29 @@ export default function About({
   const [time, setTime] = useState<any>(Date.now());
   const [age, setAge] = useState<number>(0);
   const { formatted_about, skills } = data;
+  
+  let biodataItems = [
+    {
+      icon: faUser,
+      text: `Name: | Fian`,
+    },
+    {
+      icon: faCakeCandles,
+      text: `Age: | ${age} Years Old`,
+    },
+    {
+      icon: faLocationDot,
+      text: `State: | Lamongan, East Java`,
+    },
+    {
+      icon: faGraduationCap,
+      text: `Education: | High school`,
+    },
+    {
+      icon: faGamepad,
+      text: `Hobbies: | code, movies, anime, music, and cat`,
+    },
+  ];
 
   useEffect(() => {
     const birtdate = new Date("13 June 2005, 11:00:00").getTime();
