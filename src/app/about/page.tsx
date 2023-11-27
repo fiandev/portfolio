@@ -87,9 +87,9 @@ export default async function About () {
             !about ? "animate-pulse" : "animate-none"
           } md:text-center dark:text-slate-50 text-lg lg:text-xl xl:text-2xl font-serif py-4 font-light`}
         >
-          <textarea disabled={true} className="w-max h-fit bg-transparent outline-0 border-0">
+          <p className="w-max h-fit bg-transparent outline-0 border-0">
             {about}
-          </textarea> 
+          </p> 
         </div>
 
         <div className="w-full h-fit py-4 items-center grid px-auto md:grid-cols-2 gap-4">
