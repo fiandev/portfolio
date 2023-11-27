@@ -50,7 +50,7 @@ export default function Nav() {
       className={`top-0 lg:px-[10vw] z-10 w-full px-3 py-1 flex gap-2 lg:px:8 flex-col lg:flex-row lg:justify-start ${
         isWindowScrolled
           ? "fixed shadow-md bg-gradient-to-r from-sky-200 to-blue-100 dark:from-sky-800 dark:to-blue-600"
-          : "relative bg-transparent"
+          : "relative bg-slate-200 dark:bg-slate-800"
       } lg:bg-gradient-to-r lg:from-sky-200 lg:to-blue-100 dark:lg:from-sky-800 dark:lg:to-blue-600`}
     >
       <div className="w-full lg:w-fit flex justify-between items-center py-1 transition ease-in duration-800">
