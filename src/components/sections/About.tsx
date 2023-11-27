@@ -160,7 +160,7 @@ export default function About({
                 Internship at Digital Media Telematics Ltd. - lamongan
               </h3>
               <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-                Started on January 2nd, 2023 - March 31th 2023
+                Started on January 2nd - March 31th 2023
               </time>
               <p className="text-base font-normal text-gray-500 dark:text-gray-400">
                 I am an intern as an internet network technician, based on the rules of a vocational high school majoring in computer and network engineering

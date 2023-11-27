@@ -28,7 +28,7 @@ const icons = {
 export default async function Footer() {
   let json = (await import("@assets/json/data.json")).default;
   let data = json.data;
-  let { links = [], projects = [] } = data;
+  let { links = [], portfolios = [] } = data;
 
   return (
     <footer class="bg-white dark:bg-gray-800">
@@ -68,11 +68,11 @@ export default async function Footer() {
             </div>
             <div>
               <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                Projects
+                portfolios
               </h2>
               <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                {projects
-                  ? projects.map((project) => {
+                {portfolios
+                  ? portfolios.map((project) => {
                       return (
                         <li>
                           <a
