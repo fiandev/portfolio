@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 export default async function About () {
   let json = (await import("@assets/json/data.json")).default;
   let data = json.data;
-  let { birthdate = new Date().toLocaleString(), formatted_about = "", avatar = {}, skills = [] } = data;
+  let { birthdate = new Date().toLocaleString(), about = "", avatar = {}, skills = [] } = data;
   
   if (!data) return <Preload />;
   
@@ -87,7 +87,9 @@ export default async function About () {
             !formatted_about ? "animate-pulse" : "animate-none"
           } md:text-center dark:text-slate-50 text-lg lg:text-xl xl:text-2xl font-serif py-4 font-light`}
         >
-          <Markup content={formatted_about} />
+          <p>
+            {about}
+          </p>
         </div>
 
         <div className="w-full h-fit py-4 items-center grid px-auto md:grid-cols-2 gap-4">
