@@ -12,6 +12,7 @@ import {
 
 import Link from "next/link";
 import ViewportArea from "@components/interactive/ViewportArea";
+import { links } from "@components/sections/Nav";
 import Image from "@components/partials/Image";
 import { randomID } from "@utils/functions";
 
@@ -54,16 +55,17 @@ export default async function Footer() {
                 Links
               </h2>
               <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                <li>
-                  <Link href="/" class="hover:underline">
-                    home
-                  </Link>
-                </li>
-                <li class="mb-4">
-                  <Link href="/services" class="hover:underline">
-                    services
-                  </Link>
-                </li>
+                {links
+                  ? links.map((link) => {
+                      return (
+                        <li>
+                          <Link href={link.href} class="hover:underline">
+                            {link.text}
+                          </Link>
+                        </li>
+                      );
+                    })
+                  : null}
               </ul>
             </div>
             <div>
@@ -72,7 +74,7 @@ export default async function Footer() {
               </h2>
               <ul class="text-gray-500 dark:text-gray-400 font-medium">
                 {portfolios
-                  ? portfolios.map((project) => {
+                  ? portfolios.slice(0, 5).map((project) => {
                       return (
                         <li>
                           <a

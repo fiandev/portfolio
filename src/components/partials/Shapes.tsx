@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { getBlobRadius } from "@utils/functions";
+import { getBlobRadius, randomInt } from "@utils/functions";
 
 const Shapes = ({
   className,
@@ -18,9 +18,11 @@ const Shapes = ({
     };
   }, [time]);
 
-  let border = getBlobRadius();
   let style = {
-    borderRadius: border,
+    borderRadius: getBlobRadius(),
+    transform: {
+      scale: `${randomInt(0, 1)}, ${randomInt(0, 9)}`,
+    },
   };
 
   return (

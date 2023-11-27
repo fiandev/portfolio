@@ -5,9 +5,11 @@ import ViewportArea from "@components/interactive/ViewportArea";
 import Preload from "@components/partials/Preload";
 
 const Profile = lazy(() => import("@components/sections/Profile"));
-const About = lazy(() => import("@components/sections/About"));
 const Contact = lazy(() => import("@components/sections/Contact"));
 const Project = lazy(() => import("@components/sections/Project"));
+const WorkExperience = lazy(
+  () => import("@components/sections/WorkExperience"),
+);
 
 export default async function Home() {
   let json = (await import("@assets/json/data.json")).default;
@@ -18,10 +20,7 @@ export default async function Home() {
   return (
     <div className={`scroll-smooth relative`}>
       <Profile data={Data} />
-      <ScrollableArea className="h-fit">
-        <About className="lg:px-[10vw]" data={Data} />
-      </ScrollableArea>
-
+      <WorkExperience />
       <ViewportArea specialKey={randomID()}>
         <svg
           xmlns="http://www.w3.org/2000/svg"

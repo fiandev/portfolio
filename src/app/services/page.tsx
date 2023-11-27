@@ -35,7 +35,7 @@ export default async function Services() {
   if (!data || !services) return <Preload />;
 
   return (
-    <div className={`pt-8 scroll-smooth relative dark:bg-slate-800`}>
+    <div className={`pt-8 scroll-smooth relative dark:bg-slate-800 h-screen`}>
       <ServiceList services={services} className="py-4 mt-4" />
       <svg
         xmlns="http://www.w3.org/2000/svg"
