@@ -48,7 +48,7 @@ export default async function About () {
   if (!data) return <Preload />;
   
   return (
-    <div className={`flex flex-col items-center scroll-smooth relative dark:bg-slate-800``}>
+    <div className={`flex flex-col items-center scroll-smooth relative dark:bg-slate-800`}>
         <Image
             className={`${
               avatar ? "animation-none" : "animation-pulse"
