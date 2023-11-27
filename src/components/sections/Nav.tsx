@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Hamburger from "@components/partials/Hamburger";
 import NavLink from "@components/partials/NavLink";
