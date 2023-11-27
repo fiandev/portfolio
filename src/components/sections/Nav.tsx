@@ -24,6 +24,8 @@ export default function Nav() {
   const [navOpen, setNavOpen] = useState<boolean>(false);
   const [isWindowScrolled, setWindowScrolled] = useState<boolean>(false);
   const NavRef = useRef();
+  const author = "fiandev";
+  
   const navHandler = () => {
     setNavOpen(!navOpen);
   };
