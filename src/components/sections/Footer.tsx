@@ -59,7 +59,7 @@ export default async function Footer() {
                   ? links.map((link) => {
                       return (
                         <li>
-                          <Link href={link.href} class="hover:underline">
+                          <Link href={link.href || "#"} class="hover:underline">
                             {link.text}
                           </Link>
                         </li>
