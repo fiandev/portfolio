@@ -18,10 +18,11 @@ const Shapes = ({
     };
   }, [time]);
 
+  let pixels = `${ randomInt(24, 32) }px`;
   let style = {
     borderRadius: getBlobRadius(),
-    height: `${ randomInt(24, 32) }px`,
-    width: this.height,
+    width: pixels,
+    height: pixels,
   };
 
   return (
