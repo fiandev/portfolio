@@ -43,11 +43,11 @@ export const metadata: Metadata = {
 export default async function About () {
   let json = (await import("@assets/json/data.json")).default;
   let data = json.data;
-  let { birtdate = new Date().toLocaleString(), formatted_about = "", avatar = {}, skills = [] } = data;
+  let { birthdate = new Date().toLocaleString(), formatted_about = "", avatar = {}, skills = [] } = data;
   
   if (!data) return <Preload />;
   
-  let age = countdown(new Date().getTime(), new Date(birtdate).getTime()).years;
+  let age = countdown(new Date().getTime(), new Date(birthdate).getTime()).years;
     
   let biodataItems = [
     {
