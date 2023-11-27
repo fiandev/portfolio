@@ -18,7 +18,7 @@ const Shapes = ({
     };
   }, [time]);
 
-  let pixels = `${ randomInt(24, 32) }px`;
+  let pixels = `${ randomInt(24, 32) / 4 }rem`;
   let style = {
     borderRadius: getBlobRadius(),
     width: pixels,
