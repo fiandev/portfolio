@@ -77,7 +77,7 @@ export default async function About () {
         <Image
             className={`${
               avatar ? "animation-none" : "animation-pulse"
-            } w-32 h-32 shadow-md rounded-full border-2 border-slate-100`}
+            } w-32 h-32 shadow-md rounded-full border-2 border-slate-800 dark:border-slate-100`}
             alt="my avatar"
             srcset={avatar ? avatar.url : ""}
           />
@@ -87,7 +87,7 @@ export default async function About () {
             !about ? "animate-pulse" : "animate-none"
           } md:text-center dark:text-slate-50 text-lg lg:text-xl xl:text-2xl font-serif py-4 font-light`}
         >
-          <textarea disabled={true} className="bg-transparent outline-0 border-0">
+          <textarea disabled={true} className="w-full h-fit bg-slate-100 dark:bg-slate-800 shadow shadow-md shadow-slate-800 dark:shadow-slate-200 outline-0 border-0">
             {about}
           </textarea> 
         </div>

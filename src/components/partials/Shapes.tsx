@@ -20,7 +20,8 @@ const Shapes = ({
 
   let style = {
     borderRadius: getBlobRadius(),
-    transform: `scale(${randomInt(0, 1)}, ${randomInt(0, 9)})`,
+    height: `${ randomInt(24, 32) }px`,
+    width: this.height,
   };
 
   return (
