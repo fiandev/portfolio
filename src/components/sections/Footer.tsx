@@ -9,8 +9,7 @@ import {
   faWhatsapp,
   faLinkedin,
   faTelegram,
-} from "@fortawesome/free-brands-svg-icons";
-import Link from "next/link";
+} from "@fortawesome/free-brands-svg-icons"
 
 import { navLinks } from "@components/sections/Nav";
 import { randomID } from "@utils/functions";
