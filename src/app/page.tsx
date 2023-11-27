@@ -1,5 +1,3 @@
-"use client";
-
 import { lazy } from "react";
 import { ScrollableArea } from "@components/interactive/ScrollableArea";
 import { randomID } from "@utils/functions";
