@@ -47,7 +47,7 @@ export default async function About () {
   
   if (!data) return <Preload />;
   
-  let age = countdown(time, new Date(birtdate).getTime()).years;
+  let age = countdown(new Date().getTime(), new Date(birtdate).getTime()).years;
     
   let biodataItems = [
     {
