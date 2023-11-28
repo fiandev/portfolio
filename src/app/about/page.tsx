@@ -82,7 +82,7 @@ export default async function About() {
 
   return (
     <div
-      className={`bg-slate-200 dark:bg-slate-800 flex flex-col items-center scroll-smooth relative dark:bg-slate-800 p-4`}
+      className={`bg-slate-200 dark:bg-slate-800 flex flex-col lg:flex-row items-center lg:justify-center scroll-smooth relative dark:bg-slate-800 p-4`}
     >
       <Image
         className={`${
@@ -95,7 +95,7 @@ export default async function About() {
       <div
         className={`${
           !about ? "animate-pulse" : "animate-none"
-        } md:text-center dark:text-slate-50 text-lg lg:text-xl xl:text-2xl font-serif py-4 font-light`}
+        } dark:text-slate-50 text-lg lg:text-xl xl:text-2xl font-serif py-4 font-light text-center lg:text-start`}
       >
         {about.split("\n").map((v) => {
           return (
