@@ -1,13 +1,14 @@
 import { Metadata } from "next";
+import { lazy } from "react";
 
-import ServiceList from "@components/sections/ServiceList";
-import Contact from "@components/sections/Contact";
-import Preload from "@components/partials/Preload";
+const Contact = lazy(() => import("@components/sections/Contact"));
+const ServiceList = lazy(() => import("@components/sections/ServiceList"));
+const Preload = lazy(() => import("@components/partials/Preload"));
 
 const title = "fiandev's service",
-  thumbnail = "https://fiandev.my.id/graph.png",
+  thumbnail = "/poster.png",
   description =
-    "see all the list of services that I provide, as an IT Support freelancer",
+    "see all the list of services that fiandev provide, as an Web developer, Frontend developer, Backend developer, and IT Support freelancer",
   keywords = [
     "service",
     "services",
@@ -16,6 +17,16 @@ const title = "fiandev's service",
     "freelance",
     "freelancer",
     "it support",
+    "web web developer",
+    "webdev",
+    "freelance",
+    "freelancer",
+    "fullstack",
+    "frontend",
+    "backend",
+    "backend developer",
+    "frontend developer",
+    "fullstack developer",
   ];
 
 export const metadata: Metadata = {
@@ -25,6 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: title,
     description: description,
+    images: [thumbnail]
   },
 };
 

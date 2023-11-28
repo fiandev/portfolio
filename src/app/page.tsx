@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { lazy } from "react";
 import { ScrollableArea } from "@components/interactive/ScrollableArea";
 import { randomID } from "@utils/functions";
@@ -13,6 +14,36 @@ const WorkExperience = lazy(
 const EducationTimeLine = lazy(
   () => import("@components/sections/EducationTimeLine"),
 );
+
+const title = "fiandev's website",
+  thumbnail = "/logo.png",
+  description =
+    "I am a fullstack web developer, my favorite programming languages are JavaScript, PHP and Python, don't hesitate to contact me.",
+  keywords = [
+    "web web developer",
+    "webdev",
+    "freelance",
+    "freelancer",
+    "fullstack",
+    "frontend",
+    "backend",
+    "backend developer",
+    "frontend developer",
+    "fullstack developer",
+    "it support",
+    "fiandev",
+  ];
+
+export const metadata: Metadata = {
+  title: title,
+  description: description,
+  keywords: keywords,
+  openGraph: {
+    title: title,
+    description: description,
+    images: [thumbnail]
+  },
+};
 
 export default async function Home() {
   let json = (await import("@assets/json/data.json")).default;

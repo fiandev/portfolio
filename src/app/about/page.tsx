@@ -18,7 +18,7 @@ import Image from "@components/partials/Image";
 const Item = lazy(() => import("@components/partials/about/Item"));
 
 const title = "fiandev's about",
-  thumbnail = "https://fiandev.my.id/graph.png",
+  thumbnail = "/graph.png",
   description =
     "fiandev is a fullstack developer from Indonesia, who masters several programming languages.",
   keywords = [
@@ -29,6 +29,21 @@ const title = "fiandev's about",
     "skills",
     "profile",
     "fiandev",
+    "web web developer",
+    "php",
+    "js",
+    "python",
+    "javascript",
+    "webdev",
+    "freelance",
+    "freelancer",
+    "fullstack",
+    "frontend",
+    "backend",
+    "backend developer",
+    "frontend developer",
+    "fullstack developer",
+    "it support",
   ];
 
 export const metadata: Metadata = {
@@ -38,8 +53,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: title,
     description: description,
+    images: [thumbnail]
   },
 };
+
 export default async function About() {
   let json = (await import("@assets/json/data.json")).default;
   let data = json.data;
