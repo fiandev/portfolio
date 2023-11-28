@@ -55,8 +55,10 @@ export default async function Home() {
     <div className={`scroll-smooth relative`}>
       <Profile data={Data} />
       
-      <WorkExperience />
-      <EducationTimeLine />
+      <div className="w-full h-screen flex flex-col gap-2 items-start justify-center">
+        <WorkExperience />
+        <EducationTimeLine />
+      </div>
       
       <ViewportArea specialKey={randomID()}>
         <svg

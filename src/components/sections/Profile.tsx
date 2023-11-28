@@ -11,7 +11,7 @@ const Profile = ({ data }: { data: any }) => {
         !data ? "preview-content" : ""
       } bg-slate-200 dark:bg-slate-800 bg-fixed relative w-screen h-screen md:min-h-screen flex flex-col gap-2 items-center justify-center lg:flex-row-reverse md:justify-center lg:px-24`}
     >
-      <div className="group flex items-center justify-center lg:justify-between lg:px-8">
+      <div className="group flex flex-col lg:flex-row items-center justify-center lg:justify-between lg:px-8">
         <Shapes className="w-48 h-48 lg:max-w-72 lg:max-h-72 lg:w-72 lg:h-72 p-4 relative bg-gradient-to-b from-sky-500 to-slate-100 border shadow-md p-8 overflow-hidden flex justify-center items-center">
           <Image
             className={`${
