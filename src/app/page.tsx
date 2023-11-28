@@ -10,6 +10,9 @@ const Project = lazy(() => import("@components/sections/Project"));
 const WorkExperience = lazy(
   () => import("@components/sections/WorkExperience"),
 );
+const EducationTimeLine = lazy(
+  () => import("@components/sections/EducationTimeLine"),
+);
 
 export default async function Home() {
   let json = (await import("@assets/json/data.json")).default;
@@ -20,7 +23,10 @@ export default async function Home() {
   return (
     <div className={`scroll-smooth relative`}>
       <Profile data={Data} />
+      
       <WorkExperience />
+      <EducationTimeLine />
+      
       <ViewportArea specialKey={randomID()}>
         <svg
           xmlns="http://www.w3.org/2000/svg"

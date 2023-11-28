@@ -52,7 +52,7 @@ export default async function Footer() {
               </span>
             </a>
           </div>
-          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+          <div class="grid lg:grid-cols-4 gap-8 sm:gap-6 sm:grid-cols-3">
             <FooterBackLinks links={navLinks} />
             <div>
               <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
