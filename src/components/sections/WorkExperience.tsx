@@ -2,12 +2,12 @@ export default function WorkExperience() {
   return (
     <section
       id="work-experience"
-      className="bg-slate-50 dark:bg-slate-900 px-4 py-8 inset-x-0 transition-all duration-1000 flex flex-col justify-start items-center gap-4 lg:px-8"
+      className="bg-slate-50 dark:bg-slate-900 px-4 py-8 inset-x-0 transition-all duration-1000 flex flex-col justify-start gap-4 lg:px-8"
     >
       <h1 className="text-3xl capitalize font-bold font-mono dark:text-slate-50">
         Work Experience
       </h1>
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col justify-center">
         <ol className="relative border-l border-gray-200 dark:border-gray-700">
           <li className="mb-10 ml-6">
             <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
