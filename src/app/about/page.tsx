@@ -84,7 +84,7 @@ export default async function About() {
     <div
       className={`bg-slate-200 dark:bg-slate-800 flex flex-col items-center scroll-smooth relative dark:bg-slate-800 p-4`}
     >
-      <div className="flex items-center justify-around">
+      <div className="flex items-center justify-around gap-2">
         <Image
           className={`${
             avatar ? "animation-none" : "animation-pulse"
@@ -96,7 +96,7 @@ export default async function About() {
         <div
           className={`${
             !about ? "animate-pulse" : "animate-none"
-          } flex flex-col gap-2 dark:text-slate-50 text-lg lg:text-xl xl:text-2xl font-serif py-4 font-light text-center lg:text-start`}
+          } w-1/2 flex flex-col gap-2 dark:text-slate-50 text-lg lg:text-xl xl:text-2xl font-serif py-4 font-light text-center lg:text-start`}
         >
           {about.split("\n").map((v) => {
             return (
