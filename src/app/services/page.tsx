@@ -6,7 +6,7 @@ const ServiceList = lazy(() => import("@components/sections/ServiceList"));
 const Preload = lazy(() => import("@components/partials/Preload"));
 
 const title = "fiandev's service",
-  thumbnail = "/poster.png",
+  thumbnail = "/poster.jpg",
   description =
     "see all the list of services that fiandev provide, as an Web developer, Frontend developer, Backend developer, and IT Support freelancer",
   keywords = [
