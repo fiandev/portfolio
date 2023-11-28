@@ -1,6 +1,7 @@
 "use client";
 import NextImage from "next/image";
 import { useEffect } from "react";
+
 export default function Image({
   srcset,
   alt,

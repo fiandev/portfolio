@@ -1,17 +1,8 @@
-import Item from "@components/partials/services/Item";
+import { lazy } from "react";
 import { textWhatsAppEncode, arrayShuffle } from "@utils/functions";
 
-/*
-export const images = arrayShuffle(
-  []
-    .concat(
-      ...Object.entries(services).map((val) =>
-        services[val[0]].map((item) => item.thumbnail),
-      ),
-    )
-    .filter((v) => !!v),
-);
-*/
+const Item = lazy(() => import("@components/partials/services/Item"));
+
 export default function ServiceList({ className = "", services = [] }) {
   const phoneNumber = "+62895380689955";
   let WhatsApp_URL = `https://wa.me/${phoneNumber}`;

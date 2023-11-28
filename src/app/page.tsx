@@ -1,9 +1,12 @@
 import { Metadata } from "next";
 import { lazy } from "react";
-import { ScrollableArea } from "@components/interactive/ScrollableArea";
 import { randomID } from "@utils/functions";
-import ViewportArea from "@components/interactive/ViewportArea";
-import Preload from "@components/partials/Preload";
+
+import { ScrollableArea } from "@components/interactive/ScrollableArea";
+
+const Preload = lazy(() => import("@components/partials/Preload"));
+const ViewportArea = lazy(() => import("@components/interactive/ViewportArea"));
+const ViewportArea = lazy(() => import("@components/interactive/ViewportArea"));
 
 const Profile = lazy(() => import("@components/sections/Profile"));
 const Contact = lazy(() => import("@components/sections/Contact"));

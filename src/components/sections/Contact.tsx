@@ -1,6 +1,8 @@
 "use client";
-import ItemContact from "@components/partials/ItemContact";
+import { lazy } from "react";
 import { randomID } from "@utils/functions";
+
+const ItemContact = lazy(() => import("@components/partials/ItemContact"));
 
 export default function Contact({
   links,

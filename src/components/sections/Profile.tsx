@@ -1,7 +1,7 @@
-// import { Markup } from "interweave";
+import { lazy } from "react";
 
-import Shapes from "@components/partials/Shapes";
-import Image from "@components/partials/Image";
+const Shapes = lazy(() => import("@components/partials/Shapes"));
+const Image = lazy(() => import("@components/partials/Image"));
 
 const Profile = ({ data }: { data: any }) => {
   return (

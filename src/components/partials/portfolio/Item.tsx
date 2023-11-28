@@ -1,8 +1,9 @@
+import { lazy } from "react";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import ButtonLink from "./ButtonLink";
-import { randomID } from "@utils/functions";
-// import Image from "@components/partials/Image";
+import { randomID } from "@utils/functions";;
+
+const ButtonLink = lazy(() => import("./ButtonLink"));
 
 const setThumbnail = (e) => {
   const element = e.target;

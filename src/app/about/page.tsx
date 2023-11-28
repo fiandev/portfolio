@@ -11,10 +11,10 @@ import { Markup } from "interweave";
 
 import countdown from "@utils/time";
 import { randomID } from "@utils/functions";
-import ViewportArea from "@components/interactive/ViewportArea";
-import Preload from "@components/partials/Preload";
-import Image from "@components/partials/Image";
 
+const ViewportArea = lazy(() => import("@components/interactive/ViewportArea"));
+const Image = lazy(() => import("@components/partials/Image"));
+const Preload = lazy(() => import("@components/partials/Preload"));
 const Item = lazy(() => import("@components/partials/about/Item"));
 
 const title = "fiandev's about",

@@ -1,8 +1,7 @@
 "use client";
 import { useState, useMemo, lazy, Suspense } from "react";
 
-import Loading from "@components/partials/Loading";
-
+const Loading = lazy(() => import("@components/partials/Loading"));
 const Item = lazy(() => import("@components/partials/portfolio/Item"));
 const Pagination = lazy(() => import("@components/partials/Pagination"));
 

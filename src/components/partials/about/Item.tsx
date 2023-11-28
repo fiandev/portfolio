@@ -1,7 +1,8 @@
+import { lazy } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { randomID } from "@utils/functions";
 
-import Image from "../Image";
+const Image = lazy(() => import("../Image"));
 
 export default function Item({
   children,

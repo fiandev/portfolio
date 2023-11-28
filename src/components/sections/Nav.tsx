@@ -1,9 +1,12 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
+import { lazy } from "react";
+
 import Link from "next/link";
-import Hamburger from "@components/partials/Hamburger";
-import NavLink from "@components/partials/NavLink";
-import Dropdown from "@components/partials/Dropdown";
+
+const Hamburger = lazy(() => import("@components/partials/Hamburger"));
+const NavLink = lazy(() => import("@components/partials/NavLink"));
+const Dropdown = lazy(() => import("@components/partials/Dropdown"));
 
 export const navLinks = [
   {
