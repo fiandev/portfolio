@@ -1,7 +1,10 @@
 import { lazy } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
-import {
+
+const { FontAwesomeIcon } = lazy(
+  () => import("@fortawesome/react-fontawesome"),
+);
+const { faHeart } = lazy(() => import("@fortawesome/free-solid-svg-icons"));
+const {
   faFacebook,
   faGithub,
   faTwitter,
@@ -9,10 +12,10 @@ import {
   faWhatsapp,
   faLinkedin,
   faTelegram,
-} from "@fortawesome/free-brands-svg-icons";
+} = lazy(() => import("@fortawesome/free-brands-svg-icons"));
 
-import { navLinks } from "@components/sections/Nav";
 import { randomID } from "@utils/functions";
+import { navLinks } from "@components/sections/Nav";
 
 const FooterBackLinks = lazy(
   () => import("@components/partials/footer/FooterBackLinks"),

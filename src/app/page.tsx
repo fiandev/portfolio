@@ -4,7 +4,6 @@ import { randomID } from "@utils/functions";
 
 import { ScrollableArea } from "@components/interactive/ScrollableArea";
 
-const Preload = lazy(() => import("@components/partials/Preload"));
 const ViewportArea = lazy(() => import("@components/interactive/ViewportArea"));
 
 const Profile = lazy(() => import("@components/sections/Profile"));
@@ -43,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: title,
     description: description,
-    images: [thumbnail]
+    images: [thumbnail],
   },
 };
 
@@ -51,15 +50,13 @@ export default async function Home() {
   let json = (await import("@assets/json/data.json")).default;
   let Data = json.data;
 
-  if (!Data) return <Preload />;
-
   return (
     <div className={`scroll-smooth relative`}>
       <Profile data={Data} />
-      
+
       <WorkExperience />
       <EducationTimeLine />
-      
+
       <ViewportArea specialKey={randomID()}>
         <svg
           xmlns="http://www.w3.org/2000/svg"

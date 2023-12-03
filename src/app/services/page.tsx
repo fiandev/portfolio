@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: title,
     description: description,
-    images: [thumbnail]
+    images: [thumbnail],
   },
 };
 

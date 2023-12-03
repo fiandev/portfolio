@@ -1,7 +1,7 @@
 import { lazy } from "react";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { randomID } from "@utils/functions";;
+import { randomID } from "@utils/functions";
 
 const ButtonLink = lazy(() => import("./ButtonLink"));
 

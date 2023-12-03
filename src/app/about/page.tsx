@@ -1,13 +1,12 @@
 import { Metadata } from "next";
 import { lazy } from "react";
-import {
-  faGraduationCap,
-  faGamepad,
-  faCakeCandles,
-  faLocationDot,
-  faUser,
-} from "@fortawesome/free-solid-svg-icons";
-import { Markup } from "interweave";
+
+const { FontAwesomeIcon } = lazy(
+  () => import("@fortawesome/react-fontawesome"),
+);
+const { faHeart } = lazy(() => import("@fortawesome/free-solid-svg-icons"));
+const { faGraduationCap, faGamepad, faCakeCandles, faLocationDot, faUser } =
+  lazy(() => import("@fortawesome/free-solid-svg-icons"));
 
 import countdown from "@utils/time";
 import { randomID } from "@utils/functions";
@@ -53,7 +52,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: title,
     description: description,
-    images: [thumbnail]
+    images: [thumbnail],
   },
 };
 
@@ -101,7 +100,7 @@ export default async function About() {
     <div
       className={`bg-slate-200 dark:bg-slate-800 flex flex-col items-center scroll-smooth relative dark:bg-slate-800 p-4`}
     >
-      <div className="flex items-center justify-around gap-2">
+      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-around gap-2">
         <Image
           className={`${
             avatar ? "animation-none" : "animation-pulse"

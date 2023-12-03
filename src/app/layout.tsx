@@ -1,12 +1,7 @@
 import { Metadata } from "next";
 import { lazy } from "react";
 
-import { GlobalScrollProvider } from "@hooks/useGlobalScroll";
-import { GlobalMouseMoveProvider } from "@hooks/useGlobalMouseMove";
-import { GlobalThemeProvider } from "@hooks/useTheme";
-
-// import AuthProvider from "@providers/AuthProvider";
-
+const { GlobalThemeProvider } = lazy(() => import("@hooks/useTheme"));
 const Wrapper = lazy(() => import("@components/sections/Wrapper"));
 const Nav = lazy(() => import("@components/sections/Nav"));
 const Footer = lazy(() => import("@components/sections/Footer"));
@@ -91,9 +86,7 @@ export default function RootLayout({
         <Wrapper>
           <GlobalThemeProvider>
             <Nav />
-            <GlobalScrollProvider>
-              <GlobalMouseMoveProvider>{children}</GlobalMouseMoveProvider>
-            </GlobalScrollProvider>
+            {children}
             <ScrollToTop className="bg-main text-slate-800 dark:bg-slate-800 dark:text-main" />
             <Footer />
           </GlobalThemeProvider>
