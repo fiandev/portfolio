@@ -58,7 +58,7 @@ export default function Nav() {
     >
       <div className="w-full lg:w-fit flex justify-between items-center py-1 transition ease-in duration-800">
         <Link
-          className="text-main duration-100 max-w-fit font-bold text-lg uppercase hover:underline"
+          className="text-slate-600 dark:text-main duration-100 max-w-fit font-bold text-lg uppercase hover:underline"
           href="/"
         >
           {author}
