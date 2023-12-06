@@ -1,12 +1,8 @@
 import { Metadata } from "next";
 import { lazy } from "react";
 
-const { FontAwesomeIcon } = lazy(
-  () => import("@fortawesome/react-fontawesome"),
-);
-const { faHeart } = lazy(() => import("@fortawesome/free-solid-svg-icons"));
-const { faGraduationCap, faGamepad, faCakeCandles, faLocationDot, faUser } =
-  lazy(() => import("@fortawesome/free-solid-svg-icons"));
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart, faGraduationCap, faGamepad, faCakeCandles, faLocationDot, faUser } from "@fortawesome/free-solid-svg-icons";
 
 import countdown from "@utils/time";
 import { randomID } from "@utils/functions";

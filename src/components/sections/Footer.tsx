@@ -1,18 +1,15 @@
 import { lazy } from "react";
-
-const { FontAwesomeIcon } = lazy(
-  () => import("@fortawesome/react-fontawesome"),
-);
-const { faHeart } = lazy(() => import("@fortawesome/free-solid-svg-icons"));
-const {
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { 
   faFacebook,
   faGithub,
   faTwitter,
   faInstagram,
   faWhatsapp,
   faLinkedin,
-  faTelegram,
-} = lazy(() => import("@fortawesome/free-brands-svg-icons"));
+  faTelegram
+} from "@fortawesome/free-brands-svg-icons";
 
 import { randomID } from "@utils/functions";
 import { navLinks } from "@components/sections/Nav";
