@@ -103,7 +103,7 @@ export default async function About() {
     <div
       className={`bg-slate-200 dark:bg-slate-800 flex flex-col items-center scroll-smooth relative dark:bg-slate-800 p-4`}
     >
-      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-around gap-2">
+      <div className="flex flex-col items-center lg:flex-row lg:justify-around gap-2">
         <Image
           className={`${
             avatar ? "animation-none" : "animation-pulse"
