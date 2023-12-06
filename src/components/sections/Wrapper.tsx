@@ -1,8 +1,8 @@
 "use client";
-import { useTheme } from "@hooks/useTheme";
+import { useTheme, GlobalThemeProvider } from "@hooks/useTheme";
 
 export default function Wrapper({ children }: { children?: React.ReactNode }) {
   const theme = useTheme();
 
-  return <div className="w-full">{children}</div>;
+  return <GlobalThemeProvider>{children}</GlobalThemeProvider>;
 }

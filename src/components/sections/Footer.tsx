@@ -1,14 +1,14 @@
 import { lazy } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
-import { 
+import {
   faFacebook,
   faGithub,
   faTwitter,
   faInstagram,
   faWhatsapp,
   faLinkedin,
-  faTelegram
+  faTelegram,
 } from "@fortawesome/free-brands-svg-icons";
 
 import { randomID } from "@utils/functions";

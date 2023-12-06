@@ -2,7 +2,14 @@ import { Metadata } from "next";
 import { lazy } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart, faGraduationCap, faGamepad, faCakeCandles, faLocationDot, faUser } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHeart,
+  faGraduationCap,
+  faGamepad,
+  faCakeCandles,
+  faLocationDot,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
 
 import countdown from "@utils/time";
 import { randomID } from "@utils/functions";

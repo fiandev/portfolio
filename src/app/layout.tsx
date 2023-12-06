@@ -1,13 +1,11 @@
 import { Metadata } from "next";
 import { lazy } from "react";
+import "@/styles/index.css";
 
-const { GlobalThemeProvider } = lazy(() => import("@hooks/useTheme"));
 const Wrapper = lazy(() => import("@components/sections/Wrapper"));
 const Nav = lazy(() => import("@components/sections/Nav"));
 const Footer = lazy(() => import("@components/sections/Footer"));
 const ScrollToTop = lazy(() => import("@components/partials/ScrollToTop"));
-
-import "@/styles/index.css";
 
 const title = "fiandev's portfolio",
   thumbnail = "https://fiandev.my.id/graph.jpg",
@@ -84,12 +82,10 @@ export default function RootLayout({
       <body className="relative flex flex-col min-h-screen w-screen">
         <noscript>You need to enable JavaScript to run this app.</noscript>
         <Wrapper>
-          <GlobalThemeProvider>
-            <Nav />
-            {children}
-            <ScrollToTop className="bg-main text-slate-800 dark:bg-slate-800 dark:text-main" />
-            <Footer />
-          </GlobalThemeProvider>
+          <Nav />
+          {children}
+          <ScrollToTop className="bg-main text-slate-800 dark:bg-slate-800 dark:text-main" />
+          <Footer />
         </Wrapper>
       </body>
     </html>
