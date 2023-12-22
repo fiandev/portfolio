@@ -115,7 +115,7 @@ export default async function About() {
         <div
           className={`${
             !about ? "animate-pulse" : "animate-none"
-          } w-1/2 flex flex-col gap-2 dark:text-slate-50 text-lg lg:text-xl xl:text-2xl font-serif py-4 font-light text-center lg:text-start`}
+          } w-3/4 flex flex-col gap-2 dark:text-slate-50 text-lg lg:text-xl xl:text-2xl font-serif py-4 font-light text-center lg:text-start`}
         >
           {about.split("\n").map((v) => {
             return (
