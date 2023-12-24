@@ -4,11 +4,9 @@
   "data": {
     "name": "fian",
     "username": "fiandev",
-    "email": "fiandev1234@gmail.com",
+    "email": "fiandev@programmer.net",
     "slogan": "I am a fullstack web developer, my favorite programming languages are JavaScript, PHP and Python, don't hesitate to contact me.",
     "about": "My name is Aditia Akbar Putra Alfiansa, you can call me Fian.\n I have been interested in the world of programming since middle school and I am dedicated to continuing to learn new things about the world of programming.\nI made this portfolio because,\nI want you to know me and what I can do.",
-    "birthdate": "13 June 2005, 11:00:00",
-    "special_token": "!im_admin!",
     "formatted_about": "<div>First, let me introduce myself. My name is <strong>Aditia Akbar Putra Alfiansa</strong>, you can call me Fian. I made this portfolio because, I want you to know me and what I can do</div>",
     "formatted_slogan": "<div>Hi everyone, I am Fian junior software engineer and fullstack web developer, I am very interested in the world of programming, my favorite languages are JavaScript, Python and PHP.</div>",
     "skills": [
@@ -79,29 +77,87 @@
         "url": "https://github.com/fiandev"
       },
       {
+        "type": "gitlab",
+        "url": "https://gitlab.com/fiandev"
+      },
+      {
         "type": "facebook",
-        "url": "https://fb.me/real.fiandev"
+        "url": "https://fb.me/im.fiandev"
       },
       {
         "type": "twitter",
-        "url": "https://twitter.com/alfiann_13"
+        "url": "https://twitter.com/@im_fiandev"
       },
       {
         "type": "telegram",
-        "url": "https://t.me/fiandev"
+        "url": "https://t.me/im_fiandev"
       },
       {
         "type": "whatsapp",
-        "url": "https://wa.me/+6281336270845"
+        "url": "https://wa.me/+62895380689955"
       },
       {
         "type": "instagram",
         "url": "https://instagram.com/i.m.fian"
+      },
+      {
+        "type": "mail",
+        "url": "mailto:fiandev@programmer.net"
       }
     ],
     "portfolios": [
       {
-        "title": "megane API",
+        "title": "Cashier Application",
+        "preview": "https://projects.fiandev.my.id/kasir/",
+        "repository": "https://github.com/fiandev/megane-api",
+        "description": "A website-based cashier application, has many features that support financial recording.",
+        "stacks": [
+          {
+            "name": "laravel",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/laravel.svg"
+          },
+          {
+            "name": "bootstrap",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/bootstrap.svg"
+          },
+          {
+            "name": "css",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/css.svg"
+          }
+        ],
+        "thumbnail": {
+          "url": "/static/kasir-preview.webp"
+        }
+      },
+      {
+        "title": "A web film",
+        "preview": "https://fynime.my.id/",
+        "repository": null,
+        "description": "A website for streaming, downloading, and exploring anime/film",
+        "stacks": [
+          {
+            "name": "laravel",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/laravel.svg"
+          },
+          {
+            "name": "bootstrap",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/bootstrap.svg"
+          },
+          {
+            "name": "tailwind",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/tailwind.svg"
+          },
+          {
+            "name": "javascript",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/javascript.svg"
+          }
+        ],
+        "thumbnail": {
+          "url": "/static/fynime-preview.webp"
+        }
+      },
+      {
+        "title": "Megane API",
         "preview": "https://megane-api.fiandev.my.id/",
         "repository": "https://github.com/fiandev/megane-api",
         "description": "Megane API Is A Collection Of APIs For Various Needs Built In Python",
@@ -144,8 +200,8 @@
       },
       {
         "title": "My Qur'an",
-        "preview": "https://my-quran-gray.vercel.app/",
-        "repository": null,
+        "preview": "https://my-quran.fiandev.my.id/",
+        "repository": "https://github.com/fiandev/my-quran",
         "description": "A simple web application for reading the Koran and knowing prayer times anytime and anywhere.",
         "stacks": [
           {
@@ -162,7 +218,7 @@
         }
       },
       {
-        "title": "express.js template",
+        "title": "Express.js Template",
         "preview": null,
         "repository": "https://github.com/fiandev/express-structure-folders",
         "description": "initial template for expressjs application",
@@ -177,7 +233,7 @@
         }
       },
       {
-        "title": "otaku downloader",
+        "title": "Otaku Downloader",
         "preview": null,
         "repository": "https://github.com/fiandev/otaku-downloader",
         "description": "tool to download anime from otakudesu automatically.",

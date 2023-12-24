@@ -4,6 +4,7 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
   faGithub,
+  faGitlab,
   faTwitter,
   faInstagram,
   faWhatsapp,
@@ -25,6 +26,7 @@ const icons = {
   whatsapp: faWhatsapp,
   twitter: faTwitter,
   github: faGithub,
+  gitlab: faGitlab,
   linkedin: faLinkedin,
   telegram: faTelegram,
 };

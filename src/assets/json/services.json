@@ -45,7 +45,12 @@
     {
       "title": "school website",
       "description": "situs web sekolah dengan fitur lengkap",
-      "thumbnail": "https://raw.githubusercontent.com/fiandev/school-landing-page/master/.assets/preview.jpg"
+      "thumbnail": "/static/school-website.webp"
+    },
+    {
+      "title": "aplikasi kasir",
+      "description": "Aplikasi kasir berbasis website, memiliki banyak fitur yang menunjang pencatatan keuangan.",
+      "thumbnail": "/static/kasir-preview.webp"
     }
   ]
 }

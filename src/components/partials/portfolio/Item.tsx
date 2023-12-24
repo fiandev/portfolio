@@ -48,12 +48,14 @@ export default function Item({
             </div>
           ) : null}
           <div className="flex items-center gap-2">
-            <ButtonLink
-              label="visit"
-              name={`visit ${title}`}
-              link={link}
-              icon={faArrowUpRightFromSquare}
-            />
+            {link ? (
+              <ButtonLink
+                label="visit"
+                name={`visit ${title}`}
+                link={link}
+                icon={faArrowUpRightFromSquare}
+              />
+            ) : null}
             {repo ? (
               <ButtonLink
                 label="repository"
