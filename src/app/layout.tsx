@@ -79,13 +79,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en-US">
-      <body className="relative flex flex-col min-h-screen w-screen">
+      <body className="relative flex flex-col bg-slate-50 min-h-screen w-screen">
         <noscript>You need to enable JavaScript to run this app.</noscript>
         <Wrapper>
           <Nav />
+          <div className="lg:w-3/4 mx-auto">
+
           {children}
           <ScrollToTop className="bg-main text-slate-800 dark:bg-slate-800 dark:text-main" />
           <Footer />
+          </div>
         </Wrapper>
       </body>
     </html>

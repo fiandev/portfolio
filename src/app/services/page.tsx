@@ -50,12 +50,12 @@ export default async function Services() {
     <div className={`scroll-smooth relative dark:bg-slate-800`}>
       <ServiceList
         services={services}
-        className="bg-slate-200 dark:bg-slate-800 py-4"
+        className="bg-slate-100 dark:bg-slate-800 py-4"
       />
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
-        className="outline-0 border-0 bg-slate-200 dark:bg-slate-800"
+        className="outline-0 border-0 bg-slate-100 dark:bg-slate-800"
       >
         <path
           className="fill-sky-100 dark:fill-main"

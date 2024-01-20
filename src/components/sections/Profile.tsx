@@ -9,7 +9,7 @@ const Profile = ({ data }: { data: any }) => {
       id="profile"
       className={`${
         !data ? "preview-content" : ""
-      } bg-slate-200 dark:bg-slate-800 bg-fixed relative w-screen h-screen md:min-h-screen flex flex-col gap-2 items-center justify-center lg:flex-row-reverse md:justify-center lg:px-24`}
+      } bg-slate-200 dark:bg-slate-800 bg-fixed relative w-full h-screen md:min-h-screen flex flex-col gap-2 items-center justify-center lg:flex-row-reverse md:justify-center lg:px-24`}
     >
       <div className="group flex flex-col lg:flex-row items-center justify-center lg:justify-between lg:px-8">
         <Shapes className="w-48 h-48 lg:max-w-72 lg:max-h-72 lg:w-72 lg:h-72 p-4 relative bg-gradient-to-b from-sky-500 to-slate-100 border shadow-md p-8 overflow-hidden flex justify-center items-center">
@@ -46,8 +46,9 @@ const Profile = ({ data }: { data: any }) => {
           <a
             name="download-CV"
             href="https://drive.google.com/file/d/1AXPQ-rh-8ux-0fG80dG00buF6RKUFdn6/view?usp=drivesdk"
-            className="font-bold transition-all duration-800 flex items-center justify-center text-sm lg:text-md px-4 py-2 rounded-sm text-sky-600 bg-slate-100 dark:bg-sky-600 shadow-lg outline outline-inherit hover:outline-slate-100 hover:outline-offset-2 hover:text-slate-100 hover:rounded-full hover:bg-gradient-to-r hover:from-blue-600 hover:to-slatw-100 capitalize"
-          >
+            className="font-bold transition-all duration-800 flex items-center justify-center text-sm lg:text-md px-4 py-2 rounded-sm text-sky-600 hover:text-slate-100 bg-slate-100 dark:bg-sky-600 shadow-lg outline outline-inherit hover:outline-blue-600 hover:outline-offset-2 hover:rounded-full hover:bg-gradient-to-r hover:from-blue-600 hover:to-sky-400 capitalize"
+            >
+          
             Download CV
           </a>
         </div>
