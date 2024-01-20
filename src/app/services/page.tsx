@@ -47,7 +47,7 @@ export default async function Services() {
   if (!data || !services) return <Preload />;
 
   return (
-    <div className={`scroll-smooth relative dark:bg-slate-800`}>
+    <div className={`flex flex-col gap-2 scroll-smooth relative dark:bg-slate-800`}>
       <ServiceList
         services={services}
         className="bg-slate-100 dark:bg-slate-800 py-4"

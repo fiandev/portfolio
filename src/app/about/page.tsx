@@ -101,7 +101,7 @@ export default async function About() {
 
   return (
     <div
-      className={`bg-slate-200 dark:bg-slate-800 flex flex-col items-center scroll-smooth relative dark:bg-slate-800 p-4`}
+      className={`bg-slate-200 dark:bg-slate-800 flex flex-col gap-2 items-center scroll-smooth relative dark:bg-slate-800 p-4`}
     >
       <div className="flex flex-col items-center lg:flex-row lg:justify-around gap-2">
         <Image

@@ -51,7 +51,7 @@ export default async function Home() {
   let Data = json.data;
 
   return (
-    <div className={`scroll-smooth relative`}>
+    <div className={`flex flex-col gap-2 scroll-smooth relative`}>
       <Profile data={Data} />
 
       <WorkExperience />
