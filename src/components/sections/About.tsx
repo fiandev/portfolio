@@ -34,7 +34,7 @@ export default function About({
     },
     {
       icon: faLocationDot,
-      text: `State: | Lamongan, East Java`,
+      text: `State: | Lamongan, East Java, Indonesia`,
     },
     {
       icon: faGraduationCap,
@@ -42,7 +42,7 @@ export default function About({
     },
     {
       icon: faGamepad,
-      text: `Hobbies: | code, movies, anime, music, and cat`,
+      text: `Hobbies: | Code, Movie, Anime and Music`,
     },
   ];
 

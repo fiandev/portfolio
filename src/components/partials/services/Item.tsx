@@ -27,8 +27,8 @@ export default function Item({
         <h1 className="group-hover/item:font-outline-0 hover:text-underline font-serif text-sm font-bold text-main uppercase">
           {title}
         </h1>
-        <p className="capitalize hover:underline lowercase text-xs w-28 text-center font-semibold text-slate-800 dark:text-slate-100">
-          {description.slice(0, 48)}{description.slice(49, description.length - 1) ? "..." : ""}
+        <p className="h-6 overflow-hidden group-hover/item:h-full text-elipsis capitalize hover:underline lowercase text-xs w-28 text-center font-semibold text-slate-800 dark:text-slate-100">
+          {description}
         </p>
 
         <ButtonLink
