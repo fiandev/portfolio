@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "position": "Work as fullstack web developer - freelance",
+      "active": true,
+      "date": "January 2022",
+      "description": "At first I only helped complete a student's project, but because I often received requests for help, I finally decided to become a freelance web developer"
+    },
+    {
+      "position": "Internship at Digital Media Telematika Ltd. - lamongan",
+      "active": false,
+      "date": "January 2nd - March 31th 2023",
+      "description": "I am an intern as an internet network technician, based on the rules of a vocational high school majoring in computer and network engineering"
+    }
+  ]
+}

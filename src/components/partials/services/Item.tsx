@@ -28,7 +28,7 @@ export default function Item({
           {title}
         </h1>
         <p className="capitalize hover:underline lowercase text-xs w-28 text-center font-semibold text-slate-800 dark:text-slate-100">
-          {description}
+          {description.slice(0, 48)}{description.slice(49, description.length - 1) ? "..." : ""}
         </p>
 
         <ButtonLink
