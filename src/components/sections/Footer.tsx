@@ -101,9 +101,9 @@ export default async function Footer() {
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-            © 2023{" "}
+            © { new Date().getFullYear() }
             <a href="https://github.com/fiandev" className="hover:underline">
-              fiandev
+              Fiandev
             </a>
             . All Rights Reserved.
           </span>
@@ -114,7 +114,7 @@ export default async function Footer() {
                     <a
                       key={randomID()}
                       href={link.url}
-                      className="w-6 h-6 flex items-center justify-center text-slate-800 dark:text-slate-200 hover:text-gray-200 hover:font-bold"
+                      className="w-6 h-6 flex items-center justify-center text-slate-800 dark:text-slate-200 hover:text-primary"
                     >
                       <FontAwesomeIcon icon={icons[link.type]} />
                     </a>
