@@ -81,10 +81,10 @@ export default function RootLayout({
         <noscript>You need to enable JavaScript to run this app.</noscript>
         <Wrapper>
           <Nav />
-          <div className="w-full lg:w-3/4 mx-auto">
+          <div className="w-screen md:w-3/4 md:mx-auto">
             {children}
-          <ScrollToTop className="bg-main text-slate-800 dark:bg-slate-800 dark:text-main" />
-          <Footer />
+            <ScrollToTop className="bg-main text-slate-800 dark:bg-slate-800 dark:text-main" />
+            <Footer />
           </div>
         </Wrapper>
       </body>

@@ -2,7 +2,7 @@
   "code": 200,
   "status": "success",
   "data": {
-    "name": "fian",
+    "name": "Aditia Akbar Putra A",
     "username": "fiandev",
     "email": "fiandev@programmer.net",
     "slogan": "I am a fullstack web developer, my favorite programming languages are JavaScript, PHP and Python, don't hesitate to contact me.",
@@ -109,11 +109,53 @@
     ],
     "portfolios": [
       {
-        "title": "Cashier Application",
+        "title": "web-based online library application",
+        "preview": "https://projects.fiandev.my.id/perpus/",
+        "description": "Website-Based Online Library Application, Which Has Many Complete Features.",
+        "stacks": [
+          {
+            "name": "html",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/html.svg"
+          },
+          {
+            "name": "php",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/php.svg"
+          },
+          {
+            "name": "laravel",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/laravel.svg"
+          },
+          {
+            "name": "bootstrap",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/bootstrap.svg"
+          },
+          {
+            "name": "css",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/css.svg"
+          },
+          {
+            "name": "javascript",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/javascript.svg"
+          }
+        ],
+        "thumbnail": {
+          "url": "/static/perpus.webp"
+        }
+      },
+      {
+        "title": "website-based point of sales (POS) application",
         "preview": "https://projects.fiandev.my.id/kasir/",
         "repository": "https://github.com/fiandev/megane-api",
         "description": "A website-based cashier application, has many features that support financial recording.",
         "stacks": [
+          {
+            "name": "html",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/html.svg"
+          },
+          {
+            "name": "php",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/php.svg"
+          },
           {
             "name": "laravel",
             "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/laravel.svg"
@@ -138,12 +180,24 @@
         "description": "A website for streaming, downloading, and exploring anime/film",
         "stacks": [
           {
+            "name": "html",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/html.svg"
+          },
+          {
+            "name": "php",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/php.svg"
+          },
+          {
             "name": "laravel",
             "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/laravel.svg"
           },
           {
             "name": "bootstrap",
             "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/bootstrap.svg"
+          },
+          {
+            "name": "sass",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/sass.svg"
           },
           {
             "name": "tailwind",
@@ -164,6 +218,10 @@
         "repository": "https://github.com/fiandev/megane-api",
         "description": "Megane API Is A Collection Of APIs For Various Needs Built In Python",
         "stacks": [
+          {
+            "name": "html",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/html.svg"
+          },
           {
             "name": "python",
             "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/python.svg"
@@ -188,6 +246,14 @@
         "description": "I worked as a frontend freelancer during the project develop",
         "stacks": [
           {
+            "name": "html",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/html.svg"
+          },
+          {
+            "name": "javascript",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/javascript.svg"
+          },
+          {
             "name": "tailwind",
             "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/tailwind.svg"
           },
@@ -206,6 +272,14 @@
         "repository": "https://github.com/fiandev/my-quran",
         "description": "A simple web application for reading the Koran and knowing prayer times anytime and anywhere.",
         "stacks": [
+          {
+            "name": "html",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/html.svg"
+          },
+          {
+            "name": "javascript",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/javascript.svg"
+          },
           {
             "name": "reactjs",
             "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/reactjs.svg"
@@ -270,6 +344,10 @@
         "repository": "https://github.com/fiandev/portfolio",
         "description": "A gathering Javascript Modules And Algorithm",
         "stacks": [
+          {
+            "name": "html",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/html.svg"
+          },
           {
             "name": "typescript",
             "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/typescript.svg"
