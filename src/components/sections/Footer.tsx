@@ -70,7 +70,7 @@ export default async function Footer() {
                         <li>
                           <a
                             href={project.preview || "#"}
-                            className={`hover:underline truncate ${
+                            className={`hover:underline truncate w-[80%] ${
                               project.preview ? "hover:font-semibold" : ""
                             }`}
                           >
