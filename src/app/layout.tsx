@@ -22,8 +22,6 @@ export const metadata: Metadata = {
   description: description,
   keywords: keywords,
   category: "personal website",
-  type: "website",
-  locale: "en_US",
   creator: "fian",
   robots: {
     index: true,
@@ -38,7 +36,7 @@ export const metadata: Metadata = {
   verification: {
     google: "6JyPQefQInzqKGO1cXqAmDMa7gPZoqFRdjIDSyFkRo8",
     yandex: "45ef227dddb68c4b",
-    bing: "2B357FEFFB2A5648990DF22A1C80B02C",
+    me: "fiandev",
     other: {
       github: "fiandev",
       "msvalidate.01": "2B357FEFFB2A5648990DF22A1C80B02C",
@@ -83,9 +81,8 @@ export default function RootLayout({
         <noscript>You need to enable JavaScript to run this app.</noscript>
         <Wrapper>
           <Nav />
-          <div className="lg:w-3/4 mx-auto">
-
-          {children}
+          <div className="w-full lg:w-3/4 mx-auto">
+            {children}
           <ScrollToTop className="bg-main text-slate-800 dark:bg-slate-800 dark:text-main" />
           <Footer />
           </div>

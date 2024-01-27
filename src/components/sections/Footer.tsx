@@ -34,14 +34,14 @@ const icons = {
 export default async function Footer() {
   let json = (await import("@assets/json/data.json")).default;
   let data = json.data;
-  let { links = [], portfolios = [] } = data;
+  let { links = [], portfolios = [], footer_about = "" } = data;
 
   return (
     <footer className="bg-white dark:bg-gray-800">
-      <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-        <div className="md:flex md:justify-between">
+      <div className="mx-auto w-full xl:max-w-screen-xl p-6 lg:py-8">
+        <div className="flex flex-col gap-2">
           <div className="mb-6 md:mb-0">
-            <a href="https://fiandev.my.id" className="flex items-center">
+            <h2 className="flex items-center">
               <Image
                 src="/logo.png"
                 className="w-8 h-8 mr-3"
@@ -49,12 +49,15 @@ export default async function Footer() {
                 h={20}
                 alt="fiandev's logo"
               />
-              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white uppercase">
+              <a href="https://fiandev.my.id" className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white uppercase">
                 fiandev
-              </span>
-            </a>
+              </a>
+            </h2>
+            <p className="w-3/4 py-2 text-lg text-gray-400 dark:text-gray-200">
+                { footer_about }
+            </p>
           </div>
-          <div className="grid lg:grid-cols-4 gap-8 sm:gap-6 sm:grid-cols-3">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-6">
             <FooterBackLinks links={navLinks} />
             <div>
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
@@ -67,7 +70,7 @@ export default async function Footer() {
                         <li>
                           <a
                             href={project.preview || "#"}
-                            className={`hover:underline ${
+                            className={`hover:underline truncate ${
                               project.preview ? "hover:font-semibold" : ""
                             }`}
                           >
