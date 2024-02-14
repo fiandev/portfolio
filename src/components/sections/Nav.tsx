@@ -34,6 +34,8 @@ export default function Nav() {
   };
 
   const scrollHandler = () => {
+    if (!NavRef?.current) return;
+
     let offset = NavRef.current.clientHeight + 5;
 
     if (window.scrollY > offset) setWindowScrolled(true);
@@ -52,9 +54,9 @@ export default function Nav() {
       ref={NavRef}
       className={`top-0 lg:px-[10vw] z-10 w-full px-3 py-1 flex gap-2 lg:px:8 flex-col lg:flex-row lg:justify-start ${
         isWindowScrolled
-          ? "fixed shadow-md bg-gradient-to-r from-sky-200 to-blue-100 dark:from-sky-800 dark:to-blue-600"
+          ? "fixed shadow-md bg-gradient-to-r from-sky-200 to-blue-100"
           : "relative bg-slate-200 dark:bg-slate-800"
-      } lg:bg-gradient-to-r lg:from-sky-200 lg:to-blue-100 dark:lg:from-sky-800 dark:lg:to-blue-600`}
+      } lg:bg-gradient-to-r lg:from-sky-200 lg:to-blue-100`}
     >
       <div className="w-full lg:w-fit flex justify-between items-center py-1 transition ease-in duration-800">
         <Link

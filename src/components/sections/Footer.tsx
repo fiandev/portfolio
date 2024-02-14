@@ -117,7 +117,7 @@ export default async function Footer() {
                     <a
                       key={randomID()}
                       href={link.url}
-                      className="w-6 h-6 flex items-center justify-center text-slate-800 dark:text-slate-200 hover:text-primary"
+                      className="w-6 h-6 flex items-center justify-center text-slate-800 dark:text-slate-200 hover:text-main"
                     >
                       <FontAwesomeIcon icon={icons[link.type]} />
                     </a>

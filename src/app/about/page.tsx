@@ -65,7 +65,7 @@ export default async function About() {
   let {
     birthdate = new Date().toLocaleString(),
     about = "",
-    avatar = {},
+    avatar,
     skills = [],
   } = data;
 
@@ -95,19 +95,19 @@ export default async function About() {
     },
     {
       icon: faGamepad,
-      text: `Hobbies: | code, movies, anime, music, and cat`,
+      text: `Hobbies: | code, movies, anime, music, and learn new things.`,
     },
   ];
 
   return (
     <div
-      className={`bg-slate-200 dark:bg-slate-800 flex flex-col items-center scroll-smooth relative dark:bg-slate-800 p-4`}
+      className={`bg-slate-200 font-inter dark:bg-slate-800 flex flex-col items-center scroll-smooth relative p-4`}
     >
       <div className="flex flex-col items-center lg:flex-row lg:justify-around gap-2">
         <Image
           className={`${
             avatar ? "animation-none" : "animation-pulse"
-          } w-32 h-32 shadow-md rounded-full border-2 border-slate-800 dark:border-slate-100`}
+          } w-32 h-32 shadow-md rounded-md border-2 border-slate-800 dark:border-slate-100`}
           alt="my avatar"
           srcset={avatar ? avatar.url : ""}
         />
@@ -119,21 +119,21 @@ export default async function About() {
         >
           {about.split("\n").map((v) => {
             return (
-              <p className="w-full bg-transparent outline-0 border-0">{v}</p>
+              <p className="m-0 w-full bg-transparent outline-0 border-0">{v}</p>
             );
           })}
         </div>
       </div>
       <div className="w-full h-fit py-4 items-center grid px-auto md:grid-cols-2 gap-4">
         <Item
-          className="bg-blue-600"
+          className="bg-main shadow-sm"
           data={{
             label: "biodata",
             items: biodataItems,
           }}
         />
         <Item
-          className="bg-rose-600"
+          className="bg-main shadow-sm"
           data={{
             label: "my skills",
             items: skills.map((skill) => {

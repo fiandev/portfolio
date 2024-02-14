@@ -18,7 +18,11 @@ export default function ViewportArea({
 
   useEffect(() => {
     const isInViewport = (e) => {
+      if (!e) {
+        return null;
+      }
       const rect = e.getBoundingClientRect();
+
       return (
         rect.top >= 0 &&
         rect.left >= 0 &&

@@ -9,8 +9,8 @@ export default function ScrollToTop({
   className?: string | null;
 }) {
   const [position, setPosition] = useState<number>(0);
-  const [clicked, setClicked] = useState<number>(0);
-  const [isBottom, setIsBottom] = useState<number>(0);
+  const [clicked, setClicked] = useState<boolean>(false);
+  const [isBottom, setIsBottom] = useState<boolean>(false);
   const offsetY = 50;
 
   useEffect(() => {
@@ -40,7 +40,7 @@ export default function ScrollToTop({
       onClick={() => setClicked(true)}
       className={`${position > offsetY ? "scale-100" : "scale-0"} ${
         isBottom ? "animate-bounce" : ""
-      } hover:outline hover:cursor-pointer duration-500 transition-transform fixed z-[99] bottom-2 right-2 w-12 h-12 rounded-full text-lg flex items-center justify-center lg:hidden ${className}`}
+      } hover:outline hover:cursor-pointer duration-500 transition-transform fixed z-[99] bottom-2 right-2 w-12 h-12 rounded-full text-lg flex items-center justify-center ${className}`}
     >
       <FontAwesomeIcon icon={faArrowUp} />
     </div>
