@@ -143,7 +143,7 @@
         }
       },
       {
-        "title": "website-based point of sales (POS) application",
+        "title": "point of sales (POS) application",
         "preview": "https://projects.fiandev.my.id/kasir/",
         "repository": "https://github.com/fiandev/megane-api",
         "description": "A website-based cashier application, has many features that support financial recording.",
@@ -174,10 +174,10 @@
         }
       },
       {
-        "title": "A web film",
+        "title": "A movie website",
         "preview": "https://fynime.my.id/",
         "repository": null,
-        "description": "A website for streaming, downloading, and exploring anime/film",
+        "description": "A website for streaming, downloading, and exploring anime/movie",
         "stacks": [
           {
             "name": "html",
