@@ -1,10 +1,10 @@
-export const randomPercen = () =>
+export const randomPercen = (): number =>
   Math.floor(Math.random() * (100 - 10 + 1) + 10);
 
-export const randomInt = (min = 10, max = 10) =>
+export const randomInt = (min = 10, max = 10): number =>
   Math.floor(Math.random() * (max - min + 1)) + min;
 
-export const getBlobRadius = () =>
+export const getBlobRadius = (): string =>
   `${randomPercen()}% ${randomPercen()}% ${randomPercen()}% ${randomPercen()}% / ${randomPercen()}% ${randomPercen()}% ${randomPercen()}% ${randomPercen()}%`;
 
 export const serialize = (obj = {}) => {
@@ -18,20 +18,20 @@ export const serialize = (obj = {}) => {
   return str.join("&");
 };
 
-export const imageErrorHandler = (e, src = ""): string | null => {
+export const imageErrorHandler = (e, src: string = ""): void => {
   e.target.src = src;
 };
 
-export const delay = (duration = 1000, cb) => {
+export const delay = (duration: number = 1000, cb: Function) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       cb();
-      resolve();
+      resolve(null);
     }, duration);
   });
 };
 
-export const randomID = (len = 4) => {
+export const randomID = (len: number = 4): string => {
   let chars = "abcdefghijklmnopqrstuvwxyz1234566890";
   let arr = chars.split("");
   let result = "";
@@ -41,13 +41,13 @@ export const randomID = (len = 4) => {
   return result;
 };
 
-export const textWhatsAppEncode = (text = "") => {
+export const textWhatsAppEncode = (text: string = ""): string => {
   text = text.replace(/(\|)+/g, "%0A").replace(/(\s+)/g, "%20");
 
   return text;
 };
 
-export function arrayShuffle(array) {
+export function arrayShuffle(array: any[]) {
   let currentIndex = array.length,
     randomIndex;
 
@@ -65,4 +65,8 @@ export function arrayShuffle(array) {
   }
 
   return array;
+}
+
+export function strip_tags(html: string): string {
+  return html.replace(/(<([^>]+)>)/gi, "");
 }

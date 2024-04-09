@@ -56,8 +56,6 @@ export const GlobalScrollProvider = ({ children }) => {
       currentDocHeight = document.body.clientHeight || 0;
     };
 
-    onResize();
-
     window.addEventListener("resize", onResize);
     document.addEventListener("scroll", onScroll);
     return () => {

@@ -4,14 +4,22 @@ import usePagination from "@hooks/usePagination";
 import classnames from "classnames";
 import { randomID } from "@utils/functions";
 
-const Pagination = (props) => {
+type Props = {
+  onPageChange?: Function,
+  totalCount: number,
+  currentPage: number,
+  siblingCount: number,
+  pageSize: number,
+  className?: string,
+}
+const Pagination = (props: Props) => {
   const {
-    onPageChange,
-    totalCount,
+    onPageChange = () => { },
+    totalCount = 0,
     siblingCount = 1,
-    currentPage,
-    pageSize,
-    className,
+    currentPage = 1,
+    pageSize = 1,
+    className = "",
   } = props;
 
   const paginationRange = usePagination({
@@ -71,11 +79,10 @@ const Pagination = (props) => {
         // Render our Page Pills
         return (
           <li
-            className={`p-2 rounded-sm w-6 h-6 flex items-center justify-center text-xs ${
-              pageNumber === currentPage
-                ? "bg-main text-slate-50 border border-slate-50"
-                : "text-main bg-slate-50"
-            }`}
+            className={`p-2 rounded-sm w-6 h-6 flex items-center justify-center text-xs ${pageNumber === currentPage
+              ? "bg-main text-slate-50 border border-slate-50"
+              : "text-main bg-slate-50"
+              }`}
             key={randomID()}
             onClick={() => onPageChange(pageNumber)}
           >

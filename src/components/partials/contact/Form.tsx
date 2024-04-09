@@ -70,7 +70,7 @@ export default async function Form({ formClassName = "" }) {
     }
   };
   return (
-    <div className="px-2 flex flex-col w-full px-2 md:w-[80%] lg:w-[60%]">
+    <div className="flex flex-col w-full px-2 md:w-[80%] lg:w-[60%]">
       <form
         onSubmit={contactHandler}
         className="flex flex-col gap-2 w-full py-4"

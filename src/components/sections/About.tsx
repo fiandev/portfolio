@@ -67,12 +67,10 @@ export default function About({
           About Me
         </h1>
         <div
-          className={`${
-            !formatted_about ? "animate-pulse" : "animate-none"
-          } md:text-center dark:text-slate-50 text-lg lg:text-xl xl:text-2xl font-serif py-4 font-light`}
-        >
-          <Markup content={formatted_about} />
-        </div>
+          dangerouslySetInnerHTML={{ __html: formatted_about }}
+          className={`${!formatted_about ? "animate-pulse" : "animate-none"
+            } md:text-center dark:text-slate-50 text-lg lg:text-xl xl:text-2xl font-serif py-4 font-light`}
+        ></div>
 
         <div className="w-full h-fit py-4 items-center grid px-auto md:grid-cols-2 gap-4">
           <Item

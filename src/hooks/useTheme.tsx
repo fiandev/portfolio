@@ -8,23 +8,32 @@ export const GlobalThemeProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const [Theme, setTheme] = useState<any>(null);
+  const [Theme, changeTheme] = useState<any>(null);
 
   useEffect(() => {
     let isDarkTheme =
       localStorage.theme === "dark" ||
       (!("theme" in localStorage) &&
         window.matchMedia("(prefers-color-scheme: dark)").matches);
-    //let theme = isDarkTheme ? "dark" : "light";
-    let theme = "light";
+    let theme = isDarkTheme ? "dark" : "light";
 
+    document.documentElement.setAttribute("class", "")
     document.documentElement.classList.add(theme);
 
     // Whenever the user explicitly chooses light mode
     localStorage.theme = theme;
+    changeTheme(theme);
 
-    // Whenever the user explicitly chooses to respect the OS preference
-    setTheme(theme);
+    // let tick = setInterval(() => {
+    //   let isDarkTheme = localStorage.theme === "dark";
+    //   let theme = isDarkTheme ? "dark" : "light"
+    //   setTheme(theme)
+    //   changeTheme(theme)
+    // }, 10)
+
+    return () => {
+      // clearInterval(tick);
+    }
   }, [Theme]);
 
   return (
@@ -35,9 +44,7 @@ export const GlobalThemeProvider = ({
 };
 
 export const useTheme = () => {
-  const Theme = useContext<any>(GlobalThemeContext);
+  const theme = useContext<any>(GlobalThemeContext);
 
-  if (!Theme) console.log("useTheme must be used inside a GlobalThemeProvider");
-
-  return Theme;
+  return theme;
 };

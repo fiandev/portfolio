@@ -5,7 +5,7 @@ import {
   faFacebook,
   faGithub,
   faGitlab,
-  faTwitter,
+  faXTwitter,
   faInstagram,
   faWhatsapp,
   faLinkedin,
@@ -14,17 +14,19 @@ import {
 
 import { randomID } from "@utils/functions";
 import { navLinks } from "@components/sections/Nav";
+import Link from "next/link";
 
 const FooterBackLinks = lazy(
   () => import("@components/partials/footer/FooterBackLinks"),
 );
 const Image = lazy(() => import("@components/partials/Image"));
+const ThemeToggler = lazy(() => import("@components/partials/ThemeToggler"));
 
 const icons = {
   facebook: faFacebook,
   instagram: faInstagram,
   whatsapp: faWhatsapp,
-  twitter: faTwitter,
+  x: faXTwitter,
   github: faGithub,
   gitlab: faGitlab,
   linkedin: faLinkedin,
@@ -49,12 +51,12 @@ export default async function Footer() {
                 h={20}
                 alt="fiandev's logo"
               />
-              <a href="https://fiandev.my.id" className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white uppercase">
+              <Link href="/" className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white uppercase">
                 fiandev
-              </a>
+              </Link>
             </h2>
             <p className="w-3/4 py-2 text-lg text-gray-400 dark:text-gray-200">
-                { footer_about }
+              {footer_about}
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-6">
@@ -66,36 +68,41 @@ export default async function Footer() {
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 {portfolios
                   ? portfolios.slice(0, 5).map((project) => {
-                      return (
-                        <li>
-                          <a
-                            href={project.preview || "#"}
-                            className={`hover:underline truncate w-[80%] ${
-                              project.preview ? "hover:font-semibold" : ""
+                    return (
+                      <li key={randomID()}>
+                        <a
+                          href={project.preview || "#"}
+                          className={`hover:underline w-[80%] truncate ${project.preview ? "hover:font-semibold" : ""
                             }`}
-                          >
-                            {project.title}
-                          </a>
-                        </li>
-                      );
-                    })
+                        >
+                          {project.title}
+                        </a>
+                      </li>
+                    );
+                  })
                   : null}
               </ul>
             </div>
             <div>
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                Legal
+                Others
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Privacy Policy
-                  </a>
+                <li key={randomID()}>
+                  <Link
+                    href="https://github.com/fiandev/portfolio"
+                    className={`hover:underline truncate w-[80%] hover:font-semibold capitalize`}
+                  >
+                    source code
+                  </Link>
                 </li>
-                <li>
-                  <a href="#" className="hover:underline">
-                    Terms &amp; Conditions
-                  </a>
+                <li key={randomID()}>
+                  <Link
+                    href="/sitemap.xml"
+                    className={`hover:underline truncate w-[80%] hover:font-semibold capitalize`}
+                  >
+                    sitemaps
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -104,7 +111,7 @@ export default async function Footer() {
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-            © { new Date().getFullYear() }{" "}
+            © {new Date().getFullYear()}{" "}
             <a href="https://github.com/fiandev" className="hover:underline">
               fiandev
             </a>
@@ -113,17 +120,18 @@ export default async function Footer() {
           <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
             {links
               ? links.map((link) => {
-                  return (
-                    <a
-                      key={randomID()}
-                      href={link.url}
-                      className="w-6 h-6 flex items-center justify-center text-slate-800 dark:text-slate-200 hover:text-main"
-                    >
-                      <FontAwesomeIcon icon={icons[link.type]} />
-                    </a>
-                  );
-                })
+                return (
+                  <a
+                    key={randomID()}
+                    href={link.url}
+                    className="w-6 h-6 flex items-center justify-center text-slate-800 dark:text-slate-200 hover:text-main dark:hover:text-sky-500"
+                  >
+                    <FontAwesomeIcon icon={icons[link.type]} />
+                  </a>
+                );
+              })
               : null}
+            <ThemeToggler />
           </div>
         </div>
       </div>

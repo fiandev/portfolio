@@ -16,9 +16,8 @@ export default function Item({
   return (
     data && (
       <div
-        className={`p-4 rounded-md flex flex-col gap-2 ${
-          className || "bg-main"
-        }`}
+        className={`p-4 rounded-md flex flex-col gap-2 ${className || "bg-main"
+          }`}
         key={randomID()}
       >
         <h1 className="font-bold text-slate-50 capitalize text-lg lg:text-xl xl:text-2xl">
@@ -33,7 +32,7 @@ export default function Item({
               >
                 {item.icon ? null : (
                   <Image
-                    className="w-6 h-6 bg-slate-100 dark:bg-slate-800 p-[.1rem] rounded-full"
+                    className="w-6 h-6 bg-slate-200 dark:bg-slate-100 p-[.1rem] rounded-full"
                     alt={`${data.label}'s icon`}
                     srcset={item.image || ""}
                   />

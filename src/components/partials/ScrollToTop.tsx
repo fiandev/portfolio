@@ -28,19 +28,22 @@ export default function ScrollToTop({
       behavior: "smooth",
     });
 
+    setClicked(false);
+
     window.addEventListener("scroll", handler);
 
     setIsBottom(bottom);
+
     return () => {
       window.removeEventListener("scroll", handler);
     };
   }, [clicked]);
+
   return (
     <div
-      onClick={() => setClicked(true)}
-      className={`${position > offsetY ? "scale-100" : "scale-0"} ${
-        isBottom ? "animate-bounce" : ""
-      } hover:outline hover:cursor-pointer duration-500 transition-transform fixed z-[99] bottom-2 right-2 w-12 h-12 rounded-full text-lg flex items-center justify-center ${className}`}
+      onClick={() => setClicked(!clicked)}
+      className={`${position > offsetY ? "scale-100" : "scale-0"} ${isBottom ? "animate-bounce" : ""
+        } hover:animate-bounce duration-800 hover:outline hover:cursor-pointer duration-500 transition-transform fixed z-[99] bottom-2 right-2 w-12 h-12 rounded-full text-lg flex items-center justify-center ${className}`}
     >
       <FontAwesomeIcon icon={faArrowUp} />
     </div>

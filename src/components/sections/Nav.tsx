@@ -21,6 +21,10 @@ export const navLinks = [
     text: "About",
     href: "/about",
   },
+  {
+    text: "Blog",
+    href: "/blog",
+  },
 ];
 
 export default function Nav() {
@@ -52,11 +56,10 @@ export default function Nav() {
   return (
     <nav
       ref={NavRef}
-      className={`top-0 lg:px-[10vw] z-10 w-full px-3 py-1 flex gap-2 lg:px:8 flex-col lg:flex-row lg:justify-start ${
-        isWindowScrolled
-          ? "fixed shadow-md bg-gradient-to-r from-sky-200 to-blue-100"
-          : "relative bg-slate-200 dark:bg-slate-800"
-      } lg:bg-gradient-to-r lg:from-sky-200 lg:to-blue-100`}
+      className={`top-0 lg:px-[10vw] z-10 w-full px-3 py-1 flex gap-2 lg:px:8 flex-col lg:flex-row lg:justify-start ${isWindowScrolled
+        ? "fixed shadow-md bg-gradient-to-r from-sky-200 to-blue-100 dark:bg-gradient-to-r dark:from-slate-800 dark:to-slate-900"
+        : "relative bg-slate-100 dark:bg-slate-800"
+        }`}
     >
       <div className="w-full lg:w-fit flex justify-between items-center py-1 transition ease-in duration-800">
         <Link
@@ -73,9 +76,8 @@ export default function Nav() {
       </div>
 
       <div
-        className={`transition ease-in duration-800 w-full flex backdrop-blur-md lg:backdrop-blur-0 ${
-          navOpen ? "max-h-fit" : "max-h-0"
-        } overflow-y-hidden lg:overflow-y-visible lg:max-h-fit flex-col lg:flex-row`}
+        className={`transition ease-in duration-800 w-full flex backdrop-blur-md lg:backdrop-blur-0 ${navOpen ? "max-h-fit" : "max-h-0"
+          } overflow-y-hidden lg:overflow-y-visible lg:max-h-fit flex-col lg:flex-row`}
       >
         <ul className="flex py-2.5 lg:py-0 w-full flex-col lg:flex-row lg:items-center lg:justify-end lg:gap-2 uppercase">
           {navLinks.map((link) => {

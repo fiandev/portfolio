@@ -12,15 +12,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import countdown from "@utils/time";
-import { randomID } from "@utils/functions";
 
-const ViewportArea = lazy(() => import("@components/interactive/ViewportArea"));
 const Image = lazy(() => import("@components/partials/Image"));
 const Preload = lazy(() => import("@components/partials/Preload"));
 const Item = lazy(() => import("@components/partials/about/Item"));
 
 const title = "fiandev's about",
-  thumbnail = "/graph.png",
   description =
     "fiandev is a fullstack developer from Indonesia, who masters several programming languages.",
   keywords = [
@@ -46,7 +43,8 @@ const title = "fiandev's about",
     "frontend developer",
     "fullstack developer",
     "it support",
-  ];
+  ],
+  thumbnail = "/static/fiandev.webp";
 
 export const metadata: Metadata = {
   title: title,
@@ -103,19 +101,17 @@ export default async function About() {
     <div
       className={`bg-slate-200 font-inter dark:bg-slate-800 flex flex-col items-center scroll-smooth relative p-4`}
     >
-      <div className="flex flex-col items-center lg:flex-row lg:justify-around gap-2">
+      <div className="flex flex-col items-center lg:flex-row lg:justify-center gap-4">
         <Image
-          className={`${
-            avatar ? "animation-none" : "animation-pulse"
-          } w-32 h-32 shadow-md rounded-md border-2 border-slate-800 dark:border-slate-100`}
+          className={`${avatar ? "animation-none" : "animation-pulse"
+            } w-48 h-48 shadow-md rounded-md border-2 border-slate-800 dark:border-slate-100`}
           alt="my avatar"
           srcset={avatar ? avatar.url : ""}
         />
 
         <div
-          className={`${
-            !about ? "animate-pulse" : "animate-none"
-          } w-3/4 flex flex-col gap-2 dark:text-slate-50 text-lg lg:text-xl xl:text-2xl font-serif py-4 font-light text-center lg:text-start`}
+          className={`${!about ? "animate-pulse" : "animate-none"
+            } w-3/4 flex flex-col gap-2 dark:text-slate-50 text-lg lg:text-xl xl:text-2xl font-serif py-4 font-light text-center lg:text-start`}
         >
           {about.split("\n").map((v) => {
             return (

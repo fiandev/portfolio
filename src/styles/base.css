@@ -10,15 +10,15 @@
     -webkit-text-stroke: .5px #0036f1;
   }
   
-  .nav-link {
+ .nav-link {
     @apply bg-sky-100 rounded-md text-main bg-transparent
-           dark:bg-transparent text-main dark:text-slate-100;
+           dark:bg-transparent dark:text-slate-600;
   }
   .nav-link:hover {
-    @apply text-sky-800 dark:text-slate-800;
+    @apply text-sky-800 dark:text-slate-300;
   }
   .nav-link-active {
-    @apply text-sky-800 rounded-md
-          dark:text-slate-800;
+    @apply font-semibold text-sky-800 rounded-md
+          dark:text-slate-100;
   }
 }

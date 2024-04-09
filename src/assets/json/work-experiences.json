@@ -1,16 +1,22 @@
 {
   "data": [
     {
-      "position": "Work as fullstack web developer - freelance",
+      "position": "Programmer - freelance",
       "active": true,
       "date": "January 2022",
       "description": "At first I only helped complete a student's project, but because I often received requests for help, I finally decided to become a freelance web developer"
     },
     {
-      "position": "Internship at Digital Media Telematika Ltd. - lamongan",
+      "position": "Fullstack developer at Wave Infotech Solutions Malaysia",
+      "active": false,
+      "date": "Maret 2024 - April 2024",
+      "description": "Implement several features in a web application for inventory management that is integrated with online marketplaces"
+    },
+    {
+      "position": "Trainee Network Techinician at Digital Media Telematika Ltd - lamongan",
       "active": false,
       "date": "January 2nd - March 31th 2023",
-      "description": "I am an intern as an internet network technician, based on the rules of a vocational high school majoring in computer and network engineering"
+      "description": "ased on the regulations of my vocational school, I worked as a trainee network technician at PT. Digital Media Telematika."
     }
   ]
 }

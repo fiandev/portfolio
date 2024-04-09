@@ -3,7 +3,7 @@ import { usePathname } from "next/navigation";
 import { randomID } from "@utils/functions";
 
 export default function NavLink({
-  className,
+  className = "",
   to,
   text = "",
   children,
@@ -21,9 +21,8 @@ export default function NavLink({
 
   return (
     <li
-      className={`p-2 group flex w-full lg:w-auto font-semibold ${
-        request(to) ? "nav-link-active" : "nav-link"
-      } ${className}`}
+      className={`p-2 group flex w-full lg:w-auto font-semibold ${request(to) ? "nav-link-active" : "nav-link"
+        } ${className}`}
       key={randomID()}
     >
       <Link

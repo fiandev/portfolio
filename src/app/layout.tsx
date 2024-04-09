@@ -2,6 +2,8 @@ import { Metadata } from "next";
 import { lazy } from "react";
 import "@/styles/index.css";
 
+import AuthProvider from "@/providers/AuthProvider";
+
 const Wrapper = lazy(() => import("@components/sections/Wrapper"));
 const Nav = lazy(() => import("@components/sections/Nav"));
 const Footer = lazy(() => import("@components/sections/Footer"));
@@ -47,7 +49,7 @@ export const metadata: Metadata = {
     title: title,
     description: description,
     siteId: "",
-    creator: "@fiandev",
+    creator: "@im_fiandev",
     creatorId: "",
     images: [thumbnail],
   },
@@ -77,16 +79,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en-US">
-      <body className="relative flex flex-col bg-slate-50 min-h-screen w-screen">
+      <body className="relative flex flex-col bg-slate-50 dark:bg-slate-900 min-h-screen w-screen">
         <noscript>You need to enable JavaScript to run this app.</noscript>
-        <Wrapper>
-          <Nav />
-          <div className="w-screen md:w-[80%] md:mx-auto">
-            {children}
-            <ScrollToTop className="bg-main text-slate-800 dark:bg-slate-800 dark:text-main" />
-            <Footer />
-          </div>
-        </Wrapper>
+        <AuthProvider>
+          <Wrapper>
+            <Nav />
+            <div className="w-screen md:w-[80%] md:mx-auto">
+              {children}
+              <ScrollToTop className="bg-main text-slate-800 dark:bg-slate-800 dark:text-main" />
+              <Footer />
+            </div>
+          </Wrapper>
+        </AuthProvider>
       </body>
     </html>
   );

@@ -7,8 +7,6 @@
     "email": "fiandev@programmer.net",
     "slogan": "I am a fullstack web developer, my favorite programming languages are JavaScript, PHP and Python, don't hesitate to contact me.",
     "about": "My name is Aditia Akbar Putra Alfiansa, you can call me Fian.\n I have been interested in the world of programming since middle school and I am dedicated to continuing to learn new things about the world of programming.\nI made this portfolio because, I want you to know me and what I can do.",
-    "formatted_about": "<div>First, let me introduce myself. My name is <strong>Aditia Akbar Putra Alfiansa</strong>, you can call me Fian. I made this portfolio because, I want you to know me and what I can do</div>",
-    "formatted_slogan": "<div>Hi everyone, I am Fian junior software engineer and fullstack web developer, I am very interested in the world of programming, my favorite languages are JavaScript, Python and PHP.</div>",
     "birthdate": "13 june, 2005 11:00:00 AM",
     "footer_about": "Just someone who is interested in the world of IT, especially programming, and would like to help others.",
     "skills": [
@@ -87,8 +85,8 @@
         "url": "https://fb.me/im.fiandev"
       },
       {
-        "type": "twitter",
-        "url": "https://twitter.com/@im_fiandev"
+        "type": "x",
+        "url": "https://x.com/@im_fiandev"
       },
       {
         "type": "telegram",
@@ -108,6 +106,40 @@
       }
     ],
     "portfolios": [
+      {
+        "title": "Fullhive an warehouse management",
+        "preview": "",
+        "description": "web application for inventory management that is integrated with online marketplaces.",
+        "stacks": [
+          {
+            "name": "html",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/html.svg"
+          },
+          {
+            "name": "php",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/php.svg"
+          },
+          {
+            "name": "laravel",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/laravel.svg"
+          },
+          {
+            "name": "bootstrap",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/bootstrap.svg"
+          },
+          {
+            "name": "css",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/css.svg"
+          },
+          {
+            "name": "javascript",
+            "icon": "https://raw.githubusercontent.com/fiandev/static-assets/master/icons/javascript.svg"
+          }
+        ],
+        "thumbnail": {
+          "url": "/static/fullhive.webp"
+        }
+      },
       {
         "title": "web-based online library application",
         "preview": "https://projects.fiandev.my.id/perpus/",

@@ -7,16 +7,14 @@ const Profile = ({ data }: { data: any }) => {
   return (
     <section
       id="profile"
-      className={`${
-        !data ? "preview-content" : ""
-      } bg-slate-200 dark:bg-slate-800 bg-fixed relative w-full h-screen md:min-h-screen flex flex-col gap-2 items-center justify-center lg:flex-row-reverse md:justify-center lg:px-24`}
+      className={`${!data ? "preview-content" : ""
+        } bg-slate-200 dark:bg-slate-800 bg-fixed relative w-full h-screen md:min-h-screen flex flex-col gap-2 items-center justify-center lg:flex-row-reverse md:justify-center lg:px-24`}
     >
       <div className="group flex flex-col lg:flex-row items-center justify-center lg:justify-between lg:px-8">
-        <Shapes className="w-48 h-48 lg:max-w-72 lg:max-h-72 lg:w-72 lg:h-72 p-4 relative bg-gradient-to-b from-sky-500 to-slate-100 border shadow-md p-8 overflow-hidden flex justify-center items-center">
+        <Shapes className="w-48 h-48 lg:max-w-72 lg:max-h-72 lg:w-72 lg:h-72 relative bg-gradient-to-b from-sky-500 to-slate-100 dark:from-sky-600 dark:to-slate-900 border shadow-md p-8 overflow-hidden flex justify-center items-center">
           <Image
-            className={`${
-              data ? "animation-none" : "animation-pulse"
-            } w-full h-full shadow-md rounded-full border-2 border-sky-400`}
+            className={`${data ? "animation-none" : "animation-pulse"
+              } w-full h-full shadow-md rounded-full border-2 border-sky-400`}
             alt="my avatar"
             srcset={"/static/fiandev.webp"}
           />
@@ -25,9 +23,8 @@ const Profile = ({ data }: { data: any }) => {
 
       <div className="relative w-full lg:w-90 flex flex-col items-center lg:items-start gap-2">
         <h1
-          className={`${
-            !data.name ? "animate-pulse" : ""
-          } text-shadow-md text-2xl capitalize font-bold font-mono bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-sky-600 text-center lg:text-start`}
+          className={`${!data.name ? "animate-pulse" : ""
+            } text-shadow-md text-2xl capitalize font-bold font-mono bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-sky-600 text-center lg:text-start`}
         >
           {data ? data.name : "loading ..."}
         </h1>
@@ -46,9 +43,9 @@ const Profile = ({ data }: { data: any }) => {
           <a
             name="download-CV"
             href="https://drive.google.com/file/d/1AXPQ-rh-8ux-0fG80dG00buF6RKUFdn6/view?usp=drivesdk"
-            className="font-bold transition-all duration-800 flex items-center justify-center text-sm lg:text-md px-4 py-2 rounded-sm text-sky-600 hover:text-slate-100 bg-slate-100 dark:bg-sky-600 shadow-lg outline outline-inherit hover:outline-blue-600 hover:outline-offset-2 hover:rounded-full hover:bg-gradient-to-r hover:from-blue-600 hover:to-sky-400 capitalize"
-            >
-          
+            className="font-bold transition-all duration-800 flex items-center justify-center text-sm lg:text-md px-4 py-2 rounded-sm text-sky-600 hover:text-slate-100 bg-slate-100 dark:bg-slate-200 dark:text-blue-500 shadow-lg outline outline-inherit hover:outline-blue-600 hover:outline-offset-2 hover:rounded-full hover:bg-gradient-to-r hover:from-blue-600 hover:to-sky-400 dark:hover:text-slate-100 capitalize"
+          >
+
             Download CV
           </a>
         </div>
