@@ -1,3 +1,5 @@
+@tailwind utilities;
+
 section {
   display: flex;
   flex-direction: column;
@@ -7,3 +9,51 @@ section {
 b, strong {
   font-weight: bold;
 }
+
+@layer utilities {
+  article {
+    @apply flex flex-col gap-2 px-2 text-justify first-letter:text-2xl first-letter:uppercase;
+    h1 {
+        @apply text-2xl font-bold;
+    }
+    h2 {
+        @apply text-xl font-semibold;
+    }
+  
+    h3,
+    h4 {
+        @apply text-lg font-semibold;
+    }
+  
+    h5 {
+        @apply text-lg font-semibold;
+    }
+    p {
+        @apply text-base;
+    }
+    ol {
+        @apply mx-8 p-2 text-base;
+        li {
+            @apply list-decimal;
+        }
+    }
+    ul {
+        @apply mx-8 p-2 text-base;
+        li {
+            @apply list-disc;
+        }
+    }
+  
+    figure {
+        @apply mx-auto max-w-lg flex flex-col items-center;
+  
+        img {
+            @apply h-auto max-w-full rounded-lg;
+        }
+        figcaption {
+            @apply mt-2 text-sm text-center text-slate-800 dark:text-slate-200;
+        }
+    }
+  }
+}
+

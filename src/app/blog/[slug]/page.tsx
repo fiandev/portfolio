@@ -32,7 +32,7 @@ export async function generateMetadata(
       siteId: "",
       creator: "@im_fiandev",
       creatorId: "",
-      images: [article.thumbnail],
+      images: [article.thumbnail, ...previousImages],
     },
     openGraph: {
       title: article.title,

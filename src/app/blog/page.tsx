@@ -4,7 +4,7 @@ import { lazy } from "react";
 const Articles = lazy(() => import("@components/sections/Articles"));
 
 const title = "fiandev's blog",
-    thumbnail = "/poster.jpg",
+    thumbnail = "/graph.png",
     description =
         "see all fiandev's blog",
     keywords = [
