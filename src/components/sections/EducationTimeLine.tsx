@@ -21,12 +21,9 @@ export default function EducationTimeLine() {
             </span>
             <h2 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
               SMK Abdurrahman Wahid, Lamongan 62254
-              <span className="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ml-3">
-                Active
-              </span>
             </h2>
             <time className="block mb-2 text-sm font-normal leading-none text-gray-400">
-              June 2021 - June 2024
+              June 2021 - May 2024
             </time>
           </li>
           <li className="mb-10 ml-6">

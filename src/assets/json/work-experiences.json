@@ -4,19 +4,19 @@
       "position": "Programmer - freelance",
       "active": true,
       "date": "January 2022",
-      "description": "At first I only helped complete a student's project, but because I often received requests for help, I finally decided to become a freelance web developer"
+      "description": "As a freelance fullstack web developer, I offer a wide range of tailored web development services. I excel in<br/>building fully functional and visually appealing websites from scratch, using the latest technologies and design principles for optimal performance. I specialize in bug fixing to ensure smooth website operation and minimize disruptions. Additionally, I provide IT consultation, offering strategic advice on web development and IT infrastructure. I actively collaborate with and support other developers, contributing to project success and fostering a collaborative environment."
     },
     {
       "position": "Fullstack developer at Wave Infotech Solutions Malaysia",
       "active": false,
       "date": "Maret 2024 - April 2024",
-      "description": "Implement several features in a web application for inventory management that is integrated with online marketplaces"
+      "description": "In my previous role, I was responsible for implementing several key features in a web application focused on inventory management, seamlessly integrated with various online marketplaces. This involved developing robust functionality for product export and import, facilitating smooth transaction import and export processes, and enabling efficient management of product bundles through import and export capabilities. Additionally, I handled inventory mutation management, ensuring accuracy and consistency in inventory tracking and updates. As part of my duties, I also addressed UI bugs, enhancing user experience and interface coherence by troubleshooting and fixing issues with Bootstrap CSS."
     },
     {
       "position": "Trainee Network Techinician at Digital Media Telematika Ltd - lamongan",
       "active": false,
       "date": "January 2nd - March 31th 2023",
-      "description": "ased on the regulations of my vocational school, I worked as a trainee network technician at PT. Digital Media Telematika."
+      "description": "During my tenure as a trainee network technician at PT. Digital Media Telematika, I diligently fulfilled my responsibilities in accordance with the regulations of my vocational school. My primary tasks included proficiently conducting fiber optic installations, ensuring precision and adherence to industry standards throughout the process. Additionally, I excelled in network troubleshooting, swiftly identifying and resolving issues to maintain seamless connectivity and optimal performance for clients. Through hands-on experience and meticulous attention to detail, I consistently demonstrated my commitment to delivering high-quality service and contributing to the smooth operation of network infrastructure."
     }
   ]
 }
