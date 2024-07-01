@@ -35,7 +35,7 @@ const Profile = ({ data }: { data: any }) => {
         <div className="flex items-center gap-2">
           <a
             href="https://drive.google.com/file/d/1AXPQ-rh-8ux-0fG80dG00buF6RKUFdn6/view?usp=drivesdk"
-            className="font-bold transition-all duration-800 flex items-center justify-center text-sm lg:text-md px-4 py-2 rounded-sm text-sky-600 hover:text-slate-100 bg-slate-100 dark:bg-slate-200 dark:text-blue-500 shadow-lg outline outline-inherit hover:outline-blue-600 hover:outline-offset-2 hover:rounded-full hover:bg-gradient-to-r hover:from-blue-600 hover:to-sky-400 dark:hover:text-slate-100 capitalize"
+            className="font-bold transition-all duration-800 flex items-center justify-center text-sm lg:text-md px-4 py-2 rounded-sm text-sky-600 hover:text-slate-100 bg-slate-100 dark:bg-slate-900/40 backdrop-blur-sm dark:text-slate-100 shadow-lg outline outline-inherit hover:outline-blue-600 hover:outline-offset-2 hover:rounded-full hover:bg-gradient-to-r hover:from-blue-600 hover:to-sky-400 dark:hover:text-slate-100 capitalize"
           >
 
             Download CV

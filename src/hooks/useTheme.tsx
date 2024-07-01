@@ -1,7 +1,7 @@
 "use client";
 import React, { useContext, useEffect, useState } from "react";
 
-export const GlobalThemeContext = React.createContext<any>("light");
+export const GlobalThemeContext = React.createContext<any>("dark");
 
 export const GlobalThemeProvider = ({
   children,
@@ -11,7 +11,7 @@ export const GlobalThemeProvider = ({
   const [Theme, changeTheme] = useState<any>();
 
   useEffect(() => {
-    changeTheme(localStorage.theme || "light");
+    changeTheme(localStorage.theme || "dark");
   }, []);
 
   useEffect(() => {

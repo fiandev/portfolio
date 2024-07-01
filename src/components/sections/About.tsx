@@ -61,7 +61,7 @@ export default function About({
     data && (
       <section
         id="about"
-        className={`bg-slate-50 dark:bg-slate-900 px-4 py-8 inset-x-0 transition-all duration-1000 flex flex-col gap-4 justify-start items-center lg:px-8 ${className}`}
+        className={`bg-slate-50/40 dark:bg-slate-900/40 px-4 py-8 inset-x-0 transition-all duration-1000 flex flex-col gap-4 justify-start items-center lg:px-8 ${className}`}
       >
         <h1 className="text-3xl capitalize font-bold font-mono dark:text-slate-50">
           About Me

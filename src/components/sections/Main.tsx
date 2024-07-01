@@ -10,6 +10,7 @@ export default function Main ({ children, className = "" }: {
     const [theme,] = useTheme();
 
     let styles = {
+        backgroundSize: "cover",
         backgroundImage: `url('${ `/static/bg-${ theme === "dark" ? "dark" : "light" }.webp` }')`
     }
     return (

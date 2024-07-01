@@ -99,7 +99,7 @@ export default async function About() {
 
   return (
     <div
-      className={`bg-slate-200 font-inter dark:bg-slate-800 flex flex-col items-center scroll-smooth relative p-4`}
+      className={`bg-slate-200/40 font-inter dark:bg-slate-800/40 backdrop-blur-sm flex flex-col items-center scroll-smooth relative p-4`}
     >
       <div className="flex flex-col items-center lg:flex-row lg:justify-center gap-4">
         <Image

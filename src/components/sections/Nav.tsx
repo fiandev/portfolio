@@ -8,7 +8,7 @@ const Hamburger = lazy(() => import("@/components/partials/Hamburger"));
 const NavLink = lazy(() => import("@/components/partials/NavLink"));
 const Dropdown = lazy(() => import("@/components/partials/Dropdown"));
 
-export const navLinks = [
+export const navLinks: any[] = [
   {
     text: "Home",
     href: "/",
@@ -40,7 +40,7 @@ export default function Nav() {
   const scrollHandler = () => {
     if (!NavRef?.current) return;
 
-    let offset = NavRef.current.clientHeight + 5;
+    let offset = NavRef.current?.clientHeight + 5;
 
     if (window.scrollY > offset) setWindowScrolled(true);
     else setWindowScrolled(false);
@@ -81,9 +81,9 @@ export default function Nav() {
       >
         <ul className="flex py-2.5 lg:py-0 w-full flex-col lg:flex-row lg:items-center lg:justify-end lg:gap-2 uppercase">
           {navLinks.map((link) => {
-            return link.navLinks ? (
+            return link?.navLinks ? (
               <Dropdown>
-                {link.navLinks.map((link) => {
+                {link?.navLinks.map((link) => {
                   return <NavLink text={link.text} to={link.href} />;
                 })}
               </Dropdown>

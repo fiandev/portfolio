@@ -39,7 +39,7 @@ export default async function Footer() {
   let { links = [], portfolios = [], footer_about = "" } = data;
 
   return (
-    <footer className="bg-white dark:bg-gray-800">
+    <footer className="bg-white/40 dark:bg-gray-800/40 backdrop-blur-sm">
       <div className="mx-auto w-full xl:max-w-screen-xl p-6 lg:py-8">
         <div className="flex flex-col gap-2">
           <div className="mb-6 md:mb-0">

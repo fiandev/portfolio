@@ -43,9 +43,10 @@ export default function ScrollToTop({
     <div
       onClick={() => setClicked(!clicked)}
       className={`${position > offsetY ? "scale-100" : "scale-0"} ${isBottom ? "animate-bounce" : ""
-        } hover:animate-bounce duration-800 hover:outline hover:cursor-pointer duration-500 transition-transform fixed z-[99] bottom-2 right-2 w-12 h-12 rounded-full text-lg flex items-center justify-center ${className}`}
+        } py-2 px-4 lg:p-0 lg:hover:animate-bounce duration-800 hover:outline hover:cursor-pointer duration-500 transition-transform fixed z-[99] -rotate-90 lg:rotate-0  w-fit h-fit bottom-[50%] bg-slate-50/40 dark:bg-slate-900/40 backdrop-blur-sm lg:bottom-2 right-2 lg:w-12 lg:h-12 rounded-full text-lg flex items-center gap-4 justify-center ${className}`}
     >
-      <FontAwesomeIcon icon={faArrowUp} />
+      <span className="text-slate-800 dark:text-slate-100 lg:hidden">top</span>
+      <FontAwesomeIcon icon={faArrowUp} className="rotate-90 lg:rotate-0"/>
     </div>
   );
 }

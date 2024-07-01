@@ -25,7 +25,7 @@ const Project = ({
   return (
     <section
       id="project"
-      className={`bg-sky-100 dark:bg-main p-4 lg:py-8 transition-all duration-500 flex flex-col gap-4 justify-start xl:justify-center items-center ${className}`}
+      className={`bg-sky-100/40 dark:bg-main/40 backdrop-blur-sm p-4 lg:py-8 transition-all duration-500 flex flex-col gap-4 justify-start xl:justify-center items-center ${className}`}
     >
       <h1 className="text-slate-800 dark:text-slate-50 text-3xl capitalize font-bold font-mono">
         My Projects

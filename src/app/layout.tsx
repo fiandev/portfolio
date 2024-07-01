@@ -85,7 +85,7 @@ export default function RootLayout({
         <AuthProvider>
           <Wrapper>
             <Nav />
-            <Main className="relative flex flex-col bg-slate-50 dark:bg-slate-900 min-h-screen w-screen">
+            <Main className="relative flex flex-col bg-fixed min-h-screen w-screen">
               <div className="w-screen xl:w-[90%] md:mx-auto">
                 {children}
                 <ScrollToTop className="bg-main text-slate-800 dark:bg-slate-800 dark:text-main" />

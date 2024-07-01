@@ -4,7 +4,7 @@ export default async function WorkExperience() {
   return (
     <section
       id="work-experience"
-      className="w-full bg-slate-50 dark:bg-slate-900 px-4 py-8 inset-x-0 transition-all duration-1000 flex flex-col justify-start gap-4 lg:px-8"
+      className="relative w-full bg-slate-50/40 dark:bg-slate-900/40 backdrop-blur-sm px-4 py-8 inset-x-0 transition-all duration-1000 flex flex-col justify-start gap-4 lg:px-8"
     >
       <h1 className="text-3xl capitalize font-bold font-mono dark:text-slate-50">
         Work Experience
