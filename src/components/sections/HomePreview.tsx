@@ -1,4 +1,4 @@
-import Shapes from "@components/partials/Shapes";
+import Shapes from "@/components/partials/Shapes";
 
 export default function HomePreview() {
   return (

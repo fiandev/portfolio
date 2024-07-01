@@ -13,9 +13,9 @@ import {
 
 import countdown from "@utils/time";
 
-const Image = lazy(() => import("@components/partials/Image"));
-const Preload = lazy(() => import("@components/partials/Preload"));
-const Item = lazy(() => import("@components/partials/about/Item"));
+const Image = lazy(() => import("@/components/partials/Image"));
+const Preload = lazy(() => import("@/components/partials/Preload"));
+const Item = lazy(() => import("@/components/partials/about/Item"));
 
 const title = "fiandev's about",
   description =

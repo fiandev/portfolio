@@ -3,7 +3,7 @@ import { lazy } from "react";
 
 const Contact = lazy(() => import("@components/sections/Contact"));
 const ServiceList = lazy(() => import("@components/sections/ServiceList"));
-const Preload = lazy(() => import("@components/partials/Preload"));
+const Preload = lazy(() => import("@/components/partials/Preload"));
 
 const title = "fiandev's service",
   thumbnail = "/poster.jpg",

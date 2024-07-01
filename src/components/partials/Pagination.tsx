@@ -8,8 +8,8 @@ type Props = {
   onPageChange?: Function,
   totalCount: number,
   currentPage: number,
-  siblingCount: number,
-  pageSize: number,
+  siblingCount?: number,
+  pageSize?: number,
   className?: string,
 }
 const Pagination = (props: Props) => {

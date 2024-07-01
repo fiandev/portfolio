@@ -3,11 +3,12 @@ import { lazy } from "react";
 import "@/styles/index.css";
 
 import AuthProvider from "@/providers/AuthProvider";
+import Main from "@/components/sections/Main";
 
 const Wrapper = lazy(() => import("@components/sections/Wrapper"));
 const Nav = lazy(() => import("@components/sections/Nav"));
 const Footer = lazy(() => import("@components/sections/Footer"));
-const ScrollToTop = lazy(() => import("@components/partials/ScrollToTop"));
+const ScrollToTop = lazy(() => import("@/components/partials/ScrollToTop"));
 
 const title = "fiandev's portfolio",
   thumbnail = "https://fiandev.my.id/graph.png",
@@ -79,16 +80,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en-US">
-      <body className="relative flex flex-col bg-slate-50 dark:bg-slate-900 min-h-screen w-screen">
+      <body className="relative">
         <noscript>You need to enable JavaScript to run this app.</noscript>
         <AuthProvider>
           <Wrapper>
             <Nav />
-            <div className="w-screen md:w-[80%] md:mx-auto">
-              {children}
-              <ScrollToTop className="bg-main text-slate-800 dark:bg-slate-800 dark:text-main" />
-              <Footer />
-            </div>
+            <Main className="relative flex flex-col bg-slate-50 dark:bg-slate-900 min-h-screen w-screen">
+              <div className="w-screen xl:w-[90%] md:mx-auto">
+                {children}
+                <ScrollToTop className="bg-main text-slate-800 dark:bg-slate-800 dark:text-main" />
+                <Footer />
+              </div>
+            </Main>
           </Wrapper>
         </AuthProvider>
       </body>

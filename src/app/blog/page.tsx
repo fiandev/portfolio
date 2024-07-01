@@ -50,9 +50,9 @@ export const metadata: Metadata = {
 export default async function Blog() {
 
     return (
-        <div className={`flex flex-col scroll-smooth relative dark:bg-slate-800 px-2`}>
+        <div className={`flex flex-col scroll-smooth relative px-2`}>
             <h1 className="text-sm lg:text-lg text-main capitalize font-bold">
-                all blog
+                my latest blog
             </h1>
             <Articles />
         </div>

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { Metadata, ResolvingMetadata } from 'next'
 
 type Props = {
-  params: { slug: string }
+  params: { segments: string[] }
   searchParams: { [key: string]: string | string[] | undefined }
 }
 
@@ -13,9 +13,10 @@ export async function generateMetadata(
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   // read route params
-  const slug = params.slug;
-  let response = await fetch(`https://harapandigital.com/api/blogs/${slug}`);
-  let article = await response.json();
+  const [prefix, slug] = params.segments;
+  let response = await fetch(`https://kompasiana-api.vercel.app/api/post/alfiansa/${prefix}/${slug}`);
+  let json = await response.json();
+  let article = json.data;
 
   const previousImages = (await parent).openGraph?.images || []
   const description = strip_tags(article.content).slice(0, 100) + "...";
@@ -32,11 +33,11 @@ export async function generateMetadata(
       siteId: "",
       creator: "@im_fiandev",
       creatorId: "",
-      images: [article.thumbnail, ...previousImages],
+      images: [article.thumbnail, article.images, ...previousImages],
     },
     openGraph: {
       title: article.title,
-      images: [article.thumbnail, ...previousImages],
+      images: [article.thumbnail, article.images, ...previousImages],
       description: description,
       url: baseURL,
       siteName: siteName,
@@ -46,11 +47,17 @@ export async function generateMetadata(
 }
 
 export default async function Article({ params }: Props) {
-  const slug = params.slug;
+  // return console.log(params.segments)
+  const [prefix, slug] = params.segments;
 
-  let response = await fetch(`https://harapandigital.com/api/blogs/${slug}`);
-  let article = await response.json();
 
+  let response = await fetch(`https://kompasiana-api.vercel.app/api/post/alfiansa/${prefix}/${slug}`);
+  let json = await response.json();
+  let article = json.data;
+
+  let content = { __html: article.content.replace('\"', '"') };
+
+  console.log(content)
   return article && (
     <div className="flex flex-col gap-2 p-2 text-slate-800 dark:text-slate-200">
       <h1 className="text-lg text-center">
@@ -62,9 +69,9 @@ export default async function Article({ params }: Props) {
           <FontAwesomeIcon icon={faUserAlt} />
           Admin
         </p>
-        <span>{new Date(article.updated_at).toLocaleDateString()}</span>
+        <span>{new Date().toLocaleDateString()}</span>
       </div>
-      <article dangerouslySetInnerHTML={{ __html: article.content }} className="first-letter:text-lg first-letter:font-semibold animate-fadeInRight text-sm py-2"></article>
+      <article dangerouslySetInnerHTML={content} className="first-letter:text-lg first-letter:font-semibold animate-fadeInRight text-sm py-2" />
     </div>
   );
 }

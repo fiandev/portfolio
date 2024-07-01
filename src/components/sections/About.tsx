@@ -10,7 +10,7 @@ import {
 import { Markup } from "interweave";
 
 import countdown from "@utils/time";
-import Item from "@components/partials/about/Item";
+import Item from "@/components/partials/about/Item";
 
 export default function About({
   data,

@@ -1,7 +1,7 @@
 import { lazy } from "react";
 import { textWhatsAppEncode, arrayShuffle } from "@utils/functions";
 
-const Item = lazy(() => import("@components/partials/services/Item"));
+const Item = lazy(() => import("@/components/partials/services/Item"));
 
 export default function ServiceList({ className = "", services = [] }) {
   const phoneNumber = "+62895380689955";

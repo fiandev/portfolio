@@ -2,7 +2,7 @@
 import { lazy } from "react";
 import { randomID } from "@utils/functions";
 
-const ItemContact = lazy(() => import("@components/partials/ItemContact"));
+const ItemContact = lazy(() => import("@/components/partials/ItemContact"));
 
 export default function Contact({
   links,

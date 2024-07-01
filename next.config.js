@@ -1,6 +1,17 @@
+const { hostname } = require("os");
+
 module.exports = {
   images: {
-    domains: ["images.unsplash.com", "i.pinimg.com", "harapandigital.com"],
+    remotePatterns: [
+      {
+        hostname: "**.kompasiana.com"
+      }, {
+        hostname: "images.unsplash.com"
+      }, {
+        hostname: "i.pinimg.com"
+      }, {
+        hostname: "harapandigital.com"
+      }],
   },
   reactStrictMode: true,
   productionBrowserSourceMaps: true,

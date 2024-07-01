@@ -9,8 +9,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import FormFloating from "@components/partials/FormFloating";
-import Alert from "@components/partials/contact/Alert";
+import FormFloating from "@/components/partials/FormFloating";
+import Alert from "@/components/partials/contact/Alert";
 
 import { randomID } from "@utils/functions";
 import ErrorPage from "@/components/sections/ErrorPage";

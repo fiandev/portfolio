@@ -4,9 +4,9 @@ import { lazy } from "react";
 
 import Link from "next/link";
 
-const Hamburger = lazy(() => import("@components/partials/Hamburger"));
-const NavLink = lazy(() => import("@components/partials/NavLink"));
-const Dropdown = lazy(() => import("@components/partials/Dropdown"));
+const Hamburger = lazy(() => import("@/components/partials/Hamburger"));
+const NavLink = lazy(() => import("@/components/partials/NavLink"));
+const Dropdown = lazy(() => import("@/components/partials/Dropdown"));
 
 export const navLinks = [
   {

@@ -4,22 +4,20 @@ import { useTheme } from "@/hooks/useTheme";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { randomID } from "@/utils/functions";
-import { useEffect, useState } from "react";
 
 export default function ThemeToggler() {
-    let [theme, changeTheme] = useState<string>(useTheme());
+    let [theme, changeTheme] = useTheme();
 
-    useEffect(() => {
-        document.documentElement.setAttribute("class", "")
-        document.documentElement.classList.add(theme);
-        localStorage.setItem("theme", theme)
-        console.log(`theme changed => ${theme}`);
-    }, [theme]);
+    // useEffect(() => {
+    //     localStorage.setItem("theme", theme)
+    //     console.log(`theme changed => ${theme}`);
+    // }, [theme]);
 
     const handler = () => {
         let isDark = theme == "dark";
         changeTheme(isDark ? "light" : "dark");
     }
+
     return (
         <button
             onClick={handler}

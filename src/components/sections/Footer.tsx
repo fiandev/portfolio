@@ -17,10 +17,10 @@ import { navLinks } from "@components/sections/Nav";
 import Link from "next/link";
 
 const FooterBackLinks = lazy(
-  () => import("@components/partials/footer/FooterBackLinks"),
+  () => import("@/components/partials/footer/FooterBackLinks"),
 );
-const Image = lazy(() => import("@components/partials/Image"));
-const ThemeToggler = lazy(() => import("@components/partials/ThemeToggler"));
+const Image = lazy(() => import("@/components/partials/Image"));
+const ThemeToggler = lazy(() => import("@/components/partials/ThemeToggler"));
 
 const icons = {
   facebook: faFacebook,

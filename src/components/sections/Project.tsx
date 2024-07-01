@@ -1,9 +1,9 @@
 "use client";
 import { useState, useMemo, lazy, Suspense } from "react";
 
-const Loading = lazy(() => import("@components/partials/Loading"));
-const Item = lazy(() => import("@components/partials/portfolio/Item"));
-const Pagination = lazy(() => import("@components/partials/Pagination"));
+const Loading = lazy(() => import("@/components/partials/Loading"));
+const Item = lazy(() => import("@/components/partials/portfolio/Item"));
+const Pagination = lazy(() => import("@/components/partials/Pagination"));
 
 let PageSize = 6;
 
