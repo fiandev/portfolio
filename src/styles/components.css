@@ -6,54 +6,124 @@ section {
   align-items: center;
 }
 
-b, strong {
+b,
+strong {
   font-weight: bold;
 }
 
 @layer utilities {
   article {
     @apply flex flex-col gap-2 px-2 text-justify first-letter:text-2xl first-letter:uppercase;
+
     h1 {
-        @apply text-2xl font-bold;
+      @apply text-2xl font-bold;
     }
+
     h2 {
-        @apply text-xl font-semibold;
+      @apply text-xl font-semibold;
     }
-  
+
     h3,
     h4 {
-        @apply text-lg font-semibold;
+      @apply text-lg font-semibold;
     }
-  
+
     h5 {
-        @apply text-lg font-semibold;
+      @apply text-lg font-semibold;
     }
+
     p {
-        @apply text-base;
+      @apply text-base;
     }
+
     ol {
-        @apply mx-8 p-2 text-base;
-        li {
-            @apply list-decimal;
-        }
+      @apply mx-8 p-2 text-base;
+
+      li {
+        @apply list-decimal;
+      }
     }
+
     ul {
-        @apply mx-8 p-2 text-base;
-        li {
-            @apply list-disc;
-        }
+      @apply mx-8 p-2 text-base;
+
+      li {
+        @apply list-disc;
+      }
     }
-  
+
     figure {
-        @apply mx-auto max-w-lg flex flex-col items-center;
-  
-        img {
-            @apply h-auto max-w-full rounded-lg;
-        }
-        figcaption {
-            @apply mt-2 text-sm text-center text-slate-800 dark:text-slate-200;
-        }
+      @apply mx-auto max-w-lg flex flex-col items-center;
+
+      img {
+        @apply h-auto max-w-full rounded-lg;
+      }
+
+      figcaption {
+        @apply mt-2 text-sm text-center text-slate-800 dark:text-slate-200;
+      }
+
     }
+  }
+
+
+.loader {
+  position: relative;
+  @apply border-[24px] border-main;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: eat 1s linear infinite;
+}
+
+.loader::after,
+.loader::before {
+  content: '';
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  @apply bg-slate-900 dark:bg-slate-100;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  opacity: 0;
+  animation: move 2s linear infinite;
+}
+
+.loader::before {
+  animation-delay: 1s;
+}
+
+@keyframes eat {
+
+  0%,
+  49% {
+    @apply border-r-main;
+  }
+
+  50%,
+  100% {
+    @apply border-r-slate-100 dark:border-r-slate-900;
+
   }
 }
 
+@keyframes move {
+  0% {
+    left: 75px;
+    opacity: 1
+  }
+
+  50% {
+    left: 0px;
+    opacity: 1
+  }
+
+  52%,
+  100% {
+    left: -5px;
+    opacity: 0;
+  }
+}
+}
